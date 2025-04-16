@@ -1,33 +1,456 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>University Notes on dayowrites</title>
-    <link>https://example.org/docs/notes/university-notes/</link>
-    <description>Recent content in University Notes on dayowrites</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 20 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/docs/notes/university-notes/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>software engineering</title>
-      <link>https://example.org/docs/notes/university-notes/software-engineering/</link>
-      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.org/docs/notes/university-notes/software-engineering/</guid>
-      <description>&lt;h3 id=&#34;modern-software-engineering-820&#34;&gt;Modern Software Engineering (8/20)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;What is the point of software engineering? What does it fix?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The problem with software development in the past:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Late&lt;/li&gt;&#xA;&lt;li&gt;Too expensive&lt;/li&gt;&#xA;&lt;li&gt;Poor quality&lt;/li&gt;&#xA;&lt;li&gt;And less functional than promised.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;The internet was first born in the early 1970s.&lt;/li&gt;&#xA;&lt;li&gt;Mid 1990s, the web came ot be.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;modern-software-engineering-822&#34;&gt;Modern Software Engineering (8/22)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Waterfall life cycle model is evil, much worse than agile methodology.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It was the method used for centuries before technology existed.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;What is the fundamental problem with building projects?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Poor project management&lt;/li&gt;&#xA;&lt;li&gt;Do not use good engineering practices.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Example: waterfall methodology&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The waterfall methodology is popular, but this life cycle model doesn&amp;rsquo;t work because of one key issue, that the requirements KEEP CHANGING. Waterfall assumes that the requirements don&amp;rsquo;t change.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;project efficiency - described as a project being on time and within budget.&lt;/li&gt;&#xA;&lt;li&gt;A low failure rate of software projects is not a direct indication of success or product quality.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;If only 1% of projects fail, it may indicate that not enough risks are being taken.&#xA;Multicore is usually better for performance, but there are edge cases where this is not the case.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;In situations like these, it&amp;rsquo;s better to go back to singlecore and use rate monotonic analysis.&lt;/li&gt;&#xA;&lt;li&gt;Be careful with the decisions you make especially when trying to prioritize speed.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It is not worth it to deliver poor quality work at the price of speed.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;some-random-shit-827&#34;&gt;Some random shit (8/27)&lt;/h3&gt;&#xA;&lt;h5 id=&#34;what-is-devops&#34;&gt;What is devops&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Getting the users involved with the developer team to find what works and what doesn&amp;rsquo;t.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;how-to-avoid-the-typical-mistakes&#34;&gt;How to avoid the typical mistakes:&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Identify problems that have occured in previous projects that have a similar goal to your project.&lt;/li&gt;&#xA;&lt;li&gt;Discuss major mistakes that were made with other people, whether coworkers in different departments, or even friends in the industry.&lt;/li&gt;&#xA;&lt;li&gt;Create a checklist of mistakes to be mindful of. Hopefully they don&amp;rsquo;t get checked off&lt;/li&gt;&#xA;&lt;li&gt;Create a list of mistakes to AVOID during planning and monitor cautiously.&lt;/li&gt;&#xA;&lt;li&gt;Create a watchdog, an alarm so to speak, to sound whenever your proect starts leaning toward a mistake.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;essential-vs-accidental-complexity&#34;&gt;Essential vs Accidental Complexity&lt;/h5&gt;&#xA;&lt;p&gt;Any project has a certain aspect of essential complexity, it is just intrinsic to the stuff that we do.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>database</title>
-      <link>https://example.org/docs/notes/university-notes/database/</link>
-      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.org/docs/notes/university-notes/database/</guid>
-      <description>&lt;h3 id=&#34;chapter-1-databases-and-database-users-08-21&#34;&gt;Chapter 1: Databases and Database Users 08-21&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;h5 id=&#34;vocabulary&#34;&gt;Vocabulary:&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Database&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Universe of discourse (mini-world)&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Database management system&lt;/strong&gt; - This software system will do 4 things with the data. Some examples inclued: mySQL, mongoDB, oracle&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Define - Know what information you want to store. Know the data types, the structures and also constraints.&lt;/li&gt;&#xA;&lt;li&gt;Construct - Populate the database with information.&lt;/li&gt;&#xA;&lt;li&gt;Manipulate - Performing some kind of query on the table to get a result. This could also include changing information and storing it again.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Retreival, modification, accessing&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Share&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Database system&lt;/strong&gt; - The entire db system is simply the DMBS + data.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;database-types-and-applications&#34;&gt;Database types and applications&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;There are various data types that a database can store.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;In the past it was strictly numbers and strings&lt;/li&gt;&#xA;&lt;li&gt;But now we can store videos, images.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Some applications include:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A geographic info system&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;For a database to be useable, we need three things:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Mini-world&lt;/li&gt;&#xA;&lt;li&gt;Data is correlated, and what data do we need to show for the user.&lt;/li&gt;&#xA;&lt;li&gt;Identify for WHOM we are storing the data.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Catalog&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Stores the description of a particular databse, e.g. data structures, types, and constraints&lt;/li&gt;&#xA;&lt;li&gt;Also known as meta-data&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;example-mini-world-exercise&#34;&gt;Example mini-world exercise:&lt;/h3&gt;&#xA;&lt;p&gt;Online car resale database:&#xA;MODELs are of CAR BRANDs&#xA;MODELs have YEARs&#xA;CAR_ID have MODEL and YEARs and AVAILIBILITY&#xA;CAR_SELLERs sell CAR BRANDs&#xA;PEOPLE buy CAR_IDs&#xA;PEOPLE are interested in CAR_IDS&#xA;PEOPLE have SALARYs&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>paradigms</title>
-      <link>https://example.org/docs/notes/university-notes/paradigms/</link>
-      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.org/docs/notes/university-notes/paradigms/</guid>
-      <description>&lt;h2 id=&#34;chapter-1-preliminaries-819&#34;&gt;Chapter 1: Preliminaries (8/19)&lt;/h2&gt;&#xA;&lt;p&gt;The significant difference between &lt;em&gt;natural&lt;/em&gt; language and &lt;em&gt;programmming&lt;/em&gt; language is &lt;strong&gt;ambiguity&lt;/strong&gt;. Natural language has developed over time, and was not constructed by a team of engineers. Programming languages on the other hand were purposefully created to have unamibguous grammar, whereas english has ambiguous grammar.&lt;/p&gt;&#xA;&lt;p&gt;English is SVO typology. subject-verb-object&#xA;Starwars Yoda typology: object-subject-verb&lt;/p&gt;&#xA;&lt;h5 id=&#34;what-is-the-effect-of-one-language-being-ambiguous-and-the-other-being-unambiguous&#34;&gt;What is the effect of one language being ambiguous, and the other being unambiguous?&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;There is no set phonology of a programming language. This conversion from unambiguous grammar into ambiguous grammar, such as from code to english, leads to a possible misinterpretation of meaning (semantics).&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Example: Siri still struggles today with pronunciation.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;language---set-of-strings-sentences-and-statements&#34;&gt;Language - Set of strings, sentences, and statements&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;English is recursively enumerable. It is possible to list every combination of sentences, but this list would be infinitely long because there is no upper bound, however this does mean that they are &amp;ldquo;countable&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;Countable -&amp;gt; They map one to one (onto) each integer of the number system.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;There are some languages that are infinitely long, but also not countable.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Turing complete or recursively enumerable?&lt;/strong&gt; How can we realistically find the maximum length of a &amp;lsquo;valid&amp;rsquo; sentence?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;We could use grammar rules to define how sentences should be formed. Some of these rules include: syntax, semantics, and grammar.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Syntax allows us to create order when structuring sentences.&lt;/li&gt;&#xA;&lt;li&gt;Semantics give sentences and words meaning and sense depending on context.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;culture&#34;&gt;Culture&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;every language has some sense of &lt;strong&gt;culture&lt;/strong&gt; of people who are using those languages because they have experience and context. It takes time to adapt to these cultures, but they are not aways intuitive.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;So although things may be allowed, it may not be encouraged.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;why-are-there-so-many-languages&#34;&gt;Why are there so many languages?&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;We create new languages based on a need or desire: to solve a specific problem.&lt;/li&gt;&#xA;&lt;li&gt;If we put all the functionality of every language into a single language, it would be so bloated that it could not be efficient.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;infinity-ordinal-number-theory&#34;&gt;Infinity, Ordinal Number Theory&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;There are variations of infinity. Infinity is a concept, not a number.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Aleph null is an example of this, the cardinality of all natural numbers. It&amp;rsquo;s considered to be the smallest of the infinite symbols.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;linguistics&#34;&gt;Linguistics&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;LOGLAN was created to have unambiguous grammar, but still have meaning.&lt;/li&gt;&#xA;&lt;li&gt;Sapir-Whorf Hypothesis: Language can shape how we perceive and interpret the world.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;p-vs-np&#34;&gt;P vs NP&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Polynomial Time vs Super Polynomial (nonpolynomial) Time&lt;/li&gt;&#xA;&lt;li&gt;The time it takes to interpret a particular language or sentence takes longer than O(n^k)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;preliminaries-cont-821&#34;&gt;Preliminaries Cont. (8/21)&lt;/h3&gt;&#xA;&lt;h5 id=&#34;first-programming-language&#34;&gt;First Programming Language&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ada Lovelace Bernouli sequence rational thingy&lt;/li&gt;&#xA;&lt;li&gt;The program was tabular, it didn&amp;rsquo;t go line by line from top to bottom, but could specify where to go after a line was ran.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;first-high-level-programming-language&#34;&gt;First High-level Programming Language&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Plankalkul designed by Konrad Zuze in Germany between 1942 and 1945&lt;/li&gt;&#xA;&lt;li&gt;Its original implementation was tabular, but in 1990, the first linear notation was developed.&lt;/li&gt;&#xA;&lt;li&gt;Although it was developed in the 1940s, this code already had&#xA;&lt;ul&gt;&#xA;&lt;li&gt;floating point arithmetic&lt;/li&gt;&#xA;&lt;li&gt;arrays&lt;/li&gt;&#xA;&lt;li&gt;and more&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;files&#34;&gt;Files&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It&amp;rsquo;s an abstract concept of a container.&lt;/li&gt;&#xA;&lt;li&gt;The way a file is stored on a disc is continuous and not a single entity.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;On computers, files are stored in blocks as a sector. We consider code in a single sector as a page.&lt;/li&gt;&#xA;&lt;li&gt;A single block or page size is 4096 bytes or 2^12 bytes. In hexadecimal, this is &amp;lsquo;h1000&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;How does a disk work?&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A page, or sector, or block in memory is always 4096 bytes.&lt;/li&gt;&#xA;&lt;li&gt;When we create a text file, it will immediately use 1 page worth of memory. Once the content takes up more than the limit, it will retrieve another page worth of memory to store this file.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;parse - The term we use to see if a compiler can make sense of the source code.&lt;/li&gt;&#xA;&lt;li&gt;The file type is important for a compiler.&lt;/li&gt;&#xA;&lt;li&gt;The extension of a file can be used solely for the use of naming, and not changing the content at all.&lt;/li&gt;&#xA;&lt;li&gt;For example, a .java file and a .py file are both plain text files. You can compile with either compiler and get the same output so long as its the same source code, and each compiler can make sense of the content.&lt;/li&gt;&#xA;&lt;li&gt;However, sometimes a file type could be INCOMPATIBLE with compilers such as .docx or .rtf&#xA;&lt;ul&gt;&#xA;&lt;li&gt;This is because the content is not just plain ascii, but would instead contain formatting that would be extra information that the compiler doesn&amp;rsquo;t know how to make sense of it.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;source-code-files&#34;&gt;Source Code Files&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;These files are purposed for a specific language, and this is identified by the extension.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ex: .py, .java, .pl,&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Integrated Development Environment:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;An IDE helps us program more efficiently by giving us color highlighting of certain key words, strings, variables, and data types.&lt;/li&gt;&#xA;&lt;li&gt;An IDE can come in the simple form like notepad++, or get more complicated such as with vsCode&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;esoteric-languages&#34;&gt;Esoteric Languages&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Also known as joke languages.&lt;/li&gt;&#xA;&lt;li&gt;Many were created for research purposes and to test certain hypothesis, but none of them were created for the purpose of serious use.&lt;/li&gt;&#xA;&lt;li&gt;Whitespace&#xA;&lt;ul&gt;&#xA;&lt;li&gt;This language understands and compiles whitespace characters such as tab, new lines, and spaces.&lt;/li&gt;&#xA;&lt;li&gt;The consequence of the creation of this program was the realization that a single program, a single source code can be interpreted in two vastly different ways by compilers.&lt;/li&gt;&#xA;&lt;li&gt;Thus it became very possible to hide information, which is the concept known as steganography.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&amp;ldquo;Branflake&amp;rdquo;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;This language was created for the purpose of being the smallest turing complete language.&lt;/li&gt;&#xA;&lt;li&gt;It has no variables, only 8 characters that are individual scripts.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;chapter-3-syntax-and-semantics-826&#34;&gt;Chapter 3: Syntax and Semantics (8/26)&lt;/h3&gt;&#xA;&lt;h5 id=&#34;vocabulary&#34;&gt;Vocabulary:&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Syntax - The structure of expressions&lt;/li&gt;&#xA;&lt;li&gt;Semantics - The meaning of the expressions and program units&lt;/li&gt;&#xA;&lt;li&gt;Sentence - string of characters of some alphabet&lt;/li&gt;&#xA;&lt;li&gt;Language - set of sentences&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Can be recursively enumerable.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Lexeme - (Coloquoially we use &amp;lsquo;word&amp;rsquo;). Refers to the lowest level of syntactic unit such as a word, a variable, punctuation.&lt;/li&gt;&#xA;&lt;li&gt;Tokens - Category of its lexemes.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Some token can have multiple lexemes, and in other cases it&amp;rsquo;s one to one&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ex: int_literal, identifier are tokens that can refer to multiple lexemes.&lt;/li&gt;&#xA;&lt;li&gt;Ex: mult_op, equal_sign are tokens that only refer to a single lexeme.&#xA;![[Pasted image 20240826104425.png]]&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;language-recognizers&#34;&gt;Language Recognizers&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Generator&lt;/strong&gt; - Device that we can use to generate sentences of a language.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It is effectvive because we can compare a sentence syntacically to the generated structure.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Recognizer&lt;/strong&gt; - Device that checks every alphabetic character of a sentence and verifies if it exists in the alphabet or not.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;how-can-we-describe-syntax-effectively&#34;&gt;How can we describe syntax effectively?&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;We can use grammars, which are used to describe the syntax of programming language.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;context-free-grammars&#34;&gt;Context-Free Grammars&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A class of grammar used to describe the syntax of &lt;strong&gt;programming&lt;/strong&gt; languages&lt;/li&gt;&#xA;&lt;li&gt;The reason why it&amp;rsquo;s called context-free because it doesn&amp;rsquo;t matter what the context is.&#xA;$$G=(S, N, T, P)  $$&lt;/li&gt;&#xA;&lt;li&gt;G - Grammar&lt;/li&gt;&#xA;&lt;li&gt;S - Start Symbol&lt;/li&gt;&#xA;&lt;li&gt;N - Set of Non-Terminal symbols (tokens)&lt;/li&gt;&#xA;&lt;li&gt;T - Set of Terminal Symbols (lexemes)&lt;/li&gt;&#xA;&lt;li&gt;P - Set of production rules&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;backus-naur-form&#34;&gt;Backus-Naur Form&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A subset of Context-Free grammar rules.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Optimized for describing programming languages. Syntax description&lt;/li&gt;&#xA;&lt;li&gt;Remember, we want programmign languages to be as unamibguous as possible.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;ambiguous-language-is-defined-by-distinct-parse-trees&#34;&gt;Ambiguous language is defined by distinct parse trees.&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;If a grammar is unambiguous, the derived parse trees should be isomorphic. They have the same nodes and edges, but they may be visually different.&lt;/li&gt;&#xA;&lt;li&gt;Ambiguous language is not inherently bad, so long as we can prove that we can end up at the same result.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ex: 2 + 2 + 4 = &lt;strong&gt;4&lt;/strong&gt; + 4 = 8 OR 2 + 2 + 4 = 2 + &lt;strong&gt;6&lt;/strong&gt; = 8&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;derivation&#34;&gt;Derivation&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sequence of repeated application of grammar rules.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Reverse derivation: Start with the symbols, and replace them with non-terminal symbols going right to left.&lt;/li&gt;&#xA;&lt;li&gt;You can do the right-most derivation or left-most derivation.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;So long as the graphs are both isomorphic (same leaves and edges), they are unambiguous.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;A left-most derivation is like going down a binary tree in preorder.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;We expand the left most until we can&amp;rsquo;t, and then we go back up and then down right, until we reach the root node. Once we are back to the top, that is when we begin expanding the right side.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;The deeper a procedure is in a parse tree, the closer it is to the leaves, gives it higher precedence. That value must first be evaluated before it can be used in another context.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h5 id=&#34;functional-languages&#34;&gt;Functional Languages&lt;/h5&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;We place names on immutable objects instead of some variable shit bro i don&amp;rsquo;t know. Search up the difference ebtween imperative (procedural) languages and functional languages.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;A DFS will traverse an infinite depth for a recursively enumerable language. So we must use one variation of BFS whether it be post or inorder traversal.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>University Notes on dayowrites</title><link>http://localhost:61827/docs/notes/university-notes/</link><description>Recent content in University Notes on dayowrites</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 20 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:61827/docs/notes/university-notes/index.xml" rel="self" type="application/rss+xml"/><item><title>software engineering</title><link>http://localhost:61827/docs/notes/university-notes/software-engineering/</link><pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate><guid>http://localhost:61827/docs/notes/university-notes/software-engineering/</guid><description>&lt;h3 id="modern-software-engineering-820">
+ Modern Software Engineering (8/20)
+ &lt;a class="anchor" href="#modern-software-engineering-820">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>What is the point of software engineering? What does it fix?
+&lt;ul>
+&lt;li>The problem with software development in the past:
+&lt;ul>
+&lt;li>Late&lt;/li>
+&lt;li>Too expensive&lt;/li>
+&lt;li>Poor quality&lt;/li>
+&lt;li>And less functional than promised.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>The internet was first born in the early 1970s.&lt;/li>
+&lt;li>Mid 1990s, the web came ot be.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="modern-software-engineering-822">
+ Modern Software Engineering (8/22)
+ &lt;a class="anchor" href="#modern-software-engineering-822">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Waterfall life cycle model is evil, much worse than agile methodology.
+&lt;ul>
+&lt;li>It was the method used for centuries before technology existed.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>What is the fundamental problem with building projects?
+&lt;ul>
+&lt;li>Poor project management&lt;/li>
+&lt;li>Do not use good engineering practices.
+&lt;ul>
+&lt;li>Example: waterfall methodology
+&lt;ul>
+&lt;li>The waterfall methodology is popular, but this life cycle model doesn&amp;rsquo;t work because of one key issue, that the requirements KEEP CHANGING. Waterfall assumes that the requirements don&amp;rsquo;t change.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>project efficiency - described as a project being on time and within budget.&lt;/li>
+&lt;li>A low failure rate of software projects is not a direct indication of success or product quality.
+&lt;ul>
+&lt;li>If only 1% of projects fail, it may indicate that not enough risks are being taken.
+Multicore is usually better for performance, but there are edge cases where this is not the case.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>In situations like these, it&amp;rsquo;s better to go back to singlecore and use rate monotonic analysis.&lt;/li>
+&lt;li>Be careful with the decisions you make especially when trying to prioritize speed.
+&lt;ul>
+&lt;li>It is not worth it to deliver poor quality work at the price of speed.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="some-random-shit-827">
+ Some random shit (8/27)
+ &lt;a class="anchor" href="#some-random-shit-827">#&lt;/a>
+&lt;/h3>
+&lt;h5 id="what-is-devops">
+ What is devops
+ &lt;a class="anchor" href="#what-is-devops">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>Getting the users involved with the developer team to find what works and what doesn&amp;rsquo;t.&lt;/li>
+&lt;/ul>
+&lt;h5 id="how-to-avoid-the-typical-mistakes">
+ How to avoid the typical mistakes:
+ &lt;a class="anchor" href="#how-to-avoid-the-typical-mistakes">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>Identify problems that have occured in previous projects that have a similar goal to your project.&lt;/li>
+&lt;li>Discuss major mistakes that were made with other people, whether coworkers in different departments, or even friends in the industry.&lt;/li>
+&lt;li>Create a checklist of mistakes to be mindful of. Hopefully they don&amp;rsquo;t get checked off&lt;/li>
+&lt;li>Create a list of mistakes to AVOID during planning and monitor cautiously.&lt;/li>
+&lt;li>Create a watchdog, an alarm so to speak, to sound whenever your proect starts leaning toward a mistake.&lt;/li>
+&lt;/ul>
+&lt;h5 id="essential-vs-accidental-complexity">
+ Essential vs Accidental Complexity
+ &lt;a class="anchor" href="#essential-vs-accidental-complexity">#&lt;/a>
+&lt;/h5>
+&lt;p>Any project has a certain aspect of essential complexity, it is just intrinsic to the stuff that we do.&lt;/p></description></item><item><title>database</title><link>http://localhost:61827/docs/notes/university-notes/database/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>http://localhost:61827/docs/notes/university-notes/database/</guid><description>&lt;h3 id="chapter-1-databases-and-database-users-08-21">
+ Chapter 1: Databases and Database Users 08-21
+ &lt;a class="anchor" href="#chapter-1-databases-and-database-users-08-21">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;h5 id="vocabulary">
+ Vocabulary:
+ &lt;a class="anchor" href="#vocabulary">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>&lt;strong>Database&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Data&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Universe of discourse (mini-world)&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Database management system&lt;/strong> - This software system will do 4 things with the data. Some examples inclued: mySQL, mongoDB, oracle
+&lt;ul>
+&lt;li>Define - Know what information you want to store. Know the data types, the structures and also constraints.&lt;/li>
+&lt;li>Construct - Populate the database with information.&lt;/li>
+&lt;li>Manipulate - Performing some kind of query on the table to get a result. This could also include changing information and storing it again.
+&lt;ul>
+&lt;li>Retreival, modification, accessing&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Share&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Database system&lt;/strong> - The entire db system is simply the DMBS + data.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="database-types-and-applications">
+ Database types and applications
+ &lt;a class="anchor" href="#database-types-and-applications">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>There are various data types that a database can store.
+&lt;ul>
+&lt;li>In the past it was strictly numbers and strings&lt;/li>
+&lt;li>But now we can store videos, images.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Some applications include:
+&lt;ul>
+&lt;li>A geographic info system&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>For a database to be useable, we need three things:
+&lt;ul>
+&lt;li>Mini-world&lt;/li>
+&lt;li>Data is correlated, and what data do we need to show for the user.&lt;/li>
+&lt;li>Identify for WHOM we are storing the data.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Catalog&lt;/strong>
+&lt;ul>
+&lt;li>Stores the description of a particular databse, e.g. data structures, types, and constraints&lt;/li>
+&lt;li>Also known as meta-data&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="example-mini-world-exercise">
+ Example mini-world exercise:
+ &lt;a class="anchor" href="#example-mini-world-exercise">#&lt;/a>
+&lt;/h3>
+&lt;p>Online car resale database:
+MODELs are of CAR BRANDs
+MODELs have YEARs
+CAR_ID have MODEL and YEARs and AVAILIBILITY
+CAR_SELLERs sell CAR BRANDs
+PEOPLE buy CAR_IDs
+PEOPLE are interested in CAR_IDS
+PEOPLE have SALARYs&lt;/p></description></item><item><title>paradigms</title><link>http://localhost:61827/docs/notes/university-notes/paradigms/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>http://localhost:61827/docs/notes/university-notes/paradigms/</guid><description>&lt;h2 id="chapter-1-preliminaries-819">
+ Chapter 1: Preliminaries (8/19)
+ &lt;a class="anchor" href="#chapter-1-preliminaries-819">#&lt;/a>
+&lt;/h2>
+&lt;p>The significant difference between &lt;em>natural&lt;/em> language and &lt;em>programmming&lt;/em> language is &lt;strong>ambiguity&lt;/strong>. Natural language has developed over time, and was not constructed by a team of engineers. Programming languages on the other hand were purposefully created to have unamibguous grammar, whereas english has ambiguous grammar.&lt;/p>
+&lt;p>English is SVO typology. subject-verb-object
+Starwars Yoda typology: object-subject-verb&lt;/p>
+&lt;h5 id="what-is-the-effect-of-one-language-being-ambiguous-and-the-other-being-unambiguous">
+ What is the effect of one language being ambiguous, and the other being unambiguous?
+ &lt;a class="anchor" href="#what-is-the-effect-of-one-language-being-ambiguous-and-the-other-being-unambiguous">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>There is no set phonology of a programming language. This conversion from unambiguous grammar into ambiguous grammar, such as from code to english, leads to a possible misinterpretation of meaning (semantics).
+&lt;ul>
+&lt;li>Example: Siri still struggles today with pronunciation.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="language---set-of-strings-sentences-and-statements">
+ Language - Set of strings, sentences, and statements
+ &lt;a class="anchor" href="#language---set-of-strings-sentences-and-statements">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>English is recursively enumerable. It is possible to list every combination of sentences, but this list would be infinitely long because there is no upper bound, however this does mean that they are &amp;ldquo;countable&amp;rdquo;.&lt;/li>
+&lt;li>Countable -&amp;gt; They map one to one (onto) each integer of the number system.
+&lt;ul>
+&lt;li>There are some languages that are infinitely long, but also not countable.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Turing complete or recursively enumerable?&lt;/strong> How can we realistically find the maximum length of a &amp;lsquo;valid&amp;rsquo; sentence?
+&lt;ul>
+&lt;li>We could use grammar rules to define how sentences should be formed. Some of these rules include: syntax, semantics, and grammar.
+&lt;ul>
+&lt;li>Syntax allows us to create order when structuring sentences.&lt;/li>
+&lt;li>Semantics give sentences and words meaning and sense depending on context.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="culture">
+ Culture
+ &lt;a class="anchor" href="#culture">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>every language has some sense of &lt;strong>culture&lt;/strong> of people who are using those languages because they have experience and context. It takes time to adapt to these cultures, but they are not aways intuitive.
+&lt;ul>
+&lt;li>So although things may be allowed, it may not be encouraged.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="why-are-there-so-many-languages">
+ Why are there so many languages?
+ &lt;a class="anchor" href="#why-are-there-so-many-languages">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>We create new languages based on a need or desire: to solve a specific problem.&lt;/li>
+&lt;li>If we put all the functionality of every language into a single language, it would be so bloated that it could not be efficient.&lt;/li>
+&lt;/ul>
+&lt;h5 id="infinity-ordinal-number-theory">
+ Infinity, Ordinal Number Theory
+ &lt;a class="anchor" href="#infinity-ordinal-number-theory">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>There are variations of infinity. Infinity is a concept, not a number.
+&lt;ul>
+&lt;li>Aleph null is an example of this, the cardinality of all natural numbers. It&amp;rsquo;s considered to be the smallest of the infinite symbols.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="linguistics">
+ Linguistics
+ &lt;a class="anchor" href="#linguistics">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>LOGLAN was created to have unambiguous grammar, but still have meaning.&lt;/li>
+&lt;li>Sapir-Whorf Hypothesis: Language can shape how we perceive and interpret the world.&lt;/li>
+&lt;/ul>
+&lt;h5 id="p-vs-np">
+ P vs NP
+ &lt;a class="anchor" href="#p-vs-np">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>Polynomial Time vs Super Polynomial (nonpolynomial) Time&lt;/li>
+&lt;li>The time it takes to interpret a particular language or sentence takes longer than O(n^k)&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="preliminaries-cont-821">
+ Preliminaries Cont. (8/21)
+ &lt;a class="anchor" href="#preliminaries-cont-821">#&lt;/a>
+&lt;/h3>
+&lt;h5 id="first-programming-language">
+ First Programming Language
+ &lt;a class="anchor" href="#first-programming-language">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>Ada Lovelace Bernouli sequence rational thingy&lt;/li>
+&lt;li>The program was tabular, it didn&amp;rsquo;t go line by line from top to bottom, but could specify where to go after a line was ran.&lt;/li>
+&lt;/ul>
+&lt;h5 id="first-high-level-programming-language">
+ First High-level Programming Language
+ &lt;a class="anchor" href="#first-high-level-programming-language">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>Plankalkul designed by Konrad Zuze in Germany between 1942 and 1945&lt;/li>
+&lt;li>Its original implementation was tabular, but in 1990, the first linear notation was developed.&lt;/li>
+&lt;li>Although it was developed in the 1940s, this code already had
+&lt;ul>
+&lt;li>floating point arithmetic&lt;/li>
+&lt;li>arrays&lt;/li>
+&lt;li>and more&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="files">
+ Files
+ &lt;a class="anchor" href="#files">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>It&amp;rsquo;s an abstract concept of a container.&lt;/li>
+&lt;li>The way a file is stored on a disc is continuous and not a single entity.
+&lt;ul>
+&lt;li>On computers, files are stored in blocks as a sector. We consider code in a single sector as a page.&lt;/li>
+&lt;li>A single block or page size is 4096 bytes or 2^12 bytes. In hexadecimal, this is &amp;lsquo;h1000&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>How does a disk work?
+&lt;ul>
+&lt;li>A page, or sector, or block in memory is always 4096 bytes.&lt;/li>
+&lt;li>When we create a text file, it will immediately use 1 page worth of memory. Once the content takes up more than the limit, it will retrieve another page worth of memory to store this file.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>parse - The term we use to see if a compiler can make sense of the source code.&lt;/li>
+&lt;li>The file type is important for a compiler.&lt;/li>
+&lt;li>The extension of a file can be used solely for the use of naming, and not changing the content at all.&lt;/li>
+&lt;li>For example, a .java file and a .py file are both plain text files. You can compile with either compiler and get the same output so long as its the same source code, and each compiler can make sense of the content.&lt;/li>
+&lt;li>However, sometimes a file type could be INCOMPATIBLE with compilers such as .docx or .rtf
+&lt;ul>
+&lt;li>This is because the content is not just plain ascii, but would instead contain formatting that would be extra information that the compiler doesn&amp;rsquo;t know how to make sense of it.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="source-code-files">
+ Source Code Files
+ &lt;a class="anchor" href="#source-code-files">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>These files are purposed for a specific language, and this is identified by the extension.
+&lt;ul>
+&lt;li>Ex: .py, .java, .pl,&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Integrated Development Environment:
+&lt;ul>
+&lt;li>An IDE helps us program more efficiently by giving us color highlighting of certain key words, strings, variables, and data types.&lt;/li>
+&lt;li>An IDE can come in the simple form like notepad++, or get more complicated such as with vsCode&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="esoteric-languages">
+ Esoteric Languages
+ &lt;a class="anchor" href="#esoteric-languages">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>Also known as joke languages.&lt;/li>
+&lt;li>Many were created for research purposes and to test certain hypothesis, but none of them were created for the purpose of serious use.&lt;/li>
+&lt;li>Whitespace
+&lt;ul>
+&lt;li>This language understands and compiles whitespace characters such as tab, new lines, and spaces.&lt;/li>
+&lt;li>The consequence of the creation of this program was the realization that a single program, a single source code can be interpreted in two vastly different ways by compilers.&lt;/li>
+&lt;li>Thus it became very possible to hide information, which is the concept known as steganography.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&amp;ldquo;Branflake&amp;rdquo;
+&lt;ul>
+&lt;li>This language was created for the purpose of being the smallest turing complete language.&lt;/li>
+&lt;li>It has no variables, only 8 characters that are individual scripts.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="chapter-3-syntax-and-semantics-826">
+ Chapter 3: Syntax and Semantics (8/26)
+ &lt;a class="anchor" href="#chapter-3-syntax-and-semantics-826">#&lt;/a>
+&lt;/h3>
+&lt;h5 id="vocabulary">
+ Vocabulary:
+ &lt;a class="anchor" href="#vocabulary">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>Syntax - The structure of expressions&lt;/li>
+&lt;li>Semantics - The meaning of the expressions and program units&lt;/li>
+&lt;li>Sentence - string of characters of some alphabet&lt;/li>
+&lt;li>Language - set of sentences
+&lt;ul>
+&lt;li>Can be recursively enumerable.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Lexeme - (Coloquoially we use &amp;lsquo;word&amp;rsquo;). Refers to the lowest level of syntactic unit such as a word, a variable, punctuation.&lt;/li>
+&lt;li>Tokens - Category of its lexemes.
+&lt;ul>
+&lt;li>Some token can have multiple lexemes, and in other cases it&amp;rsquo;s one to one
+&lt;ul>
+&lt;li>Ex: int_literal, identifier are tokens that can refer to multiple lexemes.&lt;/li>
+&lt;li>Ex: mult_op, equal_sign are tokens that only refer to a single lexeme.
+![[Pasted image 20240826104425.png]]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="language-recognizers">
+ Language Recognizers
+ &lt;a class="anchor" href="#language-recognizers">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>&lt;strong>Generator&lt;/strong> - Device that we can use to generate sentences of a language.
+&lt;ul>
+&lt;li>It is effectvive because we can compare a sentence syntacically to the generated structure.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Recognizer&lt;/strong> - Device that checks every alphabetic character of a sentence and verifies if it exists in the alphabet or not.&lt;/li>
+&lt;/ul>
+&lt;h5 id="how-can-we-describe-syntax-effectively">
+ How can we describe syntax effectively?
+ &lt;a class="anchor" href="#how-can-we-describe-syntax-effectively">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>We can use grammars, which are used to describe the syntax of programming language.&lt;/li>
+&lt;/ul>
+&lt;h5 id="context-free-grammars">
+ Context-Free Grammars
+ &lt;a class="anchor" href="#context-free-grammars">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>A class of grammar used to describe the syntax of &lt;strong>programming&lt;/strong> languages&lt;/li>
+&lt;li>The reason why it&amp;rsquo;s called context-free because it doesn&amp;rsquo;t matter what the context is.
+$$G=(S, N, T, P) $$&lt;/li>
+&lt;li>G - Grammar&lt;/li>
+&lt;li>S - Start Symbol&lt;/li>
+&lt;li>N - Set of Non-Terminal symbols (tokens)&lt;/li>
+&lt;li>T - Set of Terminal Symbols (lexemes)&lt;/li>
+&lt;li>P - Set of production rules&lt;/li>
+&lt;/ul>
+&lt;h5 id="backus-naur-form">
+ Backus-Naur Form
+ &lt;a class="anchor" href="#backus-naur-form">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>A subset of Context-Free grammar rules.
+&lt;ul>
+&lt;li>Optimized for describing programming languages. Syntax description&lt;/li>
+&lt;li>Remember, we want programmign languages to be as unamibguous as possible.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="ambiguous-language-is-defined-by-distinct-parse-trees">
+ Ambiguous language is defined by distinct parse trees.
+ &lt;a class="anchor" href="#ambiguous-language-is-defined-by-distinct-parse-trees">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>If a grammar is unambiguous, the derived parse trees should be isomorphic. They have the same nodes and edges, but they may be visually different.&lt;/li>
+&lt;li>Ambiguous language is not inherently bad, so long as we can prove that we can end up at the same result.
+&lt;ul>
+&lt;li>Ex: 2 + 2 + 4 = &lt;strong>4&lt;/strong> + 4 = 8 OR 2 + 2 + 4 = 2 + &lt;strong>6&lt;/strong> = 8&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="derivation">
+ Derivation
+ &lt;a class="anchor" href="#derivation">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>Sequence of repeated application of grammar rules.
+&lt;ul>
+&lt;li>Reverse derivation: Start with the symbols, and replace them with non-terminal symbols going right to left.&lt;/li>
+&lt;li>You can do the right-most derivation or left-most derivation.
+&lt;ul>
+&lt;li>So long as the graphs are both isomorphic (same leaves and edges), they are unambiguous.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>A left-most derivation is like going down a binary tree in preorder.
+&lt;ul>
+&lt;li>We expand the left most until we can&amp;rsquo;t, and then we go back up and then down right, until we reach the root node. Once we are back to the top, that is when we begin expanding the right side.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>The deeper a procedure is in a parse tree, the closer it is to the leaves, gives it higher precedence. That value must first be evaluated before it can be used in another context.&lt;/li>
+&lt;/ul>
+&lt;h5 id="functional-languages">
+ Functional Languages
+ &lt;a class="anchor" href="#functional-languages">#&lt;/a>
+&lt;/h5>
+&lt;ul>
+&lt;li>We place names on immutable objects instead of some variable shit bro i don&amp;rsquo;t know. Search up the difference ebtween imperative (procedural) languages and functional languages.&lt;/li>
+&lt;/ul>
+&lt;p>A DFS will traverse an infinite depth for a recursively enumerable language. So we must use one variation of BFS whether it be post or inorder traversal.&lt;/p></description></item></channel></rss>

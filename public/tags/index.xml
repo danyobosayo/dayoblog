@@ -1,1 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on dayowrites</title><link>http://localhost:61682/tags/</link><description>Recent content in Tags on dayowrites</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:61682/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Tgwr</title><link>http://localhost:61682/tags/tgwr/</link><pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate><guid>http://localhost:61682/tags/tgwr/</guid><description/></item><item><title>College_group</title><link>http://localhost:61682/tags/college_group/</link><pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate><guid>http://localhost:61682/tags/college_group/</guid><description/></item><item><title>Ccc</title><link>http://localhost:61682/tags/ccc/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><guid>http://localhost:61682/tags/ccc/</guid><description/></item><item><title>Sas</title><link>http://localhost:61682/tags/sas/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><guid>http://localhost:61682/tags/sas/</guid><description/></item><item><title>Aihrif</title><link>http://localhost:61682/tags/aihrif/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate><guid>http://localhost:61682/tags/aihrif/</guid><description/></item><item><title>Sf</title><link>http://localhost:61682/tags/sf/</link><pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate><guid>http://localhost:61682/tags/sf/</guid><description/></item><item><title>Pfs</title><link>http://localhost:61682/tags/pfs/</link><pubDate>Sun, 22 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:61682/tags/pfs/</guid><description/></item><item><title>Guide</title><link>http://localhost:61682/tags/guide/</link><pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:61682/tags/guide/</guid><description/></item><item><title>Agt</title><link>http://localhost:61682/tags/agt/</link><pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:61682/tags/agt/</guid><description/></item><item><title>Aig</title><link>http://localhost:61682/tags/aig/</link><pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate><guid>http://localhost:61682/tags/aig/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on dayowrites</title>
+    <link>https://example.org/tags/</link>
+    <description>Recent content in Tags on dayowrites</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tgwr</title>
+      <link>https://example.org/tags/tgwr/</link>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/tgwr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>College_group</title>
+      <link>https://example.org/tags/college_group/</link>
+      <pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/college_group/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ccc</title>
+      <link>https://example.org/tags/ccc/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/ccc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sas</title>
+      <link>https://example.org/tags/sas/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/sas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aihrif</title>
+      <link>https://example.org/tags/aihrif/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/aihrif/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sf</title>
+      <link>https://example.org/tags/sf/</link>
+      <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/sf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pfs</title>
+      <link>https://example.org/tags/pfs/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/pfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>https://example.org/tags/guide/</link>
+      <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agt</title>
+      <link>https://example.org/tags/agt/</link>
+      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/agt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aig</title>
+      <link>https://example.org/tags/aig/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.org/tags/aig/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

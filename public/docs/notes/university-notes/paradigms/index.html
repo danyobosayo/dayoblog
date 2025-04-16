@@ -1,0 +1,566 @@
+<!doctype html><html lang=en-us dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  Chapter 1: Preliminaries (8/19)
+  #
+
+The significant difference between natural language and programmming language is ambiguity. Natural language has developed over time, and was not constructed by a team of engineers. Programming languages on the other hand were purposefully created to have unamibguous grammar, whereas english has ambiguous grammar.
+English is SVO typology. subject-verb-object
+Starwars Yoda typology: object-subject-verb
+
+  What is the effect of one language being ambiguous, and the other being unambiguous?
+  #
+
+
+There is no set phonology of a programming language. This conversion from unambiguous grammar into ambiguous grammar, such as from code to english, leads to a possible misinterpretation of meaning (semantics).
+
+Example: Siri still struggles today with pronunciation.
+
+
+
+
+  Language - Set of strings, sentences, and statements
+  #
+
+
+English is recursively enumerable. It is possible to list every combination of sentences, but this list would be infinitely long because there is no upper bound, however this does mean that they are &ldquo;countable&rdquo;.
+Countable -> They map one to one (onto) each integer of the number system.
+
+There are some languages that are infinitely long, but also not countable.
+
+
+Turing complete or recursively enumerable? How can we realistically find the maximum length of a &lsquo;valid&rsquo; sentence?
+
+We could use grammar rules to define how sentences should be formed. Some of these rules include: syntax, semantics, and grammar.
+
+Syntax allows us to create order when structuring sentences.
+Semantics give sentences and words meaning and sense depending on context.
+
+
+
+
+
+
+  Culture
+  #
+
+
+every language has some sense of culture of people who are using those languages because they have experience and context. It takes time to adapt to these cultures, but they are not aways intuitive.
+
+So although things may be allowed, it may not be encouraged.
+
+
+
+
+  Why are there so many languages?
+  #
+
+
+We create new languages based on a need or desire: to solve a specific problem.
+If we put all the functionality of every language into a single language, it would be so bloated that it could not be efficient.
+
+
+  Infinity, Ordinal Number Theory
+  #
+
+
+There are variations of infinity. Infinity is a concept, not a number.
+
+Aleph null is an example of this, the cardinality of all natural numbers. It&rsquo;s considered to be the smallest of the infinite symbols.
+
+
+
+
+  Linguistics
+  #
+
+
+LOGLAN was created to have unambiguous grammar, but still have meaning.
+Sapir-Whorf Hypothesis: Language can shape how we perceive and interpret the world.
+
+
+  P vs NP
+  #
+
+
+Polynomial Time vs Super Polynomial (nonpolynomial) Time
+The time it takes to interpret a particular language or sentence takes longer than O(n^k)
+
+
+
+  Preliminaries Cont. (8/21)
+  #
+
+
+  First Programming Language
+  #
+
+
+Ada Lovelace Bernouli sequence rational thingy
+The program was tabular, it didn&rsquo;t go line by line from top to bottom, but could specify where to go after a line was ran.
+
+
+  First High-level Programming Language
+  #
+
+
+Plankalkul designed by Konrad Zuze in Germany between 1942 and 1945
+Its original implementation was tabular, but in 1990, the first linear notation was developed.
+Although it was developed in the 1940s, this code already had
+
+floating point arithmetic
+arrays
+and more
+
+
+
+
+  Files
+  #
+
+
+It&rsquo;s an abstract concept of a container.
+The way a file is stored on a disc is continuous and not a single entity.
+
+On computers, files are stored in blocks as a sector. We consider code in a single sector as a page.
+A single block or page size is 4096 bytes or 2^12 bytes. In hexadecimal, this is &lsquo;h1000
+
+
+How does a disk work?
+
+A page, or sector, or block in memory is always 4096 bytes.
+When we create a text file, it will immediately use 1 page worth of memory. Once the content takes up more than the limit, it will retrieve another page worth of memory to store this file.
+
+
+parse - The term we use to see if a compiler can make sense of the source code.
+The file type is important for a compiler.
+The extension of a file can be used solely for the use of naming, and not changing the content at all.
+For example, a .java file and a .py file are both plain text files. You can compile with either compiler and get the same output so long as its the same source code, and each compiler can make sense of the content.
+However, sometimes a file type could be INCOMPATIBLE with compilers such as .docx or .rtf
+
+This is because the content is not just plain ascii, but would instead contain formatting that would be extra information that the compiler doesn&rsquo;t know how to make sense of it.
+
+
+
+
+  Source Code Files
+  #
+
+
+These files are purposed for a specific language, and this is identified by the extension.
+
+Ex: .py, .java, .pl,
+
+
+Integrated Development Environment:
+
+An IDE helps us program more efficiently by giving us color highlighting of certain key words, strings, variables, and data types.
+An IDE can come in the simple form like notepad++, or get more complicated such as with vsCode
+
+
+
+
+  Esoteric Languages
+  #
+
+
+Also known as joke languages.
+Many were created for research purposes and to test certain hypothesis, but none of them were created for the purpose of serious use.
+Whitespace
+
+This language understands and compiles whitespace characters such as tab, new lines, and spaces.
+The consequence of the creation of this program was the realization that a single program, a single source code can be interpreted in two vastly different ways by compilers.
+Thus it became very possible to hide information, which is the concept known as steganography.
+
+
+&ldquo;Branflake&rdquo;
+
+This language was created for the purpose of being the smallest turing complete language.
+It has no variables, only 8 characters that are individual scripts.
+
+
+
+
+
+  Chapter 3: Syntax and Semantics (8/26)
+  #
+
+
+  Vocabulary:
+  #
+
+
+Syntax - The structure of expressions
+Semantics - The meaning of the expressions and program units
+Sentence - string of characters of some alphabet
+Language - set of sentences
+
+Can be recursively enumerable.
+
+
+Lexeme - (Coloquoially we use &lsquo;word&rsquo;). Refers to the lowest level of syntactic unit such as a word, a variable, punctuation.
+Tokens - Category of its lexemes.
+
+Some token can have multiple lexemes, and in other cases it&rsquo;s one to one
+
+Ex: int_literal, identifier are tokens that can refer to multiple lexemes.
+Ex: mult_op, equal_sign are tokens that only refer to a single lexeme.
+![[Pasted image 20240826104425.png]]
+
+
+
+
+
+
+  Language Recognizers
+  #
+
+
+Generator - Device that we can use to generate sentences of a language.
+
+It is effectvive because we can compare a sentence syntacically to the generated structure.
+
+
+Recognizer - Device that checks every alphabetic character of a sentence and verifies if it exists in the alphabet or not.
+
+
+  How can we describe syntax effectively?
+  #
+
+
+We can use grammars, which are used to describe the syntax of programming language.
+
+
+  Context-Free Grammars
+  #
+
+
+A class of grammar used to describe the syntax of programming languages
+The reason why it&rsquo;s called context-free because it doesn&rsquo;t matter what the context is.
+$$G=(S, N, T, P)  $$
+G - Grammar
+S - Start Symbol
+N - Set of Non-Terminal symbols (tokens)
+T - Set of Terminal Symbols (lexemes)
+P - Set of production rules
+
+
+  Backus-Naur Form
+  #
+
+
+A subset of Context-Free grammar rules.
+
+Optimized for describing programming languages. Syntax description
+Remember, we want programmign languages to be as unamibguous as possible.
+
+
+
+
+  Ambiguous language is defined by distinct parse trees.
+  #
+
+
+If a grammar is unambiguous, the derived parse trees should be isomorphic. They have the same nodes and edges, but they may be visually different.
+Ambiguous language is not inherently bad, so long as we can prove that we can end up at the same result.
+
+Ex: 2 + 2 + 4 = 4 + 4 = 8 OR 2 + 2 + 4 = 2 + 6 = 8
+
+
+
+
+  Derivation
+  #
+
+
+Sequence of repeated application of grammar rules.
+
+Reverse derivation: Start with the symbols, and replace them with non-terminal symbols going right to left.
+You can do the right-most derivation or left-most derivation.
+
+So long as the graphs are both isomorphic (same leaves and edges), they are unambiguous.
+
+
+
+
+A left-most derivation is like going down a binary tree in preorder.
+
+We expand the left most until we can&rsquo;t, and then we go back up and then down right, until we reach the root node. Once we are back to the top, that is when we begin expanding the right side.
+
+
+The deeper a procedure is in a parse tree, the closer it is to the leaves, gives it higher precedence. That value must first be evaluated before it can be used in another context.
+
+
+  Functional Languages
+  #
+
+
+We place names on immutable objects instead of some variable shit bro i don&rsquo;t know. Search up the difference ebtween imperative (procedural) languages and functional languages.
+
+A DFS will traverse an infinite depth for a recursively enumerable language. So we must use one variation of BFS whether it be post or inorder traversal."><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:1313/docs/notes/university-notes/paradigms/"><meta property="og:site_name" content="dayowrites"><meta property="og:title" content="paradigms"><meta property="og:description" content="Chapter 1: Preliminaries (8/19) # The significant difference between natural language and programmming language is ambiguity. Natural language has developed over time, and was not constructed by a team of engineers. Programming languages on the other hand were purposefully created to have unamibguous grammar, whereas english has ambiguous grammar.
+English is SVO typology. subject-verb-object Starwars Yoda typology: object-subject-verb
+What is the effect of one language being ambiguous, and the other being unambiguous? # There is no set phonology of a programming language. This conversion from unambiguous grammar into ambiguous grammar, such as from code to english, leads to a possible misinterpretation of meaning (semantics). Example: Siri still struggles today with pronunciation. Language - Set of strings, sentences, and statements # English is recursively enumerable. It is possible to list every combination of sentences, but this list would be infinitely long because there is no upper bound, however this does mean that they are “countable”. Countable -> They map one to one (onto) each integer of the number system. There are some languages that are infinitely long, but also not countable. Turing complete or recursively enumerable? How can we realistically find the maximum length of a ‘valid’ sentence? We could use grammar rules to define how sentences should be formed. Some of these rules include: syntax, semantics, and grammar. Syntax allows us to create order when structuring sentences. Semantics give sentences and words meaning and sense depending on context. Culture # every language has some sense of culture of people who are using those languages because they have experience and context. It takes time to adapt to these cultures, but they are not aways intuitive. So although things may be allowed, it may not be encouraged. Why are there so many languages? # We create new languages based on a need or desire: to solve a specific problem. If we put all the functionality of every language into a single language, it would be so bloated that it could not be efficient. Infinity, Ordinal Number Theory # There are variations of infinity. Infinity is a concept, not a number. Aleph null is an example of this, the cardinality of all natural numbers. It’s considered to be the smallest of the infinite symbols. Linguistics # LOGLAN was created to have unambiguous grammar, but still have meaning. Sapir-Whorf Hypothesis: Language can shape how we perceive and interpret the world. P vs NP # Polynomial Time vs Super Polynomial (nonpolynomial) Time The time it takes to interpret a particular language or sentence takes longer than O(n^k) Preliminaries Cont. (8/21) # First Programming Language # Ada Lovelace Bernouli sequence rational thingy The program was tabular, it didn’t go line by line from top to bottom, but could specify where to go after a line was ran. First High-level Programming Language # Plankalkul designed by Konrad Zuze in Germany between 1942 and 1945 Its original implementation was tabular, but in 1990, the first linear notation was developed. Although it was developed in the 1940s, this code already had floating point arithmetic arrays and more Files # It’s an abstract concept of a container. The way a file is stored on a disc is continuous and not a single entity. On computers, files are stored in blocks as a sector. We consider code in a single sector as a page. A single block or page size is 4096 bytes or 2^12 bytes. In hexadecimal, this is ‘h1000 How does a disk work? A page, or sector, or block in memory is always 4096 bytes. When we create a text file, it will immediately use 1 page worth of memory. Once the content takes up more than the limit, it will retrieve another page worth of memory to store this file. parse - The term we use to see if a compiler can make sense of the source code. The file type is important for a compiler. The extension of a file can be used solely for the use of naming, and not changing the content at all. For example, a .java file and a .py file are both plain text files. You can compile with either compiler and get the same output so long as its the same source code, and each compiler can make sense of the content. However, sometimes a file type could be INCOMPATIBLE with compilers such as .docx or .rtf This is because the content is not just plain ascii, but would instead contain formatting that would be extra information that the compiler doesn’t know how to make sense of it. Source Code Files # These files are purposed for a specific language, and this is identified by the extension. Ex: .py, .java, .pl, Integrated Development Environment: An IDE helps us program more efficiently by giving us color highlighting of certain key words, strings, variables, and data types. An IDE can come in the simple form like notepad++, or get more complicated such as with vsCode Esoteric Languages # Also known as joke languages. Many were created for research purposes and to test certain hypothesis, but none of them were created for the purpose of serious use. Whitespace This language understands and compiles whitespace characters such as tab, new lines, and spaces. The consequence of the creation of this program was the realization that a single program, a single source code can be interpreted in two vastly different ways by compilers. Thus it became very possible to hide information, which is the concept known as steganography. “Branflake” This language was created for the purpose of being the smallest turing complete language. It has no variables, only 8 characters that are individual scripts. Chapter 3: Syntax and Semantics (8/26) # Vocabulary: # Syntax - The structure of expressions Semantics - The meaning of the expressions and program units Sentence - string of characters of some alphabet Language - set of sentences Can be recursively enumerable. Lexeme - (Coloquoially we use ‘word’). Refers to the lowest level of syntactic unit such as a word, a variable, punctuation. Tokens - Category of its lexemes. Some token can have multiple lexemes, and in other cases it’s one to one Ex: int_literal, identifier are tokens that can refer to multiple lexemes. Ex: mult_op, equal_sign are tokens that only refer to a single lexeme. ![[Pasted image 20240826104425.png]] Language Recognizers # Generator - Device that we can use to generate sentences of a language. It is effectvive because we can compare a sentence syntacically to the generated structure. Recognizer - Device that checks every alphabetic character of a sentence and verifies if it exists in the alphabet or not. How can we describe syntax effectively? # We can use grammars, which are used to describe the syntax of programming language. Context-Free Grammars # A class of grammar used to describe the syntax of programming languages The reason why it’s called context-free because it doesn’t matter what the context is. $$G=(S, N, T, P) $$ G - Grammar S - Start Symbol N - Set of Non-Terminal symbols (tokens) T - Set of Terminal Symbols (lexemes) P - Set of production rules Backus-Naur Form # A subset of Context-Free grammar rules. Optimized for describing programming languages. Syntax description Remember, we want programmign languages to be as unamibguous as possible. Ambiguous language is defined by distinct parse trees. # If a grammar is unambiguous, the derived parse trees should be isomorphic. They have the same nodes and edges, but they may be visually different. Ambiguous language is not inherently bad, so long as we can prove that we can end up at the same result. Ex: 2 + 2 + 4 = 4 + 4 = 8 OR 2 + 2 + 4 = 2 + 6 = 8 Derivation # Sequence of repeated application of grammar rules. Reverse derivation: Start with the symbols, and replace them with non-terminal symbols going right to left. You can do the right-most derivation or left-most derivation. So long as the graphs are both isomorphic (same leaves and edges), they are unambiguous. A left-most derivation is like going down a binary tree in preorder. We expand the left most until we can’t, and then we go back up and then down right, until we reach the root node. Once we are back to the top, that is when we begin expanding the right side. The deeper a procedure is in a parse tree, the closer it is to the leaves, gives it higher precedence. That value must first be evaluated before it can be used in another context. Functional Languages # We place names on immutable objects instead of some variable shit bro i don’t know. Search up the difference ebtween imperative (procedural) languages and functional languages. A DFS will traverse an infinite depth for a recursively enumerable language. So we must use one variation of BFS whether it be post or inorder traversal."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:published_time" content="2024-08-19T00:00:00+00:00"><meta property="article:modified_time" content="2024-08-19T00:00:00+00:00"><title>paradigms | dayowrites</title>
+<link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:1313/docs/notes/university-notes/paradigms/><link rel=stylesheet href=/book.min.f9c8f802c55b9b2a770675a7a1bcb9f922e9a11a69569327f139f82e7ee1b9bd.css integrity="sha256-+cj4AsVbmyp3BnWnoby5+SLpoRppVpMn8Tn4Ln7hub0=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.bdfb13c647a5afad6828a91cffb486cb241d869cc7759276a788ba5cd4349ecb.js integrity="sha256-vfsTxkelr61oKKkc/7SGyyQdhpzHdZJ2p4i6XNQ0nss=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>dayowrites</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li class=book-section-flat><a href=/docs/notes/>Notes</a><ul><li><a href=/docs/notes/university-notes/>University Notes</a><ul><li><a href=/docs/notes/university-notes/software-engineering/>software engineering</a></li><li><a href=/docs/notes/university-notes/database/>database</a></li><li><a href=/docs/notes/university-notes/paradigms/ class=active>paradigms</a></li></ul></li></ul></li></ul><ul><li><a href=/sermons/>Sermons</a></li><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>paradigms</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#chapter-1-preliminaries-819>Chapter 1: Preliminaries (8/19)</a><ul><li></li><li><a href=#preliminaries-cont-821>Preliminaries Cont. (8/21)</a></li><li><a href=#chapter-3-syntax-and-semantics-826>Chapter 3: Syntax and Semantics (8/26)</a></li><li><a href=#functional-language-vs-non-functional-languages>Functional language vs non-functional languages</a></li><li><a href=#associativity-of-operators>Associativity of Operators</a></li><li><a href=#parsing-terms>Parsing Terms</a></li><li><a href=#type-of-grammars>Type of grammars</a></li><li><a href=#extended-bnf>Extended BNF</a></li></ul></li></ul><ul><li><ul><li><a href=#semantics>Semantics</a></li><li><a href=#dynamic-semantics>Dynamic Semantics</a></li></ul></li></ul><ul><li><ul><li><a href=#the-paradigms-of-functional-programming>The Paradigms of Functional Programming</a></li><li><a href=#lambda-calculus>Lambda Calculus</a></li><li><a href=#key-words>Key Words</a></li><li><a href=#s-expression>S-Expression</a></li><li><a href=#functions-for-checking-data-types>Functions for checking data types</a></li><li><a href=#debugging>Debugging</a></li><li><a href=#recursion>Recursion</a></li><li><a href=#syntax-of-functional-programming>SYNTAX OF FUNCTIONAL PROGRAMMING</a></li><li><a href=#errors>Errors</a></li></ul></li></ul><ul><li><ul><li><a href=#project-details>Project Details</a></li><li><a href=#analyzer>Analyzer</a></li><li><a href=#lexical-and-syntax-analysis>Lexical and Syntax Analysis</a></li><li><a href=#lexical-analysis>[[Lexical Analysis]]</a></li><li><a href=#parsing-problems>Parsing problems</a></li><li><a href=#the-ll-grammar-class>The LL Grammar Class</a></li><li><a href=#bottom-up-parsing>Bottom Up Parsing</a></li><li><a href=#shift-reduce-parsing>Shift-reduce Parsing</a></li></ul></li></ul><ul><li><ul><li><a href=#definitions>Definitions</a></li><li><a href=#prolog-syntax>Prolog Syntax</a></li><li><a href=#introduction>Introduction</a></li><li><a href=#statements>Statements</a></li><li><a href=#symbolic-logic>Symbolic Logic</a></li><li><a href=#object-representation>Object Representation</a></li><li><a href=#types-of-terms>Types of terms</a></li><li><a href=#unification-equality>Unification (equality)</a></li><li><a href=#lists>Lists</a></li><li><a href=#logical-operators>Logical Operators</a></li><li><a href=#constants-vs-variables>Constants vs Variables</a></li></ul></li></ul><ul><li><ul><li><a href=#scalar-variables>Scalar Variables</a></li><li><a href=#static-scope>Static Scope</a></li><li><a href=#let-in-racket>Let (in racket)</a></li><li><a href=#declaration-order>Declaration Order</a></li><li><a href=#global-scope>Global Scope</a></li><li><a href=#dynamic-scoping>Dynamic Scoping</a></li></ul></li></ul><ul><li><ul><li><a href=#arithmetic-expressions>Arithmetic Expressions</a></li></ul></li></ul><ul><li><ul><li><a href=#two-way-selection-statements>Two-Way Selection Statements</a></li><li><a href=#loops>Loops</a></li><li><a href=#unconditional-branching>Unconditional Branching</a></li></ul></li></ul></nav></aside></header><article class="markdown book-article"><h2 id=chapter-1-preliminaries-819>Chapter 1: Preliminaries (8/19)
+<a class=anchor href=#chapter-1-preliminaries-819>#</a></h2><p>The significant difference between <em>natural</em> language and <em>programmming</em> language is <strong>ambiguity</strong>. Natural language has developed over time, and was not constructed by a team of engineers. Programming languages on the other hand were purposefully created to have unamibguous grammar, whereas english has ambiguous grammar.</p><p>English is SVO typology. subject-verb-object
+Starwars Yoda typology: object-subject-verb</p><h5 id=what-is-the-effect-of-one-language-being-ambiguous-and-the-other-being-unambiguous>What is the effect of one language being ambiguous, and the other being unambiguous?
+<a class=anchor href=#what-is-the-effect-of-one-language-being-ambiguous-and-the-other-being-unambiguous>#</a></h5><ul><li>There is no set phonology of a programming language. This conversion from unambiguous grammar into ambiguous grammar, such as from code to english, leads to a possible misinterpretation of meaning (semantics).<ul><li>Example: Siri still struggles today with pronunciation.</li></ul></li></ul><h5 id=language---set-of-strings-sentences-and-statements>Language - Set of strings, sentences, and statements
+<a class=anchor href=#language---set-of-strings-sentences-and-statements>#</a></h5><ul><li>English is recursively enumerable. It is possible to list every combination of sentences, but this list would be infinitely long because there is no upper bound, however this does mean that they are &ldquo;countable&rdquo;.</li><li>Countable -> They map one to one (onto) each integer of the number system.<ul><li>There are some languages that are infinitely long, but also not countable.</li></ul></li><li><strong>Turing complete or recursively enumerable?</strong> How can we realistically find the maximum length of a &lsquo;valid&rsquo; sentence?<ul><li>We could use grammar rules to define how sentences should be formed. Some of these rules include: syntax, semantics, and grammar.<ul><li>Syntax allows us to create order when structuring sentences.</li><li>Semantics give sentences and words meaning and sense depending on context.</li></ul></li></ul></li></ul><h5 id=culture>Culture
+<a class=anchor href=#culture>#</a></h5><ul><li>every language has some sense of <strong>culture</strong> of people who are using those languages because they have experience and context. It takes time to adapt to these cultures, but they are not aways intuitive.<ul><li>So although things may be allowed, it may not be encouraged.</li></ul></li></ul><h5 id=why-are-there-so-many-languages>Why are there so many languages?
+<a class=anchor href=#why-are-there-so-many-languages>#</a></h5><ul><li>We create new languages based on a need or desire: to solve a specific problem.</li><li>If we put all the functionality of every language into a single language, it would be so bloated that it could not be efficient.</li></ul><h5 id=infinity-ordinal-number-theory>Infinity, Ordinal Number Theory
+<a class=anchor href=#infinity-ordinal-number-theory>#</a></h5><ul><li>There are variations of infinity. Infinity is a concept, not a number.<ul><li>Aleph null is an example of this, the cardinality of all natural numbers. It&rsquo;s considered to be the smallest of the infinite symbols.</li></ul></li></ul><h5 id=linguistics>Linguistics
+<a class=anchor href=#linguistics>#</a></h5><ul><li>LOGLAN was created to have unambiguous grammar, but still have meaning.</li><li>Sapir-Whorf Hypothesis: Language can shape how we perceive and interpret the world.</li></ul><h5 id=p-vs-np>P vs NP
+<a class=anchor href=#p-vs-np>#</a></h5><ul><li>Polynomial Time vs Super Polynomial (nonpolynomial) Time</li><li>The time it takes to interpret a particular language or sentence takes longer than O(n^k)</li></ul><hr><h3 id=preliminaries-cont-821>Preliminaries Cont. (8/21)
+<a class=anchor href=#preliminaries-cont-821>#</a></h3><h5 id=first-programming-language>First Programming Language
+<a class=anchor href=#first-programming-language>#</a></h5><ul><li>Ada Lovelace Bernouli sequence rational thingy</li><li>The program was tabular, it didn&rsquo;t go line by line from top to bottom, but could specify where to go after a line was ran.</li></ul><h5 id=first-high-level-programming-language>First High-level Programming Language
+<a class=anchor href=#first-high-level-programming-language>#</a></h5><ul><li>Plankalkul designed by Konrad Zuze in Germany between 1942 and 1945</li><li>Its original implementation was tabular, but in 1990, the first linear notation was developed.</li><li>Although it was developed in the 1940s, this code already had<ul><li>floating point arithmetic</li><li>arrays</li><li>and more</li></ul></li></ul><h5 id=files>Files
+<a class=anchor href=#files>#</a></h5><ul><li>It&rsquo;s an abstract concept of a container.</li><li>The way a file is stored on a disc is continuous and not a single entity.<ul><li>On computers, files are stored in blocks as a sector. We consider code in a single sector as a page.</li><li>A single block or page size is 4096 bytes or 2^12 bytes. In hexadecimal, this is &lsquo;h1000</li></ul></li><li>How does a disk work?<ul><li>A page, or sector, or block in memory is always 4096 bytes.</li><li>When we create a text file, it will immediately use 1 page worth of memory. Once the content takes up more than the limit, it will retrieve another page worth of memory to store this file.</li></ul></li><li>parse - The term we use to see if a compiler can make sense of the source code.</li><li>The file type is important for a compiler.</li><li>The extension of a file can be used solely for the use of naming, and not changing the content at all.</li><li>For example, a .java file and a .py file are both plain text files. You can compile with either compiler and get the same output so long as its the same source code, and each compiler can make sense of the content.</li><li>However, sometimes a file type could be INCOMPATIBLE with compilers such as .docx or .rtf<ul><li>This is because the content is not just plain ascii, but would instead contain formatting that would be extra information that the compiler doesn&rsquo;t know how to make sense of it.</li></ul></li></ul><h5 id=source-code-files>Source Code Files
+<a class=anchor href=#source-code-files>#</a></h5><ul><li>These files are purposed for a specific language, and this is identified by the extension.<ul><li>Ex: .py, .java, .pl,</li></ul></li><li>Integrated Development Environment:<ul><li>An IDE helps us program more efficiently by giving us color highlighting of certain key words, strings, variables, and data types.</li><li>An IDE can come in the simple form like notepad++, or get more complicated such as with vsCode</li></ul></li></ul><h5 id=esoteric-languages>Esoteric Languages
+<a class=anchor href=#esoteric-languages>#</a></h5><ul><li>Also known as joke languages.</li><li>Many were created for research purposes and to test certain hypothesis, but none of them were created for the purpose of serious use.</li><li>Whitespace<ul><li>This language understands and compiles whitespace characters such as tab, new lines, and spaces.</li><li>The consequence of the creation of this program was the realization that a single program, a single source code can be interpreted in two vastly different ways by compilers.</li><li>Thus it became very possible to hide information, which is the concept known as steganography.</li></ul></li><li>&ldquo;Branflake&rdquo;<ul><li>This language was created for the purpose of being the smallest turing complete language.</li><li>It has no variables, only 8 characters that are individual scripts.</li></ul></li></ul><hr><h3 id=chapter-3-syntax-and-semantics-826>Chapter 3: Syntax and Semantics (8/26)
+<a class=anchor href=#chapter-3-syntax-and-semantics-826>#</a></h3><h5 id=vocabulary>Vocabulary:
+<a class=anchor href=#vocabulary>#</a></h5><ul><li>Syntax - The structure of expressions</li><li>Semantics - The meaning of the expressions and program units</li><li>Sentence - string of characters of some alphabet</li><li>Language - set of sentences<ul><li>Can be recursively enumerable.</li></ul></li><li>Lexeme - (Coloquoially we use &lsquo;word&rsquo;). Refers to the lowest level of syntactic unit such as a word, a variable, punctuation.</li><li>Tokens - Category of its lexemes.<ul><li>Some token can have multiple lexemes, and in other cases it&rsquo;s one to one<ul><li>Ex: int_literal, identifier are tokens that can refer to multiple lexemes.</li><li>Ex: mult_op, equal_sign are tokens that only refer to a single lexeme.
+![[Pasted image 20240826104425.png]]</li></ul></li></ul></li></ul><h5 id=language-recognizers>Language Recognizers
+<a class=anchor href=#language-recognizers>#</a></h5><ul><li><strong>Generator</strong> - Device that we can use to generate sentences of a language.<ul><li>It is effectvive because we can compare a sentence syntacically to the generated structure.</li></ul></li><li><strong>Recognizer</strong> - Device that checks every alphabetic character of a sentence and verifies if it exists in the alphabet or not.</li></ul><h5 id=how-can-we-describe-syntax-effectively>How can we describe syntax effectively?
+<a class=anchor href=#how-can-we-describe-syntax-effectively>#</a></h5><ul><li>We can use grammars, which are used to describe the syntax of programming language.</li></ul><h5 id=context-free-grammars>Context-Free Grammars
+<a class=anchor href=#context-free-grammars>#</a></h5><ul><li>A class of grammar used to describe the syntax of <strong>programming</strong> languages</li><li>The reason why it&rsquo;s called context-free because it doesn&rsquo;t matter what the context is.
+$$G=(S, N, T, P) $$</li><li>G - Grammar</li><li>S - Start Symbol</li><li>N - Set of Non-Terminal symbols (tokens)</li><li>T - Set of Terminal Symbols (lexemes)</li><li>P - Set of production rules</li></ul><h5 id=backus-naur-form>Backus-Naur Form
+<a class=anchor href=#backus-naur-form>#</a></h5><ul><li>A subset of Context-Free grammar rules.<ul><li>Optimized for describing programming languages. Syntax description</li><li>Remember, we want programmign languages to be as unamibguous as possible.</li></ul></li></ul><h5 id=ambiguous-language-is-defined-by-distinct-parse-trees>Ambiguous language is defined by distinct parse trees.
+<a class=anchor href=#ambiguous-language-is-defined-by-distinct-parse-trees>#</a></h5><ul><li>If a grammar is unambiguous, the derived parse trees should be isomorphic. They have the same nodes and edges, but they may be visually different.</li><li>Ambiguous language is not inherently bad, so long as we can prove that we can end up at the same result.<ul><li>Ex: 2 + 2 + 4 = <strong>4</strong> + 4 = 8 OR 2 + 2 + 4 = 2 + <strong>6</strong> = 8</li></ul></li></ul><h5 id=derivation>Derivation
+<a class=anchor href=#derivation>#</a></h5><ul><li>Sequence of repeated application of grammar rules.<ul><li>Reverse derivation: Start with the symbols, and replace them with non-terminal symbols going right to left.</li><li>You can do the right-most derivation or left-most derivation.<ul><li>So long as the graphs are both isomorphic (same leaves and edges), they are unambiguous.</li></ul></li></ul></li><li>A left-most derivation is like going down a binary tree in preorder.<ul><li>We expand the left most until we can&rsquo;t, and then we go back up and then down right, until we reach the root node. Once we are back to the top, that is when we begin expanding the right side.</li></ul></li><li>The deeper a procedure is in a parse tree, the closer it is to the leaves, gives it higher precedence. That value must first be evaluated before it can be used in another context.</li></ul><h5 id=functional-languages>Functional Languages
+<a class=anchor href=#functional-languages>#</a></h5><ul><li>We place names on immutable objects instead of some variable shit bro i don&rsquo;t know. Search up the difference ebtween imperative (procedural) languages and functional languages.</li></ul><p>A DFS will traverse an infinite depth for a recursively enumerable language. So we must use one variation of BFS whether it be post or inorder traversal.</p><h3 id=functional-language-vs-non-functional-languages>Functional language vs non-functional languages
+<a class=anchor href=#functional-language-vs-non-functional-languages>#</a></h3><p>Racket is an eager functional language, which requires to know the content of all functions, even if they&rsquo;re never called.
+There is a trade off between efficiency and security. and memory and speed. More ram, less disk space?
+There are many optimizations and trade offs that programmers can make, it all depends on what the goal is.</p><ul><li>Ex: NASA doesn&rsquo;t care about maxing speed, sending a probe is gonna take long regardless. They want to ensure accuracy of data.</li><li>Ex: Facebook wants people to have timely and quick responses, even if the information may not be 100% perfect.</li></ul><p>One of the biggest things for this course is identifying what the &ldquo;care abouts&rdquo; or goals are for a project. And to find an appropriate language for that particular task. And this is what the word paradigm represents: What is the context (paradigm) in which we are trying to solve a particular task.</p><h3 id=associativity-of-operators>Associativity of Operators
+<a class=anchor href=#associativity-of-operators>#</a></h3><p>![[Pasted image 20240828104010.png]]
+This distinction is important. The reason the latter is unambiguous is because we</p><p>Head recursion - Gives us a complexity problem. When we have right side recursion and right side expansion, then we are doing the recursion before we even build the tree. This is O($n^2$)</p><p>Tail recursion - &ldquo;I have a concrete draft of what my tree is gonna look like, and I will do the recursion as my final task&rdquo;. This is a linear runtime.</p><h3 id=parsing-terms>Parsing Terms
+<a class=anchor href=#parsing-terms>#</a></h3><p>Recursion Type:</p><ul><li><strong>Left</strong> vs <strong>Right</strong> recursion will change the <strong>SHAPE</strong> of the tree
+Derivation Type:</li><li><strong>Leftmost</strong> vs <strong>Rightmost</strong> derivation regards the <strong>ORDER</strong> of a tree&rsquo;s expansion
+Parse Direction</li><li><strong>Left-to-Right</strong> vs <strong>Right-to-Left</strong></li><li>Most of us read left to right</li></ul><h3 id=type-of-grammars>Type of grammars
+<a class=anchor href=#type-of-grammars>#</a></h3><p>LL grammars and LR grammars</p><ul><li>They have to do with the recursion and parse direction.</li><li>The derivation type will always be the opposite of the recursion type because we want tail recursion.</li><li>Ex: LL indicates Left Recursion parsing left-to-right<ul><li>Whereas LR indicates Left Recursion parsing right-to-left</li></ul></li></ul><h3 id=extended-bnf>Extended BNF
+<a class=anchor href=#extended-bnf>#</a></h3><p>We talked about building parse trees using grammars, but they also involve a lot of recursion.
+EBNF was created as another way representing using loops.
+The expressive power of EBNF does not exceed BNF.</p><ul><li>It&rsquo;s just adding some extra ways of expressing the same thing that makes it easier for humans.
+What are the differences between extended BNF and just BNF?</li><li>EBNF provides are more concise syntax that is easier to understand.
+EBNF is used in most compiler compilers, like YACC and BISON
+YACC - Yet Another Compiler Compiler
+The Three primray differences / additions</li><li>Optional parts are placed in brackets</li><li>Repetition can be placed inside curly braces.</li><li>We can place alternative parts of RHS inside parenthesis and separated via vertical bars, like an OR sign.
+Conversion Reminders for exam
+==Removing explicit recursion means you can&rsquo;t have any left hand term on the RHS==</li></ul><hr><h1 id=94>(9/4)
+<a class=anchor href=#94>#</a></h1><h3 id=semantics>Semantics
+<a class=anchor href=#semantics>#</a></h3><ul><li>How computers &ldquo;think&rdquo; about a particular programming language.</li><li>Two different high level categories</li><li><strong>Static Semantics</strong> (Attribute Grammars and Context-sensitive Grammars)<ul><li>The feature of attribute grammar provides context.<ul><li>Ex: <code>String x = "hello";</code></li><li><pre><code> ``` int y = x; ```
+</code></pre></li></ul></li><li>Sort of like meta-data, it has more information for interpretation.</li><li>Starts as an EBNF or BNF</li><li>Attribute grammar is a context-free grammar<ul><li>But for each grammar symbol <em>x</em>, there is a set A(<em>x</em>) of attribute values</li><li>For each rule, there is a set of functions and predicates.<ul><li>certain attribute values that can attached to the entire rule, either functions or predicates.</li></ul></li></ul></li><li>Semantic happens at compilation, before we run.</li></ul></li></ul><h3 id=dynamic-semantics>Dynamic Semantics
+<a class=anchor href=#dynamic-semantics>#</a></h3><ul><li>Operation Semantics - We are going to describe the assembly of what the code is doing.</li><li>We use operational semantics to describe how a single block of code or algorithm works. To prove the correctness.<ul><li>Platform specific description<ul><li>Example: Converting a high level language to machine code or assembly.</li><li>Blocks of code with different syntax can be proven to have the same operational semantics if the <em>Meaning</em> is the same.</li></ul></li><li>Denotational Semantics<ul><li>Mathematical representation.</li><li>Syntactic - Verify that the math is legal? bro i dont know ==&mldr;==</li><li>Semantic - You verify that the syntax is a well-formed representation.</li></ul></li><li>Axiomatic Semantics<ul><li>Logical proofs.</li><li>Logic programming</li><li>Precondition and Postconditions. We desire to use the weakest precondition (the least restrictive) that satisfies the postcondition.<ul><li>Ex: a = b + 1</li><li>Postcondition - {a > 1}</li><li>Weakest precondition - {b > 0}</li><li>Possible precondition - {b > 17}</li></ul></li><li>Another example where we have multiple statements.<ul><li>Ex: y = 3x + 1</li><li><pre><code> x = y + 3
+</code></pre></li><li>Postcondition: {x &lt; 10}</li><li>To solve this, we must start from the bottom, our precondition for the bottom is: {y &lt; 7}</li><li>This precondition for the last line, becomes the post condition for the above statement.</li><li>And thus we get a final precondition of: {x &lt; 2}</li></ul></li></ul></li></ul></li></ul><hr><h1 id=functional-programming-911---916>Functional Programming (9/11 - 9/16)
+<a class=anchor href=#functional-programming-911---916>#</a></h1><p>Random tidbits</p><ul><li>Scheme started as a fork of LISP, made by two separate groups. The MIT people that forked it were forced to rename their program to Scheme. Racket (or raquet idk), is also a jab at the origin of the name of Scheme. 98% of the source code of racquet is similar to scheme.</li></ul><h3 id=the-paradigms-of-functional-programming>The Paradigms of Functional Programming
+<a class=anchor href=#the-paradigms-of-functional-programming>#</a></h3><ul><li>All functional languages are based on Lambda Calculus: $(\lambda)$<ul><li>Functions are first order:<ul><li>they can be arguments</li><li>they can work as return values</li><li>functions can build other functions<ul><li>i can pass a function to itself, and change the result: it can change itself.</li></ul></li></ul></li><li>Anonymous functions - (# fill this in)</li><li>Immutability - No such thing as a varaible in functional programming. When we set a value, we cannot change it. Similar to using Const in C programming.<ul><li>Don&rsquo;t think about variables as creating a box and setting a value to it. Think of it more like we have an object with a value, and we are now going to NAME it. Like a POST-IT note instead of a shoebox. We can also stick multiple post-it notes to a value, and we can reference it via both ways.</li><li>Python has a similar idea, though not purely functional, it has a lot of functional features.</li><li>Purely functional ___ cannot have functional side effects.\</li></ul></li><li>Currying: every function will process the arguments as if they were separate functions with separate returns.</li></ul></li><li>No side effects: Functions will always return the same output for the same input. There is nothing within the state machine that can change, or global variable that is used that can be changed.</li><li>LISP, Scheme, Racket, etc. uses explicit parenthesis, and then the descendants of ML: Haskell, Scala, etc. instead have an implied left associative.</li><li>Loops require recursion because you can&rsquo;t have an iterator.</li></ul><h3 id=lambda-calculus>Lambda Calculus
+<a class=anchor href=#lambda-calculus>#</a></h3><ul><li>Lambda Function:<ul><li>Lisp has list-based expressions</li><li>All expressions are lists, and all arguments must be functions.</li></ul></li><li>Any &ldquo;built-in function&rdquo; is really just already defined and NAMED functions within the standard library from <code>#lang racket</code>. They&rsquo;re defined anonymously. When we include this library, all of those function definitions get passed in.</li><li>Examples:</li></ul><pre tabindex=0><code>(define mysqr (λ (x) (* x x)))
+	(mysqr 4.5) 
+	20.20
+
+(define divtwo (λ (x) (/ x 2)))
+	(divtwo 100)
+	50
+
+	((λ (x)(* x 3))50)
+	150
+	
+</code></pre><h3 id=key-words>Key Words
+<a class=anchor href=#key-words>#</a></h3><ul><li>lambda $\lambda$</li><li>first, second, third</li><li>car, cdr</li><li>quote (`)</li><li>quotient and remainder</li><li>length<ul><li>Can do this with direct and indirect recursion</li></ul></li><li>reverse<ul><li>Can do this with direct and indirect recursion</li></ul></li><li>append<ul><li>Unlike cons, will return a single list with all elements combined in order.</li></ul></li><li>list</li><li></li></ul><p>Syntax:
+- Every lambda function has three characteristics
+- The Lambda symbol
+- Arguments
+- Body</p><ul><li>In racket, we always assume the first argument is a function.</li><li>Square brackets are equivalent to parentheses.<ul><li>We use it to differentiate and make our code more readable.</li></ul></li><li>List is a keyword that returns a list of the inputs</li><li>what is the eq? key term in racket used for.</li></ul><h3 id=s-expression>S-Expression
+<a class=anchor href=#s-expression>#</a></h3><p>You use the . for
+The dot operator is shorthand for an operator called &ldquo;Cons&rdquo; which is short for construction.
+We can cons something and add it to a list
+To create a dotted pair we can use the cons function</p><ul><li>example: <code>(cons 2 '(4 6 8)) -> '(2 4 6 8)</code>
+Or we c an use the period:</li><li>example: <code>'(1 . (2 . (3 . ())))</code>
+<strong>car and cdr</strong></li><li>cdr stands for the Contents of the Decrement register.</li><li>car stands for Contents of the Address part of the Register.</li><li>Head and tail are equivalent terms for the above, but they must be <strong>explicitly defined.</strong></li><li>car, head, and first are interchangeable.</li><li>cdr, tail, and rest are interchangeable</li><li><strong>Haskel</strong> variation<ul><li>They use colons and commas for the dot operator, and key words head/tail for car/cdr</li><li>Define in Racket is just an equal sign in Haskell.<ul><li>Example <code>car = head</code></li></ul></li></ul></li><li>We can call cdr and then car to get the value of an index <strong>deeper</strong> in the list. We have keywords already created such as second, third, fourth, fifth, etc.<ul><li>cadr (second) caddr (third)</li></ul></li><li>How does this all work?<ul><li>If you look at an s-expression, you&rsquo;ll see that from top down, everything is paired with connections and a dot operator. Whenever we use car or cdr, we are returning either the left or right side of the dot operator, where the left would be a leaf node, and the right would be the subtree of the other elements.
+<strong>If statements</strong></li></ul></li><li>if function expects 3 curried elements, one that is supposed to be a Boolean, then two other bodies. If True, then the entire List becomes the left argument, else the right argument<ul><li>Example: <code>(if #t '(1 2) '(3 4))</code> -> this evaluates to &lsquo;(1 2) bc it&rsquo;s true. else &lsquo;(3 4)</li></ul></li><li>Boolean literals are <code>#t</code> and <code>#f</code> indiciating True and False</li></ul><h5 id=operations-will-return-a-value>Operations will return a value
+<a class=anchor href=#operations-will-return-a-value>#</a></h5><p>(+ 4 3)
+(/ 15 3)</p><ul><li>Racket does allow for rational numbers. so if we were to run (/ 1 3), it would return $1/3$.</li><li>==If asked to evaluate this / operator, it should be a fraction, not a decimal number==</li><li>Furthermore, if we instead have (/ 2.0 6.0), it would return 0.33333333</li><li>We can use either remainder or modulo to find that remainder.</li></ul><h5 id=evaluations-will-return-a-boolean-t-or-f>Evaluations will return a boolean #t or #f
+<a class=anchor href=#evaluations-will-return-a-boolean-t-or-f>#</a></h5><p>(= 3 3)</p><ul><li>Note that this = sign expects only numbers as data types. can&rsquo;t compare lists or strings.
+(eq? 4 4)</li><li>Should be used when comparing scalar values such as numbers, ints, floats, strings, etc. But it has to be a single value, not a list</li></ul><p>(equal? &lsquo;(1 2 3) &lsquo;(1 2 3))</p><ul><li>Can compare any two values. Literally anything</li></ul><h3 id=functions-for-checking-data-types>Functions for checking data types
+<a class=anchor href=#functions-for-checking-data-types>#</a></h3><p>You can define and put names on things, but these are just aliases. There is no expectation for this value to change, as a variable would.
+The question mark at the end indicates that the function is for humans to understand, and it&rsquo;ll always return a boolean.</p><p>length
+number?
+complex?
+zero?
+string?
+integer?
+null?
+eq? (equal?)</p><p>Note that we have many aliases for an empty list:</p><ul><li>empty</li><li>null</li><li>&lsquo;()</li></ul><p>examples:</p><ul><li><code>(number? 4)</code> -> <code>#t</code></li><li><code>(zero? 0)</code> -> <code>#t</code></li><li><code>(zero? 4)</code> -> <code>#t</code></li><li><code>(string? hello)</code> -> <code>hello: undefined</code></li><li><code>(string? 'hello')</code> -> <code>#t</code></li><li><code>(define hello 6</code>)<ul><li><code>(symbol? hello)</code> -> <code>#f</code></li><li><code>(integer? hello)</code> -> <code>#t</code></li></ul></li><li><code>(real? 3.4)</code> -> <code>#t</code></li><li><code>(real? 5)</code> -> <code>#t</code>
+Note that numbers that have a decimal can still be an integer if it trails with .0
+Every number can be considered complex, because 3 = 3+ 0i, for all integers.</li></ul><p><strong>all lists are pairs, but not all pairs are lists.</strong>
+a pair could be a pair if it&rsquo;s strictly just two elements with no list inside. Once we add a third value, or there exists a list inside the pair, then it is no longer just a pair but also a list.</p><p>nested lists and quotes
+Be careful to not double quote, because a cdr or car of a double list will either be a quote tick or the list of a list.</p><p>Sometimes you need to peel off the outer layer, so that the inside is not evaluated too early.</p><h3 id=debugging>Debugging
+<a class=anchor href=#debugging>#</a></h3><p>Hover over a fucntion and you can find its definition or origin, whether from previous code or an import from Racket.</p><h3 id=recursion>Recursion
+<a class=anchor href=#recursion>#</a></h3><p>We can create our own length function using recursion and the tail.
+This function works because the length of CDR is the length of list -1. What&rsquo;s going on under the hood is we are removing one element at a time and adding 1 to length until it&rsquo;s null.
+![[Pasted image 20240918105601.png]]
+<strong>Direction recursion</strong> -> You can either build the expression by climbing in 1+ 1 + 1 + 1 + 0. Or you can climb out 0 +1 is 1 +1 is 2 + 1 is 3. Climbing in is when you dive until the base case, and add as we climb out.</p><p><strong>Indirect recursion</strong> ->When we use a helper, we pass it a list and an accumulator. We pass in the list and the counter. In this instance, when we hit the base case we return the accumulator value. There&rsquo;s a trade off of memory and speed. Because we are constantly defining the accumulator value in order to increment it, the stack calls will bulid up, but if we have parallel processing, we can start the next operation and allow the stack to pop in the background.</p><p>This accumulator function is brittle. We have to initialize this counter at an arbitrary value that the user can input, because it needs to be called every single time.
+To combat this, we can use a <strong>wrapper function</strong>, which initializes the previous function with the same input list, but with a hard coded 0 initialized.</p><ul><li>Note that, a programmer could still run the accumulator function and still potentially get a bad answer.</li><li>To combat this issue, we use scope. We can hide the accumulator function in another function. Just like Java, functional programming has function locallity. when the body of the functions returns back to the caller, everything we defined no longer exists.
+Advantages:
+we can fix weaknesses such as exposure of helper and accumulator
+Faster in some cases
+easier to understand</li></ul><h3 id=syntax-of-functional-programming>SYNTAX OF FUNCTIONAL PROGRAMMING
+<a class=anchor href=#syntax-of-functional-programming>#</a></h3><p>The entire syntax is based off of just these three rules:</p><ul><li>Everything in a lambda expression<ul><li>Each expression is either a name, function, or application.</li></ul></li><li>A compiler for a functional language can be created in one hour by a single person, whereas a language like java took a team over a year.</li></ul><h3 id=errors>Errors
+<a class=anchor href=#errors>#</a></h3><p>Contract violation is a data type error.</p><hr><h1 id=chapter-4---lexical-and-syntax-analysis-930-current>Chapter 4 - Lexical and Syntax Analysis (9/30-current)
+<a class=anchor href=#chapter-4---lexical-and-syntax-analysis-930-current>#</a></h1><h3 id=project-details>Project Details
+<a class=anchor href=#project-details>#</a></h3><p>> 6
+6. similarly to range, start with an integer and loop that many times. direct recursion, decrement the count value. once im at the end of the list and the value is 0, then we return True, else we return false.
+7. This question has many lines. Requires helper functions. Mod 10 algorithm</p><h3 id=analyzer>Analyzer
+<a class=anchor href=#analyzer>#</a></h3><p>How do we do this with prgramming languages. How do we determine all of the words are corect for the language/
+Lexical and syntactical analyzer</p><p>THe syntax analysis portion consists of two parts:</p><ul><li>The low-level part: the lexical analyzer. Tries to determine if any of the characters represent a proper lexeme.</li><li>The high-level part: the syntactic analyzer or parser.</li><li>example: soijw sofijew fwoiejf<ul><li>Thsi has no valid lexemes, thus the parser would reject this.</li></ul></li></ul><h3 id=lexical-and-syntax-analysis>Lexical and Syntax Analysis
+<a class=anchor href=#lexical-and-syntax-analysis>#</a></h3><p>Why do we use bnf to describe syntax?</p><ul><li>because it&rsquo;s easy for humans to understand bnf. The rules are easy to understand.</li><li>They are easy to maintain: making changes can be done by just adding a new rule, and it wouldn&rsquo;t affect the other rules.
+The reason we split parsing into the lexical and syntactic parts is because it simplifies the complexity of the parser. We can make a parser that&rsquo;s one level deep, but it&rsquo;s not good to use. Essentially, doing these two separate processes makes it more efficient and simple.
+Also portability. Parts of the lexical analyzer may not be portable, but the parser always is portable.</li></ul><h3 id=lexical-analysis>[[Lexical Analysis]]
+<a class=anchor href=#lexical-analysis>#</a></h3><ul><li>We need a state machine that is reading each character one by one, and moving states.</li><li>So basically this lexical analyzer is a finite state machine that looks at individual characters are identifies what this word can mean. If it first sees a character, it&rsquo;s expecting this entire string to be either a variable or a function name and will keep looping alphachars until it stops seeing that.</li><li>Once it finishes matching a character pattern, it&rsquo;ll then be associated together as a token. And this token can represent many things DEPENDING on it&rsquo;s starting character. if it starts with a number, then the token could represent a float or an integer. If it&rsquo;s an alpha char, then it could represent a variable or a function.</li><li>The lexical analyzer is generally implemented as a <strong>function</strong> that is called by the parser when it needs the next token.
+Three approaches to building a lexical analyzer</li><li>Initialize a formal description of the tokens and a software tool taht constructs a table-driven lexican analyzer from such a description.</li><li>Design a State machine that describes the tokens and writes a program that implements the state diagram.</li><li>Hybrid: Design a state diagram that describes the tokens, and then manually construct a table-driven implementation of the state diagram.
+Simplification the state process</li><li>If we had to map to every single variation of alphachar, our state machine would be ginormous, so instead we can point to a character class that groups all of them together.
+Lookup</li><li>For identifiers such as variables and functions, the lexeme parser will verify that only after it has iterated through all of the characters in a word.</li></ul><h3 id=parsing-problems>Parsing problems
+<a class=anchor href=#parsing-problems>#</a></h3><ul><li>What is the goal of the parser?<ul><li>Find all <strong>syntax errors</strong></li><li>Generate the parse tree for the source code being analyzed.</li></ul></li><li>What do we do when we run into an error?<ul><li>For each error, we need to create an appropriate message that conveys the issue.</li></ul></li><li>If no error is found, then the program will go ahead and create the parse tree, which can be converted into assembly.</li></ul><p>Two Categories of Parsers</p><ul><li><strong>Top down</strong>- Makes a tree starting at the root<ul><li>We need <strong>right recursion</strong> and the expansion requires <strong>leftmost derivation</strong></li></ul></li><li><strong>Bottom up</strong> - Makes a tree starting at the leaves<ul><li>We build up from the bottom, so we use <strong>left recursion</strong>. So we don&rsquo;t recurse until the end. This is tail recursion</li><li>Order of node rduction uses <strong>rightmost derivation.</strong></li></ul></li><li>Depending on the grammar that we want to use, this will dictate the type of parser that we want to use. The architecture/shape of the tree. Neither is better or worse, just depends on whta tools you have at your disposal.</li></ul><p>Most common top-down parsing algorithms ==<em>These are LL Parsers</em>==</p><ul><li>Recursive descent -> expands recursively downward into all children</li><li>Table driven implementation -> Used in Assembly because we can&rsquo;t make functions, we can only use predefined machine tools. Uses a parsing table where you find the meaning of lexemes.</li></ul><h5 id=recursive-descent-parsing-continued>Recursive-Descent Parsing Continued
+<a class=anchor href=#recursive-descent-parsing-continued>#</a></h5><p>top down parser
+In the source code, we&rsquo;ll have a function for every single grammar rule. If they expect some element or another, we&rsquo;ll have if and else if statements, followed by an else that will throw an error.
+As we go through each element, we check for tokens,we check for lexemes, and we&rsquo;ll check for expression.</p><h3 id=the-ll-grammar-class>The LL Grammar Class
+<a class=anchor href=#the-ll-grammar-class>#</a></h3><p>Remember, LL means it&rsquo;s left Recursion with left to right parsing
+E rule replacement</p><p>Detecting (not correcting) Indirect Left Recursion
+Pairwise Disjointness</p><ul><li>For every RHS rule, we call the FIRST method to create a set of elements. We compare these sets to see if there are any intersections.</li><li>&ldquo;Is the A rule safe using the Pairwise disjointness test&rdquo;</li><li>Example:<ul><li>A = ab |bc |cd</li><li>first(ab) = {a}</li><li>first(bc) = {b}</li><li>first(cd) = {c}</li></ul></li><li>Now we have to check for disjointness by intersecting every combination of pairs<ul><li>{a} $\cap$ {b} = {}</li><li>{a} $\cap$ {c} = {}</li><li>{b} $\cap$ {c} = {}</li></ul></li><li>Because we have no intersection, we have disjointness]</li></ul><h3 id=bottom-up-parsing>Bottom Up Parsing
+<a class=anchor href=#bottom-up-parsing>#</a></h3><ul><li>One of the most common ways is using shift-reduce.<ul><li>We have right most derivation with left recursion. So how can we injest code into our parser right to left, if we are reading it left to right.</li><li>We use a stack.</li><li>We read the elements from left to right, but we are reducing chunks from right to left.</li></ul></li></ul><h3 id=shift-reduce-parsing>Shift-reduce Parsing
+<a class=anchor href=#shift-reduce-parsing>#</a></h3><ul><li>This one is somewhat complicated but not really.</li><li>We push into the stack the first element from left to right. As we add symbols, our state will be in different machines, and depending on the state and the next symbol we push, we will have a different action. Keep going through one by one until the end is reached.</li></ul><h1 id=chapter-16---logic-programming-prolog>Chapter 16 - Logic Programming (prolog)
+<a class=anchor href=#chapter-16---logic-programming-prolog>#</a></h1><h3 id=definitions>Definitions
+<a class=anchor href=#definitions>#</a></h3><p>Axioms -> a set of rules that are either true or false
+Source code -> Knowledge Base
+Resolution -> logical inferencing process. The program will intuit what an arbitrarily defined value may be.
+hypothesis base -> the possible evaluations that could evaluate to true</p><h3 id=prolog-syntax>Prolog Syntax
+<a class=anchor href=#prolog-syntax>#</a></h3><p>logical and -> <code>,</code>
+logical or -> <code>OR</code>
+end every statement with a <code>.</code>
+write()</p><h3 id=introduction>Introduction
+<a class=anchor href=#introduction>#</a></h3><ul><li>Programs in Logic Programming are expressed in the form of Symbolic Logic<ul><li>This symbolic language is easier to process for humans to intuit because it&rsquo;s based upon human logic instead of machine logic.</li></ul></li><li>Use a logical inferencing process to produce results</li><li><strong>declarative</strong> rather than <strong>procedural</strong><ul><li>only specification of <strong>results</strong> are stated (not detailed procedures for producing them)<ul><li>You define what the results look like, and the run time will figure out how to produce those results. This is <strong>resolution</strong>.</li></ul></li><li>You cannot return values, only evaluate to True or False</li></ul></li></ul><p>Random note -> predicate (proposition) vs function vs method. Different <em>procedures</em></p><h3 id=statements>Statements
+<a class=anchor href=#statements>#</a></h3><ul><li>A logical statement is a predicate/proposition that comprises of these elements<ul><li>objects, relationships, and evaluation value</li><li>Example: student, mexico, has visisted, false</li></ul></li><li>Both the <strong>input</strong> and the <strong>output</strong> are in the predicate call<ul><li>ex: <code>add_one(4,5)</code> evaluates to <code>true</code></li><li>Essentially we are testing if our conclusion is valid. Checking if our answer is correct</li><li>When there is insufficent information, we use <strong>Resolution</strong>. The program will assign a value to Var that would make our conclusion true<ul><li>ex: <code>add_one(4,Var)</code> evalutes to <code>Var = 5</code></li></ul></li><li>Our program can actually find multiple evaluations that would make evaluate to true.</li><li>Thus our goal is to write rules that are specific enough to narrow down the possible solutions.</li></ul></li></ul><h3 id=symbolic-logic>Symbolic Logic
+<a class=anchor href=#symbolic-logic>#</a></h3><ul><li>The code can only evaluate propositions based off of the <strong>knowledge base</strong>. Don&rsquo;t get caught up in trying to make sense of things in relation to the real world. We are only working off of rules that are defined by the programmer.</li><li>What is computable, and what is complex?<ul><li>A complex problem <strong>is</strong> computable, but it&rsquo;ll take a long time.</li></ul></li></ul><h3 id=object-representation>Object Representation
+<a class=anchor href=#object-representation>#</a></h3><ul><li>Variables in logical programming differs from procedual programming. Instead of the programmer declaring and instantiating the value, the program will instead find all possible values that may evaluate to true at a given time.</li><li>Now this could lead to a tremendously large computational problem. Our</li></ul><h3 id=types-of-terms>Types of terms
+<a class=anchor href=#types-of-terms>#</a></h3><ul><li>Atomic</li><li>Compound<ul><li>Functor/predicate<ul><li>The symbol that names the relationship</li><li>No return type or value</li></ul></li><li>Parameters<ul><li>An ordered list of parameters (tuple)</li><li>Not arguments</li></ul></li></ul></li></ul><h3 id=unification-equality>Unification (equality)
+<a class=anchor href=#unification-equality>#</a></h3><ul><li>ex: <code>6 = 6</code><ul><li>Note that this equal sign is not assignment.</li></ul></li><li>ex: <code>x = 6</code><ul><li>this is not assigning 6 to x. instead it&rsquo;s computing the value that makes this equality true (unified) is x containing the value 6</li></ul></li><li>ex: <code>Var = 2 + 3</code><ul><li>In this special case, unification will compute Var as <code>2 + 3</code>, and not as <code>5</code> and this is because this Var could be any infinite combination of operations that evaluate to 5, thus we assign it the exact value.</li></ul></li><li>ex: <code>Var is 2 + 3</code><ul><li>The <code>is</code> key word will evaluate the operation.</li></ul></li></ul><h3 id=lists>Lists
+<a class=anchor href=#lists>#</a></h3><ul><li>Square brackets and comma separated</li><li>ex: `[1,2,3,4] = SomeList<ul><li>SomeList will have the entire List as its value</li></ul></li><li>ex: `[1,2,3,4] = [1,2,X,4]<ul><li>X will be assigned the value of 3</li></ul></li><li>ex: `[1,2,3,4] = [X | Y]<ul><li>So this part is a little confusing. X will take the first element, and Y will take the rest so</li><li><code>X = 1</code></li><li><code>Y = [2,3,4]</code></li></ul></li><li>ex: <code>[1][2,3,4] = X</code><ul><li>X will be assigned a complete list of <code>[1,2,3,4]</code>. Having two lists side by side is the equivalent to cons in Racket</li></ul></li><li>ex: <code>[1,2,3,4] = [X, Y, Z]</code><ul><li>This will evaluate to False. There is no combination of these three variables that can create a list of 4 elements.</li></ul></li><li>Generally right now I&rsquo;m most confused about <code>|</code> vs <code>,</code></li><li><code>_</code> is a placeholder key variable. The program will know that we do not care to use this value. Don&rsquo;t Care variable.</li></ul><hr><pre tabindex=0><code>Head(SomeList, Head) :-
+	SomeList = [H | _],
+	Head = H.
+	
+Head([H|_], H).
+</code></pre><ul><li>This code block shows the predicate of finding the Head of some list and its one line version (which is more typical of prolog).</li></ul><hr><pre tabindex=0><code>cons(H,InList,OutList) :-
+	OutList = [H|T],
+	Elem = H,
+	InList = T.
+	
+cons(H,T,[H|T]).
+</code></pre><ul><li>In this code block, we built a predicate that will append an element to the front of the list</li><li>Ex: <code>cons(7, [8, 9, 10], Out)</code></li></ul><hr><pre tabindex=0><code>leng([],0). % this is a base case for when we have an empty list.
+leng(SomeList, Len) :-
+	SomeList = [_|T],
+	leng(T, Tlen),
+	Len is Tlen + 1.
+</code></pre><pre tabindex=0><code>
+leng(SomeList, Len) :-
+	SomeList = [_|T],
+	Len = leng(T, Tlen) + 1.
+</code></pre><ul><li>Recursive call to find length. We need a base case, if we don&rsquo;t the unification statement will evaluate to False.<ul><li>Note that the base case here is an overloaded definition of the same predicate.</li><li>Generally it&rsquo;s advised to check for base cases within the same definition such as in the example below.</li></ul></li></ul><pre tabindex=0><code>leng(SomeList,Len) :-
+	SomeList = [] -&gt;
+		Len is 0 ;
+		SomeList = [_|T],
+		leng(T, TLen),
+		Len is TLen + `.
+</code></pre><hr><pre tabindex=0><code>is_sorted(SomeList) :-
+	SomeList = [] -&gt;
+		true;
+		SomeList = [_] -&gt;
+			true;
+			SomeList = [H1,H2|T],
+			H1 =&lt; H2,
+			is_sorted([H2]T]).
+</code></pre><ul><li>Though it&rsquo;s possible to use overloaded predicates for the base cases in tandem with <code>!.</code> (cuts), but it&rsquo;s ill advised.</li></ul><hr><pre tabindex=0><code>rev([],[]).
+rev(InputList, OutputList) :-
+	InputList = [H\T],
+	rev(T,TRev),
+	append(TRev, [H]).
+</code></pre><p><code>H</code> is a single element, and <code>[H]</code> is a singleton list.
+This implementation is similar to racket, but the difference is:
+In racket you expect to see <code>append rev(T) head(lst)</code>
+but in Prolog, we can&rsquo;t recursively obtain the Rev(T) through the predicate, instead we need to call <code>rev(T, TRev)</code> independently and use the output of that call.</p><pre tabindex=0><code>	rev2(InputList, OutputList) :-
+		InputList = [] -&gt;
+			OutputList = [] ;
+			InputList = [H|T],
+			rev2(T,TRev),
+			append(TRev,[H], OutputList)
+</code></pre><p>This is the version of rev that doesn&rsquo;t use the overloaded base case.
+Also another reminder, we can pass the assignment of our InputList directly into our function, i.e. <code>rev2([H|T], OutputList) :-</code></p><p><strong>Accumulator version of rev</strong></p><pre tabindex=0><code>revAcc([], OutputList, Acc) :-  % this is the overloaded base case
+	OutputList = Acc.
+revAcc(InputList, OutputList, Acc) :-
+	InputList = [H|T],
+	revAcc(T, OutputList, [H|Acc]).
+
+% input query
+revAcc([2,4,6,8], R, []).
+</code></pre><p>But how can I ensure that the third argument is always empty? We can wrap this in a helper and call the helper with the empty list argument.</p><pre tabindex=0><code>revAcc(Input,Output) :-
+	revAccHelper(Input, Output, []).
+revAccHelper([], OutputList, Acc) :-  % this is the overloaded base case
+	OutputList = Acc.
+revAccHelper(InputList, OutputList, Acc) :-
+	InputList = [H|T],
+	revAccHelper(T, OutputList, [H|Acc]).
+
+% input query
+revAcc([2,4,6,8], R).
+</code></pre><hr><pre tabindex=0><code>add1(X,Y) :-
+	Y is X + 1.
+</code></pre><p>This is just to reiterate that we these predicates themselves will return a true or false, but the output variable will hold the value that makes it true.</p><hr><pre tabindex=0><code>last(SomeList, L) :-
+	rev(SomeList, RevList),
+	head(RevList,L)
+
+LastB([L],L) :-
+	!.
+LastB([H|T], L):-
+	LastB(T, L).
+</code></pre><p>Here we have two different implementations of finding the last element in a list.
+The top version is inefficent, we call reverse and grab the head of the list.
+In the bottom version, we have a base case of when the List is just a single element, and we return that element immediately.</p><hr><pre tabindex=0><code>penultimate([L,_], L) :-
+	!.
+penultimate([_|T],L) :-
+	penultimate(T, L).
+</code></pre><p>This is the similar to Last but instead of the ultimate eliminate (last), it&rsquo;s the penultimate (second-last)</p><hr><p>Project question for prolog
+Index
+We can keep calling recursively by decrementing the counter, and grabbing the 0th index (head) of that recursive calls list.</p><pre tabindex=0><code>% example input
+index(input,output, 0) :-
+	!.
+index(input, output, index) :-
+	
+</code></pre><h3 id=logical-operators>Logical Operators
+<a class=anchor href=#logical-operators>#</a></h3><ul><li>We use the <code>-></code> symbol with a <code>;</code> to separate the then/else<ul><li>ex: `true -> write(&ldquo;Yes&rdquo;); write(&ldquo;No&rdquo;).</li><li><code>Yes true</code></li><li>OR: <code>;</code></li><li>AND: <code>,</code></li><li>CUT: <code>!.</code></li></ul></li><li>For logic we have symbols such as <code>-> ; , !</code><ul><li>==I don&rsquo;t completely understand these symbols, read the documentation for this==</li></ul></li></ul><h3 id=constants-vs-variables>Constants vs Variables
+<a class=anchor href=#constants-vs-variables>#</a></h3><ul><li>Camelcase is a variable</li><li>all lowercase is a constant</li></ul><h1 id=chapter-5---names-bindings--scope>Chapter 5 - Names, Bindings, & Scope
+<a class=anchor href=#chapter-5---names-bindings--scope>#</a></h1><h3 id=scalar-variables>Scalar Variables
+<a class=anchor href=#scalar-variables>#</a></h3><ul><li>Single values that get dynamically converted.</li><li>the <strong>meta</strong> character will specify the data type that is being stored.<ul><li><code>@</code> signifies a list</li><li>To print the entire list, we have to use <code>print(@y);</code></li><li>When we try to print this list using a <code>$</code> meta char, it&rsquo;ll only expect one value. In this instance we need to specify a specific index for the output to correctly generate.</li></ul></li></ul><h3 id=static-scope>Static Scope
+<a class=anchor href=#static-scope>#</a></h3><ul><li>A runtime will look first locally, and then increasingly larger scopes. If it can&rsquo;t find a variable locally, it will look within its next enclosing scope.</li><li>You can change where the runtime <strong>looks</strong> for a variable value in languages such as Perl, Ada, and Python. Unit is the name of the function to look inside, and name is the variable name. Essentially, we have an X value in main, that is eclipsed by the nested function. However, we can look behind the eclipse through this function.<ul><li>Ex: <code>unit.name</code> or <code>$unit::name</code> -> <code>$main::x</code></li></ul></li></ul><h3 id=let-in-racket>Let (in racket)
+<a class=anchor href=#let-in-racket>#</a></h3><ul><li>The only purpose of LET is to declare local variables within a new scope to use without modifying the original values.</li></ul><h3 id=declaration-order>Declaration Order
+<a class=anchor href=#declaration-order>#</a></h3><ul><li>The major difference between C++/Java/C# and C.<ul><li>In C++, you can declare a variable within the scope of a <em>for</em> statement. Whereas in C, we must declare the variable <strong>before</strong> the for loop begins.</li></ul></li><li>It&rsquo;s pretty incredible how every control flow statement is based off of either an IF or a WHILE. But we can combine these in combinations to create any other control flow statement such as DO WHILE, FOR EACH, etc.</li></ul><h3 id=global-scope>Global Scope
+<a class=anchor href=#global-scope>#</a></h3><ul><li>Some languages allow you to alter the value of a global variable within a nested scope</li></ul><pre tabindex=0><code>globvar = 0 
+def set_globvar_to_one(): 
+	global globvar # Needed to modify global copy of 
+	globvar globvar = 1 
+def print_globvar(): 
+	print globvar   # No need for global declaration 
+					# to read value of globvar 
+print_globvar() # Prints 0 
+set_globvar_to_one() 
+print_globvar() # Prints 1
+</code></pre><h3 id=dynamic-scoping>Dynamic Scoping
+<a class=anchor href=#dynamic-scoping>#</a></h3><p>![[Pasted image 20241111105647.png]]</p><h1 id=chapter-7---expressions-and-assignment-statements>Chapter 7 - Expressions and Assignment Statements
+<a class=anchor href=#chapter-7---expressions-and-assignment-statements>#</a></h1><h3 id=arithmetic-expressions>Arithmetic Expressions
+<a class=anchor href=#arithmetic-expressions>#</a></h3><ul><li><strong>Arity</strong><ul><li>The number of operands that can be had by an operator.</li><li><strong>unary operator</strong>: takes one operand<ul><li><strong>-</strong> negation</li><li><strong>++</strong> increment</li><li><ul><li>pointer</li></ul></li><li><strong>&</strong> dereference</li></ul></li><li><strong>binary operator:</strong> has two opernads<ul><li>+, -, /, %, $**$, $*$</li></ul></li><li><strong>ternary operator</strong>: has three operands<ul><li><strong>? : Conditional</strong> if then else</li></ul></li><li></li></ul></li><li><strong>Precedence</strong><ul><li>What do we prioritize in operations? Most languages use &ldquo;PEMDAS&rdquo;, but some languages like ALO and has no operation precedence.</li></ul></li><li><strong>Associativity</strong><ul><li>This is the order in which adjacent operators with the same precedence level are evaluated, e.g. 3+5-2 or 4*2/4</li><li>Typically we go left to right, except ** which is right to left</li></ul></li><li><strong>Evaluation Order</strong><ul><li>Describes how we access and process operands within an operation.<ul><li><strong>Variables</strong> are retrieved to be used</li><li><strong>Constants</strong> are also retrieved to be used but comes from either memory or from the machine language instruction such ax MAX_INT</li><li><strong>Parenthesized Expressoins</strong>: Evaluates the content of the paren first</li><li><strong>Functional Call</strong>: Evaluates the function first, but a possible side effect is the modification of the a value that will be used within the operation that it&rsquo;s a part of.</li></ul></li></ul></li><li><strong>Conditional Operators (ternary)</strong><ul><li>An alternative way of expressing the if then else control structure<ul><li>Ex: <code>average = ((count == 0)? 0 : (sum / count))</code></li><li>The equivalent
+![[Pasted image 20241113133612.png]]</li></ul></li></ul></li><li><strong>Potentials for side effects</strong><ul><li><strong>Functional side effects</strong>: when a function <strong>changes</strong> a two-way parameter or a non-local variable.<ul><li>What&rsquo;s the problem with functional side effects?<ul><li>The program may behavior unexpectedly.</li><li>![[Pasted image 20241113133833.png]]</li></ul></li></ul></li><li><strong>Referential Transparency</strong>: If after I execute a function, does it change some of the parameters that i <strong>passed</strong> into it. To check for this, we can declare a temporary variable that is assigned to a function&rsquo;s evaluation, and compare the result of operations using the two original variable, and the temporary one.<ul><li>Benefits: Semantics of a program is much easier to understand</li><li>Pure functional languages such as Perl are by nature referentially transparent.<ul><li>These functions cannot have a state</li><li>Any values that a function obtains from outside its block must be constant.</li></ul></li></ul></li></ul></li><li><strong>Operator Overloading</strong><ul><li>Allows us to use an operator with additional purpose.</li><li>This occurs much more often than we assume.<ul><li>Ex: &ldquo;Hello " + &ldquo;World&rdquo; is concatenate instead of arithmetic addition.</li><li>Ex: 4.3 + 2.5: adding floats is a much different operation/process than adding two integers.</li></ul></li></ul></li></ul><p>How do we handle type mixing?</p><ul><li>Usually we would have a protocol for determining data type precedence.</li><li>Ex: 4.5 + 3 evaluates to 7.5 in python, but in C++ if we declare as int, then we keep the type consistent unless we cast.</li></ul><h1 id=chapter-8---statement-level-control-structures>Chapter 8 - Statement-Level Control Structures
+<a class=anchor href=#chapter-8---statement-level-control-structures>#</a></h1><h3 id=two-way-selection-statements>Two-Way Selection Statements
+<a class=anchor href=#two-way-selection-statements>#</a></h3><ul><li>The general form is <code>if then else</code></li><li>The absense of the <code>then</code> keyword is generally replaced by parenthesis.</li></ul><h3 id=loops>Loops
+<a class=anchor href=#loops>#</a></h3><ul><li>Can be accomplished by either iteration (with counters), or recursion</li><li>Counter-Controlled Loops<ul><li>Initial loop value is generally of type <strong>integer</strong>.</li><li>Has some state that it identifies as a <strong>terminal state</strong>. Once the counter contorl reaches some state, then the loop will terminate.</li><li>Step size values -> How does the counter get changed with each loop level</li><li>Essentially, we keep going until a statement is reached, which will then lead us to terminate the loop</li></ul></li><li>Range-based For Loops<ul><li>These consider a collection or set to be iterated over.</li><li>Advantages<ul><li>Miniimzes the change of range out of bounds error</li></ul></li><li>Disadvantages<ul><li>Can&rsquo;t iterate through a slice of the collection (a subset).</li></ul></li></ul></li><li>Logically-controlled loops (WHILE loops)<ul><li>Design issues<ul><li>Where do we put the test? Pre-test or post-test?</li><li>Should a logically controlled loop be a special case of the counting loop, or a separate statement. In C, you can actually make a while loop that is more efficient that a for loop with the standard counter procedure.</li></ul></li></ul></li><li>User-Located Loop control mechanism<ul><li>Simple design for single loops (e.g. <strong>break</strong>)</li><li>Design issues for nested loops<ul><li>Should the conditional be part of the exit?</li><li>Should control be transferable out of more than one loop?</li></ul></li></ul></li><li>Iteration based on Data Structure<ul><li>Java 5.0 can also the the <code>for</code> items in array.</li></ul></li></ul><h3 id=unconditional-branching>Unconditional Branching
+<a class=anchor href=#unconditional-branching>#</a></h3><ul><li>Guarded Commands<ul><li>Combines programming in a concise way, based on the semantics for formal logic and proofs so that if the code compiles correctly, then the semantics are proven to be correct. It&rsquo;s embedded in some languages such as ADA.<ul><li>Baesd on Tony Hoare&rsquo;s <strong>Hoare logic</strong>.</li></ul></li><li>Selection Guarded command<ul><li>Multiway selector -></li><li><pre tabindex=0><code class=language-if data-lang=if>  [] &lt;Boolean expr&gt; -&gt; &lt;statement&gt;
+  [] &lt;Boolean expr&gt; -&gt; &lt;statement&gt;
+  [] &lt;Boolean expr&gt; -&gt; &lt;statement&gt;
+  ...
+  [] &lt;Boolean expr&gt; -&gt; &lt;statement&gt;
+  fi```
+</code></pre></li><li>If more than one of these switch statements are true, we choose on at random. If none are true, it is a runtime error.</li></ul></li><li></li></ul></li></ul></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#chapter-1-preliminaries-819>Chapter 1: Preliminaries (8/19)</a><ul><li></li><li><a href=#preliminaries-cont-821>Preliminaries Cont. (8/21)</a></li><li><a href=#chapter-3-syntax-and-semantics-826>Chapter 3: Syntax and Semantics (8/26)</a></li><li><a href=#functional-language-vs-non-functional-languages>Functional language vs non-functional languages</a></li><li><a href=#associativity-of-operators>Associativity of Operators</a></li><li><a href=#parsing-terms>Parsing Terms</a></li><li><a href=#type-of-grammars>Type of grammars</a></li><li><a href=#extended-bnf>Extended BNF</a></li></ul></li></ul><ul><li><ul><li><a href=#semantics>Semantics</a></li><li><a href=#dynamic-semantics>Dynamic Semantics</a></li></ul></li></ul><ul><li><ul><li><a href=#the-paradigms-of-functional-programming>The Paradigms of Functional Programming</a></li><li><a href=#lambda-calculus>Lambda Calculus</a></li><li><a href=#key-words>Key Words</a></li><li><a href=#s-expression>S-Expression</a></li><li><a href=#functions-for-checking-data-types>Functions for checking data types</a></li><li><a href=#debugging>Debugging</a></li><li><a href=#recursion>Recursion</a></li><li><a href=#syntax-of-functional-programming>SYNTAX OF FUNCTIONAL PROGRAMMING</a></li><li><a href=#errors>Errors</a></li></ul></li></ul><ul><li><ul><li><a href=#project-details>Project Details</a></li><li><a href=#analyzer>Analyzer</a></li><li><a href=#lexical-and-syntax-analysis>Lexical and Syntax Analysis</a></li><li><a href=#lexical-analysis>[[Lexical Analysis]]</a></li><li><a href=#parsing-problems>Parsing problems</a></li><li><a href=#the-ll-grammar-class>The LL Grammar Class</a></li><li><a href=#bottom-up-parsing>Bottom Up Parsing</a></li><li><a href=#shift-reduce-parsing>Shift-reduce Parsing</a></li></ul></li></ul><ul><li><ul><li><a href=#definitions>Definitions</a></li><li><a href=#prolog-syntax>Prolog Syntax</a></li><li><a href=#introduction>Introduction</a></li><li><a href=#statements>Statements</a></li><li><a href=#symbolic-logic>Symbolic Logic</a></li><li><a href=#object-representation>Object Representation</a></li><li><a href=#types-of-terms>Types of terms</a></li><li><a href=#unification-equality>Unification (equality)</a></li><li><a href=#lists>Lists</a></li><li><a href=#logical-operators>Logical Operators</a></li><li><a href=#constants-vs-variables>Constants vs Variables</a></li></ul></li></ul><ul><li><ul><li><a href=#scalar-variables>Scalar Variables</a></li><li><a href=#static-scope>Static Scope</a></li><li><a href=#let-in-racket>Let (in racket)</a></li><li><a href=#declaration-order>Declaration Order</a></li><li><a href=#global-scope>Global Scope</a></li><li><a href=#dynamic-scoping>Dynamic Scoping</a></li></ul></li></ul><ul><li><ul><li><a href=#arithmetic-expressions>Arithmetic Expressions</a></li></ul></li></ul><ul><li><ul><li><a href=#two-way-selection-statements>Two-Way Selection Statements</a></li><li><a href=#loops>Loops</a></li><li><a href=#unconditional-branching>Unconditional Branching</a></li></ul></li></ul></nav></div></aside></main></body></html>

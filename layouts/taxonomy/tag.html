@@ -1,0 +1,34 @@
+{{ define "main" }}
+  <style>
+    .sermon-post {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #e3e3e3;
+    }
+    
+    .sermon-post:last-child {
+      border-bottom: none;
+    }
+  </style>
+
+<header class="tag-header">
+    <h1 class="tag-title">{{.Title}}</h1>
+</header>
+{{ range sort .Paginator.Pages }}
+  <article class="markdown book-post sermon-post">
+    <h3>
+      <a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a>
+    </h3>
+    {{ partial "docs/post-meta" . }}
+    <div class="book-post-content">
+      {{truncate 250 .Summary }}
+    </div>
+  </article>
+  {{ end }}
+
+  {{ template "_internal/pagination.html" . }}
+{{ end }}
+
+{{ define "toc" }}
+  {{ partial "docs/taxonomy" . }}
+{{ end }}

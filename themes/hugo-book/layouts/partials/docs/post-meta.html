@@ -1,0 +1,33 @@
+<style>
+  .tags{
+    font-size:.8rem;
+    margin-top:0.2rem;
+    background-color:rgb(203, 213, 203);
+    padding-top:0.3rem;
+    padding-bottom:0.2rem;
+    padding-left:0.3rem;
+    padding-right:0.3rem;
+    border-radius:4px;
+    width:fit-content;
+
+}
+  .fontcolor{
+    color:gray;
+  }
+
+</style>
+{{ with .Date }}
+  <div class="flex align-center fontcolor text-small book-post-date">
+    <span>{{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}</span>
+  </div>
+{{ end }}
+
+{{ range $taxonomy, $_ := .Site.Taxonomies }}
+  {{ with $terms := $.GetTerms $taxonomy }}
+  <div class="tags fontcolor">
+    {{ range $n, $term := $terms }}{{ if $n }}, {{ end }}
+      <a href="{{ $term.RelPermalink }}">{{ $term.Title }}</a>
+    {{- end }}
+  </div>
+  {{ end }}
+{{ end }}

@@ -1,7 +1,8 @@
 ---
 title: How to Go All In On God
 date: 2025-03-06
-tags:
+tags: 
+draft: true
 ---
 1. Recognize how weak and insignificant you are.
 	1. You are not as righteous as you are

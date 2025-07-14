@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>University Notes on dayowrites</title><link>http://localhost:61995/docs/notes/university-notes/</link><description>Recent content in University Notes on dayowrites</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 20 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:61995/docs/notes/university-notes/index.xml" rel="self" type="application/rss+xml"/><item><title>software engineering</title><link>http://localhost:61995/docs/notes/university-notes/software-engineering/</link><pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate><guid>http://localhost:61995/docs/notes/university-notes/software-engineering/</guid><description>&lt;h3 id="modern-software-engineering-820">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>University Notes on dayowrites</title><link>http://localhost:65252/docs/notes/university-notes/</link><description>Recent content in University Notes on dayowrites</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 20 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:65252/docs/notes/university-notes/index.xml" rel="self" type="application/rss+xml"/><item><title>software engineering</title><link>http://localhost:65252/docs/notes/university-notes/software-engineering/</link><pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate><guid>http://localhost:65252/docs/notes/university-notes/software-engineering/</guid><description>&lt;h3 id="modern-software-engineering-820">
  Modern Software Engineering (8/20)
  &lt;a class="anchor" href="#modern-software-engineering-820">#&lt;/a>
 &lt;/h3>
@@ -84,7 +84,7 @@ Multicore is usually better for performance, but there are edge cases where this
  Essential vs Accidental Complexity
  &lt;a class="anchor" href="#essential-vs-accidental-complexity">#&lt;/a>
 &lt;/h5>
-&lt;p>Any project has a certain aspect of essential complexity, it is just intrinsic to the stuff that we do.&lt;/p></description></item><item><title>database</title><link>http://localhost:61995/docs/notes/university-notes/database/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>http://localhost:61995/docs/notes/university-notes/database/</guid><description>&lt;h3 id="chapter-1-databases-and-database-users-08-21">
+&lt;p>Any project has a certain aspect of essential complexity, it is just intrinsic to the stuff that we do.&lt;/p></description></item><item><title>database</title><link>http://localhost:65252/docs/notes/university-notes/database/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>http://localhost:65252/docs/notes/university-notes/database/</guid><description>&lt;h3 id="chapter-1-databases-and-database-users-08-21">
  Chapter 1: Databases and Database Users 08-21
  &lt;a class="anchor" href="#chapter-1-databases-and-database-users-08-21">#&lt;/a>
 &lt;/h3>
@@ -156,7 +156,7 @@ CAR_ID have MODEL and YEARs and AVAILIBILITY
 CAR_SELLERs sell CAR BRANDs
 PEOPLE buy CAR_IDs
 PEOPLE are interested in CAR_IDS
-PEOPLE have SALARYs&lt;/p></description></item><item><title>paradigms</title><link>http://localhost:61995/docs/notes/university-notes/paradigms/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>http://localhost:61995/docs/notes/university-notes/paradigms/</guid><description>&lt;h2 id="chapter-1-preliminaries-819">
+PEOPLE have SALARYs&lt;/p></description></item><item><title>paradigms</title><link>http://localhost:65252/docs/notes/university-notes/paradigms/</link><pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate><guid>http://localhost:65252/docs/notes/university-notes/paradigms/</guid><description>&lt;h2 id="chapter-1-preliminaries-819">
  Chapter 1: Preliminaries (8/19)
  &lt;a class="anchor" href="#chapter-1-preliminaries-819">#&lt;/a>
 &lt;/h2>

@@ -1,4 +1,9 @@
-<!doctype html><html lang=en-us dir=ltr><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=65252&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
   Modern Software Engineering (8/20)
   #
 
@@ -84,152 +89,1527 @@ Create a watchdog, an alarm so to speak, to sound whenever your proect starts le
   Essential vs Accidental Complexity
   #
 
-Any project has a certain aspect of essential complexity, it is just intrinsic to the stuff that we do."><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="http://localhost:65252/docs/notes/university-notes/software-engineering/"><meta property="og:site_name" content="dayowrites"><meta property="og:title" content="software engineering"><meta property="og:description" content="Modern Software Engineering (8/20) # What is the point of software engineering? What does it fix? The problem with software development in the past: Late Too expensive Poor quality And less functional than promised. The internet was first born in the early 1970s. Mid 1990s, the web came ot be. Modern Software Engineering (8/22) # Waterfall life cycle model is evil, much worse than agile methodology. It was the method used for centuries before technology existed. What is the fundamental problem with building projects? Poor project management Do not use good engineering practices. Example: waterfall methodology The waterfall methodology is popular, but this life cycle model doesn’t work because of one key issue, that the requirements KEEP CHANGING. Waterfall assumes that the requirements don’t change. project efficiency - described as a project being on time and within budget. A low failure rate of software projects is not a direct indication of success or product quality. If only 1% of projects fail, it may indicate that not enough risks are being taken. Multicore is usually better for performance, but there are edge cases where this is not the case. In situations like these, it’s better to go back to singlecore and use rate monotonic analysis. Be careful with the decisions you make especially when trying to prioritize speed. It is not worth it to deliver poor quality work at the price of speed. Some random shit (8/27) # What is devops # Getting the users involved with the developer team to find what works and what doesn’t. How to avoid the typical mistakes: # Identify problems that have occured in previous projects that have a similar goal to your project. Discuss major mistakes that were made with other people, whether coworkers in different departments, or even friends in the industry. Create a checklist of mistakes to be mindful of. Hopefully they don’t get checked off Create a list of mistakes to AVOID during planning and monitor cautiously. Create a watchdog, an alarm so to speak, to sound whenever your proect starts leaning toward a mistake. Essential vs Accidental Complexity # Any project has a certain aspect of essential complexity, it is just intrinsic to the stuff that we do."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:published_time" content="2024-08-20T00:00:00+00:00"><meta property="article:modified_time" content="2024-08-20T00:00:00+00:00"><title>software engineering | dayowrites</title>
-<link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=http://localhost:65252/docs/notes/university-notes/software-engineering/><link rel=stylesheet href=/book.min.f9c8f802c55b9b2a770675a7a1bcb9f922e9a11a69569327f139f82e7ee1b9bd.css integrity="sha256-+cj4AsVbmyp3BnWnoby5+SLpoRppVpMn8Tn4Ln7hub0=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.a243734070c32c231bdd24305a62c671f0eff47682a16adee12e99d6851491c6.js integrity="sha256-okNzQHDDLCMb3SQwWmLGcfDv9HaCoWre4S6Z1oUUkcY=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>dayowrites</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li class=book-section-flat><span>Notes</span><ul><li><span>University Notes</span><ul><li><a href=/docs/notes/university-notes/software-engineering/ class=active>software engineering</a></li><li><a href=/docs/notes/university-notes/database/>database</a></li><li><a href=/docs/notes/university-notes/paradigms/>paradigms</a></li></ul></li><li><span>Video Notes</span><ul></ul></li></ul></li></ul><ul><li><a href=/sermons/>Sermons</a></li><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>software engineering</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><ul><li><a href=#modern-software-engineering-820>Modern Software Engineering (8/20)</a></li><li><a href=#modern-software-engineering-822>Modern Software Engineering (8/22)</a></li><li><a href=#some-random-shit-827>Some random shit (8/27)</a></li><li><a href=#829>(8/29)</a></li></ul></li></ul><ul><li><ul><li><a href=#what-does-agile-address>What does agile address?</a></li><li><a href=#agile-manifesto>Agile manifesto</a></li><li><a href=#principles-of-the-manifesto>Principles of the Manifesto</a></li><li><a href=#different-projects-need-different-methodologies>Different projects need different methodologies</a></li><li><a href=#six-sweet-spots-2001>Six Sweet Spots (2001)</a></li></ul></li></ul><ul><li><ul><li><a href=#scrum-the-most-popular-agile-method>Scrum (The most popular agile method)</a></li><li><a href=#life-cycle>Life Cycle</a></li><li><a href=#team-members>Team Members</a></li><li><a href=#sprints>Sprints</a></li><li><a href=#daily-scrum>Daily Scrum</a></li><li><a href=#sprint-review>Sprint Review</a></li><li><a href=#product-backlog>Product Backlog</a></li><li><a href=#product-goal>Product Goal</a></li><li><a href=#user-story>User Story</a></li><li><a href=#architecture-breaker>Architecture Breaker</a></li><li><a href=#splitting-stories-not-on-exam>Splitting stories (not on exam)</a></li><li><a href=#tech-stories>Tech Stories</a></li><li><a href=#division-of-concerns>Division of Concerns</a></li><li><a href=#planning-poker>Planning Poker</a></li></ul></li></ul><ul><li><ul><li><a href=#re-estimating>Re-estimating</a></li><li><a href=#sprint-backlog-and-sprint-goal>Sprint Backlog and Sprint Goal</a></li><li><a href=#stories-and-tasks>Stories and Tasks</a></li><li><a href=#definition-of-done>Definition of Done</a></li><li><a href=#why-scrum-is-powerful>Why Scrum is powerful</a></li><li><a href=#no-silver-bullet>No silver bullet</a></li><li><a href=#does-agile-fit-your-needs>Does Agile Fit your needs?</a></li><li><a href=#barriers-to-the-success-of-agile>Barriers to the Success of Agile</a></li></ul></li></ul><ul><li><ul><li><a href=#functional-vs-nonfunctional-requirement-on-exam>==Functional vs nonfunctional requirement on exam==</a></li><li><a href=#requirement-eliciation>Requirement Eliciation</a></li></ul></li></ul><ul><li><ul><li><a href=#requirements-defects>Requirements Defects</a></li><li><a href=#characteristics-of-good-individual-requirements>Characteristics of Good Individual Requirements</a></li><li><a href=#characteristics-of-good-set-of-requirements>Characteristics of Good SET of Requirements</a></li><li><a href=#requirements-jargon-shall>Requirements Jargon: Shall</a></li><li><a href=#object-oriented-requirements>Object-Oriented Requirements</a></li><li><a href=#use-cases-document-requirements>Use Cases Document Requirements</a></li><li><a href=#use-case-diagrams>Use case diagrams</a></li><li><a href=#actors>Actors</a></li><li><a href=#finding-use-cases>Finding Use cases</a></li><li><a href=#use-case-context-diagram>Use Case Context Diagram</a></li><li><a href=#larmans-fully-dressed-use-case>Larman&rsquo;s Fully Dressed Use Case</a></li><li><a href=#bank-loan-example>Bank Loan Example</a></li><li><a href=#bohems-cone-of-uncertainty>Bohem&rsquo;s Cone of Uncertainty</a></li><li><a href=#pure-watefall-model>Pure Watefall Model</a></li><li><a href=#moving-away-from-plan-driven>Moving Away from Plan-Driven</a></li><li><a href=#spiral-lifecycle>Spiral Lifecycle</a></li><li><a href=#iterative-and-incremental-development>Iterative and incremental development</a></li><li><a href=#snowdens-cynefin-framekwork>Snowden&rsquo;s Cynefin Framekwork</a></li><li><a href=#unified-process>Unified Process</a></li><li><a href=#lifecycles-used>Lifecycles used</a></li></ul></li></ul><ul><li><ul><li><a href=#system-perspectives>System Perspectives</a></li><li><a href=#classical-analysis>Classical Analysis</a></li></ul></li></ul><ul><li><ul><li><a href=#the-problem-of-software-design-is-complexity>The problem of software design is complexity</a></li><li><a href=#complexity>Complexity</a></li><li><a href=#up-design-workflow>UP Design Workflow</a></li><li><a href=#cohesion-and-coupling>Cohesion and Coupling</a></li></ul></li></ul></nav></aside></header><article class="markdown book-article"><h3 id=modern-software-engineering-820>Modern Software Engineering (8/20)
-<a class=anchor href=#modern-software-engineering-820>#</a></h3><ul><li>What is the point of software engineering? What does it fix?<ul><li>The problem with software development in the past:<ul><li>Late</li><li>Too expensive</li><li>Poor quality</li><li>And less functional than promised.</li></ul></li></ul></li><li>The internet was first born in the early 1970s.</li><li>Mid 1990s, the web came ot be.</li></ul><hr><h3 id=modern-software-engineering-822>Modern Software Engineering (8/22)
-<a class=anchor href=#modern-software-engineering-822>#</a></h3><ul><li>Waterfall life cycle model is evil, much worse than agile methodology.<ul><li>It was the method used for centuries before technology existed.</li></ul></li><li>What is the fundamental problem with building projects?<ul><li>Poor project management</li><li>Do not use good engineering practices.<ul><li>Example: waterfall methodology<ul><li>The waterfall methodology is popular, but this life cycle model doesn&rsquo;t work because of one key issue, that the requirements KEEP CHANGING. Waterfall assumes that the requirements don&rsquo;t change.</li></ul></li></ul></li></ul></li><li>project efficiency - described as a project being on time and within budget.</li><li>A low failure rate of software projects is not a direct indication of success or product quality.<ul><li>If only 1% of projects fail, it may indicate that not enough risks are being taken.
-Multicore is usually better for performance, but there are edge cases where this is not the case.</li></ul></li><li>In situations like these, it&rsquo;s better to go back to singlecore and use rate monotonic analysis.</li><li>Be careful with the decisions you make especially when trying to prioritize speed.<ul><li>It is not worth it to deliver poor quality work at the price of speed.</li></ul></li></ul><hr><h3 id=some-random-shit-827>Some random shit (8/27)
-<a class=anchor href=#some-random-shit-827>#</a></h3><h5 id=what-is-devops>What is devops
-<a class=anchor href=#what-is-devops>#</a></h5><ul><li>Getting the users involved with the developer team to find what works and what doesn&rsquo;t.</li></ul><h5 id=how-to-avoid-the-typical-mistakes>How to avoid the typical mistakes:
-<a class=anchor href=#how-to-avoid-the-typical-mistakes>#</a></h5><ul><li>Identify problems that have occured in previous projects that have a similar goal to your project.</li><li>Discuss major mistakes that were made with other people, whether coworkers in different departments, or even friends in the industry.</li><li>Create a checklist of mistakes to be mindful of. Hopefully they don&rsquo;t get checked off</li><li>Create a list of mistakes to AVOID during planning and monitor cautiously.</li><li>Create a watchdog, an alarm so to speak, to sound whenever your proect starts leaning toward a mistake.</li></ul><h5 id=essential-vs-accidental-complexity>Essential vs Accidental Complexity
-<a class=anchor href=#essential-vs-accidental-complexity>#</a></h5><p>Any project has a certain aspect of essential complexity, it is just intrinsic to the stuff that we do.</p><p>Accidental is not intrinsic to the problem, but sometimes it&rsquo;s necessary.</p><hr><h3 id=829>(8/29)
-<a class=anchor href=#829>#</a></h3><h5 id=lessons-learned-from-historic-cases>Lessons Learned from Historic Cases
-<a class=anchor href=#lessons-learned-from-historic-cases>#</a></h5><p>Boeing</p><ul><li>They got a larger engine that was more powerful but it caused issues with the plane during flight. To combat this, engineers created radars and scanners to detect when the plane is in danger, but it was an optional feature that many engineers did not opt to install because it cost extra. This meant that there was only one point of failure. Furthermore, there was new software that would take control of the plane to correct its sterring, but this feature was not known to many pilots, causing major panic in those situations to the pilots that did not understand why they could not fly their plane.</li><li>Bob Martin&rsquo;s lessons learned:<ul><li>When our mistakes may cause injury, loss, or death, it is up to us to ensure the upmost safety.</li></ul></li></ul><h5 id=healthcaregov>Healthcare.gov
-<a class=anchor href=#healthcaregov>#</a></h5><ul><li>There were a lot of separate teams that worked on different pieces.<ul><li>The lack of communication between these teams contributed to poor development.</li></ul></li><li>Originally, they had a very short timeline, but the requirements of the project kept increasing, while keeping the time-line the same.<ul><li>Their solution to reaching the deadline was adding more engineers that did not necessarily help.</li></ul></li><li>Part of the problem was that, there was nobody in charge (nobody was responsible for this disaster).</li><li>There&rsquo;s supposed to be test cases for each of the features, but there was poor testing, and not a full implementation of the features.<ul><li>So when they actually ran tests, they failed almost every single one.<ul><li>Some issues were, could not handle the load</li><li>Security issues</li><li>Clear text.</li></ul></li></ul></li><li>Volunteers from Silicon valley fixed the issues in 1/10 the time with 1/10 the resources.</li><li>When you have a big project where you expect many users, there <strong>NEEDS</strong> to be a dashboard.</li><li>Also, when you want to build a big project with many users, you have to incrementally scale it and fix it as you go.</li><li>Just because you use the word sprint, does not indicate the use of agile methodologies.</li><li><strong>Root causes of failure:</strong><ul><li>The time frame must be well established, and modified when necessary</li><li>Requirements can change, be quick on your feet.</li><li>No effective planning</li><li>Poor integration strategy (lax oversight of contractors).</li></ul></li></ul><h5 id=london-ambulance-service>London Ambulance Service
-<a class=anchor href=#london-ambulance-service>#</a></h5><ul><li>War between management and reunions</li><li>Skipped a lot of steps in the testing protocols<ul><li>Relates to the quality culture. When we have a culture that doesn&rsquo;t prioritize quality, then you won&rsquo;t get it.</li><li>This led to many deaths in London because of the delay in ambulance services.</li></ul></li><li>In 1992, GPS and the web did not exist.<ul><li>They wanted a computer aided system where the driver could say, &ldquo;This is where I am, where should I go&rdquo;</li></ul></li><li>One issue: They used single shot implementation (waterfall).<ul><li>If any feature did not expect to be completed by the 8 Jan 1992 deadline would be scrapped.</li></ul></li><li>Another issue: the original team of workers in 1992 had no experience in building dispatch systems.<ul><li>The 1996 team was filled with members from midland that DID have experience.</li></ul></li><li>The 1992 project did not use the PRINCE method, but not only that, they did not have the proper culture.</li><li>The root cause was bad management</li><li>There was also just a major lack of testing.</li><li>In 1996, all of the stages were completed in small increments. The project started as a simple call-taking one. At each stage, it was thoroughly tested.</li></ul><h5 id=london-stock-exchange>London Stock Exchange
-<a class=anchor href=#london-stock-exchange>#</a></h5><ul><li>This project was extremely over budget and late</li><li>They were just really bad at managing the escalation.</li><li>bad at estimating the cost and time.</li><li>They wanted to have a concrete outline within 2 months, but didn&rsquo;t have one years.</li><li>There were people that were on the project that had poor interests for the project. They were sabotaging and stopping the project from coming to fruition.</li><li>The LSE set an ambitious timescale of 18 months, they allowed politics to take precedence over technical rationality.</li><li>Solution:<ul><li>Taurus renamed CREST arround 1993 and was taken over by England.<ul><li>They decided to implement a central registry of shares (the decision that would&rsquo;ve cost many banks money).</li></ul></li><li>The &ldquo;big hammer&rdquo;<ul><li>Put their foot down and made the obviously correct decision.</li></ul></li></ul></li></ul><h5 id=toyota>Toyota
-<a class=anchor href=#toyota>#</a></h5><ul><li>I wrote about this in my homework, you already know</li></ul><hr><h1 id=agile-methods-93>Agile Methods (9/3)
-<a class=anchor href=#agile-methods-93>#</a></h1><p>Agile: a method that supports responding raipdly to changing requirements
-Scrum is one method of Agile.</p><ul><li>There are significant differences in the methods. Scrum is the most widely used method, and also the 2nd most simple. The most simple is &mldr;. (I FORGOT)
-There&rsquo;s 12 principles for the agile methodology.</li></ul><p>If you notice in healthcare.gov incident, we had a bunch of different sprints, but it was the waterfall lifecycle split into chunks.</p><h3 id=what-does-agile-address>What does agile address?
-<a class=anchor href=#what-does-agile-address>#</a></h3><ul><li>Requirement volatility.<ul><li>If you look at failed projects, one of the leading causes is high requrement volatility.</li></ul></li><li>Heavy-weight documentation<ul><li>Agile moves away from that to simplify things.</li></ul></li><li>Not collaborating with stakeholders to find out what the problem is and fix it.<ul><li>They have a focus on communication with customers and people</li></ul></li><li>Poor communication within the team<ul><li>Smaller teams are preferred to enhance communication</li></ul></li><li>Poor estimating and planning<ul><li>Agile says that we will constantly work on the customer&rsquo;s number 1 issue at every iteration.</li></ul></li></ul><p>The customer controls the schedule and the functionality, but they cannot control how much of it gets done.</p><h3 id=agile-manifesto>Agile manifesto
-<a class=anchor href=#agile-manifesto>#</a></h3><p>We value:</p><ul><li>Individuals and interactions<ul><li>This means confident and competent people working as members of effective teams.</li></ul></li><li>Working software over comprehensive documentation<ul><li>If you&rsquo;re writnig over thousands of pages of documentation for your code, it&rsquo;s not going to have much value.</li><li>Obviously we need to write down the requirements or a formal specification, we may get a lot of documentation for a small amount of code.</li><li>HOWEVER, there should not be thousands of pages of design spec. Sometimes the design spec won&rsquo;t even match the code that was written because the code changed, but the design spec wasn&rsquo;t update.<ul><li>The design spec and the code can become out of sync, rendering the design spec useless.</li></ul></li></ul></li><li>Customer collaboration over contract negotiation.<ul><li>Would you rather work with a third-party lawyer and work with contracts, or collaborate directly with the customer.</li><li>The customer is our ally, not an enemy.</li></ul></li><li>Responding to change over following a plan<ul><li>Having a plan is good.</li><li>But the type of plan for an agile project is different</li><li>Requirements change, and when things change, we need to change our plan.
-One of the issues was that agile was too process oriented.</li></ul></li></ul><h3 id=principles-of-the-manifesto>Principles of the Manifesto
-<a class=anchor href=#principles-of-the-manifesto>#</a></h3><ul><li>==The highest priority is to SATISFY the customer by providing valuable and real products that they find satisfactory. ==<ul><li>How do we know it&rsquo;s valuable?<ul><li>Early and continuous delivery. Deliver the customer software early and allow them to see the iterations.</li></ul></li></ul></li><li>We welcome changes in the requirements. We just say, man that&rsquo;s just how it is, we&rsquo;ll do our best.</li><li>Deliver working software FREQUENTLY, from a couple of weeks to a couple of months.<ul><li>We prefer shorter timescales. These iterations are usually around 2 weeks, we will rarely see an iteration length of a month.</li></ul></li><li>Bulid a project around motivated people. We give them interesting work and the environment and support that they need.</li><li>Most effective way of communicating is through face to face conversation.<ul><li>This was the philosophy back then in 2001. A lot of virtual teams exist and perform remotely. But face-to-face is generally the best.</li></ul></li><li>The primary way of measuring progress is via working software and the implementation of new features.</li><li>Sustainable development<ul><li>We want to avoid burnout. Avoid 60 hour work weeks. We want to create a culture of sustainable work.</li></ul></li><li>Make it easier to change the software. Pay really good attention to excellence.<ul><li>Good design will enchance agility. A well designed software is easier to change.</li><li>Refactoring is cleaning up the code base.</li></ul></li><li>Simplicity - Don&rsquo;t solve a problem you don&rsquo;t have.<ul><li>&ldquo;At some point, we are going to have some variant of this same problem, should i start strategizing and figure out how to generalize my solution to fit other future problems?&rdquo;<ul><li>Nah bro, just eat that first bullet and fix the code.</li></ul></li><li>The art of maximizing the amount of work not done is essential.</li></ul></li><li>The best architectures, requirements, and designs emerge from self-organizing teams.<ul><li>One of the things we want to do early in the lifestyle is think about the architecture.</li><li>==The architecture is not really emerging, it should preemtively be made, and then slightly iterated==</li></ul></li><li>At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.<ul><li>Basically just be self-aware and self-crtitical, individually and on a team basis.</li></ul></li></ul><h3 id=different-projects-need-different-methodologies>Different projects need different methodologies
-<a class=anchor href=#different-projects-need-different-methodologies>#</a></h3><p>![[Pasted image 20240903165001.png]]
+Any project has a certain aspect of essential complexity, it is just intrinsic to the stuff that we do.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/notes/university-notes/software-engineering/">
+  <meta property="og:site_name" content="dayowrites">
+  <meta property="og:title" content="software engineering">
+  <meta property="og:description" content="Modern Software Engineering (8/20) # What is the point of software engineering? What does it fix? The problem with software development in the past: Late Too expensive Poor quality And less functional than promised. The internet was first born in the early 1970s. Mid 1990s, the web came ot be. Modern Software Engineering (8/22) # Waterfall life cycle model is evil, much worse than agile methodology. It was the method used for centuries before technology existed. What is the fundamental problem with building projects? Poor project management Do not use good engineering practices. Example: waterfall methodology The waterfall methodology is popular, but this life cycle model doesn’t work because of one key issue, that the requirements KEEP CHANGING. Waterfall assumes that the requirements don’t change. project efficiency - described as a project being on time and within budget. A low failure rate of software projects is not a direct indication of success or product quality. If only 1% of projects fail, it may indicate that not enough risks are being taken. Multicore is usually better for performance, but there are edge cases where this is not the case. In situations like these, it’s better to go back to singlecore and use rate monotonic analysis. Be careful with the decisions you make especially when trying to prioritize speed. It is not worth it to deliver poor quality work at the price of speed. Some random shit (8/27) # What is devops # Getting the users involved with the developer team to find what works and what doesn’t. How to avoid the typical mistakes: # Identify problems that have occured in previous projects that have a similar goal to your project. Discuss major mistakes that were made with other people, whether coworkers in different departments, or even friends in the industry. Create a checklist of mistakes to be mindful of. Hopefully they don’t get checked off Create a list of mistakes to AVOID during planning and monitor cautiously. Create a watchdog, an alarm so to speak, to sound whenever your proect starts leaning toward a mistake. Essential vs Accidental Complexity # Any project has a certain aspect of essential complexity, it is just intrinsic to the stuff that we do.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2024-08-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-08-20T00:00:00+00:00">
+<title>software engineering | dayowrites</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/notes/university-notes/software-engineering/">
+<link rel="stylesheet" href="/book.min.f9c8f802c55b9b2a770675a7a1bcb9f922e9a11a69569327f139f82e7ee1b9bd.css" integrity="sha256-&#43;cj4AsVbmyp3BnWnoby5&#43;SLpoRppVpMn8Tn4Ln7hub0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.d0a4df2e0ee941c77ca799ffc1bfbce707c05679512da9a69e8ce2ffc942c1eb.js" integrity="sha256-0KTfLg7pQcd8p5n/wb&#43;85wfAVnlRLammnozi/8lCwes=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>dayowrites</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/sermons/"  >
+        Sermons
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Notes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>University Notes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/university-notes/software-engineering/" class="active">software engineering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/university-notes/database/" class="">database</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/university-notes/paradigms/" class="">paradigms</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Video Notes</span>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>software engineering</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#modern-software-engineering-820">Modern Software Engineering (8/20)</a></li>
+        <li><a href="#modern-software-engineering-822">Modern Software Engineering (8/22)</a></li>
+        <li><a href="#some-random-shit-827">Some random shit (8/27)</a></li>
+        <li><a href="#829">(8/29)</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#what-does-agile-address">What does agile address?</a></li>
+        <li><a href="#agile-manifesto">Agile manifesto</a></li>
+        <li><a href="#principles-of-the-manifesto">Principles of the Manifesto</a></li>
+        <li><a href="#different-projects-need-different-methodologies">Different projects need different methodologies</a></li>
+        <li><a href="#six-sweet-spots-2001">Six Sweet Spots (2001)</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#scrum-the-most-popular-agile-method">Scrum (The most popular agile method)</a></li>
+        <li><a href="#life-cycle">Life Cycle</a></li>
+        <li><a href="#team-members">Team Members</a></li>
+        <li><a href="#sprints">Sprints</a></li>
+        <li><a href="#daily-scrum">Daily Scrum</a></li>
+        <li><a href="#sprint-review">Sprint Review</a></li>
+        <li><a href="#product-backlog">Product Backlog</a></li>
+        <li><a href="#product-goal">Product Goal</a></li>
+        <li><a href="#user-story">User Story</a></li>
+        <li><a href="#architecture-breaker">Architecture Breaker</a></li>
+        <li><a href="#splitting-stories-not-on-exam">Splitting stories (not on exam)</a></li>
+        <li><a href="#tech-stories">Tech Stories</a></li>
+        <li><a href="#division-of-concerns">Division of Concerns</a></li>
+        <li><a href="#planning-poker">Planning Poker</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#re-estimating">Re-estimating</a></li>
+        <li><a href="#sprint-backlog-and-sprint-goal">Sprint Backlog and Sprint Goal</a></li>
+        <li><a href="#stories-and-tasks">Stories and Tasks</a></li>
+        <li><a href="#definition-of-done">Definition of Done</a></li>
+        <li><a href="#why-scrum-is-powerful">Why Scrum is powerful</a></li>
+        <li><a href="#no-silver-bullet">No silver bullet</a></li>
+        <li><a href="#does-agile-fit-your-needs">Does Agile Fit your needs?</a></li>
+        <li><a href="#barriers-to-the-success-of-agile">Barriers to the Success of Agile</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#functional-vs-nonfunctional-requirement-on-exam">==Functional vs nonfunctional requirement on exam==</a></li>
+        <li><a href="#requirement-eliciation">Requirement Eliciation</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#requirements-defects">Requirements Defects</a></li>
+        <li><a href="#characteristics-of-good-individual-requirements">Characteristics of Good Individual Requirements</a></li>
+        <li><a href="#characteristics-of-good-set-of-requirements">Characteristics of Good SET of Requirements</a></li>
+        <li><a href="#requirements-jargon-shall">Requirements Jargon: Shall</a></li>
+        <li><a href="#object-oriented-requirements">Object-Oriented Requirements</a></li>
+        <li><a href="#use-cases-document-requirements">Use Cases Document Requirements</a></li>
+        <li><a href="#use-case-diagrams">Use case diagrams</a></li>
+        <li><a href="#actors">Actors</a></li>
+        <li><a href="#finding-use-cases">Finding Use cases</a></li>
+        <li><a href="#use-case-context-diagram">Use Case Context Diagram</a></li>
+        <li><a href="#larmans-fully-dressed-use-case">Larman&rsquo;s Fully Dressed Use Case</a></li>
+        <li><a href="#bank-loan-example">Bank Loan Example</a></li>
+        <li><a href="#bohems-cone-of-uncertainty">Bohem&rsquo;s Cone of Uncertainty</a></li>
+        <li><a href="#pure-watefall-model">Pure Watefall Model</a></li>
+        <li><a href="#moving-away-from-plan-driven">Moving Away from Plan-Driven</a></li>
+        <li><a href="#spiral-lifecycle">Spiral Lifecycle</a></li>
+        <li><a href="#iterative-and-incremental-development">Iterative and incremental development</a></li>
+        <li><a href="#snowdens-cynefin-framekwork">Snowden&rsquo;s Cynefin Framekwork</a></li>
+        <li><a href="#unified-process">Unified Process</a></li>
+        <li><a href="#lifecycles-used">Lifecycles used</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#system-perspectives">System Perspectives</a></li>
+        <li><a href="#classical-analysis">Classical Analysis</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#the-problem-of-software-design-is-complexity">The problem of software design is complexity</a></li>
+        <li><a href="#complexity">Complexity</a></li>
+        <li><a href="#up-design-workflow">UP Design Workflow</a></li>
+        <li><a href="#cohesion-and-coupling">Cohesion and Coupling</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h3 id="modern-software-engineering-820">
+  Modern Software Engineering (8/20)
+  <a class="anchor" href="#modern-software-engineering-820">#</a>
+</h3>
+<ul>
+<li>What is the point of software engineering? What does it fix?
+<ul>
+<li>The problem with software development in the past:
+<ul>
+<li>Late</li>
+<li>Too expensive</li>
+<li>Poor quality</li>
+<li>And less functional than promised.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The internet was first born in the early 1970s.</li>
+<li>Mid 1990s, the web came ot be.</li>
+</ul>
+<hr>
+<h3 id="modern-software-engineering-822">
+  Modern Software Engineering (8/22)
+  <a class="anchor" href="#modern-software-engineering-822">#</a>
+</h3>
+<ul>
+<li>Waterfall life cycle model is evil, much worse than agile methodology.
+<ul>
+<li>It was the method used for centuries before technology existed.</li>
+</ul>
+</li>
+<li>What is the fundamental problem with building projects?
+<ul>
+<li>Poor project management</li>
+<li>Do not use good engineering practices.
+<ul>
+<li>Example: waterfall methodology
+<ul>
+<li>The waterfall methodology is popular, but this life cycle model doesn&rsquo;t work because of one key issue, that the requirements KEEP CHANGING. Waterfall assumes that the requirements don&rsquo;t change.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>project efficiency - described as a project being on time and within budget.</li>
+<li>A low failure rate of software projects is not a direct indication of success or product quality.
+<ul>
+<li>If only 1% of projects fail, it may indicate that not enough risks are being taken.
+Multicore is usually better for performance, but there are edge cases where this is not the case.</li>
+</ul>
+</li>
+<li>In situations like these, it&rsquo;s better to go back to singlecore and use rate monotonic analysis.</li>
+<li>Be careful with the decisions you make especially when trying to prioritize speed.
+<ul>
+<li>It is not worth it to deliver poor quality work at the price of speed.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="some-random-shit-827">
+  Some random shit (8/27)
+  <a class="anchor" href="#some-random-shit-827">#</a>
+</h3>
+<h5 id="what-is-devops">
+  What is devops
+  <a class="anchor" href="#what-is-devops">#</a>
+</h5>
+<ul>
+<li>Getting the users involved with the developer team to find what works and what doesn&rsquo;t.</li>
+</ul>
+<h5 id="how-to-avoid-the-typical-mistakes">
+  How to avoid the typical mistakes:
+  <a class="anchor" href="#how-to-avoid-the-typical-mistakes">#</a>
+</h5>
+<ul>
+<li>Identify problems that have occured in previous projects that have a similar goal to your project.</li>
+<li>Discuss major mistakes that were made with other people, whether coworkers in different departments, or even friends in the industry.</li>
+<li>Create a checklist of mistakes to be mindful of. Hopefully they don&rsquo;t get checked off</li>
+<li>Create a list of mistakes to AVOID during planning and monitor cautiously.</li>
+<li>Create a watchdog, an alarm so to speak, to sound whenever your proect starts leaning toward a mistake.</li>
+</ul>
+<h5 id="essential-vs-accidental-complexity">
+  Essential vs Accidental Complexity
+  <a class="anchor" href="#essential-vs-accidental-complexity">#</a>
+</h5>
+<p>Any project has a certain aspect of essential complexity, it is just intrinsic to the stuff that we do.</p>
+<p>Accidental is not intrinsic to the problem, but sometimes it&rsquo;s necessary.</p>
+<hr>
+<h3 id="829">
+  (8/29)
+  <a class="anchor" href="#829">#</a>
+</h3>
+<h5 id="lessons-learned-from-historic-cases">
+  Lessons Learned from Historic Cases
+  <a class="anchor" href="#lessons-learned-from-historic-cases">#</a>
+</h5>
+<p>Boeing</p>
+<ul>
+<li>They got a larger engine that was more powerful but it caused issues with the plane during flight. To combat this, engineers created radars and scanners to detect when the plane is in danger, but it was an optional feature that many engineers did not opt to install because it cost extra. This meant that there was only one point of failure. Furthermore, there was new software that would take control of the plane to correct its sterring, but this feature was not known to many pilots, causing major panic in those situations to the pilots that did not understand why they could not fly their plane.</li>
+<li>Bob Martin&rsquo;s lessons learned:
+<ul>
+<li>When our mistakes may cause injury, loss, or death, it is up to us to ensure the upmost safety.</li>
+</ul>
+</li>
+</ul>
+<h5 id="healthcaregov">
+  Healthcare.gov
+  <a class="anchor" href="#healthcaregov">#</a>
+</h5>
+<ul>
+<li>There were a lot of separate teams that worked on different pieces.
+<ul>
+<li>The lack of communication between these teams contributed to poor development.</li>
+</ul>
+</li>
+<li>Originally, they had a very short timeline, but the requirements of the project kept increasing, while keeping the time-line the same.
+<ul>
+<li>Their solution to reaching the deadline was adding more engineers that did not necessarily help.</li>
+</ul>
+</li>
+<li>Part of the problem was that, there was nobody in charge (nobody was responsible for this disaster).</li>
+<li>There&rsquo;s supposed to be test cases for each of the features, but there was poor testing, and not a full implementation of the features.
+<ul>
+<li>So when they actually ran tests, they failed almost every single one.
+<ul>
+<li>Some issues were, could not handle the load</li>
+<li>Security issues</li>
+<li>Clear text.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Volunteers from Silicon valley fixed the issues in 1/10 the time with 1/10 the resources.</li>
+<li>When you have a big project where you expect many users, there <strong>NEEDS</strong> to be a dashboard.</li>
+<li>Also, when you want to build a big project with many users, you have to incrementally scale it and fix it as you go.</li>
+<li>Just because you use the word sprint, does not indicate the use of agile methodologies.</li>
+<li><strong>Root causes of failure:</strong>
+<ul>
+<li>The time frame must be well established, and modified when necessary</li>
+<li>Requirements can change, be quick on your feet.</li>
+<li>No effective planning</li>
+<li>Poor integration strategy (lax oversight of contractors).</li>
+</ul>
+</li>
+</ul>
+<h5 id="london-ambulance-service">
+  London Ambulance Service
+  <a class="anchor" href="#london-ambulance-service">#</a>
+</h5>
+<ul>
+<li>War between management and reunions</li>
+<li>Skipped a lot of steps in the testing protocols
+<ul>
+<li>Relates to the quality culture. When we have a culture that doesn&rsquo;t prioritize quality, then you won&rsquo;t get it.</li>
+<li>This led to many deaths in London because of the delay in ambulance services.</li>
+</ul>
+</li>
+<li>In 1992, GPS and the web did not exist.
+<ul>
+<li>They wanted a computer aided system where the driver could say, &ldquo;This is where I am, where should I go&rdquo;</li>
+</ul>
+</li>
+<li>One issue: They used single shot implementation (waterfall).
+<ul>
+<li>If any feature did not expect to be completed by the 8 Jan 1992 deadline would be scrapped.</li>
+</ul>
+</li>
+<li>Another issue: the original team of workers in 1992 had no experience in building dispatch systems.
+<ul>
+<li>The 1996 team was filled with members from midland that DID have experience.</li>
+</ul>
+</li>
+<li>The 1992 project did not use the PRINCE method, but not only that, they did not have the proper culture.</li>
+<li>The root cause was bad management</li>
+<li>There was also just a major lack of testing.</li>
+<li>In 1996, all of the stages were completed in small increments. The project started as a simple call-taking one. At each stage, it was thoroughly tested.</li>
+</ul>
+<h5 id="london-stock-exchange">
+  London Stock Exchange
+  <a class="anchor" href="#london-stock-exchange">#</a>
+</h5>
+<ul>
+<li>This project was extremely over budget and late</li>
+<li>They were just really bad at managing the escalation.</li>
+<li>bad at estimating the cost and time.</li>
+<li>They wanted to have a concrete outline within 2 months, but didn&rsquo;t have one years.</li>
+<li>There were people that were on the project that had poor interests for the project. They were sabotaging and stopping the project from coming to fruition.</li>
+<li>The LSE set an ambitious timescale of 18 months, they allowed politics to take precedence over technical rationality.</li>
+<li>Solution:
+<ul>
+<li>Taurus renamed CREST arround 1993 and was taken over by England.
+<ul>
+<li>They decided to implement a central registry of shares (the decision that would&rsquo;ve cost many banks money).</li>
+</ul>
+</li>
+<li>The &ldquo;big hammer&rdquo;
+<ul>
+<li>Put their foot down and made the obviously correct decision.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="toyota">
+  Toyota
+  <a class="anchor" href="#toyota">#</a>
+</h5>
+<ul>
+<li>I wrote about this in my homework, you already know</li>
+</ul>
+<hr>
+<h1 id="agile-methods-93">
+  Agile Methods (9/3)
+  <a class="anchor" href="#agile-methods-93">#</a>
+</h1>
+<p>Agile: a method that supports responding raipdly to changing requirements
+Scrum is one method of Agile.</p>
+<ul>
+<li>There are significant differences in the methods. Scrum is the most widely used method, and also the 2nd most simple. The most simple is &hellip;. (I FORGOT)
+There&rsquo;s 12 principles for the agile methodology.</li>
+</ul>
+<p>If you notice in healthcare.gov incident, we had a bunch of different sprints, but it was the waterfall lifecycle split into chunks.</p>
+<h3 id="what-does-agile-address">
+  What does agile address?
+  <a class="anchor" href="#what-does-agile-address">#</a>
+</h3>
+<ul>
+<li>Requirement volatility.
+<ul>
+<li>If you look at failed projects, one of the leading causes is high requrement volatility.</li>
+</ul>
+</li>
+<li>Heavy-weight documentation
+<ul>
+<li>Agile moves away from that to simplify things.</li>
+</ul>
+</li>
+<li>Not collaborating with stakeholders to find out what the problem is and fix it.
+<ul>
+<li>They have a focus on communication with customers and people</li>
+</ul>
+</li>
+<li>Poor communication within the team
+<ul>
+<li>Smaller teams are preferred to enhance communication</li>
+</ul>
+</li>
+<li>Poor estimating and planning
+<ul>
+<li>Agile says that we will constantly work on the customer&rsquo;s number 1 issue at every iteration.</li>
+</ul>
+</li>
+</ul>
+<p>The customer controls the schedule and the functionality, but they cannot control how much of it gets done.</p>
+<h3 id="agile-manifesto">
+  Agile manifesto
+  <a class="anchor" href="#agile-manifesto">#</a>
+</h3>
+<p>We value:</p>
+<ul>
+<li>Individuals and interactions
+<ul>
+<li>This means confident and competent people working as members of effective teams.</li>
+</ul>
+</li>
+<li>Working software over comprehensive documentation
+<ul>
+<li>If you&rsquo;re writnig over thousands of pages of documentation for your code, it&rsquo;s not going to have much value.</li>
+<li>Obviously we need to write down the requirements or a formal specification, we may get a lot of documentation for a small amount of code.</li>
+<li>HOWEVER, there should not be thousands of pages of design spec. Sometimes the design spec won&rsquo;t even match the code that was written because the code changed, but the design spec wasn&rsquo;t update.
+<ul>
+<li>The design spec and the code can become out of sync, rendering the design spec useless.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Customer collaboration over contract negotiation.
+<ul>
+<li>Would you rather work with a third-party lawyer and work with contracts, or collaborate directly with the customer.</li>
+<li>The customer is our ally, not an enemy.</li>
+</ul>
+</li>
+<li>Responding to change over following a plan
+<ul>
+<li>Having a plan is good.</li>
+<li>But the type of plan for an agile project is different</li>
+<li>Requirements change, and when things change, we need to change our plan.
+One of the issues was that agile was too process oriented.</li>
+</ul>
+</li>
+</ul>
+<h3 id="principles-of-the-manifesto">
+  Principles of the Manifesto
+  <a class="anchor" href="#principles-of-the-manifesto">#</a>
+</h3>
+<ul>
+<li>==The highest priority is to SATISFY the customer by providing valuable and real products that they find satisfactory. ==
+<ul>
+<li>How do we know it&rsquo;s valuable?
+<ul>
+<li>Early and continuous delivery. Deliver the customer software early and allow them to see the iterations.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>We welcome changes in the requirements. We just say, man that&rsquo;s just how it is, we&rsquo;ll do our best.</li>
+<li>Deliver working software FREQUENTLY, from a couple of weeks to a couple of months.
+<ul>
+<li>We prefer shorter timescales. These iterations are usually around 2 weeks, we will rarely see an iteration length of a month.</li>
+</ul>
+</li>
+<li>Bulid a project around motivated people. We give them interesting work and the environment and support that they need.</li>
+<li>Most effective way of communicating is through face to face conversation.
+<ul>
+<li>This was the philosophy back then in 2001. A lot of virtual teams exist and perform remotely. But face-to-face is generally the best.</li>
+</ul>
+</li>
+<li>The primary way of measuring progress is via working software and the implementation of new features.</li>
+<li>Sustainable development
+<ul>
+<li>We want to avoid burnout. Avoid 60 hour work weeks. We want to create a culture of sustainable work.</li>
+</ul>
+</li>
+<li>Make it easier to change the software. Pay really good attention to excellence.
+<ul>
+<li>Good design will enchance agility. A well designed software is easier to change.</li>
+<li>Refactoring is cleaning up the code base.</li>
+</ul>
+</li>
+<li>Simplicity - Don&rsquo;t solve a problem you don&rsquo;t have.
+<ul>
+<li>&ldquo;At some point, we are going to have some variant of this same problem, should i start strategizing and figure out how to generalize my solution to fit other future problems?&rdquo;
+<ul>
+<li>Nah bro, just eat that first bullet and fix the code.</li>
+</ul>
+</li>
+<li>The art of maximizing the amount of work not done is essential.</li>
+</ul>
+</li>
+<li>The best architectures, requirements, and designs emerge from self-organizing teams.
+<ul>
+<li>One of the things we want to do early in the lifestyle is think about the architecture.</li>
+<li>==The architecture is not really emerging, it should preemtively be made, and then slightly iterated==</li>
+</ul>
+</li>
+<li>At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.
+<ul>
+<li>Basically just be self-aware and self-crtitical, individually and on a team basis.</li>
+</ul>
+</li>
+</ul>
+<h3 id="different-projects-need-different-methodologies">
+  Different projects need different methodologies
+  <a class="anchor" href="#different-projects-need-different-methodologies">#</a>
+</h3>
+<p>![[Pasted image 20240903165001.png]]
 The more important the stake/criticality, the higher up on the Y axis.
-When the stakes are higher, we must be more and more thorough with our operation. Review every change, test a bunch, multiple points of failure, etc.</p><p>You have got to be dilligent when the consequences are potentially more disasterous.</p><h3 id=six-sweet-spots-2001>Six Sweet Spots (2001)
-<a class=anchor href=#six-sweet-spots-2001>#</a></h3><p>Dedicated developer?</p><ul><li>Someone that dedicates 100% of their time to the project, full time.</li><li>Multi-tasking is not encouraged in software development. You cannot interupt your thought process deliberately, especially multiple times. It is basically an unspoken law to only be assigned one task or project at a time.
-Experienced developer?</li><li>10,000 hours (~5 years) of experience.</li><li>Agile cannot fix inexperienced novice workers.</li><li>Agile is best with smaller teams of EXPERIENCED workers.</li><li>You can have a few novices, but not a team full of them.
-Small co-located team?</li><li>7 + or - 2 members (basically less than 10)</li><li>Visible, audible, isolated, same physical space.
-Tools to support testing and configuration management</li><li>Doing multiple tests many times perday to see if any changes you&rsquo;ve made may have potentially accidentally broken something.
-Easy access to uses to respond to their requests</li><li>Basically we need to continuously interact with customers and users.</li></ul><hr><h1 id=scrum95>Scrum(9/5)
-<a class=anchor href=#scrum95>#</a></h1><h3 id=scrum-the-most-popular-agile-method>Scrum (The most popular agile method)
-<a class=anchor href=#scrum-the-most-popular-agile-method>#</a></h3><p>Frequently hybridized and expanded on with other methods. No technical aspects, only project management.</p><h3 id=life-cycle>Life Cycle
-<a class=anchor href=#life-cycle>#</a></h3><p>Product backlog ->
-Sprint backlog ->
-work on this iteration for 2-4 weeks, where everyday the team discuss ->
-at the end of the iteration, you have a shippable increment of the product.</p><h3 id=team-members>Team Members
-<a class=anchor href=#team-members>#</a></h3><ul><li><strong>product master</strong><ul><li>responsible for maximizing the value of the product resulting from the work.</li><li>order (prioritize) the Product Backlog items.</li><li>communicate the Product Goal.</li><li>it is important that there is only ONE person as a product master. No conflicts.</li></ul></li><li><strong>scrum master</strong><ul><li>leadership role, advisor like<ul><li>but has no management authority over the team</li></ul></li><li>helps resolve impediments</li><li>keeps people organized?</li><li>==Search up the difference ==</li></ul></li><li><strong>developers</strong><ul><li>Gotta do your work man</li><li>Incompetent members will get hounded on</li><li>5-9 members ideally. Less than 10 typically</li></ul></li></ul><p>Within the team, there is no hierarchy, everyone just works.</p><h3 id=sprints>Sprints
-<a class=anchor href=#sprints>#</a></h3><p>Fixed length of time to work on a goal</p><ul><li>The iterations are short, most commonly two weeks as of today</li><li>You cannot change the requirements DURING a sprint.<ul><li>Because of this, even if the Product Owner wants to change the priority, they must wait to mention this until the next meeting.</li></ul></li><li>A sprint can be cancelled with the Product Goal becomes obsolete.<ul><li>Only one person can do this, the Product OWNER.</li></ul></li><li><strong>Sprint Goal</strong> - What makes the sprint valuable?</li></ul><h3 id=daily-scrum>Daily Scrum
-<a class=anchor href=#daily-scrum>#</a></h3><p>Timeboxed 15 minutes, cannot go over it no matter what.
+When the stakes are higher, we must be more and more thorough with our operation. Review every change, test a bunch, multiple points of failure, etc.</p>
+<p>You have got to be dilligent when the consequences are potentially more disasterous.</p>
+<h3 id="six-sweet-spots-2001">
+  Six Sweet Spots (2001)
+  <a class="anchor" href="#six-sweet-spots-2001">#</a>
+</h3>
+<p>Dedicated developer?</p>
+<ul>
+<li>Someone that dedicates 100% of their time to the project, full time.</li>
+<li>Multi-tasking is not encouraged in software development. You cannot interupt your thought process deliberately, especially multiple times. It is basically an unspoken law to only be assigned one task or project at a time.
+Experienced developer?</li>
+<li>10,000 hours (~5 years) of experience.</li>
+<li>Agile cannot fix inexperienced novice workers.</li>
+<li>Agile is best with smaller teams of EXPERIENCED workers.</li>
+<li>You can have a few novices, but not a team full of them.
+Small co-located team?</li>
+<li>7 + or - 2 members (basically less than 10)</li>
+<li>Visible, audible, isolated, same physical space.
+Tools to support testing and configuration management</li>
+<li>Doing multiple tests many times perday to see if any changes you&rsquo;ve made may have potentially accidentally broken something.
+Easy access to uses to respond to their requests</li>
+<li>Basically we need to continuously interact with customers and users.</li>
+</ul>
+<hr>
+<h1 id="scrum95">
+  Scrum(9/5)
+  <a class="anchor" href="#scrum95">#</a>
+</h1>
+<h3 id="scrum-the-most-popular-agile-method">
+  Scrum (The most popular agile method)
+  <a class="anchor" href="#scrum-the-most-popular-agile-method">#</a>
+</h3>
+<p>Frequently hybridized and expanded on with other methods. No technical aspects, only project management.</p>
+<h3 id="life-cycle">
+  Life Cycle
+  <a class="anchor" href="#life-cycle">#</a>
+</h3>
+<p>Product backlog -&gt;
+Sprint backlog -&gt;
+work on this iteration for 2-4 weeks, where everyday the team discuss -&gt;
+at the end of the iteration, you have a shippable increment of the product.</p>
+<h3 id="team-members">
+  Team Members
+  <a class="anchor" href="#team-members">#</a>
+</h3>
+<ul>
+<li><strong>product master</strong>
+<ul>
+<li>responsible for maximizing the value of the product resulting from the work.</li>
+<li>order (prioritize) the Product Backlog items.</li>
+<li>communicate the Product Goal.</li>
+<li>it is important that there is only ONE person as a product master. No conflicts.</li>
+</ul>
+</li>
+<li><strong>scrum master</strong>
+<ul>
+<li>leadership role, advisor like
+<ul>
+<li>but has no management authority over the team</li>
+</ul>
+</li>
+<li>helps resolve impediments</li>
+<li>keeps people organized?</li>
+<li>==Search up the difference ==</li>
+</ul>
+</li>
+<li><strong>developers</strong>
+<ul>
+<li>Gotta do your work man</li>
+<li>Incompetent members will get hounded on</li>
+<li>5-9 members ideally. Less than 10 typically</li>
+</ul>
+</li>
+</ul>
+<p>Within the team, there is no hierarchy, everyone just works.</p>
+<h3 id="sprints">
+  Sprints
+  <a class="anchor" href="#sprints">#</a>
+</h3>
+<p>Fixed length of time to work on a goal</p>
+<ul>
+<li>The iterations are short, most commonly two weeks as of today</li>
+<li>You cannot change the requirements DURING a sprint.
+<ul>
+<li>Because of this, even if the Product Owner wants to change the priority, they must wait to mention this until the next meeting.</li>
+</ul>
+</li>
+<li>A sprint can be cancelled with the Product Goal becomes obsolete.
+<ul>
+<li>Only one person can do this, the Product OWNER.</li>
+</ul>
+</li>
+<li><strong>Sprint Goal</strong> - What makes the sprint valuable?</li>
+</ul>
+<h3 id="daily-scrum">
+  Daily Scrum
+  <a class="anchor" href="#daily-scrum">#</a>
+</h3>
+<p>Timeboxed 15 minutes, cannot go over it no matter what.
 Carefully consider the progress being made
-Adapt the Sprint Backlog as necessary, and adjust the upcoming planned work.</p><p><strong>Three main questions:</strong></p><ol><li>What did you do since the last Scrum?</li><li>What got in your way?<ol><li>Only list the problems, don&rsquo;t try to solve the problems.</li></ol></li><li>What are you going to do before the next Scrum?</li></ol><h3 id=sprint-review>Sprint Review
-<a class=anchor href=#sprint-review>#</a></h3><ul><li>Conduct a review to inspect the current status and outcome and adjust accordingly.</li><li>Timeboxed to a max of 4 hours for a one-month sprint (one hour per week?)</li><li>Rapid feedback on building the product.</li></ul><h3 id=product-backlog>Product Backlog
-<a class=anchor href=#product-backlog>#</a></h3><ul><li>The master list of everything that is needed to be created or improved in a product.</li><li><strong>Product Backlog Refinement</strong> - breaking down and defining items into smaller more precises items.</li></ul><h3 id=product-goal>Product Goal
-<a class=anchor href=#product-goal>#</a></h3><ul><li>Describes a future state of the product which can serve as a target</li><li>This goal is in the Product Backlog</li></ul><h3 id=user-story>User Story
-<a class=anchor href=#user-story>#</a></h3><ul><li>Is simply a prmoise to have a discussion; not every detail needs to be included.</li><li>Describes functionality that will be valuable to either a user or purcahser of a system.<ul><li>Card - written descriptoin of the story</li><li>Conversation - about the story taht serve to flesh out the details of the story</li><li>Confirmation - details that can be used to determine when a story is COMPLETE.</li></ul></li><li>User stories should be INVEST:<ul><li>Independent - avoid dependencies between stories</li><li>Negotiable - details are negotiable</li><li>Valuable - valuable to everyone (users and developers)</li><li>Estimable - reasonably confident that they can estimate the story</li><li>Small - story can be completed in a single sprint with &lt; 25% of the team</li><li>Testable - test should satisfy the Product Owner</li></ul></li></ul><h3 id=architecture-breaker>Architecture Breaker
-<a class=anchor href=#architecture-breaker>#</a></h3><ul><li>Having to recreate the architecture</li><li>The architecture is mostly not driven by functional requirements.</li><li>The user stories are funciotnal requirements, they&rsquo;re what the softwrae neds to do</li><li>Architecture is driven by the non functoinal requirementsl ike availabity performance security and usability and things like that</li><li>spanh hgue chunks of the system</li><li>so if you break something there, then you got to change big chunks of the software in order to fix it.</li><li>you dont want totry to do all of the architecture work up front, but at least enought (walking skeleton) to understand the big impacts of the design decisions you&rsquo;re making. if you look at just this part of this stimulus response thread, and then another part, but then in combination the performance is awful. if you do a skinny little skeleton, you could look at the performance from end to end in totality and decide accordinigly.</li><li>Focusing on the architecutre early in the project, frequently line up as being a useful way of spending your time.</li><li>create a strong foundation of the architecture and infrastructure early on first, and then afterward start building business value.</li></ul><h3 id=splitting-stories-not-on-exam>Splitting stories (not on exam)
-<a class=anchor href=#splitting-stories-not-on-exam>#</a></h3><ul><li>Cross cutting conerns</li><li>mixed priority things</li></ul><h3 id=tech-stories>Tech Stories
-<a class=anchor href=#tech-stories>#</a></h3><ul><li>Try to avoid tech stories, but you may not be able to<ul><li>Sometimes you can express a tech story in such a way that the customer understands that value that they are getting out of it, sometimes you can&rsquo;t.</li></ul></li><li>stuff that needs to be done, but may not be that the user cares about directly.</li><li>Some tmies you can hide a tech story, inside of othe ruser stories, so you can address the tech story underneath the surface, of things the user actually DOES care about.</li><li>Sometimes you need to create a list of tech stories that you keep around and work on when you can.</li><li>These suggestions come from a book called &ldquo;<strong>scrum and xp from the trenches.</strong>&rdquo; wtf i don&rsquo;t know.</li><li>If you decide that you&rsquo;re interested in agile read this book.</li></ul><h3 id=division-of-concerns>Division of Concerns
-<a class=anchor href=#division-of-concerns>#</a></h3><ul><li>Setting the relative importance of requireemnts and the estimates for doing the work are divided.</li><li>Everyone on the team is involved in estimating every story- builds common understanding.</li></ul><h3 id=planning-poker>Planning Poker
-<a class=anchor href=#planning-poker>#</a></h3><ul><li>As the user story gets bigger, the accuracy of estimation worsens.</li><li>A size of 20 may not fit in a sprint, but a 40 will definitely not fit in a sprint.</li><li>The typical story is usually 5.</li><li>A story with 0 is something that is low friction and easy. One minute of work.
-Aggregating expert judgment</li></ul><hr><h1 id=scrum-cont-910>Scrum Cont. (9/10)
-<a class=anchor href=#scrum-cont-910>#</a></h1><p>Random tangent: Slow is smooth, smooth is fast.
-Essentially the main idea is to take things slow. Plan, be careful, don&rsquo;t rush or else you&rsquo;re cooked.</p><h3 id=re-estimating>Re-estimating
-<a class=anchor href=#re-estimating>#</a></h3><p>When the size of a story has changed, you need to adjust accordingly. If can be smaller or larger than expected. With experience, you will begin to get better at relative estimation.</p><h3 id=sprint-backlog-and-sprint-goal>Sprint Backlog and Sprint Goal
-<a class=anchor href=#sprint-backlog-and-sprint-goal>#</a></h3><p>The Sprint Goal: what are we trying to accomplish this iteration. This overarching motif. Summarizes what we are doing in a single statement.</p><h3 id=stories-and-tasks>Stories and Tasks
-<a class=anchor href=#stories-and-tasks>#</a></h3><p>A task is a broken down component of a story.
+Adapt the Sprint Backlog as necessary, and adjust the upcoming planned work.</p>
+<p><strong>Three main questions:</strong></p>
+<ol>
+<li>What did you do since the last Scrum?</li>
+<li>What got in your way?
+<ol>
+<li>Only list the problems, don&rsquo;t try to solve the problems.</li>
+</ol>
+</li>
+<li>What are you going to do before the next Scrum?</li>
+</ol>
+<h3 id="sprint-review">
+  Sprint Review
+  <a class="anchor" href="#sprint-review">#</a>
+</h3>
+<ul>
+<li>Conduct a review to inspect the current status and outcome and adjust accordingly.</li>
+<li>Timeboxed to a max of 4 hours for a one-month sprint (one hour per week?)</li>
+<li>Rapid feedback on building the product.</li>
+</ul>
+<h3 id="product-backlog">
+  Product Backlog
+  <a class="anchor" href="#product-backlog">#</a>
+</h3>
+<ul>
+<li>The master list of everything that is needed to be created or improved in a product.</li>
+<li><strong>Product Backlog Refinement</strong> - breaking down and defining items into smaller more precises items.</li>
+</ul>
+<h3 id="product-goal">
+  Product Goal
+  <a class="anchor" href="#product-goal">#</a>
+</h3>
+<ul>
+<li>Describes a future state of the product which can serve as a target</li>
+<li>This goal is in the Product Backlog</li>
+</ul>
+<h3 id="user-story">
+  User Story
+  <a class="anchor" href="#user-story">#</a>
+</h3>
+<ul>
+<li>Is simply a prmoise to have a discussion; not every detail needs to be included.</li>
+<li>Describes functionality that will be valuable to either a user or purcahser of a system.
+<ul>
+<li>Card - written descriptoin of the story</li>
+<li>Conversation - about the story taht serve to flesh out the details of the story</li>
+<li>Confirmation - details that can be used to determine when a story is COMPLETE.</li>
+</ul>
+</li>
+<li>User stories should be INVEST:
+<ul>
+<li>Independent - avoid dependencies between stories</li>
+<li>Negotiable - details are negotiable</li>
+<li>Valuable - valuable to everyone (users and developers)</li>
+<li>Estimable - reasonably confident that they can estimate the story</li>
+<li>Small - story can be completed in a single sprint with &lt; 25% of the team</li>
+<li>Testable - test should satisfy the Product Owner</li>
+</ul>
+</li>
+</ul>
+<h3 id="architecture-breaker">
+  Architecture Breaker
+  <a class="anchor" href="#architecture-breaker">#</a>
+</h3>
+<ul>
+<li>Having to recreate the architecture</li>
+<li>The architecture is mostly not driven by functional requirements.</li>
+<li>The user stories are funciotnal requirements, they&rsquo;re what the softwrae neds to do</li>
+<li>Architecture is driven by the non functoinal requirementsl ike availabity performance security and usability and things like that</li>
+<li>spanh hgue chunks of the system</li>
+<li>so if you break something there, then you got to change big chunks of the software in order to fix it.</li>
+<li>you dont want totry to do all of the architecture work up front, but at least enought (walking skeleton) to understand the big impacts of the design decisions you&rsquo;re making. if you look at just this part of this stimulus response thread, and then another part, but then in combination the performance is awful. if you do a skinny little skeleton, you could look at the performance from end to end in totality and decide accordinigly.</li>
+<li>Focusing on the architecutre early in the project, frequently line up as being a useful way of spending your time.</li>
+<li>create a strong foundation of the architecture and infrastructure early on first, and then afterward start building business value.</li>
+</ul>
+<h3 id="splitting-stories-not-on-exam">
+  Splitting stories (not on exam)
+  <a class="anchor" href="#splitting-stories-not-on-exam">#</a>
+</h3>
+<ul>
+<li>Cross cutting conerns</li>
+<li>mixed priority things</li>
+</ul>
+<h3 id="tech-stories">
+  Tech Stories
+  <a class="anchor" href="#tech-stories">#</a>
+</h3>
+<ul>
+<li>Try to avoid tech stories, but you may not be able to
+<ul>
+<li>Sometimes you can express a tech story in such a way that the customer understands that value that they are getting out of it, sometimes you can&rsquo;t.</li>
+</ul>
+</li>
+<li>stuff that needs to be done, but may not be that the user cares about directly.</li>
+<li>Some tmies you can hide a tech story, inside of othe ruser stories, so you can address the tech story underneath the surface, of things the user actually DOES care about.</li>
+<li>Sometimes you need to create a list of tech stories that you keep around and work on when you can.</li>
+<li>These suggestions come from a book called &ldquo;<strong>scrum and xp from the trenches.</strong>&rdquo; wtf i don&rsquo;t know.</li>
+<li>If you decide that you&rsquo;re interested in agile read this book.</li>
+</ul>
+<h3 id="division-of-concerns">
+  Division of Concerns
+  <a class="anchor" href="#division-of-concerns">#</a>
+</h3>
+<ul>
+<li>Setting the relative importance of requireemnts and the estimates for doing the work are divided.</li>
+<li>Everyone on the team is involved in estimating every story- builds common understanding.</li>
+</ul>
+<h3 id="planning-poker">
+  Planning Poker
+  <a class="anchor" href="#planning-poker">#</a>
+</h3>
+<ul>
+<li>As the user story gets bigger, the accuracy of estimation worsens.</li>
+<li>A size of 20 may not fit in a sprint, but a 40 will definitely not fit in a sprint.</li>
+<li>The typical story is usually 5.</li>
+<li>A story with 0 is something that is low friction and easy. One minute of work.
+Aggregating expert judgment</li>
+</ul>
+<hr>
+<h1 id="scrum-cont-910">
+  Scrum Cont. (9/10)
+  <a class="anchor" href="#scrum-cont-910">#</a>
+</h1>
+<p>Random tangent: Slow is smooth, smooth is fast.
+Essentially the main idea is to take things slow. Plan, be careful, don&rsquo;t rush or else you&rsquo;re cooked.</p>
+<h3 id="re-estimating">
+  Re-estimating
+  <a class="anchor" href="#re-estimating">#</a>
+</h3>
+<p>When the size of a story has changed, you need to adjust accordingly. If can be smaller or larger than expected. With experience, you will begin to get better at relative estimation.</p>
+<h3 id="sprint-backlog-and-sprint-goal">
+  Sprint Backlog and Sprint Goal
+  <a class="anchor" href="#sprint-backlog-and-sprint-goal">#</a>
+</h3>
+<p>The Sprint Goal: what are we trying to accomplish this iteration. This overarching motif. Summarizes what we are doing in a single statement.</p>
+<h3 id="stories-and-tasks">
+  Stories and Tasks
+  <a class="anchor" href="#stories-and-tasks">#</a>
+</h3>
+<p>A task is a broken down component of a story.
 Stories - DELIVERABLE progress that the Product Owner CARES about
 Tasks - Non-deliverable stuff that the Product Owner doesn&rsquo;t care about.
-We don&rsquo;t need to fill in the Product Owner about tasks, they&rsquo;re just things to be mindful of as we make progress.</p><h3 id=definition-of-done>Definition of Done
-<a class=anchor href=#definition-of-done>#</a></h3><p>How can I know when I&rsquo;ve generated a good set of test cases:</p><ul><li>It&rsquo;s gotta cover all of the requirements.</li><li>MCDC Testing
-The definition of done is when the state of the increment reaches the measure of quality it is required. WTF is the point of this slide.</li></ul><h3 id=why-scrum-is-powerful>Why Scrum is powerful
-<a class=anchor href=#why-scrum-is-powerful>#</a></h3><p>Communication, low-overhead, makes problems visible, puts responsibility on people</p><h3 id=no-silver-bullet>No silver bullet
-<a class=anchor href=#no-silver-bullet>#</a></h3><p>Though it&rsquo;s easier to find problems, obviously we still have to solve them. You still need to do good work to solve hard problems.</p><h3 id=does-agile-fit-your-needs>Does Agile Fit your needs?
-<a class=anchor href=#does-agile-fit-your-needs>#</a></h3><ul><li>Really dynamic</li><li>A culture that thrives off of chaos</li><li>Smaller number of personnel</li><li>Low criticality</li><li>Less intern type roles, and more high level positions.</li></ul><h3 id=barriers-to-the-success-of-agile>Barriers to the Success of Agile
-<a class=anchor href=#barriers-to-the-success-of-agile>#</a></h3><p>Customer that doesn&rsquo;t want to work with you, they&rsquo;re going to make a big requirement spec and figure it out without input from the programmers.</p><p>Programmers can actually choose who to work with. Bad customers won&rsquo;t get service. &ldquo;We don&rsquo;t have the resources to help you at this current time&rdquo;.</p><ul><li>Only do this when you have the luxury</li></ul><p>A culture that overworks the employees and expects too much of them</p><ul><li>One common issue is death-marks projects, where a PM will claim that a project&rsquo;s performance will either cause the company to fail or survive. This sort of culture causes burn out.</li></ul><hr><h1 id=requirements-910>Requirements (9/10)
-<a class=anchor href=#requirements-910>#</a></h1><p>Communication is key, make sure you can talk to the end users and understand the requirements that they desire. Also you need to be able to talk to other developers.</p><p>Make sure you spend enough time before you even write a single line of code. Make sure you have the architecture, requirements, design, implementation, etc. fully understood.</p><p>perspectives on dealing with requirements
+We don&rsquo;t need to fill in the Product Owner about tasks, they&rsquo;re just things to be mindful of as we make progress.</p>
+<h3 id="definition-of-done">
+  Definition of Done
+  <a class="anchor" href="#definition-of-done">#</a>
+</h3>
+<p>How can I know when I&rsquo;ve generated a good set of test cases:</p>
+<ul>
+<li>It&rsquo;s gotta cover all of the requirements.</li>
+<li>MCDC Testing
+The definition of done is when the state of the increment reaches the measure of quality it is required. WTF is the point of this slide.</li>
+</ul>
+<h3 id="why-scrum-is-powerful">
+  Why Scrum is powerful
+  <a class="anchor" href="#why-scrum-is-powerful">#</a>
+</h3>
+<p>Communication, low-overhead, makes problems visible, puts responsibility on people</p>
+<h3 id="no-silver-bullet">
+  No silver bullet
+  <a class="anchor" href="#no-silver-bullet">#</a>
+</h3>
+<p>Though it&rsquo;s easier to find problems, obviously we still have to solve them. You still need to do good work to solve hard problems.</p>
+<h3 id="does-agile-fit-your-needs">
+  Does Agile Fit your needs?
+  <a class="anchor" href="#does-agile-fit-your-needs">#</a>
+</h3>
+<ul>
+<li>Really dynamic</li>
+<li>A culture that thrives off of chaos</li>
+<li>Smaller number of personnel</li>
+<li>Low criticality</li>
+<li>Less intern type roles, and more high level positions.</li>
+</ul>
+<h3 id="barriers-to-the-success-of-agile">
+  Barriers to the Success of Agile
+  <a class="anchor" href="#barriers-to-the-success-of-agile">#</a>
+</h3>
+<p>Customer that doesn&rsquo;t want to work with you, they&rsquo;re going to make a big requirement spec and figure it out without input from the programmers.</p>
+<p>Programmers can actually choose who to work with. Bad customers won&rsquo;t get service. &ldquo;We don&rsquo;t have the resources to help you at this current time&rdquo;.</p>
+<ul>
+<li>Only do this when you have the luxury</li>
+</ul>
+<p>A culture that overworks the employees and expects too much of them</p>
+<ul>
+<li>One common issue is death-marks projects, where a PM will claim that a project&rsquo;s performance will either cause the company to fail or survive. This sort of culture causes burn out.</li>
+</ul>
+<hr>
+<h1 id="requirements-910">
+  Requirements (9/10)
+  <a class="anchor" href="#requirements-910">#</a>
+</h1>
+<p>Communication is key, make sure you can talk to the end users and understand the requirements that they desire. Also you need to be able to talk to other developers.</p>
+<p>Make sure you spend enough time before you even write a single line of code. Make sure you have the architecture, requirements, design, implementation, etc. fully understood.</p>
+<p>perspectives on dealing with requirements
 System analysts use UML and other stuff
 Professor really like iterative development
-There&rsquo;s mayn ways to deal with requirements problems. Why do we have so many requirements issues in our projects?</p><p>Some solutions to common problems
-The GOLDEN standard: talk to the customers, users, and others.</p><ul><li>realize what the issue is</li><li>support them and show that you care</li></ul><p>Derived Requirement vs Requirement
-Derived - are derived from the engieners as a result of the requirements analysis.</p><h3 id=functional-vs-nonfunctional-requirement-on-exam>==Functional vs nonfunctional requirement on exam==
-<a class=anchor href=#functional-vs-nonfunctional-requirement-on-exam>#</a></h3><ul><li>Functional - something the engineer has gotta do. You can build a module that implements that particular feature, but non-functional are quality attributes.</li><li>Nonfunctional- some constraint such as response time, performance, security. They include quality attributes, the primary drivers of the architecture</li></ul><h3 id=requirement-eliciation>Requirement Eliciation
-<a class=anchor href=#requirement-eliciation>#</a></h3><p>Basically figuring out what the customer wants and needs. Most importnatly you must talk to the stakeholders.
-How can we talk to other people comfortably?</p><hr><h1 id=yo-fill-the-in-between>yo fill the in between
-<a class=anchor href=#yo-fill-the-in-between>#</a></h1><h3 id=requirements-defects>Requirements Defects
-<a class=anchor href=#requirements-defects>#</a></h3><ul><li>These errors are the most expensive to fix DURING production, but cheapest BEFORE production.</li><li>Missing requirements are obviously the hardest to fix because they dont exist.<ul><li>Therefore, we should constantly be iteritvely updating the requirement list and keep checking for stuff that&rsquo;s missing.</li></ul></li></ul><h3 id=characteristics-of-good-individual-requirements>Characteristics of Good Individual Requirements
-<a class=anchor href=#characteristics-of-good-individual-requirements>#</a></h3><ul><li>Unambiguous<ul><li>Easy to understand</li></ul></li><li>Consistent<ul><li>Dont conflict with other erquirements</li></ul></li><li>Complete<ul><li>dont need to add more stuff</li></ul></li><li>Singular<ul><li>shouldn&rsquo;t need conjunctions</li></ul></li><li>Feasibile<ul><li>Possible to do given current tech</li></ul></li><li>Traceable<ul><li>Should be able to trace during design, test requirements, etc.</li></ul></li><li>Verifiable<ul><li>Demonstrate that the system satisfies this requirement.</li></ul></li></ul><h3 id=characteristics-of-good-set-of-requirements>Characteristics of Good SET of Requirements
-<a class=anchor href=#characteristics-of-good-set-of-requirements>#</a></h3><ul><li>Complete<ul><li>Should contain everything pertinent</li></ul></li><li>Consistent<ul><li>Same terminology, no duplicatoins / double dipping</li></ul></li><li>Affordable and Bounded<ul><li>Set the scope of the work</li></ul></li></ul><p>In practice, because of complexity of the system, it is <strong>impossible</strong> to produce a complete and consistent requirements document. But the goal is to get as close to this as possible
-Trying to come up with a detailed requirement specification that is complete and consistent is in practical purposes not likely to achieve. Because one day you&rsquo;ll find yourself to fall short.</p><p>Gause and Weinberg on ambiguity</p><h3 id=requirements-jargon-shall>Requirements Jargon: Shall
-<a class=anchor href=#requirements-jargon-shall>#</a></h3><p>Requirements are mandatory binding provisions and shall use <strong>shall</strong>.
+There&rsquo;s mayn ways to deal with requirements problems. Why do we have so many requirements issues in our projects?</p>
+<p>Some solutions to common problems
+The GOLDEN standard: talk to the customers, users, and others.</p>
+<ul>
+<li>realize what the issue is</li>
+<li>support them and show that you care</li>
+</ul>
+<p>Derived Requirement vs Requirement
+Derived - are derived from the engieners as a result of the requirements analysis.</p>
+<h3 id="functional-vs-nonfunctional-requirement-on-exam">
+  ==Functional vs nonfunctional requirement on exam==
+  <a class="anchor" href="#functional-vs-nonfunctional-requirement-on-exam">#</a>
+</h3>
+<ul>
+<li>Functional - something the engineer has gotta do. You can build a module that implements that particular feature, but non-functional are quality attributes.</li>
+<li>Nonfunctional- some constraint such as response time, performance, security. They include quality attributes, the primary drivers of the architecture</li>
+</ul>
+<h3 id="requirement-eliciation">
+  Requirement Eliciation
+  <a class="anchor" href="#requirement-eliciation">#</a>
+</h3>
+<p>Basically figuring out what the customer wants and needs. Most importnatly you must talk to the stakeholders.
+How can we talk to other people comfortably?</p>
+<hr>
+<h1 id="yo-fill-the-in-between">
+  yo fill the in between
+  <a class="anchor" href="#yo-fill-the-in-between">#</a>
+</h1>
+<h3 id="requirements-defects">
+  Requirements Defects
+  <a class="anchor" href="#requirements-defects">#</a>
+</h3>
+<ul>
+<li>These errors are the most expensive to fix DURING production, but cheapest BEFORE production.</li>
+<li>Missing requirements are obviously the hardest to fix because they dont exist.
+<ul>
+<li>Therefore, we should constantly be iteritvely updating the requirement list and keep checking for stuff that&rsquo;s missing.</li>
+</ul>
+</li>
+</ul>
+<h3 id="characteristics-of-good-individual-requirements">
+  Characteristics of Good Individual Requirements
+  <a class="anchor" href="#characteristics-of-good-individual-requirements">#</a>
+</h3>
+<ul>
+<li>Unambiguous
+<ul>
+<li>Easy to understand</li>
+</ul>
+</li>
+<li>Consistent
+<ul>
+<li>Dont conflict with other erquirements</li>
+</ul>
+</li>
+<li>Complete
+<ul>
+<li>dont need to add more stuff</li>
+</ul>
+</li>
+<li>Singular
+<ul>
+<li>shouldn&rsquo;t need conjunctions</li>
+</ul>
+</li>
+<li>Feasibile
+<ul>
+<li>Possible to do given current tech</li>
+</ul>
+</li>
+<li>Traceable
+<ul>
+<li>Should be able to trace during design, test requirements, etc.</li>
+</ul>
+</li>
+<li>Verifiable
+<ul>
+<li>Demonstrate that the system satisfies this requirement.</li>
+</ul>
+</li>
+</ul>
+<h3 id="characteristics-of-good-set-of-requirements">
+  Characteristics of Good SET of Requirements
+  <a class="anchor" href="#characteristics-of-good-set-of-requirements">#</a>
+</h3>
+<ul>
+<li>Complete
+<ul>
+<li>Should contain everything pertinent</li>
+</ul>
+</li>
+<li>Consistent
+<ul>
+<li>Same terminology, no duplicatoins / double dipping</li>
+</ul>
+</li>
+<li>Affordable and Bounded
+<ul>
+<li>Set the scope of the work</li>
+</ul>
+</li>
+</ul>
+<p>In practice, because of complexity of the system, it is <strong>impossible</strong> to produce a complete and consistent requirements document. But the goal is to get as close to this as possible
+Trying to come up with a detailed requirement specification that is complete and consistent is in practical purposes not likely to achieve. Because one day you&rsquo;ll find yourself to fall short.</p>
+<p>Gause and Weinberg on ambiguity</p>
+<h3 id="requirements-jargon-shall">
+  Requirements Jargon: Shall
+  <a class="anchor" href="#requirements-jargon-shall">#</a>
+</h3>
+<p>Requirements are mandatory binding provisions and shall use <strong>shall</strong>.
 Statements of fact are non-mandatory so use <strong>will</strong>.
 Preferences are desired but non-mandatory use <strong>should</strong>.
 Suggestions use <strong>may</strong>.
 Don&rsquo;t use <strong>must</strong> because of posible misinterpretation.
 Use positive statements and avoid negative requirements such as &ldquo;<strong>shall not</strong>&rdquo;.
-Use an active, avoid usign passive voice such as &ldquo;shall <strong>be</strong> able to select&rdquo;.</p><h3 id=object-oriented-requirements>Object-Oriented Requirements
-<a class=anchor href=#object-oriented-requirements>#</a></h3><p>You can generate a specificatoin that is object oriented, but those will likely be derived requirements of what the customer needs.
-When doing OO design and generate ues cases, those are not an object oriented artifcat</p><h3 id=use-cases-document-requirements>Use Cases Document Requirements
-<a class=anchor href=#use-cases-document-requirements>#</a></h3><p>a use case is a set of scenarios that describe some usage of the system. let&rsquo;s say you&rsquo;re building an automated cash register. One of the 20 use cases is processing a sale, and it&rsquo;s without a doubt the most important feature. The use case is the set of steps that discuss the actions of the actors and the system.</p><h3 id=use-case-diagrams>Use case diagrams
-<a class=anchor href=#use-case-diagrams>#</a></h3><p>Not super clear all the time, not preferred by Paulky.</p><h3 id=actors>Actors
-<a class=anchor href=#actors>#</a></h3><p>Not a part of the system we are building, but they use it.
+Use an active, avoid usign passive voice such as &ldquo;shall <strong>be</strong> able to select&rdquo;.</p>
+<h3 id="object-oriented-requirements">
+  Object-Oriented Requirements
+  <a class="anchor" href="#object-oriented-requirements">#</a>
+</h3>
+<p>You can generate a specificatoin that is object oriented, but those will likely be derived requirements of what the customer needs.
+When doing OO design and generate ues cases, those are not an object oriented artifcat</p>
+<h3 id="use-cases-document-requirements">
+  Use Cases Document Requirements
+  <a class="anchor" href="#use-cases-document-requirements">#</a>
+</h3>
+<p>a use case is a set of scenarios that describe some usage of the system. let&rsquo;s say you&rsquo;re building an automated cash register. One of the 20 use cases is processing a sale, and it&rsquo;s without a doubt the most important feature. The use case is the set of steps that discuss the actions of the actors and the system.</p>
+<h3 id="use-case-diagrams">
+  Use case diagrams
+  <a class="anchor" href="#use-case-diagrams">#</a>
+</h3>
+<p>Not super clear all the time, not preferred by Paulky.</p>
+<h3 id="actors">
+  Actors
+  <a class="anchor" href="#actors">#</a>
+</h3>
+<p>Not a part of the system we are building, but they use it.
 Basically inheritance: We have generealization and specialization.
-Actors must be specified sometimes. Instead of just medical staff, we can say physician and nurse. Be specific</p><h3 id=finding-use-cases>Finding Use cases
-<a class=anchor href=#finding-use-cases>#</a></h3><p>not superh ard. think about the custoemr and what they need.</p><h3 id=use-case-context-diagram>Use Case Context Diagram
-<a class=anchor href=#use-case-context-diagram>#</a></h3><p>Prmiary actors on the left, supporting on the right.
+Actors must be specified sometimes. Instead of just medical staff, we can say physician and nurse. Be specific</p>
+<h3 id="finding-use-cases">
+  Finding Use cases
+  <a class="anchor" href="#finding-use-cases">#</a>
+</h3>
+<p>not superh ard. think about the custoemr and what they need.</p>
+<h3 id="use-case-context-diagram">
+  Use Case Context Diagram
+  <a class="anchor" href="#use-case-context-diagram">#</a>
+</h3>
+<p>Prmiary actors on the left, supporting on the right.
 ![[Pasted image 20240917164432.png]]
-When we start talking about selling alcoholic beverages, there&rsquo;s more context to this. We have extensions for alcoholic use case. Stereotypes that require more context.</p><h3 id=larmans-fully-dressed-use-case>Larman&rsquo;s Fully Dressed Use Case
-<a class=anchor href=#larmans-fully-dressed-use-case>#</a></h3><p>There&rsquo;s a bunch of diff templates that are all p similar. We are gonna use Larman&rsquo;s because that&rsquo;s the one in the textbook.
-<strong>Subfunction</strong> -> dividing the use case into smaller pieces. (Divide and conquer)
-<strong>Primary actor</strong> -> Calls on the system to deliver its services.</p><ul><li>In a scenario where we have a customer and a bank teller and a withdrawal of money, who is the primary actor? the primary actor is actually the teller, they&rsquo;re the ones utilizing the system to get the money. if the customer were to use an ATM, it would be the customer.</li><li>It&rsquo;s whoever is interacting with the computer system.
-<strong>Stakeholders and interests</strong></li><li>Hard to define all of the people the stakeholders and those that care about the project.
-<strong>Preconditions</strong></li><li>What must be true on at the start?</li><li>Something that is always true at the beginning? or something idk.</li><li>Not tested within the use case.
-<strong>Sucess Guarantee (postconditions)</strong></li><li>What must be true on successful completion</li><li>This would be worth telling the reader.
-<strong>Main Success Scenario</strong></li><li>Also typically called the happy path or basic flow.</li><li>Steps of three kinds.
-<strong>Extensions</strong></li><li>Alternate flows</li><li>Basically there&rsquo;s two categories of alternate flows</li><li>Firstly, different ways of doing an activity in the alternative path.</li><li>We don&rsquo;t want conditionals in the main success scenario
-Frequently span the system as a hole.</li></ul><h3 id=bank-loan-example>Bank Loan Example
-<a class=anchor href=#bank-loan-example>#</a></h3><p>![[Pasted image 20240917165829.png]]
+When we start talking about selling alcoholic beverages, there&rsquo;s more context to this. We have extensions for alcoholic use case. Stereotypes that require more context.</p>
+<h3 id="larmans-fully-dressed-use-case">
+  Larman&rsquo;s Fully Dressed Use Case
+  <a class="anchor" href="#larmans-fully-dressed-use-case">#</a>
+</h3>
+<p>There&rsquo;s a bunch of diff templates that are all p similar. We are gonna use Larman&rsquo;s because that&rsquo;s the one in the textbook.
+<strong>Subfunction</strong> -&gt; dividing the use case into smaller pieces. (Divide and conquer)
+<strong>Primary actor</strong> -&gt; Calls on the system to deliver its services.</p>
+<ul>
+<li>In a scenario where we have a customer and a bank teller and a withdrawal of money, who is the primary actor? the primary actor is actually the teller, they&rsquo;re the ones utilizing the system to get the money. if the customer were to use an ATM, it would be the customer.</li>
+<li>It&rsquo;s whoever is interacting with the computer system.
+<strong>Stakeholders and interests</strong></li>
+<li>Hard to define all of the people the stakeholders and those that care about the project.
+<strong>Preconditions</strong></li>
+<li>What must be true on at the start?</li>
+<li>Something that is always true at the beginning? or something idk.</li>
+<li>Not tested within the use case.
+<strong>Sucess Guarantee (postconditions)</strong></li>
+<li>What must be true on successful completion</li>
+<li>This would be worth telling the reader.
+<strong>Main Success Scenario</strong></li>
+<li>Also typically called the happy path or basic flow.</li>
+<li>Steps of three kinds.
+<strong>Extensions</strong></li>
+<li>Alternate flows</li>
+<li>Basically there&rsquo;s two categories of alternate flows</li>
+<li>Firstly, different ways of doing an activity in the alternative path.</li>
+<li>We don&rsquo;t want conditionals in the main success scenario
+Frequently span the system as a hole.</li>
+</ul>
+<h3 id="bank-loan-example">
+  Bank Loan Example
+  <a class="anchor" href="#bank-loan-example">#</a>
+</h3>
+<p>![[Pasted image 20240917165829.png]]
 Much more to this, see slides
-Most important thing to remember abt the homework is the extensions and maind success scenario.</p><hr><p>(9/19)</p><h3 id=bohems-cone-of-uncertainty>Bohem&rsquo;s Cone of Uncertainty
-<a class=anchor href=#bohems-cone-of-uncertainty>#</a></h3><p>At the beginning, we may not have a good idea of the requirements and parameters, but as it progresses, we get closer to the ideal.</p><p>We spend a lot of our time doing rework, fixing bugs. The avg project spends 50-80% total effort correcting defects. Why does it cost so much to fix defects, the worst ones require analysis, design, and testing. Finding and fixing defects earlier in the life cycle, the cheaper it is to fix. The <strong>cost of change curve</strong>.</p><h3 id=pure-watefall-model>Pure Watefall Model
-<a class=anchor href=#pure-watefall-model>#</a></h3><p>Good if requirements don&rsquo;t change. We can perfectly know everything before we begin, and it&rsquo;s just up to us to getting it all down and then forging ahead.
-But in the Real World, waterfall is impractical because:</p><ul><li>People make mistakes, make misunderstandings</li><li>The operating environment changes</li><li>Didn&rsquo;t nkow what they wanted in the first place</li><li>There are some things that we don&rsquo;t discover until we are well into implementation.</li></ul><h5 id=the-royce-waterfall-model>The Royce &ldquo;waterfall&rdquo; model
-<a class=anchor href=#the-royce-waterfall-model>#</a></h5><p>Do everything twice</p><h3 id=moving-away-from-plan-driven>Moving Away from Plan-Driven
-<a class=anchor href=#moving-away-from-plan-driven>#</a></h3><p>This idea of Royce&rsquo;s feedback loop is a concession to the insufficient capability of software development. Customers want a linear approach to know the timeline and cost of a project. People used to think that having an iterative approach meant that you had to go backwards and thought of it as evil.</p><h3 id=spiral-lifecycle>Spiral Lifecycle
-<a class=anchor href=#spiral-lifecycle>#</a></h3><p>Iterative process
-Prioritizes things according to risk</p><p>P vs adapative</p><ul><li>Traditional, plan things carefully, and change things carefully and infrequently</li><li>Adaptive - Change-driven, this is what agile is all about. '</li></ul><h3 id=iterative-and-incremental-development>Iterative and incremental development
-<a class=anchor href=#iterative-and-incremental-development>#</a></h3><p>Iterate means to redo.
-&ldquo;we dont know what it is we are building, we are figuring it out as we go on. it&rsquo;s evolving as time goes by&rdquo;</p><p>Increment- even if you knew exactly what you were gnona buld, incremental is still good because we are building and releasing in periods. Focus is to get value to the customer early.</p><p>IID means iterativeand-incremental</p><p>![[Pasted image 20240919162625.png]]</p><h3 id=snowdens-cynefin-framekwork>Snowden&rsquo;s Cynefin Framekwork
-<a class=anchor href=#snowdens-cynefin-framekwork>#</a></h3><p>There&rsquo;s 5 categories of work</p><ol><li>Complex - Don&rsquo;t know necsesarily what is going on, what we&rsquo;re doing, but you gotta work to figure it out. AGILE AGILE AGILE<ol><li>The more uncertainty you have, the better a complex one is.</li></ol></li><li>Complicated - Generally know what it is we are doing. Sequential development has its sweet spot.</li><li>Chaotic</li><li>Obvious</li><li>Discord (don&rsquo;t nkow where we are)</li></ol><p>People are ignorant and uncertain. We need lifecycle models that can deal with these things such as agile or anything IID</p><p>Agile is not a lifecycle model, it&rsquo;s a methodology.
+Most important thing to remember abt the homework is the extensions and maind success scenario.</p>
+<hr>
+<p>(9/19)</p>
+<h3 id="bohems-cone-of-uncertainty">
+  Bohem&rsquo;s Cone of Uncertainty
+  <a class="anchor" href="#bohems-cone-of-uncertainty">#</a>
+</h3>
+<p>At the beginning, we may not have a good idea of the requirements and parameters, but as it progresses, we get closer to the ideal.</p>
+<p>We spend a lot of our time doing rework, fixing bugs. The avg project spends 50-80% total effort correcting defects. Why does it cost so much to fix defects, the worst ones require analysis, design, and testing. Finding and fixing defects earlier in the life cycle, the cheaper it is to fix. The <strong>cost of change curve</strong>.</p>
+<h3 id="pure-watefall-model">
+  Pure Watefall Model
+  <a class="anchor" href="#pure-watefall-model">#</a>
+</h3>
+<p>Good if requirements don&rsquo;t change. We can perfectly know everything before we begin, and it&rsquo;s just up to us to getting it all down and then forging ahead.
+But in the Real World, waterfall is impractical because:</p>
+<ul>
+<li>People make mistakes, make misunderstandings</li>
+<li>The operating environment changes</li>
+<li>Didn&rsquo;t nkow what they wanted in the first place</li>
+<li>There are some things that we don&rsquo;t discover until we are well into implementation.</li>
+</ul>
+<h5 id="the-royce-waterfall-model">
+  The Royce &ldquo;waterfall&rdquo; model
+  <a class="anchor" href="#the-royce-waterfall-model">#</a>
+</h5>
+<p>Do everything twice</p>
+<h3 id="moving-away-from-plan-driven">
+  Moving Away from Plan-Driven
+  <a class="anchor" href="#moving-away-from-plan-driven">#</a>
+</h3>
+<p>This idea of Royce&rsquo;s feedback loop is a concession to the insufficient capability of software development. Customers want a linear approach to know the timeline and cost of a project. People used to think that having an iterative approach meant that you had to go backwards and thought of it as evil.</p>
+<h3 id="spiral-lifecycle">
+  Spiral Lifecycle
+  <a class="anchor" href="#spiral-lifecycle">#</a>
+</h3>
+<p>Iterative process
+Prioritizes things according to risk</p>
+<p>P vs adapative</p>
+<ul>
+<li>Traditional, plan things carefully, and change things carefully and infrequently</li>
+<li>Adaptive - Change-driven, this is what agile is all about. '</li>
+</ul>
+<h3 id="iterative-and-incremental-development">
+  Iterative and incremental development
+  <a class="anchor" href="#iterative-and-incremental-development">#</a>
+</h3>
+<p>Iterate means to redo.
+&ldquo;we dont know what it is we are building, we are figuring it out as we go on. it&rsquo;s evolving as time goes by&rdquo;</p>
+<p>Increment- even if you knew exactly what you were gnona buld, incremental is still good because we are building and releasing in periods. Focus is to get value to the customer early.</p>
+<p>IID means iterativeand-incremental</p>
+<p>![[Pasted image 20240919162625.png]]</p>
+<h3 id="snowdens-cynefin-framekwork">
+  Snowden&rsquo;s Cynefin Framekwork
+  <a class="anchor" href="#snowdens-cynefin-framekwork">#</a>
+</h3>
+<p>There&rsquo;s 5 categories of work</p>
+<ol>
+<li>Complex - Don&rsquo;t know necsesarily what is going on, what we&rsquo;re doing, but you gotta work to figure it out. AGILE AGILE AGILE
+<ol>
+<li>The more uncertainty you have, the better a complex one is.</li>
+</ol>
+</li>
+<li>Complicated - Generally know what it is we are doing. Sequential development has its sweet spot.</li>
+<li>Chaotic</li>
+<li>Obvious</li>
+<li>Discord (don&rsquo;t nkow where we are)</li>
+</ol>
+<p>People are ignorant and uncertain. We need lifecycle models that can deal with these things such as agile or anything IID</p>
+<p>Agile is not a lifecycle model, it&rsquo;s a methodology.
 Methodoly- more than a lifecycle. set of practices, techniques, procedures, rules. We usually pick a lifecycle model as part of our methodology.
 For agile, the choice is always some form of iterative lifecycle.
 One of the problems with methodology is whether we take a small M or big M approach.
 Small M - Basic approach, tailored plan.
-Big M - We are gonna give you a methodology, just do what you&rsquo;re told.</p><h3 id=unified-process>Unified Process
-<a class=anchor href=#unified-process>#</a></h3><p>Methodology process built by the three amigos.
+Big M - We are gonna give you a methodology, just do what you&rsquo;re told.</p>
+<h3 id="unified-process">
+  Unified Process
+  <a class="anchor" href="#unified-process">#</a>
+</h3>
+<p>Methodology process built by the three amigos.
 Created the UML for OOD.
 THE design notation that everyone uses.
 Unified process was good because it emphasized iterative development.
-Historically we had phases, and we would iterate through these phases however many times as necessary. This still has a flavor of waterfall in the sense that we do feasibility analysis, and then develop it and then deliver the product.</p><h3 id=lifecycles-used>Lifecycles used
-<a class=anchor href=#lifecycles-used>#</a></h3><p>Waterfall continues to be used as the predominant lifecycle. More than a third claim its use.</p><p>![[Pasted image 20240919164007.png]]
-Look at the diff of the second thing</p><p>Iterative vs incremental have two different value propositions</p><p>Complicated vs complex kind of work</p><p>In the uni process, difference between work loads and phases.</p><hr><h1 id=analsis-and-design>Analsis and Design
-<a class=anchor href=#analsis-and-design>#</a></h1><h3 id=system-perspectives>System Perspectives
-<a class=anchor href=#system-perspectives>#</a></h3><p>Specifying Requirements
+Historically we had phases, and we would iterate through these phases however many times as necessary. This still has a flavor of waterfall in the sense that we do feasibility analysis, and then develop it and then deliver the product.</p>
+<h3 id="lifecycles-used">
+  Lifecycles used
+  <a class="anchor" href="#lifecycles-used">#</a>
+</h3>
+<p>Waterfall continues to be used as the predominant lifecycle. More than a third claim its use.</p>
+<p>![[Pasted image 20240919164007.png]]
+Look at the diff of the second thing</p>
+<p>Iterative vs incremental have two different value propositions</p>
+<p>Complicated vs complex kind of work</p>
+<p>In the uni process, difference between work loads and phases.</p>
+<hr>
+<h1 id="analsis-and-design">
+  Analsis and Design
+  <a class="anchor" href="#analsis-and-design">#</a>
+</h1>
+<h3 id="system-perspectives">
+  System Perspectives
+  <a class="anchor" href="#system-perspectives">#</a>
+</h3>
+<p>Specifying Requirements
 The sweet spot is semi formal
 The proble with informal is that it&rsquo;s very loosey goosey, not specific, tends to be ambiguous. but it&rsquo;s easier to communicate with the cilent that&rsquo;s not a tech head. The devs may be techies and enjoy mathematical rigor and formal specifications, which may be great from a technical perspective, but the customer will be confused.
-Semi-form is a reasonable balance point between these. These two extremes are mutually contradictory.</p><p>Informal Specification
-Don&rsquo;t use negatives with requirements. classic examples are double negatives, triple negatives</p><h3 id=classical-analysis>Classical Analysis
-<a class=anchor href=#classical-analysis>#</a></h3><p>![[Pasted image 20240919165616.png]]</p><hr><h1 id=software-design101-current-exam-2>Software Design(10/1-Current) Exam 2
-<a class=anchor href=#software-design101-current-exam-2>#</a></h1><h3 id=the-problem-of-software-design-is-complexity>The problem of software design is complexity
-<a class=anchor href=#the-problem-of-software-design-is-complexity>#</a></h3><p>Overtime, we keep building more complex and larger systems that require more demand.</p><h3 id=complexity>Complexity
-<a class=anchor href=#complexity>#</a></h3><p>For every 25% increase in problem complexity, there is a 100% incresae in complexity of the solution.</p><h3 id=up-design-workflow>UP Design Workflow
-<a class=anchor href=#up-design-workflow>#</a></h3><h3 id=cohesion-and-coupling>Cohesion and Coupling
-<a class=anchor href=#cohesion-and-coupling>#</a></h3><ul><li>????</li></ul><p>EXAM
-what&rsquo;s the difference between shared aggregation and compositiion</p><p>EXAM
-Slide for software testing -> Subtle Distinctoins
+Semi-form is a reasonable balance point between these. These two extremes are mutually contradictory.</p>
+<p>Informal Specification
+Don&rsquo;t use negatives with requirements. classic examples are double negatives, triple negatives</p>
+<h3 id="classical-analysis">
+  Classical Analysis
+  <a class="anchor" href="#classical-analysis">#</a>
+</h3>
+<p>![[Pasted image 20240919165616.png]]</p>
+<hr>
+<h1 id="software-design101-current-exam-2">
+  Software Design(10/1-Current) Exam 2
+  <a class="anchor" href="#software-design101-current-exam-2">#</a>
+</h1>
+<h3 id="the-problem-of-software-design-is-complexity">
+  The problem of software design is complexity
+  <a class="anchor" href="#the-problem-of-software-design-is-complexity">#</a>
+</h3>
+<p>Overtime, we keep building more complex and larger systems that require more demand.</p>
+<h3 id="complexity">
+  Complexity
+  <a class="anchor" href="#complexity">#</a>
+</h3>
+<p>For every 25% increase in problem complexity, there is a 100% incresae in complexity of the solution.</p>
+<h3 id="up-design-workflow">
+  UP Design Workflow
+  <a class="anchor" href="#up-design-workflow">#</a>
+</h3>
+<h3 id="cohesion-and-coupling">
+  Cohesion and Coupling
+  <a class="anchor" href="#cohesion-and-coupling">#</a>
+</h3>
+<ul>
+<li>????</li>
+</ul>
+<p>EXAM
+what&rsquo;s the difference between shared aggregation and compositiion</p>
+<p>EXAM
+Slide for software testing -&gt; Subtle Distinctoins
 People make mistakes, which becomes a fault, resluting at execution in a failure
-Which is wrong with some degree of error.</p><p>Regression testing is one of the most important testing tools with automatic testing.</p><h1 id=exam-3-notes>Exam 3 Notes
-<a class=anchor href=#exam-3-notes>#</a></h1></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><ul><li><a href=#modern-software-engineering-820>Modern Software Engineering (8/20)</a></li><li><a href=#modern-software-engineering-822>Modern Software Engineering (8/22)</a></li><li><a href=#some-random-shit-827>Some random shit (8/27)</a></li><li><a href=#829>(8/29)</a></li></ul></li></ul><ul><li><ul><li><a href=#what-does-agile-address>What does agile address?</a></li><li><a href=#agile-manifesto>Agile manifesto</a></li><li><a href=#principles-of-the-manifesto>Principles of the Manifesto</a></li><li><a href=#different-projects-need-different-methodologies>Different projects need different methodologies</a></li><li><a href=#six-sweet-spots-2001>Six Sweet Spots (2001)</a></li></ul></li></ul><ul><li><ul><li><a href=#scrum-the-most-popular-agile-method>Scrum (The most popular agile method)</a></li><li><a href=#life-cycle>Life Cycle</a></li><li><a href=#team-members>Team Members</a></li><li><a href=#sprints>Sprints</a></li><li><a href=#daily-scrum>Daily Scrum</a></li><li><a href=#sprint-review>Sprint Review</a></li><li><a href=#product-backlog>Product Backlog</a></li><li><a href=#product-goal>Product Goal</a></li><li><a href=#user-story>User Story</a></li><li><a href=#architecture-breaker>Architecture Breaker</a></li><li><a href=#splitting-stories-not-on-exam>Splitting stories (not on exam)</a></li><li><a href=#tech-stories>Tech Stories</a></li><li><a href=#division-of-concerns>Division of Concerns</a></li><li><a href=#planning-poker>Planning Poker</a></li></ul></li></ul><ul><li><ul><li><a href=#re-estimating>Re-estimating</a></li><li><a href=#sprint-backlog-and-sprint-goal>Sprint Backlog and Sprint Goal</a></li><li><a href=#stories-and-tasks>Stories and Tasks</a></li><li><a href=#definition-of-done>Definition of Done</a></li><li><a href=#why-scrum-is-powerful>Why Scrum is powerful</a></li><li><a href=#no-silver-bullet>No silver bullet</a></li><li><a href=#does-agile-fit-your-needs>Does Agile Fit your needs?</a></li><li><a href=#barriers-to-the-success-of-agile>Barriers to the Success of Agile</a></li></ul></li></ul><ul><li><ul><li><a href=#functional-vs-nonfunctional-requirement-on-exam>==Functional vs nonfunctional requirement on exam==</a></li><li><a href=#requirement-eliciation>Requirement Eliciation</a></li></ul></li></ul><ul><li><ul><li><a href=#requirements-defects>Requirements Defects</a></li><li><a href=#characteristics-of-good-individual-requirements>Characteristics of Good Individual Requirements</a></li><li><a href=#characteristics-of-good-set-of-requirements>Characteristics of Good SET of Requirements</a></li><li><a href=#requirements-jargon-shall>Requirements Jargon: Shall</a></li><li><a href=#object-oriented-requirements>Object-Oriented Requirements</a></li><li><a href=#use-cases-document-requirements>Use Cases Document Requirements</a></li><li><a href=#use-case-diagrams>Use case diagrams</a></li><li><a href=#actors>Actors</a></li><li><a href=#finding-use-cases>Finding Use cases</a></li><li><a href=#use-case-context-diagram>Use Case Context Diagram</a></li><li><a href=#larmans-fully-dressed-use-case>Larman&rsquo;s Fully Dressed Use Case</a></li><li><a href=#bank-loan-example>Bank Loan Example</a></li><li><a href=#bohems-cone-of-uncertainty>Bohem&rsquo;s Cone of Uncertainty</a></li><li><a href=#pure-watefall-model>Pure Watefall Model</a></li><li><a href=#moving-away-from-plan-driven>Moving Away from Plan-Driven</a></li><li><a href=#spiral-lifecycle>Spiral Lifecycle</a></li><li><a href=#iterative-and-incremental-development>Iterative and incremental development</a></li><li><a href=#snowdens-cynefin-framekwork>Snowden&rsquo;s Cynefin Framekwork</a></li><li><a href=#unified-process>Unified Process</a></li><li><a href=#lifecycles-used>Lifecycles used</a></li></ul></li></ul><ul><li><ul><li><a href=#system-perspectives>System Perspectives</a></li><li><a href=#classical-analysis>Classical Analysis</a></li></ul></li></ul><ul><li><ul><li><a href=#the-problem-of-software-design-is-complexity>The problem of software design is complexity</a></li><li><a href=#complexity>Complexity</a></li><li><a href=#up-design-workflow>UP Design Workflow</a></li><li><a href=#cohesion-and-coupling>Cohesion and Coupling</a></li></ul></li></ul></nav></div></aside></main></body></html>
+Which is wrong with some degree of error.</p>
+<p>Regression testing is one of the most important testing tools with automatic testing.</p>
+<h1 id="exam-3-notes">
+  Exam 3 Notes
+  <a class="anchor" href="#exam-3-notes">#</a>
+</h1>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#modern-software-engineering-820">Modern Software Engineering (8/20)</a></li>
+        <li><a href="#modern-software-engineering-822">Modern Software Engineering (8/22)</a></li>
+        <li><a href="#some-random-shit-827">Some random shit (8/27)</a></li>
+        <li><a href="#829">(8/29)</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#what-does-agile-address">What does agile address?</a></li>
+        <li><a href="#agile-manifesto">Agile manifesto</a></li>
+        <li><a href="#principles-of-the-manifesto">Principles of the Manifesto</a></li>
+        <li><a href="#different-projects-need-different-methodologies">Different projects need different methodologies</a></li>
+        <li><a href="#six-sweet-spots-2001">Six Sweet Spots (2001)</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#scrum-the-most-popular-agile-method">Scrum (The most popular agile method)</a></li>
+        <li><a href="#life-cycle">Life Cycle</a></li>
+        <li><a href="#team-members">Team Members</a></li>
+        <li><a href="#sprints">Sprints</a></li>
+        <li><a href="#daily-scrum">Daily Scrum</a></li>
+        <li><a href="#sprint-review">Sprint Review</a></li>
+        <li><a href="#product-backlog">Product Backlog</a></li>
+        <li><a href="#product-goal">Product Goal</a></li>
+        <li><a href="#user-story">User Story</a></li>
+        <li><a href="#architecture-breaker">Architecture Breaker</a></li>
+        <li><a href="#splitting-stories-not-on-exam">Splitting stories (not on exam)</a></li>
+        <li><a href="#tech-stories">Tech Stories</a></li>
+        <li><a href="#division-of-concerns">Division of Concerns</a></li>
+        <li><a href="#planning-poker">Planning Poker</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#re-estimating">Re-estimating</a></li>
+        <li><a href="#sprint-backlog-and-sprint-goal">Sprint Backlog and Sprint Goal</a></li>
+        <li><a href="#stories-and-tasks">Stories and Tasks</a></li>
+        <li><a href="#definition-of-done">Definition of Done</a></li>
+        <li><a href="#why-scrum-is-powerful">Why Scrum is powerful</a></li>
+        <li><a href="#no-silver-bullet">No silver bullet</a></li>
+        <li><a href="#does-agile-fit-your-needs">Does Agile Fit your needs?</a></li>
+        <li><a href="#barriers-to-the-success-of-agile">Barriers to the Success of Agile</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#functional-vs-nonfunctional-requirement-on-exam">==Functional vs nonfunctional requirement on exam==</a></li>
+        <li><a href="#requirement-eliciation">Requirement Eliciation</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#requirements-defects">Requirements Defects</a></li>
+        <li><a href="#characteristics-of-good-individual-requirements">Characteristics of Good Individual Requirements</a></li>
+        <li><a href="#characteristics-of-good-set-of-requirements">Characteristics of Good SET of Requirements</a></li>
+        <li><a href="#requirements-jargon-shall">Requirements Jargon: Shall</a></li>
+        <li><a href="#object-oriented-requirements">Object-Oriented Requirements</a></li>
+        <li><a href="#use-cases-document-requirements">Use Cases Document Requirements</a></li>
+        <li><a href="#use-case-diagrams">Use case diagrams</a></li>
+        <li><a href="#actors">Actors</a></li>
+        <li><a href="#finding-use-cases">Finding Use cases</a></li>
+        <li><a href="#use-case-context-diagram">Use Case Context Diagram</a></li>
+        <li><a href="#larmans-fully-dressed-use-case">Larman&rsquo;s Fully Dressed Use Case</a></li>
+        <li><a href="#bank-loan-example">Bank Loan Example</a></li>
+        <li><a href="#bohems-cone-of-uncertainty">Bohem&rsquo;s Cone of Uncertainty</a></li>
+        <li><a href="#pure-watefall-model">Pure Watefall Model</a></li>
+        <li><a href="#moving-away-from-plan-driven">Moving Away from Plan-Driven</a></li>
+        <li><a href="#spiral-lifecycle">Spiral Lifecycle</a></li>
+        <li><a href="#iterative-and-incremental-development">Iterative and incremental development</a></li>
+        <li><a href="#snowdens-cynefin-framekwork">Snowden&rsquo;s Cynefin Framekwork</a></li>
+        <li><a href="#unified-process">Unified Process</a></li>
+        <li><a href="#lifecycles-used">Lifecycles used</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#system-perspectives">System Perspectives</a></li>
+        <li><a href="#classical-analysis">Classical Analysis</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#the-problem-of-software-design-is-complexity">The problem of software design is complexity</a></li>
+        <li><a href="#complexity">Complexity</a></li>
+        <li><a href="#up-design-workflow">UP Design Workflow</a></li>
+        <li><a href="#cohesion-and-coupling">Cohesion and Coupling</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

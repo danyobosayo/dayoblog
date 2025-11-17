@@ -1,1 +1,649 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on dayowrites</title><link>http://localhost:65252/tags/</link><description>Recent content in Tags on dayowrites</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:65252/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Tgwr</title><link>http://localhost:65252/tags/tgwr/</link><pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate><guid>http://localhost:65252/tags/tgwr/</guid><description/></item><item><title>College_group</title><link>http://localhost:65252/tags/college_group/</link><pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate><guid>http://localhost:65252/tags/college_group/</guid><description/></item><item><title>Ccc</title><link>http://localhost:65252/tags/ccc/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><guid>http://localhost:65252/tags/ccc/</guid><description/></item><item><title>Sas</title><link>http://localhost:65252/tags/sas/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><guid>http://localhost:65252/tags/sas/</guid><description/></item><item><title>Aihrif</title><link>http://localhost:65252/tags/aihrif/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate><guid>http://localhost:65252/tags/aihrif/</guid><description/></item><item><title>Sf</title><link>http://localhost:65252/tags/sf/</link><pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate><guid>http://localhost:65252/tags/sf/</guid><description/></item><item><title>Pfs</title><link>http://localhost:65252/tags/pfs/</link><pubDate>Sun, 22 Dec 2024 00:00:00 +0000</pubDate><guid>http://localhost:65252/tags/pfs/</guid><description/></item><item><title>Guide</title><link>http://localhost:65252/tags/guide/</link><pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate><guid>http://localhost:65252/tags/guide/</guid><description/></item><item><title>Agt</title><link>http://localhost:65252/tags/agt/</link><pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate><guid>http://localhost:65252/tags/agt/</guid><description/></item><item><title>Aig</title><link>http://localhost:65252/tags/aig/</link><pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate><guid>http://localhost:65252/tags/aig/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on dayowrites</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on dayowrites</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Life</title>
+      <link>http://localhost:1313/tags/life/</link>
+      <pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Productivity</title>
+      <link>http://localhost:1313/tags/productivity/</link>
+      <pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/productivity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Escape</title>
+      <link>http://localhost:1313/tags/escape/</link>
+      <pubDate>Sun, 13 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/escape/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Freedom</title>
+      <link>http://localhost:1313/tags/freedom/</link>
+      <pubDate>Sun, 13 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/freedom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reflection</title>
+      <link>http://localhost:1313/tags/reflection/</link>
+      <pubDate>Sun, 13 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/reflection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sin</title>
+      <link>http://localhost:1313/tags/sin/</link>
+      <pubDate>Sun, 13 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Discernment</title>
+      <link>http://localhost:1313/tags/discernment/</link>
+      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/discernment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Discipline</title>
+      <link>http://localhost:1313/tags/discipline/</link>
+      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/discipline/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Purpose</title>
+      <link>http://localhost:1313/tags/purpose/</link>
+      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/purpose/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Satisfaction</title>
+      <link>http://localhost:1313/tags/satisfaction/</link>
+      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/satisfaction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Judgment</title>
+      <link>http://localhost:1313/tags/judgment/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/judgment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rebuild</title>
+      <link>http://localhost:1313/tags/rebuild/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rebuild/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Calling</title>
+      <link>http://localhost:1313/tags/calling/</link>
+      <pubDate>Sun, 08 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/calling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Control</title>
+      <link>http://localhost:1313/tags/control/</link>
+      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/control/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Epic</title>
+      <link>http://localhost:1313/tags/epic/</link>
+      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/epic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guest</title>
+      <link>http://localhost:1313/tags/guest/</link>
+      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/guest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sacrifice</title>
+      <link>http://localhost:1313/tags/sacrifice/</link>
+      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sacrifice/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trust</title>
+      <link>http://localhost:1313/tags/trust/</link>
+      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/trust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tgwr</title>
+      <link>http://localhost:1313/tags/tgwr/</link>
+      <pubDate>Sun, 04 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tgwr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Devotion</title>
+      <link>http://localhost:1313/tags/devotion/</link>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/devotion/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gospel</title>
+      <link>http://localhost:1313/tags/gospel/</link>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/gospel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lifestyle</title>
+      <link>http://localhost:1313/tags/lifestyle/</link>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/lifestyle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Obedience</title>
+      <link>http://localhost:1313/tags/obedience/</link>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/obedience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Regen</title>
+      <link>http://localhost:1313/tags/regen/</link>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/regen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Discomfort</title>
+      <link>http://localhost:1313/tags/discomfort/</link>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/discomfort/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Miracles</title>
+      <link>http://localhost:1313/tags/miracles/</link>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/miracles/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transformation</title>
+      <link>http://localhost:1313/tags/transformation/</link>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/transformation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>College_group</title>
+      <link>http://localhost:1313/tags/college_group/</link>
+      <pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/college_group/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Comparison</title>
+      <link>http://localhost:1313/tags/comparison/</link>
+      <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/comparison/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Content</title>
+      <link>http://localhost:1313/tags/content/</link>
+      <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/content/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Perspective</title>
+      <link>http://localhost:1313/tags/perspective/</link>
+      <pubDate>Sun, 06 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/perspective/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Peace</title>
+      <link>http://localhost:1313/tags/peace/</link>
+      <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/peace/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ccc</title>
+      <link>http://localhost:1313/tags/ccc/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ccc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Patience</title>
+      <link>http://localhost:1313/tags/patience/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/patience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rest</title>
+      <link>http://localhost:1313/tags/rest/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Retreat</title>
+      <link>http://localhost:1313/tags/retreat/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/retreat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sas</title>
+      <link>http://localhost:1313/tags/sas/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Solitude</title>
+      <link>http://localhost:1313/tags/solitude/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/solitude/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Change</title>
+      <link>http://localhost:1313/tags/change/</link>
+      <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/change/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Conformity</title>
+      <link>http://localhost:1313/tags/conformity/</link>
+      <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/conformity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Growth</title>
+      <link>http://localhost:1313/tags/growth/</link>
+      <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/growth/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aihrif</title>
+      <link>http://localhost:1313/tags/aihrif/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/aihrif/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Individuality</title>
+      <link>http://localhost:1313/tags/individuality/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/individuality/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Revival</title>
+      <link>http://localhost:1313/tags/revival/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/revival/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Endurance</title>
+      <link>http://localhost:1313/tags/endurance/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/endurance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Routine</title>
+      <link>http://localhost:1313/tags/routine/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/routine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Faithfulness</title>
+      <link>http://localhost:1313/tags/faithfulness/</link>
+      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/faithfulness/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Knowledge</title>
+      <link>http://localhost:1313/tags/knowledge/</link>
+      <pubDate>Sun, 16 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/knowledge/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Consistensy</title>
+      <link>http://localhost:1313/tags/consistensy/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/consistensy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prayer</title>
+      <link>http://localhost:1313/tags/prayer/</link>
+      <pubDate>Sun, 09 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/prayer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wisdom</title>
+      <link>http://localhost:1313/tags/wisdom/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/wisdom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Service</title>
+      <link>http://localhost:1313/tags/service/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/service/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Surrender</title>
+      <link>http://localhost:1313/tags/surrender/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/surrender/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sf</title>
+      <link>http://localhost:1313/tags/sf/</link>
+      <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Suffering</title>
+      <link>http://localhost:1313/tags/suffering/</link>
+      <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/suffering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Community</title>
+      <link>http://localhost:1313/tags/community/</link>
+      <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/community/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Idol</title>
+      <link>http://localhost:1313/tags/idol/</link>
+      <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/idol/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Christmas</title>
+      <link>http://localhost:1313/tags/christmas/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/christmas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Promise</title>
+      <link>http://localhost:1313/tags/promise/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/promise/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bible</title>
+      <link>http://localhost:1313/tags/bible/</link>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/bible/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Comfort</title>
+      <link>http://localhost:1313/tags/comfort/</link>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/comfort/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pfs</title>
+      <link>http://localhost:1313/tags/pfs/</link>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/pfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jealousy</title>
+      <link>http://localhost:1313/tags/jealousy/</link>
+      <pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/jealousy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Regret</title>
+      <link>http://localhost:1313/tags/regret/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/regret/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Repentance</title>
+      <link>http://localhost:1313/tags/repentance/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/repentance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>http://localhost:1313/tags/guide/</link>
+      <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fellowship</title>
+      <link>http://localhost:1313/tags/fellowship/</link>
+      <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/fellowship/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gluttony</title>
+      <link>http://localhost:1313/tags/gluttony/</link>
+      <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/gluttony/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>http://localhost:1313/tags/security/</link>
+      <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fear</title>
+      <link>http://localhost:1313/tags/fear/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/fear/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agt</title>
+      <link>http://localhost:1313/tags/agt/</link>
+      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/agt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pride</title>
+      <link>http://localhost:1313/tags/pride/</link>
+      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/pride/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stoicism</title>
+      <link>http://localhost:1313/tags/stoicism/</link>
+      <pubDate>Sun, 29 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/stoicism/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Greed</title>
+      <link>http://localhost:1313/tags/greed/</link>
+      <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/greed/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wealth</title>
+      <link>http://localhost:1313/tags/wealth/</link>
+      <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/wealth/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Grace</title>
+      <link>http://localhost:1313/tags/grace/</link>
+      <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/grace/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stress</title>
+      <link>http://localhost:1313/tags/stress/</link>
+      <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/stress/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Worry</title>
+      <link>http://localhost:1313/tags/worry/</link>
+      <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/worry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Conflict</title>
+      <link>http://localhost:1313/tags/conflict/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/conflict/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Speech</title>
+      <link>http://localhost:1313/tags/speech/</link>
+      <pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/speech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Words</title>
+      <link>http://localhost:1313/tags/words/</link>
+      <pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/words/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kindness</title>
+      <link>http://localhost:1313/tags/kindness/</link>
+      <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/kindness/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Intent</title>
+      <link>http://localhost:1313/tags/intent/</link>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/intent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Humility</title>
+      <link>http://localhost:1313/tags/humility/</link>
+      <pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/humility/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aig</title>
+      <link>http://localhost:1313/tags/aig/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/aig/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Influence</title>
+      <link>http://localhost:1313/tags/influence/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/influence/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jesus</title>
+      <link>http://localhost:1313/tags/jesus/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/jesus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Immorality</title>
+      <link>http://localhost:1313/tags/immorality/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/immorality/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Thanksgiving</title>
+      <link>http://localhost:1313/tags/thanksgiving/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/thanksgiving/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blessing</title>
+      <link>http://localhost:1313/tags/blessing/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/blessing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Btbab</title>
+      <link>http://localhost:1313/tags/btbab/</link>
+      <pubDate>Sat, 07 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/btbab/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -22,14 +22,6 @@ I plan on writing a few short stories with the sole purpose of entertainment, bu
 
 # Categories
 
-### University Notes
-
-I used a variety of note taking strategies throughout my time at University. I've tried RemNote, Notion, Obsidian, GoodNotes, Evernote, OneNote, and Google Docs. My current workflow comprises of Obsidian, OneDrive storage, and GoodNotes on the tablet.
-
-### Video Notes
-
-Mindlessly watching YouTube videos was one of the things I hate most about my habits. Thus I started increasing my mindfulness by having my laptop out whenever consuming content and writing down what I learn or find interesting. This doesn't apply to the League of Legends pro matches I watch though.
-
 ### Sermons
 
 I started taking digital notes during service about a year ago. It started as a means of staying awake, but it's turned into a reliable means of connecting adjacent ideas. I hope to continue building this library so that I can rely on it during hard times.

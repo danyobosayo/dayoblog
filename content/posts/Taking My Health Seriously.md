@@ -12,9 +12,21 @@ For far too long have I "understood" the importance of diet, sleep, and exercise
 - Sleep before 1AM, and there is zero excuse for this one. 
 - Charge all technology at the desk, not at the bed.
 - Drink 40oz of water a day at the minimum
-- No more snacks or sweets unless you're with your girlfriend. When you're alone you can only drink water.
+- No more snacks or sweets. When you're alone you can only drink water.
 - Journal daily and also measure weight
 - Listen to Christian or classical music
 
 And this is really all that I ask of you for this period of time.
 It's not going to be easy. It's going to be really hard. Try not to mess up, but when you do, get back up.
+
+## Update: June 16, 2026
+
+Coming back to this over a year later, and I'll be honest. The only things I've actually kept
+consistent are listening to Christian music and journaling daily while tracking my weight.
+Everything else I fell short of.
+
+So here's a more realistic set of goals for this season:
+
+- Get 8 hours of sleep a day.
+- Do any form of cardio at least 4 times a week.
+- Do a 10 minute stretching routine every night.

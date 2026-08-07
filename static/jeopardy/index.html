@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Bible Study Jeopardy!</title>
+<meta name="theme-color" content="#060ce9">
+<!-- ?v= is a cache buster. Bump it after editing css/js or browsers serve stale files. -->
+<link rel="stylesheet" href="style.css?v=4">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23060ce9'/><text y='72' x='50' text-anchor='middle' font-size='64' font-family='Impact,sans-serif' fill='%23d8a04a'>J</text></svg>">
+</head>
+<body data-view="setup">
+
+<!-- ================= AMBIENT BACKDROP ================= -->
+<div class="stage-bg" aria-hidden="true">
+  <div class="stage-glow"></div>
+  <div class="light-column left"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="light-column right"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+
+<!-- ================= SETUP ================= -->
+<section id="view-setup" class="view">
+  <div class="setup-card">
+    <div class="setup-logo">
+      <span class="logo-jeop">JEOPARDY!</span>
+      <span class="logo-sub">The Bridge EM</span>
+    </div>
+
+    <div class="team-count">
+      <span class="field-label">How many teams?</span>
+      <div class="seg" id="team-count-seg" role="group" aria-label="Number of teams">
+        <button type="button" data-n="2" class="on">2</button>
+        <button type="button" data-n="3">3</button>
+        <button type="button" data-n="4">4</button>
+      </div>
+    </div>
+
+    <div id="team-inputs" class="team-inputs"></div>
+
+    <details class="setup-options">
+      <summary>Game options</summary>
+      <div class="opt-grid">
+        <label class="opt"><input type="checkbox" id="opt-timer" checked><span>Countdown timer on each clue</span></label>
+        <label class="opt opt-inline">Seconds to answer
+          <input type="number" id="opt-timer-secs" min="5" max="120" step="5" value="20">
+        </label>
+        <label class="opt"><input type="checkbox" id="opt-penalty" checked><span>Wrong answers lose points</span></label>
+        <label class="opt"><input type="checkbox" id="opt-dd" checked><span>Hide Daily Doubles on the board</span></label>
+        <label class="opt"><input type="checkbox" id="opt-sound" checked><span>Sound effects</span></label>
+        <label class="opt"><input type="checkbox" id="opt-freeforall"><span>Strict turns &mdash; only the active team may answer</span></label>
+      </div>
+    </details>
+
+    <button id="btn-start" class="btn btn-primary btn-lg">Start Game</button>
+    <button id="btn-resume" class="btn btn-ghost hidden">Resume saved game</button>
+
+    <p class="setup-foot">Press <kbd>?</kbd> any time for keyboard shortcuts.</p>
+  </div>
+</section>
+
+<!-- ================= BOARD ================= -->
+<section id="view-board" class="view">
+  <header class="topbar">
+    <div class="topbar-left">
+      <span id="round-name" class="round-name">Jeopardy!</span>
+      <span id="round-progress" class="round-progress"></span>
+    </div>
+    <div class="topbar-right">
+      <button class="icon-btn" id="btn-undo" title="Undo last action (Z)" aria-label="Undo">↶</button>
+      <button class="icon-btn" id="btn-fullscreen" title="Fullscreen (F)" aria-label="Fullscreen">⛶</button>
+      <button class="icon-btn" id="btn-settings" title="Settings (S)" aria-label="Settings">⚙</button>
+    </div>
+  </header>
+
+  <div class="board-frame">
+    <div class="board-chrome-top"></div>
+    <div id="board" class="board" role="grid" aria-label="Jeopardy board"></div>
+    <div class="board-chrome-bottom"></div>
+  </div>
+
+  <div id="podiums" class="podiums"></div>
+
+  <div class="board-footer">
+    <span id="turn-hint" class="turn-hint"></span>
+    <button id="btn-next-round" class="btn btn-gold hidden">Continue &rarr;</button>
+  </div>
+</section>
+
+<!-- ================= CLUE OVERLAY ================= -->
+<div id="clue-layer" class="clue-layer" aria-hidden="true">
+  <div id="clue-card" class="clue-card" role="dialog" aria-modal="true" aria-label="Clue">
+
+    <button class="clue-close" id="btn-clue-x" title="Close (esc)" aria-label="Close clue">✕</button>
+
+    <!-- Daily Double splash -->
+    <div id="dd-splash" class="dd-splash">
+      <div class="dd-text"><span>DAILY</span><span>DOUBLE!</span></div>
+    </div>
+
+    <!-- Wager screen -->
+    <div id="wager-panel" class="wager-panel">
+      <p class="wager-team" id="wager-team">Team</p>
+      <p class="wager-label">How much do you wager?</p>
+      <div class="wager-input-row">
+        <span class="wager-currency">$</span>
+        <input type="number" id="wager-input" min="0" step="100" inputmode="numeric">
+      </div>
+      <p class="wager-range" id="wager-range"></p>
+      <div class="wager-quick" id="wager-quick"></div>
+      <button class="btn btn-gold btn-lg" id="wager-go">Lock it in</button>
+    </div>
+
+    <!-- The clue itself -->
+    <div id="clue-body" class="clue-body">
+      <div class="clue-meta">
+        <span id="clue-cat" class="clue-cat"></span>
+        <span id="clue-val" class="clue-val"></span>
+      </div>
+
+      <p id="clue-text" class="clue-text"></p>
+
+      <!-- audio clip, only shown when a clue defines `media`.
+           The YouTube iframe is what produces the sound, so it has to exist —
+           it is parked off-screen and never displayed. -->
+      <div id="clue-media" class="clue-media">
+        <div id="media-frame" class="media-frame" aria-hidden="true"></div>
+        <div class="media-stage">
+          <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <span class="media-cover-label">Now playing</span>
+        </div>
+        <div class="media-controls">
+          <button class="btn btn-ghost btn-sm" id="media-play">Pause</button>
+          <button class="btn btn-ghost btn-sm" id="media-replay">Replay</button>
+        </div>
+      </div>
+
+      <div id="answer-box" class="answer-box">
+        <span class="answer-eyebrow">Correct response</span>
+        <p id="answer-text" class="answer-text"></p>
+        <p id="answer-note" class="answer-note"></p>
+      </div>
+
+      <div id="timer-strip" class="timer-strip"></div>
+
+      <div class="clue-controls">
+        <div id="buzz-row" class="buzz-row"></div>
+        <div class="clue-actions">
+          <button class="btn btn-good" id="btn-correct">Correct <kbd>&crarr;</kbd></button>
+          <button class="btn btn-bad" id="btn-wrong">Wrong <kbd>X</kbd></button>
+          <button class="btn btn-ghost" id="btn-reveal">Reveal answer <kbd>space</kbd></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ROUND TRANSITION ================= -->
+<div id="round-splash" class="round-splash" aria-hidden="true">
+  <div class="round-splash-inner">
+    <span id="round-splash-text">Double Jeopardy!</span>
+    <span id="round-splash-sub" class="round-splash-sub">All values doubled</span>
+  </div>
+</div>
+
+<!-- ================= FINAL JEOPARDY ================= -->
+<section id="view-final" class="view">
+  <div class="final-wrap">
+    <div class="final-header">
+      <span class="final-kicker">Final Jeopardy!</span>
+      <h2 id="final-category" class="final-category"></h2>
+    </div>
+
+    <!-- step 1: wagers -->
+    <div id="final-wagers" class="final-step">
+      <p class="final-instruction">Everyone locks in a wager before the clue is shown. You can bet up to your current score.</p>
+      <div id="final-wager-list" class="final-wager-list"></div>
+      <button class="btn btn-gold btn-lg" id="final-lock">Lock wagers &amp; reveal clue</button>
+    </div>
+
+    <!-- step 2: the clue -->
+    <div id="final-clue" class="final-step">
+      <p id="final-clue-text" class="final-clue-text"></p>
+      <div id="final-timer" class="timer-strip big"></div>
+      <button class="btn btn-gold btn-lg" id="final-reveal">Reveal the answer</button>
+    </div>
+
+    <!-- step 3: judging -->
+    <div id="final-judge" class="final-step">
+      <div class="final-answer">
+        <span class="answer-eyebrow">Correct response</span>
+        <p id="final-answer-text" class="answer-text"></p>
+        <p id="final-answer-note" class="answer-note"></p>
+      </div>
+      <div id="final-judge-list" class="final-judge-list"></div>
+      <button class="btn btn-gold btn-lg" id="final-done">See the results</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESULTS ================= -->
+<section id="view-results" class="view">
+  <canvas id="confetti"></canvas>
+  <div class="results-wrap">
+    <p class="results-kicker">Final Scores</p>
+    <h2 id="winner-line" class="winner-line"></h2>
+    <ol id="results-list" class="results-list"></ol>
+    <div class="results-actions">
+      <button class="btn btn-ghost" id="btn-back-board">Back to the board</button>
+      <button class="btn btn-gold" id="btn-play-again">New game</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SETTINGS DRAWER ================= -->
+<div id="settings-scrim" class="scrim"></div>
+<aside id="settings" class="settings" aria-label="Settings" aria-hidden="true">
+  <header class="settings-head">
+    <h2>Settings</h2>
+    <button class="icon-btn" id="btn-close-settings" aria-label="Close settings">✕</button>
+  </header>
+
+  <div class="settings-body">
+
+    <section class="set-group">
+      <h3>Scores</h3>
+      <div id="score-editor" class="score-editor"></div>
+      <p class="set-hint">Use &plusmn; buttons for quick bonuses, or type an exact score.</p>
+      <div class="set-row">
+        <button class="btn btn-sm btn-ghost" id="set-undo">↶ Undo last action</button>
+        <button class="btn btn-sm btn-ghost" id="set-zero">Reset all scores to 0</button>
+      </div>
+      <div class="bonus-row">
+        <label>Give everyone</label>
+        <input type="number" id="bonus-all" step="100" value="100">
+        <button class="btn btn-sm btn-ghost" id="bonus-all-go">Apply</button>
+      </div>
+    </section>
+
+    <section class="set-group">
+      <h3>Teams</h3>
+      <div id="team-editor" class="team-editor"></div>
+      <div class="set-row">
+        <button class="btn btn-sm btn-ghost" id="set-add-team">+ Add team</button>
+        <button class="btn btn-sm btn-ghost" id="set-remove-team">− Remove last</button>
+      </div>
+      <label class="set-field">Whose turn is it?
+        <select id="set-turn"></select>
+      </label>
+    </section>
+
+    <section class="set-group">
+      <h3>Board</h3>
+      <label class="set-field">Current round
+        <select id="set-round">
+          <option value="0">Round 1 — Jeopardy!</option>
+          <option value="1">Round 2 — Double Jeopardy!</option>
+        </select>
+      </label>
+      <p class="set-hint">Put any category on either board, or take it off entirely. Changes apply straight away &mdash; scores and played squares are kept.</p>
+      <div id="layout-editor" class="layout-editor"></div>
+      <p class="set-hint" id="layout-count"></p>
+
+      <p class="set-hint">Tap any square below to flip it between used and available.</p>
+      <div id="board-editor" class="board-editor"></div>
+      <div class="set-row">
+        <button class="btn btn-sm btn-ghost" id="set-open-all">Reopen every clue</button>
+        <button class="btn btn-sm btn-ghost" id="set-close-all">Mark all used</button>
+      </div>
+      <div class="set-row">
+        <button class="btn btn-sm btn-ghost" id="set-reroll-dd">Reshuffle Daily Doubles</button>
+        <button class="btn btn-sm btn-ghost" id="set-goto-final">Jump to Final Jeopardy</button>
+      </div>
+    </section>
+
+    <section class="set-group">
+      <h3>Gameplay</h3>
+      <label class="opt"><input type="checkbox" id="set-timer"><span>Countdown timer</span></label>
+      <label class="set-field">Seconds per clue
+        <input type="number" id="set-timer-secs" min="5" max="120" step="5">
+      </label>
+      <label class="opt"><input type="checkbox" id="set-penalty"><span>Wrong answers lose points</span></label>
+      <label class="opt"><input type="checkbox" id="set-dd-on"><span>Daily Doubles enabled</span></label>
+      <label class="opt"><input type="checkbox" id="set-sound"><span>Sound effects</span></label>
+      <label class="opt"><input type="checkbox" id="set-ffa"><span>Strict turns (only active team answers)</span></label>
+      <label class="opt"><input type="checkbox" id="set-autoturn"><span>Correct answer takes control of the board</span></label>
+    </section>
+
+    <section class="set-group">
+      <h3>Final Jeopardy</h3>
+      <label class="set-field">Question
+        <select id="set-final-pick"></select>
+      </label>
+    </section>
+
+    <section class="set-group danger">
+      <h3>Danger zone</h3>
+      <div class="set-row">
+        <button class="btn btn-sm btn-ghost" id="set-reset-board">Reset board only</button>
+        <button class="btn btn-sm btn-danger" id="set-new-game">Wipe game &amp; start over</button>
+      </div>
+    </section>
+
+  </div>
+</aside>
+
+<!-- ================= SHORTCUTS ================= -->
+<div id="help-scrim" class="scrim"></div>
+<div id="help" class="help-modal" aria-hidden="true">
+  <h2>Keyboard shortcuts</h2>
+  <dl class="shortcuts">
+    <dt><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd></dt><dd>Buzz in a team</dd>
+    <dt><kbd>&crarr;</kbd></dt><dd>Correct</dd>
+    <dt><kbd>X</kbd></dt><dd>Wrong</dd>
+    <dt><kbd>space</kbd></dt><dd>Reveal the answer</dd>
+    <dt><kbd>esc</kbd></dt><dd>Reveal, then close the clue</dd>
+    <dt><kbd>Z</kbd></dt><dd>Undo last action</dd>
+    <dt><kbd>S</kbd></dt><dd>Settings</dd>
+    <dt><kbd>F</kbd></dt><dd>Fullscreen</dd>
+    <dt><kbd>?</kbd></dt><dd>This list</dd>
+  </dl>
+  <button class="btn btn-ghost" id="help-close">Got it</button>
+</div>
+
+<!-- ================= TOASTS ================= -->
+<div id="toasts" class="toasts" aria-live="polite"></div>
+
+<script src="questions.js?v=4"></script>
+<script src="sfx.js?v=4"></script>
+<script src="game.js?v=4"></script>
+</body>
+</html>

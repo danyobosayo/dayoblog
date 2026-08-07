@@ -25,7 +25,7 @@ function defaultLayout() {
   return layout;
 }
 const PALETTE = ["#4dd2ff", "#ff6b8a", "#7ee787", "#ffb04d"];
-const DEFAULT_NAMES = ["The Bereans", "The Zealots", "The Prodigals", "The Disciples"];
+const DEFAULT_NAMES = ["Team 1", "Team 2", "Team 3", "Team 4"];
 
 /* ==========================================================================
    STATE
@@ -495,9 +495,9 @@ function showClueBody() {
   startMedia(clue.media);
   renderBuzzRow();
   renderClueActions();
-  // when a clip has a fixed window, the timer starts the moment it stops —
-  // see armClipWindow(). Otherwise it runs from now.
-  if (!(clue.media && clue.media.end != null)) startTimer();
+  // Clues with a clip don't start their countdown here at all — it begins when
+  // the host presses play (or, for a windowed clip, when the clip cuts out).
+  if (!clue.media) startTimer();
 }
 
 function showDailyDouble() {
@@ -741,6 +741,7 @@ let ytPaused = false;    // youtube has no readable state from out here, so trac
 let clipTimer = null;    // fires at the end of a clip window
 let clipArmed = false;   // the window timer has been scheduled
 let clipStopped = false; // the window already ended — don't stop it a second time
+let mediaStarted = false; // the host has pressed play at least once
 
 const YT_ORIGIN = "https://www.youtube-nocookie.com";
 
@@ -788,6 +789,7 @@ function armClipWindow() {
    so a missing file degrades to streaming instead of silence. */
 function useFallback(media) {
   if (!media || !media.fallback || !curMedia) return;
+  const wasPlaying = mediaStarted;
   toast("Clip file missing — streaming instead");
   startMedia({
     type: "youtube",
@@ -795,6 +797,8 @@ function useFallback(media) {
     start: media.fallbackStart ?? media.start,
     end: media.fallbackEnd ?? media.end,
   });
+  // if the host had already hit play, don't make them press it twice
+  if (wasPlaying) $("#media-play").click();
 }
 
 /* Reveal plays the rest of the song, so the room actually hears the answer. */
@@ -802,6 +806,7 @@ function playAnswerClip() {
   if (!curMedia) return;
   clearTimeout(clipTimer);
   clipStopped = true;
+  mediaStarted = true;
   if (curMedia.type === "youtube") { ytCommand("playVideo"); ytPaused = false; }
   // play() rejects if a pause lands mid-request; swallow it rather than
   // throwing, and reflect whatever state we actually ended up in.
@@ -829,55 +834,55 @@ function startMedia(media) {
   if (!media) { wrap.classList.remove("show"); return; }
 
   curMedia = media;
-  ytPaused = false;
+  ytPaused = true;         // nothing plays until the host presses play
   clipArmed = false;
   clipStopped = false;
+  mediaStarted = false;
   wrap.classList.add("show");
-  wrap.classList.remove("paused");
   frame.innerHTML = "";
 
   if (media.type === "youtube") {
     const p = new URLSearchParams({
-      autoplay: "1", rel: "0", modestbranding: "1", playsinline: "1",
+      autoplay: "0", rel: "0", modestbranding: "1", playsinline: "1",
       controls: "0", iv_load_policy: "3",
       enablejsapi: "1", origin: location.origin,
     });
-    if (media.start != null) p.set("start", media.start);
+    if (media.start != null) p.set("start", Math.floor(media.start));
     const iframe = document.createElement("iframe");
     iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(media.id)}?${p}`;
     iframe.allow = "autoplay; encrypted-media";
     iframe.title = "Clue clip";
     iframe.addEventListener("load", ytListen);
     frame.appendChild(iframe);
-    // if the player never reports back, start the window anyway
-    if (media.end != null) setTimeout(armClipWindow, 2500);
   } else {
     audioEl = new Audio(media.src);
     audioEl.preload = "auto";
-    audioEl.currentTime = media.start || 0;
+    // A seek set before the file has metadata can be discarded, which would
+    // start the clip in the wrong place — so re-apply it once it loads.
+    const seekTo = media.start || 0;
+    audioEl.currentTime = seekTo;
+    if (seekTo) {
+      audioEl.addEventListener("loadedmetadata", () => {
+        if (audioEl && Math.abs(audioEl.currentTime - seekTo) > 0.05) {
+          audioEl.currentTime = seekTo;
+        }
+      }, { once: true });
+    }
     audioEl.addEventListener("playing", armClipWindow, { once: true });
-    // Backstop: if "playing" is slow to fire (or never does), arm the window
-    // anyway so a windowed clue can't sit there with no timer.
-    if (media.end != null) setTimeout(armClipWindow, 2500);
     // If the mp3 is missing or won't decode, quietly stream from YouTube
     // instead of leaving the host with a dead clue.
     audioEl.addEventListener("error", () => useFallback(media), { once: true });
-    // Browsers block audio that isn't tied to a click. If that happens, show
-    // the paused state honestly so the host knows to hit Play, rather than
-    // leaving a "Pause" button over silence.
-    audioEl.play().catch(() => {
-      setPausedUI(true);
-      toast("Press Play to start the clip");
-    });
   }
 
-  setPausedUI(false);
+  // Nothing plays on its own — the host presses play when the room is ready,
+  // and only then does any countdown begin.
+  setPausedUI(true);
 }
 
 function stopMedia() {
   clearTimeout(clipTimer);
   clipTimer = null;
-  clipArmed = clipStopped = false;
+  clipArmed = clipStopped = mediaStarted = false;
   if (audioEl) { audioEl.pause(); audioEl.src = ""; audioEl = null; }
   $("#media-frame").innerHTML = "";   // unloading the iframe stops YouTube
   $("#clue-media").classList.remove("show", "paused");
@@ -886,8 +891,28 @@ function stopMedia() {
 
 function setPausedUI(paused) {
   $("#clue-media").classList.toggle("paused", paused);
-  // after a clip window ends, the button's job is to carry the song on
-  $("#media-play").textContent = paused ? (clipStopped ? "Continue" : "Play") : "Pause";
+  const btn = $("#media-play");
+  const label = $("#media-label");
+  const primary = (on) => {
+    btn.classList.toggle("btn-gold", on);
+    btn.classList.toggle("btn-ghost", !on);
+  };
+
+  if (!paused) {
+    btn.textContent = "Pause";
+    primary(false);
+    if (label) label.textContent = "Now playing";
+  } else if (!mediaStarted) {
+    // the clip is loaded and waiting — make this the obvious thing to click
+    btn.textContent = "▶  Play clip";
+    primary(true);
+    if (label) label.textContent = "Ready — press play";
+  } else {
+    // after a clip window ends, the button's job is to carry the song on
+    btn.textContent = clipStopped ? "Continue" : "Play";
+    primary(false);
+    if (label) label.textContent = clipStopped ? "Clip ended" : "Paused";
+  }
 }
 
 function initMedia() {
@@ -899,12 +924,27 @@ function initMedia() {
     const paused = isYT ? ytPaused : !audioEl || audioEl.paused;
 
     if (paused) {
-      // resuming — from here the host is driving, so the clip window is done
-      clipStopped = true;
-      clearTimeout(clipTimer);
+      const firstStart = !mediaStarted;
+      mediaStarted = true;
+      // A later press means the host is driving, so the clip window is done.
+      // The very first press is just "start the clip" and must not cancel it.
+      if (!firstStart) { clipStopped = true; clearTimeout(clipTimer); }
+
       if (isYT) { ytCommand("playVideo"); ytPaused = false; }
       else if (audioEl) audioEl.play().catch(() => setPausedUI(true));
       setPausedUI(false);
+
+      if (firstStart) {
+        if (curMedia.end != null) {
+          // windowed clue ($800): the countdown waits for the clip to cut out,
+          // which armClipWindow handles. This is just a backstop in case the
+          // player never reports that it started.
+          setTimeout(armClipWindow, 2500);
+        } else {
+          // guessing clue: the countdown runs alongside the music
+          startTimer();
+        }
+      }
     } else {
       clearTimeout(clipTimer);
       clipStopped = true;
@@ -919,15 +959,18 @@ function initMedia() {
     clearTimeout(clipTimer);
     clipArmed = false;
     clipStopped = false;
+    mediaStarted = true;
+
     if (curMedia.type === "youtube") {
       ytCommand("seekTo", [curMedia.start || 0, true]);
       ytCommand("playVideo");
       ytPaused = false;
-      setPausedUI(false);
-      armClipWindow();
-      return;
+    } else if (audioEl) {
+      audioEl.currentTime = curMedia.start || 0;
+      audioEl.play().catch(() => setPausedUI(true));
     }
-    startMedia(curMedia);
+    setPausedUI(false);
+    armClipWindow();   // re-arm the cut so a replay stops in the same place
   });
 
   window.addEventListener("message", onYtMessage);

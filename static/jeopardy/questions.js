@@ -138,7 +138,7 @@ const GAME = {
              reason, the clue quietly streams instead of dying.
 
              The $800 is the odd one out. Its mp3 already starts at 5:03 of
-             the song, so it plays a 4-second window, stops dead for the
+             the song, so it plays 5:04-5:07.75, stops dead for the
              finish-the-lyric guess, and the Pause button turns into
              "Continue" to play on from that exact spot.
              --------------------------------------------------------------- */
@@ -169,7 +169,10 @@ const GAME = {
               q: "Finish the lyric.",
               a: "What is “That I put my faith in Jesus”?",
               note: 'Cody Carnes, "Firm Foundation (He Won\'t)."',
-              media: { type: "audio", src: "clips/firm-foundation.mp3", start: 0, end: 4, fallback: "x9ndiD0_qNk", fallbackStart: 303, fallbackEnd: 307 },
+              /* The mp3 is trimmed to begin at 5:03, so file time 0 = 5:03.
+                 start: 1 / end: 4.75 therefore plays 5:04 - 5:07.75.
+                 Fractions are fine here — the cut is timed in milliseconds. */
+              media: { type: "audio", src: "clips/firm-foundation.mp3", start: 1, end: 4.75, fallback: "x9ndiD0_qNk", fallbackStart: 304, fallbackEnd: 307.75 },
               seconds: 40,
             },
             {

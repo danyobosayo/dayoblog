@@ -264,9 +264,10 @@ _Host reference. Generated from `questions.js` — run `node static/jeopardy/mak
 > What is Unlimited Void?  
 > _Muryōkūsho._
 
-**$2000** — The seventh holder of One For All and All Might's mentor, she also turns out to be Tomura Shigaraki's grandmother.
+**$2000** — Write a name in the Death Note and you get this long to specify a cause of death — miss the window and they just drop dead of a heart attack.
 
-> Who is Nana Shimura?
+> What is 40 seconds?  
+> _You then get 6 minutes and 40 seconds to write the details._
 
 ### Animal Kingdom
 

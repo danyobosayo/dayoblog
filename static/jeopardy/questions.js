@@ -353,9 +353,9 @@ const GAME = {
               note: "Muryōkūsho.",
             },
             {
-              q: "Write a name in the Death Note and you get this long to specify a cause of death — miss the window and they just drop dead of a heart attack.",
-              a: "What is 40 seconds?",
-              note: "You then get 6 minutes and 40 seconds to write the details.",
+              q: "Saitama insists he became the strongest man alive on a completely ordinary daily routine. Name all four parts of it.",
+              a: "What is 100 push-ups, 100 sit-ups, 100 squats, and a 10 km run?",
+              note: "Every single day for three years — and it made his hair fall out.",
             },
           ],
         },

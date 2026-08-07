@@ -264,10 +264,10 @@ _Host reference. Generated from `questions.js` — run `node static/jeopardy/mak
 > What is Unlimited Void?  
 > _Muryōkūsho._
 
-**$2000** — Write a name in the Death Note and you get this long to specify a cause of death — miss the window and they just drop dead of a heart attack.
+**$2000** — Saitama insists he became the strongest man alive on a completely ordinary daily routine. Name all four parts of it.
 
-> What is 40 seconds?  
-> _You then get 6 minutes and 40 seconds to write the details._
+> What is 100 push-ups, 100 sit-ups, 100 squats, and a 10 km run?  
+> _Every single day for three years — and it made his hair fall out._
 
 ### Animal Kingdom
 

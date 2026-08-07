@@ -35,7 +35,14 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html, body { height: 100%; }
+/* --ui-scale drives every rem in the app, which is how the zoom dial works.
+   Deliberately not `zoom` or a transform: those would break the tile-to-clue
+   animation, which measures real pixel rects. */
+html {
+  font-size: calc(100% * var(--ui-scale, 1));
+  height: 100%;
+}
+body { height: 100%; }
 
 body {
   background: var(--ink);
@@ -174,8 +181,9 @@ body[data-view="results"] #view-results { display: flex; animation: viewIn var(-
 .btn-danger:hover { background: rgba(224,52,74,.3); }
 .btn-ghost { background: rgba(255,255,255,.06); }
 
+/* sized in rem, not px, so the zoom dial can grow them */
 .icon-btn {
-  width: 38px; height: 38px;
+  width: 2.375rem; height: 2.375rem;
   display: grid; place-items: center;
   border-radius: 9px;
   font-size: 1.1rem;
@@ -249,7 +257,7 @@ body[data-view="results"] #view-results { display: flex; animation: viewIn var(-
   border: 1px solid rgba(255,255,255,.1);
 }
 .seg button {
-  min-width: 62px;
+  min-width: 3.9rem;
   padding: .5em 0;
   border-radius: 8px;
   font-weight: 700;
@@ -311,7 +319,7 @@ body[data-view="results"] #view-results { display: flex; animation: viewIn var(-
   animation: viewIn var(--t-med) var(--ease) both;
 }
 .swatch {
-  width: 22px; height: 22px; flex: none;
+  width: 1.375rem; height: 1.375rem; flex: none;
   border-radius: 50%;
   background: var(--tc);
   border: 2px solid rgba(255,255,255,.28);
@@ -378,7 +386,40 @@ body[data-view="results"] #view-results { display: flex; animation: viewIn var(-
   flex: none;
 }
 .topbar-left { display: flex; align-items: baseline; gap: 14px; min-width: 0; }
-.topbar-right { display: flex; gap: 8px; flex: none; }
+.topbar-right { display: flex; gap: 8px; flex: none; align-items: center; }
+
+/* zoom dial */
+.zoom-dial {
+  display: flex; align-items: center; gap: 2px;
+  padding: 3px;
+  margin-right: 4px;
+  border-radius: 11px;
+  background: rgba(0,0,0,.3);
+  border: 1px solid rgba(255,255,255,.1);
+}
+.zoom-dial .icon-btn {
+  width: 1.875rem; height: 1.875rem;
+  border: none; background: rgba(255,255,255,.06);
+  font-size: 1rem; font-weight: 700;
+}
+.zoom-dial .icon-btn:hover { transform: none; background: rgba(255,255,255,.18); }
+.zoom-val {
+  min-width: 3.25rem;
+  padding: 0 4px;
+  font-size: .74rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: rgba(255,255,255,.6);
+  transition: color var(--t-fast);
+}
+.zoom-val:hover { color: var(--gold-lit); }
+
+.zoom-readout { font-weight: 700; color: var(--gold-lit); font-variant-numeric: tabular-nums; }
+.zoom-range {
+  width: 100%;
+  accent-color: var(--gold);
+  margin-top: 4px;
+}
 
 .round-name {
   font-family: var(--f-display);
@@ -687,7 +728,7 @@ body[data-view="results"] #view-results { display: flex; animation: viewIn var(-
   top: clamp(10px, 1.6vh, 18px);
   right: clamp(10px, 1.4vw, 20px);
   z-index: 7;
-  width: 34px; height: 34px;
+  width: 2.125rem; height: 2.125rem;
   display: grid; place-items: center;
   border-radius: 9px;
   font-size: .95rem;
@@ -767,7 +808,7 @@ body[data-view="results"] #view-results { display: flex; animation: viewIn var(-
 
 .media-stage {
   position: relative;
-  width: 460px;          /* not a %: the centred flex item would shrink-to-fit */
+  width: 28.75rem;       /* not a %: the centred flex item would shrink-to-fit */
   max-width: 100%;
   padding: clamp(16px, 3vh, 28px);
   display: flex; flex-direction: column; align-items: center; gap: 14px;
@@ -883,7 +924,7 @@ body[data-view="results"] #view-results { display: flex; animation: viewIn var(-
 }
 .buzz-btn {
   position: relative;
-  min-width: 118px;
+  min-width: 7.4rem;
   padding: .6em 1.15em;
   border-radius: 10px;
   background: rgba(0,0,0,.34);
@@ -1165,7 +1206,7 @@ body[data-view="results"] #view-results { display: flex; animation: viewIn var(-
 
 .settings {
   position: fixed; top: 0; right: 0; bottom: 0; z-index: 80;
-  width: min(430px, 100%);
+  width: min(27rem, 100%);
   display: flex; flex-direction: column;
   background: linear-gradient(180deg, #0b1046, #05071f);
   border-left: 1px solid rgba(255,255,255,.12);
@@ -1216,7 +1257,7 @@ body[data-view="results"] #view-results { display: flex; animation: viewIn var(-
 .score-row .sname { flex: 1; font-size: .87rem; font-weight: 650; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .score-row input { width: 84px; font-family: var(--f-display); font-size: 1.15rem; color: var(--gold-lit); }
 .nudge {
-  width: 28px; height: 28px; flex: none;
+  width: 1.75rem; height: 1.75rem; flex: none;
   display: grid; place-items: center;
   border-radius: 7px;
   background: rgba(255,255,255,.08);

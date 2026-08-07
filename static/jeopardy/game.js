@@ -580,10 +580,15 @@ function renderBuzzRow() {
 
   S.teams.forEach((t, i) => {
     const allowed = !S.settings.strictTurns || i === S.activeTeam;
+    // once the clue is over (time up, or already answered) nobody can buzz,
+    // so every button should visibly go dead
+    // (but the team that just won it stays lit rather than greying out)
+    const dead = (clue.resolved && clue.buzzed !== i)
+      || clue.lockedOut.includes(i) || !allowed;
     const b = document.createElement("button");
     b.className = "buzz-btn"
       + (clue.buzzed === i ? " on" : "")
-      + (clue.lockedOut.includes(i) || !allowed ? " out" : "");
+      + (dead ? " out" : "");
     b.style.setProperty("--tc", t.color);
     b.innerHTML = `<span class="num">${i + 1}</span>${escapeHtml(t.name)}`;
     b.addEventListener("click", () => buzzIn(i));
@@ -664,6 +669,7 @@ function revealAnswer() {
   stopTimer();
   playAnswerClip();
   $("#answer-box").classList.add("show");
+  renderBuzzRow();      // grey out the team buttons — the clue is closed to answers
   renderClueActions();
 }
 
@@ -778,13 +784,30 @@ function armClipWindow() {
   }, ms);
 }
 
+/* The local mp3 failed. Swap to the YouTube id the clue named, if it has one,
+   so a missing file degrades to streaming instead of silence. */
+function useFallback(media) {
+  if (!media || !media.fallback || !curMedia) return;
+  toast("Clip file missing — streaming instead");
+  startMedia({
+    type: "youtube",
+    id: media.fallback,
+    start: media.fallbackStart ?? media.start,
+    end: media.fallbackEnd ?? media.end,
+  });
+}
+
 /* Reveal plays the rest of the song, so the room actually hears the answer. */
 function playAnswerClip() {
   if (!curMedia) return;
   clearTimeout(clipTimer);
   clipStopped = true;
   if (curMedia.type === "youtube") { ytCommand("playVideo"); ytPaused = false; }
-  else if (audioEl && audioEl.paused) audioEl.play();
+  // play() rejects if a pause lands mid-request; swallow it rather than
+  // throwing, and reflect whatever state we actually ended up in.
+  else if (audioEl && audioEl.paused) {
+    audioEl.play().catch(() => setPausedUI(true));
+  }
   setPausedUI(false);
 }
 
@@ -833,7 +856,19 @@ function startMedia(media) {
     audioEl.preload = "auto";
     audioEl.currentTime = media.start || 0;
     audioEl.addEventListener("playing", armClipWindow, { once: true });
-    audioEl.play().catch(() => toast("Press Play to start the clip"));
+    // Backstop: if "playing" is slow to fire (or never does), arm the window
+    // anyway so a windowed clue can't sit there with no timer.
+    if (media.end != null) setTimeout(armClipWindow, 2500);
+    // If the mp3 is missing or won't decode, quietly stream from YouTube
+    // instead of leaving the host with a dead clue.
+    audioEl.addEventListener("error", () => useFallback(media), { once: true });
+    // Browsers block audio that isn't tied to a click. If that happens, show
+    // the paused state honestly so the host knows to hit Play, rather than
+    // leaving a "Pause" button over silence.
+    audioEl.play().catch(() => {
+      setPausedUI(true);
+      toast("Press Play to start the clip");
+    });
   }
 
   setPausedUI(false);
@@ -868,7 +903,7 @@ function initMedia() {
       clipStopped = true;
       clearTimeout(clipTimer);
       if (isYT) { ytCommand("playVideo"); ytPaused = false; }
-      else if (audioEl) audioEl.play();
+      else if (audioEl) audioEl.play().catch(() => setPausedUI(true));
       setPausedUI(false);
     } else {
       clearTimeout(clipTimer);
@@ -1586,6 +1621,9 @@ function initChrome() {
     if (k === "s") { e.preventDefault(); $("#settings").classList.contains("open") ? closeSettings() : openSettings(); return; }
     if (k === "f") { e.preventDefault(); toggleFullscreen(); return; }
     if (k === "z") { e.preventDefault(); undo(); return; }
+    if (k === "+" || k === "=") { e.preventDefault(); applyZoom(uiZoom + ZOOM_STEP); return; }
+    if (k === "-" || k === "_") { e.preventDefault(); applyZoom(uiZoom - ZOOM_STEP); return; }
+    if (k === "0" && (e.metaKey || e.ctrlKey)) { e.preventDefault(); applyZoom(100, true); return; }
 
     if (!clue) return;
     if (k >= "1" && k <= "4") { e.preventDefault(); buzzIn(+k - 1); return; }
@@ -1610,6 +1648,40 @@ function initChrome() {
   document.addEventListener("pointerdown", () => SFX.unlock(), { once: true });
 }
 
+/* ==========================================================================
+   UI SCALE — the zoom dial
+   ========================================================================== */
+
+const ZOOM_KEY = "bs-jeopardy-zoom";
+const ZOOM_MIN = 80, ZOOM_MAX = 220, ZOOM_STEP = 10;
+let uiZoom = 100;
+
+function applyZoom(pct, announce) {
+  uiZoom = Math.round(Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, pct)));
+  document.documentElement.style.setProperty("--ui-scale", uiZoom / 100);
+  const label = uiZoom + "%";
+  const val = $("#zoom-val"), read = $("#zoom-readout"), range = $("#zoom-range");
+  if (val) val.textContent = label;
+  if (read) read.textContent = label;
+  if (range) range.value = uiZoom;
+  try { localStorage.setItem(ZOOM_KEY, uiZoom); } catch (e) { /* private mode */ }
+
+  // the expanded clue card is sized in pixels, so re-fit it after a resize
+  window.dispatchEvent(new Event("resize"));
+  if (announce) toast(`Interface size ${label}`);
+}
+
+function initZoom() {
+  let saved = 100;
+  try { saved = +localStorage.getItem(ZOOM_KEY) || 100; } catch (e) { /* noop */ }
+  applyZoom(saved);
+
+  $("#zoom-up").addEventListener("click", () => applyZoom(uiZoom + ZOOM_STEP));
+  $("#zoom-down").addEventListener("click", () => applyZoom(uiZoom - ZOOM_STEP));
+  $("#zoom-val").addEventListener("click", () => applyZoom(100, true));
+  $("#zoom-range").addEventListener("input", (e) => applyZoom(+e.target.value));
+}
+
 function toggleFullscreen() {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen?.().catch(() => toast("Fullscreen blocked"));
@@ -1626,3 +1698,4 @@ initSetup();
 initSettings();
 initChrome();
 initMedia();
+initZoom();

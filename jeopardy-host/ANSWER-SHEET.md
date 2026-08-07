@@ -11,63 +11,65 @@ _Host reference. Generated from `questions.js` — run `node static/jeopardy/mak
 > What are the heavens and the earth?  
 > _Genesis 1:1_
 
-**$400** — At 969 years, he holds the record for the longest life in the Bible.
+**$400** — He lived on locusts and wild honey, and he baptized Jesus in the Jordan.
 
-> Who is Methuselah?  
-> _Genesis 5:27. He died the year of the flood._
+> Who is John the Baptist?  
+> _Jesus' relative — their mothers were cousins._
 
 **$600** — A physician by trade, he wrote both a gospel and Acts, which makes him the author of more of the New Testament by word count than Paul.
 
 > Who is Luke?  
 > _The only gentile author in the Bible._
 
-**$800** — God is never once mentioned by name in this Old Testament book, even though the whole story is about His rescue of the Jews.
+**$800** — At 969 years, he holds the record for the longest life in the Bible.
 
-> What is Esther?
+> Who is Methuselah?  
+> _Genesis 5:27. He died the year of the flood._
 
 **$1000** — Roughly this many years separate the last page of Malachi from the first page of Matthew — the so-called silent years.
 
 > What is 400 years?
 
-### Lab Notes
+### General Science
 
-**$200** — It is the only planet in our solar system not named after a Greek or Roman god.
+**$200** — Every biology class calls this organelle the powerhouse of the cell.
 
-> What is Earth?
+> What is the mitochondria?
 
-**$400** — It's the only metal that shows up as a liquid at room temperature.
+**$400** — One neuron passes a signal to the next across this microscopic gap.
 
-> What is mercury?
+> What is a synapse?
 
-**$600** — You share roughly 60% of your DNA with this yellow fruit.
+**$600** — At atomic number 92, it's the heaviest element that occurs naturally in any real quantity.
 
-> What is a banana?
+> What is uranium?
 
-**$800** — It makes up about 78% of the air you're breathing right now — far more than oxygen.
+**$800** — This law of thermodynamics is the reason entropy in a closed system only ever increases.
 
-> What is nitrogen?
+> What is the second law?  
+> _Why you can't un-scramble an egg._
 
-**$1000** — It spins so slowly that a single day there lasts longer than its entire year.
+**$1000** — Roughly 8 minutes and 20 seconds — that's how long this takes to reach Earth.
 
-> What is Venus?  
-> _243 Earth days to rotate; 225 to orbit the Sun._
+> What is sunlight?  
+> _If the Sun vanished, we wouldn't know for 8 minutes._
 
 ### Miracles & Mayhem
 
-**$200** — Jesus performed His first recorded miracle at a wedding in this town.
+**$200** — Jesus fed five thousand people with five loaves and this many fish.
 
-> What is Cana?  
-> _John 2_
+> What is two?  
+> _The only miracle in all four gospels._
 
 **$400** — This tenth and final plague is the one that finally broke Pharaoh.
 
 > What is the death of the firstborn?  
 > _Exodus 12_
 
-**$600** — On Mount Carmel, Elijah called down fire and humiliated 450 prophets of this god.
+**$600** — His superhuman strength ran out the night Delilah had his hair cut off.
 
-> Who is Baal?  
-> _1 Kings 18_
+> Who is Samson?  
+> _Judges 16_
 
 **$800** — When this prophet's terrified servant had his eyes opened, he saw the hills full of fiery horses and chariots.
 
@@ -83,43 +85,43 @@ _Host reference. Generated from `questions.js` — run `node static/jeopardy/mak
 
 **$200** — Name this Elevation Worship song.
 
-🎵 clip: youtube.com/watch?v=QS04WbSnxok · plays 0s–end
+🎵 clip: clips/trust-in-god.mp3 · plays 0s–end
 
 > What is "Trust in God"?  
 > _Featuring Chris Brown and Isaiah Templeton._
 
 **$400** — Name this song.
 
-🎵 clip: youtube.com/watch?v=Sc6SSHuZvQE · plays 0s–end
+🎵 clip: clips/reckless-love.mp3 · plays 0s–end
 
 > What is "Reckless Love"?  
 > _Cory Asbury, 2018._
 
 **$600** — Name the artist singing this one.
 
-🎵 clip: youtube.com/watch?v=XFRjr_x-yxU · plays 0s–end
+🎵 clip: clips/this-is-amazing-grace.mp3 · plays 0s–end
 
 > Who is Phil Wickham?  
 > _"This Is Amazing Grace," 2013._
 
 **$800** — Finish the lyric.
 
-🎵 clip: youtube.com/watch?v=x9ndiD0_qNk · plays 303s–307s
+🎵 clip: clips/firm-foundation.mp3 · plays 0s–4s
 
 > What is “That I put my faith in Jesus”?  
 > _Cody Carnes, "Firm Foundation (He Won't)."_
 
 **$1000** — For the full thousand: name both this song and the artists performing it.
 
-🎵 clip: youtube.com/watch?v=7YZCu5LdG_U · plays 0s–end
+🎵 clip: clips/goodbye-yesterday.mp3 · plays 0s–end
 
 > What is "Goodbye Yesterday" by Elevation Rhythm and Gracie Binion?
 
 ### History Class
 
-**$200** — This wall split a German city in two from 1961 until it came down in 1989.
+**$200** — Of the seven wonders of the ancient world, this Egyptian one is the only survivor.
 
-> What is the Berlin Wall?
+> What is the Great Pyramid of Giza?
 
 **$400** — This Roman emperor's Edict of Milan legalized Christianity in AD 313.
 
@@ -133,10 +135,9 @@ _Host reference. Generated from `questions.js` — run `node static/jeopardy/mak
 
 > What is the Great Schism?
 
-**$1000** — Ordered to take back everything he had written, Luther refused at this 1521 assembly with a gloriously unappetising name.
+**$1000** — Signed in 1919, this treaty formally ended the First World War — and its punishing terms helped set up the second.
 
-> What is the Diet of Worms?  
-> _Worms is a German city; a 'diet' is an imperial assembly._
+> What is the Treaty of Versailles?
 
 ### Mental Math
 
@@ -167,54 +168,55 @@ _Host reference. Generated from `questions.js` — run `node static/jeopardy/mak
 
 ### Psalms & Proverbs
 
-**$400** — Psalm 23 opens by calling the Lord this — a job David had actually worked.
+**$400** — Fill in the blank: "The Lord is my __________; I shall not want."
 
-> What is a shepherd?  
+> What is shepherd?  
 > _Psalm 23:1_
 
-**$800** — Running 176 verses, this is the longest chapter in the entire Bible.
-
-> What is Psalm 119?  
-> _An acrostic — 22 stanzas, one for each Hebrew letter._
-
-**$1200** — Proverbs 3:5-6 promises that if you trust the Lord instead of your own understanding, He will do this to your paths.
-
-> What is make them straight?
-
-**$1600** — This king, who famously asked God for wisdom instead of wealth, is credited with most of Proverbs.
+**$800** — This king, who asked God for wisdom instead of money, is credited with most of Proverbs.
 
 > Who is Solomon?
 
-**$2000** — Proverbs 27:17 says one person sharpens another the way these two identical metal objects do.
+**$1200** — Fill in the blank: "Your word is a lamp to my feet and a light to my __________."
 
-> What is iron sharpening iron?
+> What is path?  
+> _Psalm 119:105_
+
+**$1600** — Proverbs 3:5-6 promises that if you trust the Lord instead of leaning on your own understanding, He will do this to your paths.
+
+> What is make them straight?
+
+**$2000** — Jesus quoted the opening line of this psalm from the cross: "My God, my God, why have you forsaken me?"
+
+> What is Psalm 22?  
+> _It goes on to describe pierced hands and feet, and soldiers casting lots for clothing._
 
 ### Parables
 
-**$400** — In this parable a father spots his son far off, runs to him, and throws a feast.
+**$400** — A shepherd leaves ninety-nine behind to go after the single one that wandered off.
+
+> What is the parable of the lost sheep?  
+> _Luke 15:3-7_
+
+**$800** — In this parable a father spots his son far off, runs to him, and throws a feast.
 
 > What is the Prodigal Son?  
 > _Luke 15_
 
-**$800** — A priest and a Levite walk straight past a beaten man; this unlikely traveller stops.
+**$1200** — A priest and a Levite walk straight past a beaten man; this unlikely traveller stops.
 
 > Who is the Good Samaritan?  
 > _Luke 10_
 
-**$1200** — In the parable of the talents, the servant who buried his money had been given this many.
+**$1600** — In the parable of the talents, the servant who buried his money had been given this many.
 
 > What is one?  
 > _Matthew 25:14-30_
 
-**$1600** — A man stumbles on treasure buried in a field, then joyfully sells everything he owns to buy that field.
+**$2000** — This man's harvest was so good he tore down his barns to build bigger ones — and God called him a fool, because he died that very night.
 
-> What is the parable of the hidden treasure?  
-> _Matthew 13:44_
-
-**$2000** — A rich man ignores a beggar at his gate and the two swap places after death. The beggar is the only character Jesus ever named in a parable, and this is his name.
-
-> Who is Lazarus?  
-> _Luke 16 — a different Lazarus from Mary and Martha's brother._
+> What is the parable of the rich fool?  
+> _Luke 12:16-21_
 
 ### Bible Geography
 
@@ -232,38 +234,39 @@ _Host reference. Generated from `questions.js` — run `node static/jeopardy/mak
 
 > What is the Jordan?
 
-**$1600** — Saul was struck blind on the road to this city — and the phrase now means any sudden total reversal.
+**$1600** — Moses came down this mountain carrying the Ten Commandments.
 
-> What is Damascus?  
-> _Acts 9_
+> What is Mount Sinai?  
+> _Exodus 19-20. Also called Horeb._
 
 **$2000** — Jesus was crucified at this spot just outside Jerusalem, a name meaning "the place of the skull."
 
 > What is Golgotha?  
 > _Calvary is the Latin version of the same name._
 
-### Pop Culture Pew
+### Anime
 
-**$400** — This rapper's 2019 gospel album "Jesus Is King" debuted at #1 on the Billboard 200.
+**$400** — It's the very first entry in the National Pokédex — number 001.
 
-> Who is Kanye West?
+> What is Bulbasaur?
 
-**$800** — Crowdfunded rather than studio-backed, this series about the life of Jesus takes its name from the men He picked.
+**$800** — This is how long Aang spent frozen in the iceberg before Katara and Sokka found him.
 
-> What is The Chosen?
+> What is 100 years?
 
-**$1200** — Mel Gibson's 2004 film about Jesus' final hours was shot almost entirely in Aramaic and Latin.
+**$1200** — In the written first phase of the Chunin Exams, this is how many questions Naruto actually answered correctly.
 
-> What is The Passion of the Christ?
+> What is zero?  
+> _He left it blank and passed anyway by refusing to quit on the tenth question._
 
-**$1600** — This Charlotte, North Carolina church's worship collective gave us "Graves Into Gardens."
+**$1600** — Gojo Satoru's Domain Expansion goes by this name.
 
-> What is Elevation Worship?
+> What is Unlimited Void?  
+> _Muryōkūsho._
 
-**$2000** — Lecrae, Trip Lee, and Andy Mineo all built their careers at this Atlanta-based Christian hip-hop label.
+**$2000** — The seventh holder of One For All and All Might's mentor, she also turns out to be Tomura Shigaraki's grandmother.
 
-> What is Reach Records?  
-> _Co-founded by Lecrae in 2004._
+> Who is Nana Shimura?
 
 ### Animal Kingdom
 
@@ -279,35 +282,36 @@ _Host reference. Generated from `questions.js` — run `node static/jeopardy/mak
 
 > What is a parliament?
 
-**$1600** — A sea otter keeps its favourite rock for cracking shellfish tucked into a loose pouch of skin here.
+**$1600** — This shrimp throws a punch so fast it boils the water around its claw and can crack aquarium glass.
 
-> What is its armpit?
+> What is the mantis shrimp?
 
 **$2000** — Nicknamed "Ming," a specimen of this shellfish was found to be about 507 years old — the longest-lived animal ever recorded.
 
 > What is a clam?  
 > _An ocean quahog, hatched around 1499._
 
-### Grab Bag
+### Bible Oddities
 
-**$400** — At roughly 450 feet, Noah's ark was about the length of one and a half of these American sports fields.
+**$400** — Noah's dove finally came back carrying a fresh leaf from this tree — which is why its branch still means peace.
 
-> What is a football field?
+> What is an olive tree?  
+> _Genesis 8:11_
 
 **$800** — Genesis says this man "walked with God, and he was not, for God took him" — he never died at all.
 
 > Who is Enoch?  
 > _Genesis 5:24. Methuselah's father._
 
-**$1200** — In Numbers 22 this animal sees an angel, and then talks back to its owner about it.
-
-> What is a donkey?  
-> _Balaam's donkey._
-
-**$1600** — Dying at 127, she is the only woman in the Bible whose age at death is recorded.
+**$1200** — Dying at 127, she is the only woman in the Bible whose age at death is recorded.
 
 > Who is Sarah?  
 > _Genesis 23:1_
+
+**$1600** — In Numbers 22 this animal sees an angel, and then talks back to its owner about it.
+
+> What is a donkey?  
+> _Balaam's donkey._
 
 **$2000** — Two words long in most English translations, it's the shortest verse in the Bible.
 

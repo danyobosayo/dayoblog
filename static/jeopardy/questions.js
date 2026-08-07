@@ -53,9 +53,9 @@ const GAME = {
               note: "Genesis 1:1",
             },
             {
-              q: "At 969 years, he holds the record for the longest life in the Bible.",
-              a: "Who is Methuselah?",
-              note: "Genesis 5:27. He died the year of the flood.",
+              q: "He lived on locusts and wild honey, and he baptized Jesus in the Jordan.",
+              a: "Who is John the Baptist?",
+              note: "Jesus' relative — their mothers were cousins.",
             },
             {
               q: "A physician by trade, he wrote both a gospel and Acts, which makes him the author of more of the New Testament by word count than Paul.",
@@ -63,8 +63,9 @@ const GAME = {
               note: "The only gentile author in the Bible.",
             },
             {
-              q: "God is never once mentioned by name in this Old Testament book, even though the whole story is about His rescue of the Jews.",
-              a: "What is Esther?",
+              q: "At 969 years, he holds the record for the longest life in the Bible.",
+              a: "Who is Methuselah?",
+              note: "Genesis 5:27. He died the year of the flood.",
             },
             {
               q: "Roughly this many years separate the last page of Malachi from the first page of Matthew — the so-called silent years.",
@@ -73,28 +74,29 @@ const GAME = {
           ],
         },
         {
-          title: "Lab Notes",
+          title: "General Science",
           clues: [
             {
-              q: "It is the only planet in our solar system not named after a Greek or Roman god.",
-              a: "What is Earth?",
+              q: "Every biology class calls this organelle the powerhouse of the cell.",
+              a: "What is the mitochondria?",
             },
             {
-              q: "It's the only metal that shows up as a liquid at room temperature.",
-              a: "What is mercury?",
+              q: "One neuron passes a signal to the next across this microscopic gap.",
+              a: "What is a synapse?",
             },
             {
-              q: "You share roughly 60% of your DNA with this yellow fruit.",
-              a: "What is a banana?",
+              q: "At atomic number 92, it's the heaviest element that occurs naturally in any real quantity.",
+              a: "What is uranium?",
             },
             {
-              q: "It makes up about 78% of the air you're breathing right now — far more than oxygen.",
-              a: "What is nitrogen?",
+              q: "This law of thermodynamics is the reason entropy in a closed system only ever increases.",
+              a: "What is the second law?",
+              note: "Why you can't un-scramble an egg.",
             },
             {
-              q: "It spins so slowly that a single day there lasts longer than its entire year.",
-              a: "What is Venus?",
-              note: "243 Earth days to rotate; 225 to orbit the Sun.",
+              q: "Roughly 8 minutes and 20 seconds — that's how long this takes to reach Earth.",
+              a: "What is sunlight?",
+              note: "If the Sun vanished, we wouldn't know for 8 minutes.",
             },
           ],
         },
@@ -102,9 +104,9 @@ const GAME = {
           title: "Miracles & Mayhem",
           clues: [
             {
-              q: "Jesus performed His first recorded miracle at a wedding in this town.",
-              a: "What is Cana?",
-              note: "John 2",
+              q: "Jesus fed five thousand people with five loaves and this many fish.",
+              a: "What is two?",
+              note: "The only miracle in all four gospels.",
             },
             {
               q: "This tenth and final plague is the one that finally broke Pharaoh.",
@@ -112,9 +114,9 @@ const GAME = {
               note: "Exodus 12",
             },
             {
-              q: "On Mount Carmel, Elijah called down fire and humiliated 450 prophets of this god.",
-              a: "Who is Baal?",
-              note: "1 Kings 18",
+              q: "His superhuman strength ran out the night Delilah had his hair cut off.",
+              a: "Who is Samson?",
+              note: "Judges 16",
             },
             {
               q: "When this prophet's terrified servant had his eyes opened, he saw the hills full of fiery horses and chariots.",
@@ -130,13 +132,15 @@ const GAME = {
         },
         {
           /* ---- SONG CLIPS ----------------------------------------------
-             Audio only — the player is never shown, so the video title can't
-             give anything away. Each clip plays from the top and keeps going
-             until you close the clue or hit Pause.
+             These play local mp3s from clips/, already trimmed to ~45s, so
+             there is no streaming lag and no wifi dependency. Each one names
+             a `fallback` YouTube id too: if the file can't load for any
+             reason, the clue quietly streams instead of dying.
 
-             The $800 is the odd one out: it plays a 4-second window, stops
-             dead for the finish-the-lyric guess, and the Pause button turns
-             into "Continue" so you can play the song on from that exact spot.
+             The $800 is the odd one out. Its mp3 already starts at 5:03 of
+             the song, so it plays a 4-second window, stops dead for the
+             finish-the-lyric guess, and the Pause button turns into
+             "Continue" to play on from that exact spot.
              --------------------------------------------------------------- */
           title: "Sing It Back",
           clues: [
@@ -144,34 +148,34 @@ const GAME = {
               q: "Name this Elevation Worship song.",
               a: 'What is "Trust in God"?',
               note: "Featuring Chris Brown and Isaiah Templeton.",
-              media: { type: "youtube", id: "QS04WbSnxok", start: 0 },
+              media: { type: "audio", src: "clips/trust-in-god.mp3", fallback: "QS04WbSnxok" },
               seconds: 40,
             },
             {
               q: "Name this song.",
               a: 'What is "Reckless Love"?',
               note: "Cory Asbury, 2018.",
-              media: { type: "youtube", id: "Sc6SSHuZvQE", start: 0 },
+              media: { type: "audio", src: "clips/reckless-love.mp3", fallback: "Sc6SSHuZvQE" },
               seconds: 40,
             },
             {
               q: "Name the artist singing this one.",
               a: "Who is Phil Wickham?",
               note: '"This Is Amazing Grace," 2013.',
-              media: { type: "youtube", id: "XFRjr_x-yxU", start: 0 },
+              media: { type: "audio", src: "clips/this-is-amazing-grace.mp3", fallback: "XFRjr_x-yxU" },
               seconds: 40,
             },
             {
               q: "Finish the lyric.",
               a: "What is “That I put my faith in Jesus”?",
               note: 'Cody Carnes, "Firm Foundation (He Won\'t)."',
-              media: { type: "youtube", id: "x9ndiD0_qNk", start: 303, end: 307 },
+              media: { type: "audio", src: "clips/firm-foundation.mp3", start: 0, end: 4, fallback: "x9ndiD0_qNk", fallbackStart: 303, fallbackEnd: 307 },
               seconds: 40,
             },
             {
               q: "For the full thousand: name both this song and the artists performing it.",
               a: 'What is "Goodbye Yesterday" by Elevation Rhythm and Gracie Binion?',
-              media: { type: "youtube", id: "7YZCu5LdG_U", start: 0 },
+              media: { type: "audio", src: "clips/goodbye-yesterday.mp3", fallback: "7YZCu5LdG_U" },
               seconds: 40,
             },
           ],
@@ -180,8 +184,8 @@ const GAME = {
           title: "History Class",
           clues: [
             {
-              q: "This wall split a German city in two from 1961 until it came down in 1989.",
-              a: "What is the Berlin Wall?",
+              q: "Of the seven wonders of the ancient world, this Egyptian one is the only survivor.",
+              a: "What is the Great Pyramid of Giza?",
             },
             {
               q: "This Roman emperor's Edict of Milan legalized Christianity in AD 313.",
@@ -196,9 +200,8 @@ const GAME = {
               a: "What is the Great Schism?",
             },
             {
-              q: "Ordered to take back everything he had written, Luther refused at this 1521 assembly with a gloriously unappetising name.",
-              a: "What is the Diet of Worms?",
-              note: "Worms is a German city; a 'diet' is an imperial assembly.",
+              q: "Signed in 1919, this treaty formally ended the First World War — and its punishing terms helped set up the second.",
+              a: "What is the Treaty of Versailles?",
             },
           ],
         },
@@ -243,32 +246,38 @@ const GAME = {
           title: "Psalms & Proverbs",
           clues: [
             {
-              q: "Psalm 23 opens by calling the Lord this — a job David had actually worked.",
-              a: "What is a shepherd?",
+              q: 'Fill in the blank: "The Lord is my __________; I shall not want."',
+              a: "What is shepherd?",
               note: "Psalm 23:1",
             },
             {
-              q: "Running 176 verses, this is the longest chapter in the entire Bible.",
-              a: "What is Psalm 119?",
-              note: "An acrostic — 22 stanzas, one for each Hebrew letter.",
-            },
-            {
-              q: "Proverbs 3:5-6 promises that if you trust the Lord instead of your own understanding, He will do this to your paths.",
-              a: "What is make them straight?",
-            },
-            {
-              q: "This king, who famously asked God for wisdom instead of wealth, is credited with most of Proverbs.",
+              q: "This king, who asked God for wisdom instead of money, is credited with most of Proverbs.",
               a: "Who is Solomon?",
             },
             {
-              q: "Proverbs 27:17 says one person sharpens another the way these two identical metal objects do.",
-              a: "What is iron sharpening iron?",
+              q: 'Fill in the blank: "Your word is a lamp to my feet and a light to my __________."',
+              a: "What is path?",
+              note: "Psalm 119:105",
+            },
+            {
+              q: "Proverbs 3:5-6 promises that if you trust the Lord instead of leaning on your own understanding, He will do this to your paths.",
+              a: "What is make them straight?",
+            },
+            {
+              q: 'Jesus quoted the opening line of this psalm from the cross: "My God, my God, why have you forsaken me?"',
+              a: "What is Psalm 22?",
+              note: "It goes on to describe pierced hands and feet, and soldiers casting lots for clothing.",
             },
           ],
         },
         {
           title: "Parables",
           clues: [
+            {
+              q: "A shepherd leaves ninety-nine behind to go after the single one that wandered off.",
+              a: "What is the parable of the lost sheep?",
+              note: "Luke 15:3-7",
+            },
             {
               q: "In this parable a father spots his son far off, runs to him, and throws a feast.",
               a: "What is the Prodigal Son?",
@@ -285,14 +294,9 @@ const GAME = {
               note: "Matthew 25:14-30",
             },
             {
-              q: "A man stumbles on treasure buried in a field, then joyfully sells everything he owns to buy that field.",
-              a: "What is the parable of the hidden treasure?",
-              note: "Matthew 13:44",
-            },
-            {
-              q: "A rich man ignores a beggar at his gate and the two swap places after death. The beggar is the only character Jesus ever named in a parable, and this is his name.",
-              a: "Who is Lazarus?",
-              note: "Luke 16 — a different Lazarus from Mary and Martha's brother.",
+              q: "This man's harvest was so good he tore down his barns to build bigger ones — and God called him a fool, because he died that very night.",
+              a: "What is the parable of the rich fool?",
+              note: "Luke 12:16-21",
             },
           ],
         },
@@ -314,9 +318,9 @@ const GAME = {
               a: "What is the Jordan?",
             },
             {
-              q: "Saul was struck blind on the road to this city — and the phrase now means any sudden total reversal.",
-              a: "What is Damascus?",
-              note: "Acts 9",
+              q: "Moses came down this mountain carrying the Ten Commandments.",
+              a: "What is Mount Sinai?",
+              note: "Exodus 19-20. Also called Horeb.",
             },
             {
               q: 'Jesus was crucified at this spot just outside Jerusalem, a name meaning "the place of the skull."',
@@ -326,28 +330,31 @@ const GAME = {
           ],
         },
         {
-          title: "Pop Culture Pew",
+          /* Deliberately not "name this anime" — the shows are mainstream but
+             the details are for people who actually watched them. */
+          title: "Anime",
           clues: [
             {
-              q: 'This rapper\'s 2019 gospel album "Jesus Is King" debuted at #1 on the Billboard 200.',
-              a: "Who is Kanye West?",
+              q: "It's the very first entry in the National Pokédex — number 001.",
+              a: "What is Bulbasaur?",
             },
             {
-              q: "Crowdfunded rather than studio-backed, this series about the life of Jesus takes its name from the men He picked.",
-              a: "What is The Chosen?",
+              q: "This is how long Aang spent frozen in the iceberg before Katara and Sokka found him.",
+              a: "What is 100 years?",
             },
             {
-              q: "Mel Gibson's 2004 film about Jesus' final hours was shot almost entirely in Aramaic and Latin.",
-              a: "What is The Passion of the Christ?",
+              q: "In the written first phase of the Chunin Exams, this is how many questions Naruto actually answered correctly.",
+              a: "What is zero?",
+              note: "He left it blank and passed anyway by refusing to quit on the tenth question.",
             },
             {
-              q: 'This Charlotte, North Carolina church\'s worship collective gave us "Graves Into Gardens."',
-              a: "What is Elevation Worship?",
+              q: "Gojo Satoru's Domain Expansion goes by this name.",
+              a: "What is Unlimited Void?",
+              note: "Muryōkūsho.",
             },
             {
-              q: "Lecrae, Trip Lee, and Andy Mineo all built their careers at this Atlanta-based Christian hip-hop label.",
-              a: "What is Reach Records?",
-              note: "Co-founded by Lecrae in 2004.",
+              q: "The seventh holder of One For All and All Might's mentor, she also turns out to be Tomura Shigaraki's grandmother.",
+              a: "Who is Nana Shimura?",
             },
           ],
         },
@@ -367,8 +374,8 @@ const GAME = {
               a: "What is a parliament?",
             },
             {
-              q: "A sea otter keeps its favourite rock for cracking shellfish tucked into a loose pouch of skin here.",
-              a: "What is its armpit?",
+              q: "This shrimp throws a punch so fast it boils the water around its claw and can crack aquarium glass.",
+              a: "What is the mantis shrimp?",
             },
             {
               q: 'Nicknamed "Ming," a specimen of this shellfish was found to be about 507 years old — the longest-lived animal ever recorded.',
@@ -378,11 +385,12 @@ const GAME = {
           ],
         },
         {
-          title: "Grab Bag",
+          title: "Bible Oddities",
           clues: [
             {
-              q: "At roughly 450 feet, Noah's ark was about the length of one and a half of these American sports fields.",
-              a: "What is a football field?",
+              q: "Noah's dove finally came back carrying a fresh leaf from this tree — which is why its branch still means peace.",
+              a: "What is an olive tree?",
+              note: "Genesis 8:11",
             },
             {
               q: 'Genesis says this man "walked with God, and he was not, for God took him" — he never died at all.',
@@ -390,14 +398,14 @@ const GAME = {
               note: "Genesis 5:24. Methuselah's father.",
             },
             {
-              q: "In Numbers 22 this animal sees an angel, and then talks back to its owner about it.",
-              a: "What is a donkey?",
-              note: "Balaam's donkey.",
-            },
-            {
               q: "Dying at 127, she is the only woman in the Bible whose age at death is recorded.",
               a: "Who is Sarah?",
               note: "Genesis 23:1",
+            },
+            {
+              q: "In Numbers 22 this animal sees an angel, and then talks back to its owner about it.",
+              a: "What is a donkey?",
+              note: "Balaam's donkey.",
             },
             {
               q: "Two words long in most English translations, it's the shortest verse in the Bible.",

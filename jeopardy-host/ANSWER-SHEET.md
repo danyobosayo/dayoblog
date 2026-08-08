@@ -30,57 +30,6 @@ _Host reference. Generated from `questions.js` — run `node static/jeopardy/mak
 
 > What is 400 years?
 
-### General Science
-
-**$200** — Every biology class calls this organelle the powerhouse of the cell.
-
-> What is the mitochondria?
-
-**$400** — One neuron passes a signal to the next across this microscopic gap.
-
-> What is a synapse?
-
-**$600** — At atomic number 92, it's the heaviest element that occurs naturally in any real quantity.
-
-> What is uranium?
-
-**$800** — This law of thermodynamics is the reason entropy in a closed system only ever increases.
-
-> What is the second law?  
-> _Why you can't un-scramble an egg._
-
-**$1000** — Roughly 8 minutes and 20 seconds — that's how long this takes to reach Earth.
-
-> What is sunlight?  
-> _If the Sun vanished, we wouldn't know for 8 minutes._
-
-### Miracles & Mayhem
-
-**$200** — Jesus fed five thousand people with five loaves and this many fish.
-
-> What is two?  
-> _The only miracle in all four gospels._
-
-**$400** — This tenth and final plague is the one that finally broke Pharaoh.
-
-> What is the death of the firstborn?  
-> _Exodus 12_
-
-**$600** — His superhuman strength ran out the night Delilah had his hair cut off.
-
-> Who is Samson?  
-> _Judges 16_
-
-**$800** — When this prophet's terrified servant had his eyes opened, he saw the hills full of fiery horses and chariots.
-
-> Who is Elisha?  
-> _2 Kings 6:17_
-
-**$1000** — The sun stopped in the middle of the sky for about a full day so this leader could finish a battle.
-
-> Who is Joshua?  
-> _Joshua 10:13_
-
 ### Sing It Back
 
 **$200** — Name this Elevation Worship song.
@@ -106,7 +55,7 @@ _Host reference. Generated from `questions.js` — run `node static/jeopardy/mak
 
 **$800** — Finish the lyric.
 
-🎵 clip: clips/firm-foundation.mp3 · plays 0s–4s
+🎵 clip: clips/firm-foundation.mp3 · plays 1s–4.75s
 
 > What is “That I put my faith in Jesus”?  
 > _Cody Carnes, "Firm Foundation (He Won't)."_
@@ -139,32 +88,134 @@ _Host reference. Generated from `questions.js` — run `node static/jeopardy/mak
 
 > What is the Treaty of Versailles?
 
+### Bible Geography
+
+**$200** — Jesus grew up in this Galilean town, prompting the question "can anything good come from" there?
+
+> What is Nazareth?  
+> _John 1:46_
+
+**$400** — The Israelites wandered the wilderness for this many years.
+
+> What is 40?  
+> _One year for each day the spies scouted Canaan._
+
+**$600** — John baptized Jesus in this river.
+
+> What is the Jordan?
+
+**$800** — Moses came down this mountain carrying the Ten Commandments.
+
+> What is Mount Sinai?  
+> _Exodus 19-20. Also called Horeb._
+
+**$1000** — Jesus was crucified at this spot just outside Jerusalem, a name meaning "the place of the skull."
+
+> What is Golgotha?  
+> _Calvary is the Latin version of the same name._
+
+### Anime
+
+**$200** — It's the very first entry in the National Pokédex — number 001.
+
+> What is Bulbasaur?
+
+**$400** — This is how long Aang spent frozen in the iceberg before Katara and Sokka found him.
+
+> What is 100 years?
+
+**$600** — In the written first phase of the Chunin Exams, this is how many questions Naruto actually answered correctly.
+
+> What is zero?  
+> _He left it blank and passed anyway by refusing to quit on the tenth question._
+
+**$800** — Gojo Satoru's Domain Expansion goes by this name.
+
+> What is Unlimited Void?  
+> _Muryōkūsho._
+
+**$1000** — Saitama insists he became the strongest man alive on a completely ordinary daily routine. Name all four parts of it.
+
+> What is 100 push-ups, 100 sit-ups, 100 squats, and a 10 km run?  
+> _Every single day for three years — and it made his hair fall out._
+
+### Miracles & Mayhem
+
+**$200** — Jesus fed five thousand people with five loaves and this many fish.
+
+> What is two?  
+> _The only miracle in all four gospels._
+
+**$400** — This tenth and final plague is the one that finally broke Pharaoh.
+
+> What is the death of the firstborn?  
+> _Exodus 12_
+
+**$600** — His superhuman strength ran out the night Delilah had his hair cut off.
+
+> Who is Samson?  
+> _Judges 16_
+
+**$800** — When this prophet's terrified servant had his eyes opened, he saw the hills full of fiery horses and chariots.
+
+> Who is Elisha?  
+> _2 Kings 6:17_
+
+**$1000** — The sun stopped in the middle of the sky for about a full day so this leader could finish a battle.
+
+> Who is Joshua?  
+> _Joshua 10:13_
+
+## Round 2 — Double Jeopardy!
+
+### General Science
+
+**$400** — Every biology class calls this organelle the powerhouse of the cell.
+
+> What is the mitochondria?
+
+**$800** — One neuron passes a signal to the next across this microscopic gap.
+
+> What is a synapse?
+
+**$1200** — At atomic number 92, it's the heaviest element that occurs naturally in any real quantity.
+
+> What is uranium?
+
+**$1600** — This law of thermodynamics is the reason entropy in a closed system only ever increases.
+
+> What is the second law?  
+> _Why you can't un-scramble an egg._
+
+**$2000** — Roughly 8 minutes and 20 seconds — that's how long this takes to reach Earth.
+
+> What is sunlight?  
+> _If the Sun vanished, we wouldn't know for 8 minutes._
+
 ### Mental Math
 
-**$200** — A hoodie costs $80 and is marked 25% off. This is what you actually pay.
+**$400** — A hoodie costs $80 and is marked 25% off. This is what you actually pay.
 
 > What is $60?
 
-**$400** — This number cubed is 343.
+**$800** — This number cubed is 343.
 
 > What is 7?
 
-**$600** — You buy a horse for $60, sell it for $70, buy it back for $80, and sell it again for $90. This is your total profit.
+**$1200** — You buy a horse for $60, sell it for $70, buy it back for $80, and sell it again for $90. This is your total profit.
 
 > What is $20?  
 > _Two separate $10 gains. Most people say $10 or $30._
 
-**$800** — In a room of just 23 people, the chance that two of them share a birthday is closest to this percentage.
+**$1600** — In a room of just 23 people, the chance that two of them share a birthday is closest to this percentage.
 
 > What is 50%?  
 > _The birthday paradox — it's about 50.7%._
 
-**$1000** — Add up every whole number from 1 to 100 and you get this total.
+**$2000** — Add up every whole number from 1 to 100 and you get this total.
 
 > What is 5,050?  
 > _Fifty pairs that each add to 101. Gauss worked it out as a schoolboy._
-
-## Round 2 — Double Jeopardy!
 
 ### Psalms & Proverbs
 
@@ -217,57 +268,6 @@ _Host reference. Generated from `questions.js` — run `node static/jeopardy/mak
 
 > What is the parable of the rich fool?  
 > _Luke 12:16-21_
-
-### Bible Geography
-
-**$400** — Jesus grew up in this Galilean town, prompting the question "can anything good come from" there?
-
-> What is Nazareth?  
-> _John 1:46_
-
-**$800** — The Israelites wandered the wilderness for this many years.
-
-> What is 40?  
-> _One year for each day the spies scouted Canaan._
-
-**$1200** — John baptized Jesus in this river.
-
-> What is the Jordan?
-
-**$1600** — Moses came down this mountain carrying the Ten Commandments.
-
-> What is Mount Sinai?  
-> _Exodus 19-20. Also called Horeb._
-
-**$2000** — Jesus was crucified at this spot just outside Jerusalem, a name meaning "the place of the skull."
-
-> What is Golgotha?  
-> _Calvary is the Latin version of the same name._
-
-### Anime
-
-**$400** — It's the very first entry in the National Pokédex — number 001.
-
-> What is Bulbasaur?
-
-**$800** — This is how long Aang spent frozen in the iceberg before Katara and Sokka found him.
-
-> What is 100 years?
-
-**$1200** — In the written first phase of the Chunin Exams, this is how many questions Naruto actually answered correctly.
-
-> What is zero?  
-> _He left it blank and passed anyway by refusing to quit on the tenth question._
-
-**$1600** — Gojo Satoru's Domain Expansion goes by this name.
-
-> What is Unlimited Void?  
-> _Muryōkūsho._
-
-**$2000** — Saitama insists he became the strongest man alive on a completely ordinary daily routine. Name all four parts of it.
-
-> What is 100 push-ups, 100 sit-ups, 100 squats, and a 10 km run?  
-> _Every single day for three years — and it made his hair fall out._
 
 ### Animal Kingdom
 

@@ -5,16 +5,22 @@
 const $  = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
-const SAVE_KEY = "bs-jeopardy-v2";
+const SAVE_KEY = "bs-jeopardy-v3";
+const LAYOUT_KEY = "bs-jeopardy-layout";
 const MAX_COLS = 6;
 
-/* Every category from every round, in one flat pool with a stable id. The board
-   is just a list of pool ids per round, which is what lets you drag a Double
-   Jeopardy category onto board one mid-game. */
+/* Every category from every round, in one flat pool. The board is just a list
+   of pool ids per round, which is what lets you move a Double Jeopardy
+   category onto board one mid-game.
+
+   Ids come from the title rather than the position, so reordering categories
+   in questions.js doesn't silently repoint a saved layout at the wrong one. */
+const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
 const POOL = [];
 GAME.rounds.forEach((r, ri) =>
-  r.categories.forEach((c, ci) =>
-    POOL.push({ id: `c${ri}_${ci}`, title: c.title, clues: c.clues, home: ri })));
+  r.categories.forEach((c) =>
+    POOL.push({ id: slug(c.title), title: c.title, clues: c.clues, home: ri })));
 
 const poolById = (id) => POOL.find((p) => p.id === id);
 
@@ -23,6 +29,28 @@ function defaultLayout() {
   GAME.rounds.forEach((_, ri) =>
     (layout[ri] = POOL.filter((p) => p.home === ri).map((p) => p.id)));
   return layout;
+}
+
+/* The board arrangement is remembered separately from the game, so starting a
+   fresh game from the team screen doesn't throw away a layout you set up. */
+function saveLayout() {
+  try { localStorage.setItem(LAYOUT_KEY, JSON.stringify(S.layout)); } catch (e) { /* noop */ }
+}
+
+function loadLayout() {
+  try {
+    const raw = localStorage.getItem(LAYOUT_KEY);
+    if (!raw) return null;
+    const l = JSON.parse(raw);
+    // ignore anything referring to categories that no longer exist
+    const ok = GAME.rounds.every((_, ri) =>
+      Array.isArray(l[ri]) && l[ri].every((id) => poolById(id)));
+    return ok ? l : null;
+  } catch (e) { return null; }
+}
+
+function forgetLayout() {
+  try { localStorage.removeItem(LAYOUT_KEY); } catch (e) { /* noop */ }
 }
 const PALETTE = ["#4dd2ff", "#ff6b8a", "#7ee787", "#ffb04d"];
 const DEFAULT_NAMES = ["Team 1", "Team 2", "Team 3", "Team 4"];
@@ -42,7 +70,7 @@ function freshState(teams, settings) {
     settings,
     round: 0,
     activeTeam: 0,
-    layout: defaultLayout(),   // round -> [pool id, ...] — the columns on that board
+    layout: loadLayout() || defaultLayout(),   // round -> [pool id, ...] — the columns on that board
     used: {},          // "catId-row" -> true
     dd: {},            // round -> ["catId-row", ...]
     ddHit: {},         // "catId-row" -> true (already played, for the ★)
@@ -1460,6 +1488,7 @@ function moveCategory(catId, to) {
 
   lastBoardShown = null;   // let the new board cascade in
   save();
+  saveLayout();            // remember it for the next game too
   renderAll();
   renderLayoutEditor();
   renderBoardEditor();
@@ -1578,6 +1607,7 @@ function initSettings() {
     snapshot("reset board");
     S.used = {};
     S.ddHit = {};
+    forgetLayout();              // an explicit reset really does reset
     S.layout = defaultLayout();
     rollDailyDoubles(0); rollDailyDoubles(1);
     S.round = 0;
@@ -1591,6 +1621,7 @@ function initSettings() {
   $("#set-new-game").addEventListener("click", () => {
     if (!confirm("Wipe this game and go back to the setup screen?")) return;
     wipe();
+    forgetLayout();
     location.reload();
   });
 }

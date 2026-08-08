@@ -74,63 +74,6 @@ const GAME = {
           ],
         },
         {
-          title: "General Science",
-          clues: [
-            {
-              q: "Every biology class calls this organelle the powerhouse of the cell.",
-              a: "What is the mitochondria?",
-            },
-            {
-              q: "One neuron passes a signal to the next across this microscopic gap.",
-              a: "What is a synapse?",
-            },
-            {
-              q: "At atomic number 92, it's the heaviest element that occurs naturally in any real quantity.",
-              a: "What is uranium?",
-            },
-            {
-              q: "This law of thermodynamics is the reason entropy in a closed system only ever increases.",
-              a: "What is the second law?",
-              note: "Why you can't un-scramble an egg.",
-            },
-            {
-              q: "Roughly 8 minutes and 20 seconds — that's how long this takes to reach Earth.",
-              a: "What is sunlight?",
-              note: "If the Sun vanished, we wouldn't know for 8 minutes.",
-            },
-          ],
-        },
-        {
-          title: "Miracles & Mayhem",
-          clues: [
-            {
-              q: "Jesus fed five thousand people with five loaves and this many fish.",
-              a: "What is two?",
-              note: "The only miracle in all four gospels.",
-            },
-            {
-              q: "This tenth and final plague is the one that finally broke Pharaoh.",
-              a: "What is the death of the firstborn?",
-              note: "Exodus 12",
-            },
-            {
-              q: "His superhuman strength ran out the night Delilah had his hair cut off.",
-              a: "Who is Samson?",
-              note: "Judges 16",
-            },
-            {
-              q: "When this prophet's terrified servant had his eyes opened, he saw the hills full of fiery horses and chariots.",
-              a: "Who is Elisha?",
-              note: "2 Kings 6:17",
-            },
-            {
-              q: "The sun stopped in the middle of the sky for about a full day so this leader could finish a battle.",
-              a: "Who is Joshua?",
-              note: "Joshua 10:13",
-            },
-          ],
-        },
-        {
           /* ---- SONG CLIPS ----------------------------------------------
              These play local mp3s from clips/, already trimmed to ~45s, so
              there is no streaming lag and no wifi dependency. Each one names
@@ -209,101 +152,6 @@ const GAME = {
           ],
         },
         {
-          title: "Mental Math",
-          clues: [
-            {
-              q: "A hoodie costs $80 and is marked 25% off. This is what you actually pay.",
-              a: "What is $60?",
-            },
-            {
-              q: "This number cubed is 343.",
-              a: "What is 7?",
-            },
-            {
-              q: "You buy a horse for $60, sell it for $70, buy it back for $80, and sell it again for $90. This is your total profit.",
-              a: "What is $20?",
-              note: "Two separate $10 gains. Most people say $10 or $30.",
-            },
-            {
-              q: "In a room of just 23 people, the chance that two of them share a birthday is closest to this percentage.",
-              a: "What is 50%?",
-              note: "The birthday paradox — it's about 50.7%.",
-            },
-            {
-              q: "Add up every whole number from 1 to 100 and you get this total.",
-              a: "What is 5,050?",
-              note: "Fifty pairs that each add to 101. Gauss worked it out as a schoolboy.",
-            },
-          ],
-        },
-      ],
-    },
-
-    /* ============= ROUND 2 — DOUBLE JEOPARDY! ============= */
-    {
-      name: "Double Jeopardy!",
-      values: [400, 800, 1200, 1600, 2000],
-      dailyDoubles: 2,
-      categories: [
-        {
-          title: "Psalms & Proverbs",
-          clues: [
-            {
-              q: 'Fill in the blank: "The Lord is my __________; I shall not want."',
-              a: "What is shepherd?",
-              note: "Psalm 23:1",
-            },
-            {
-              q: "This king, who asked God for wisdom instead of money, is credited with most of Proverbs.",
-              a: "Who is Solomon?",
-            },
-            {
-              q: 'Fill in the blank: "Your word is a lamp to my feet and a light to my __________."',
-              a: "What is path?",
-              note: "Psalm 119:105",
-            },
-            {
-              q: "Proverbs 3:5-6 promises that if you trust the Lord instead of leaning on your own understanding, He will do this to your paths.",
-              a: "What is make them straight?",
-            },
-            {
-              q: 'Jesus quoted the opening line of this psalm from the cross: "My God, my God, why have you forsaken me?"',
-              a: "What is Psalm 22?",
-              note: "It goes on to describe pierced hands and feet, and soldiers casting lots for clothing.",
-            },
-          ],
-        },
-        {
-          title: "Parables",
-          clues: [
-            {
-              q: "A shepherd leaves ninety-nine behind to go after the single one that wandered off.",
-              a: "What is the parable of the lost sheep?",
-              note: "Luke 15:3-7",
-            },
-            {
-              q: "In this parable a father spots his son far off, runs to him, and throws a feast.",
-              a: "What is the Prodigal Son?",
-              note: "Luke 15",
-            },
-            {
-              q: "A priest and a Levite walk straight past a beaten man; this unlikely traveller stops.",
-              a: "Who is the Good Samaritan?",
-              note: "Luke 10",
-            },
-            {
-              q: "In the parable of the talents, the servant who buried his money had been given this many.",
-              a: "What is one?",
-              note: "Matthew 25:14-30",
-            },
-            {
-              q: "This man's harvest was so good he tore down his barns to build bigger ones — and God called him a fool, because he died that very night.",
-              a: "What is the parable of the rich fool?",
-              note: "Luke 12:16-21",
-            },
-          ],
-        },
-        {
           title: "Bible Geography",
           clues: [
             {
@@ -359,6 +207,158 @@ const GAME = {
               q: "Saitama insists he became the strongest man alive on a completely ordinary daily routine. Name all four parts of it.",
               a: "What is 100 push-ups, 100 sit-ups, 100 squats, and a 10 km run?",
               note: "Every single day for three years — and it made his hair fall out.",
+            },
+          ],
+        },
+        {
+          title: "Miracles & Mayhem",
+          clues: [
+            {
+              q: "Jesus fed five thousand people with five loaves and this many fish.",
+              a: "What is two?",
+              note: "The only miracle in all four gospels.",
+            },
+            {
+              q: "This tenth and final plague is the one that finally broke Pharaoh.",
+              a: "What is the death of the firstborn?",
+              note: "Exodus 12",
+            },
+            {
+              q: "His superhuman strength ran out the night Delilah had his hair cut off.",
+              a: "Who is Samson?",
+              note: "Judges 16",
+            },
+            {
+              q: "When this prophet's terrified servant had his eyes opened, he saw the hills full of fiery horses and chariots.",
+              a: "Who is Elisha?",
+              note: "2 Kings 6:17",
+            },
+            {
+              q: "The sun stopped in the middle of the sky for about a full day so this leader could finish a battle.",
+              a: "Who is Joshua?",
+              note: "Joshua 10:13",
+            },
+          ],
+        },
+      ],
+    },
+
+    /* ============= ROUND 2 — DOUBLE JEOPARDY! ============= */
+    {
+      name: "Double Jeopardy!",
+      values: [400, 800, 1200, 1600, 2000],
+      dailyDoubles: 2,
+      categories: [
+        {
+          title: "General Science",
+          clues: [
+            {
+              q: "Every biology class calls this organelle the powerhouse of the cell.",
+              a: "What is the mitochondria?",
+            },
+            {
+              q: "One neuron passes a signal to the next across this microscopic gap.",
+              a: "What is a synapse?",
+            },
+            {
+              q: "At atomic number 92, it's the heaviest element that occurs naturally in any real quantity.",
+              a: "What is uranium?",
+            },
+            {
+              q: "This law of thermodynamics is the reason entropy in a closed system only ever increases.",
+              a: "What is the second law?",
+              note: "Why you can't un-scramble an egg.",
+            },
+            {
+              q: "Roughly 8 minutes and 20 seconds — that's how long this takes to reach Earth.",
+              a: "What is sunlight?",
+              note: "If the Sun vanished, we wouldn't know for 8 minutes.",
+            },
+          ],
+        },
+        {
+          title: "Mental Math",
+          clues: [
+            {
+              q: "A hoodie costs $80 and is marked 25% off. This is what you actually pay.",
+              a: "What is $60?",
+            },
+            {
+              q: "This number cubed is 343.",
+              a: "What is 7?",
+            },
+            {
+              q: "You buy a horse for $60, sell it for $70, buy it back for $80, and sell it again for $90. This is your total profit.",
+              a: "What is $20?",
+              note: "Two separate $10 gains. Most people say $10 or $30.",
+            },
+            {
+              q: "In a room of just 23 people, the chance that two of them share a birthday is closest to this percentage.",
+              a: "What is 50%?",
+              note: "The birthday paradox — it's about 50.7%.",
+            },
+            {
+              q: "Add up every whole number from 1 to 100 and you get this total.",
+              a: "What is 5,050?",
+              note: "Fifty pairs that each add to 101. Gauss worked it out as a schoolboy.",
+            },
+          ],
+        },
+        {
+          title: "Psalms & Proverbs",
+          clues: [
+            {
+              q: 'Fill in the blank: "The Lord is my __________; I shall not want."',
+              a: "What is shepherd?",
+              note: "Psalm 23:1",
+            },
+            {
+              q: "This king, who asked God for wisdom instead of money, is credited with most of Proverbs.",
+              a: "Who is Solomon?",
+            },
+            {
+              q: 'Fill in the blank: "Your word is a lamp to my feet and a light to my __________."',
+              a: "What is path?",
+              note: "Psalm 119:105",
+            },
+            {
+              q: "Proverbs 3:5-6 promises that if you trust the Lord instead of leaning on your own understanding, He will do this to your paths.",
+              a: "What is make them straight?",
+            },
+            {
+              q: 'Jesus quoted the opening line of this psalm from the cross: "My God, my God, why have you forsaken me?"',
+              a: "What is Psalm 22?",
+              note: "It goes on to describe pierced hands and feet, and soldiers casting lots for clothing.",
+            },
+          ],
+        },
+        {
+          title: "Parables",
+          clues: [
+            {
+              q: "A shepherd leaves ninety-nine behind to go after the single one that wandered off.",
+              a: "What is the parable of the lost sheep?",
+              note: "Luke 15:3-7",
+            },
+            {
+              q: "In this parable a father spots his son far off, runs to him, and throws a feast.",
+              a: "What is the Prodigal Son?",
+              note: "Luke 15",
+            },
+            {
+              q: "A priest and a Levite walk straight past a beaten man; this unlikely traveller stops.",
+              a: "Who is the Good Samaritan?",
+              note: "Luke 10",
+            },
+            {
+              q: "In the parable of the talents, the servant who buried his money had been given this many.",
+              a: "What is one?",
+              note: "Matthew 25:14-30",
+            },
+            {
+              q: "This man's harvest was so good he tore down his barns to build bigger ones — and God called him a fool, because he died that very night.",
+              a: "What is the parable of the rich fool?",
+              note: "Luke 12:16-21",
             },
           ],
         },

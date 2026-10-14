@@ -40,3 +40,6 @@ When the vault paths differ on another machine, override `SERMON_SRC` / `SERMON_
 
 After syncing, the new `.md` files are untracked/modified in git — commit them only when
 the user wants to publish. Pushing to the default branch triggers the CI/CD deploy.
+
+Shared skill contents live in `.agents/skills/`; the individual directories in
+`.claude/skills/` are discovery links to those same files, not separate copies.

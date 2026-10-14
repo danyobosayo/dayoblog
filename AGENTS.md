@@ -1,4 +1,4 @@
-# dayoblog — project notes for Claude
+# dayoblog — repository instructions
 
 A [Hugo](https://gohugo.io) static site (`dayowrites`) using the **hugo-book** theme.
 Content lives in `content/`; the site builds to `public/` and deploys via CI on push.
@@ -16,7 +16,7 @@ The **Sermons** section (`content/sermons/*.md`) is **not authored in this repo*
 file is a **verbatim copy** of a sermon note kept in the user's Obsidian vault:
 
 ```
-/Users/dayo/matcha milk tea/2 - General Notes/Sermons
+/Users/dayo/Library/Mobile Documents/iCloud~md~obsidian/Documents/matcha milk tea/020 Faith/Sermons
 ```
 
 That vault folder is the **source of truth**. The user writes sermon notes there
@@ -27,13 +27,13 @@ them. The copy is 1:1 — same filename, same front matter (`title`, `date`, `ta
 
 ### Keeping it in sync
 
-Use the **`sync-sermons`** skill (`.claude/skills/sync-sermons/`). It reports the delta
+Use the **`sync-sermons`** skill (`.agents/skills/sync-sermons/`). It reports the delta
 (new / changed / orphaned) between the vault and the repo and copies new + changed
 notes across. Always dry-run first:
 
 ```bash
-.claude/skills/sync-sermons/sync-sermons.sh           # report delta (read-only)
-.claude/skills/sync-sermons/sync-sermons.sh --apply   # copy new + changed notes
+.agents/skills/sync-sermons/sync-sermons.sh           # report delta (read-only)
+.agents/skills/sync-sermons/sync-sermons.sh --apply   # copy new + changed notes
 ```
 
 When the vault paths differ on another machine, override `SERMON_SRC` / `SERMON_DST`.

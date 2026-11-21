@@ -8,33 +8,33 @@ Ask for responses in question form. Parentheses mark optional units or descripto
 
 ### Kids’ Corner
 
-**$200** — These striped insects make honey.
+**$200** — This duck-billed mammal lays eggs.
 
-> What are honeybees?
->
-> _Accept bees._
+> What is a platypus?
 
 **$400** — In Frozen, this snowman dreams of summer.
 
 > Who is Olaf?
 
-**$600** — This shape has six sides.
+**$600** — This shape has ten sides.
 
-> What is a hexagon?
+> What is a decagon?
 
 **$800** — In Bluey, this is the name of Bluey’s little sister.
 
 > Who is Bingo?
 
-**$1000** — In Charlotte’s Web, this pig is saved with help from a spider.
+**$1000** — Use the same rule at every step: 2, 3, 5, 9, 17. What number comes next?
 
-> Who is Wilbur?
+> What is 33?
+>
+> _Double the previous number and subtract 1: (17 × 2) − 1 = 33._
 
 ### Young Adult Era
 
-**$200** — This sandbox video game features Creepers, crafting tables, and the Nether.
+**$200** — Who headlined the Super Bowl LIX halftime show in February 2025?
 
-> What is Minecraft?
+> Who is Kendrick Lamar?
 
 **$400** — In Among Us, this is the role that secretly sabotages the crew.
 
@@ -42,45 +42,53 @@ Ask for responses in question form. Parentheses mark optional units or descripto
 >
 > _Accept Imposter._
 
-**$600** — In the original Wordle, you have this many guesses to find the five-letter word.
+**$600** — Fans waited about 13 years between the fifth and sixth numbered installments of this Rockstar Games franchise.
 
-> What is 6 (guesses)?
-
-**$800** — This animated film follows Miles Morales as he meets Spider-People from other dimensions for the first time.
-
-> What is Spider-Man: Into the Spider-Verse?
+> What is Grand Theft Auto?
 >
-> _Accept Into the Spider-Verse._
+> _Accept GTA. Count from GTA V’s original 2013 launch._
 
-**$1000** — In Stardew Valley, this corporation runs the blue-branded supermarket competing with Pierre’s shop.
+**$800** — Name the five emotions working at Headquarters in Riley’s mind in the original Inside Out.
 
-> What is Joja (Corporation)?
+> What are Joy, Sadness, Fear, Anger, and Disgust?
 >
-> _Accept JojaMart._
+> _Accept any order._
+
+**$1000** — In Club Penguin, what was the name of the Pizza Parlor minigame where players filled pizza orders on a conveyor belt?
+
+> What is Pizzatron 3000?
+>
+> _Accept Pizzatron._
 
 ### The ’90s & ’00s
 
-**$200** — This 1995 Pixar film introduced Woody and Buzz Lightyear.
+**$200** — McDonald’s 1990s Teenie plush toys were miniature versions of this collectible line from Ty.
 
-> What is Toy Story?
+> What are Beanie Babies?
+>
+> _Accept Teenie Beanie Babies._
 
 **$400** — This Japanese pocket pet needed feeding and care through buttons on an egg-shaped keychain.
 
 > What is a Tamagotchi?
 
-**$600** — This instant messaging service from AOL let people post away messages.
+**$600** — This 1998 Nintendo accessory turned a Game Boy into a camera that captured tiny grayscale photos.
 
-> What is AIM?
+> What is the Game Boy Camera?
 >
-> _Accept AOL Instant Messenger._
+> _Accept Pocket Camera._
 
-**$800** — Apple used the slogan ‘1,000 songs in your pocket’ for this music player.
+**$800** — In the original Matrix, Morpheus captains a hovercraft named for this Babylonian king.
 
-> What is the iPod?
+> Who is Nebuchadnezzar?
+>
+> _Accept Nebuchadnezzar II._
 
-**$1000** — This browser game let you care for digital pets from species such as Aisha, Kacheek and Shoyru.
+**$1000** — Iomega’s original Zip disks held this much data, compared with about 1.44 MB on a standard high-density floppy.
 
-> What is Neopets?
+> What is 100 (megabytes)?
+>
+> _Accept 100 MB. Later Zip disks held more._
 
 ### Bible Stories
 
@@ -120,9 +128,11 @@ Ask for responses in question form. Parentheses mark optional units or descripto
 
 > What is pumpkin?
 
-**$400** — This appliance would toast slices of bread before you cut them into cubes.
+**$400** — What do you call the tool with a squeeze bulb that draws up pan juices so you can pour them back over a roasting turkey?
 
-> What is a toaster?
+> What is a turkey baster?
+>
+> _Accept baster._
 
 **$600** — This many tablespoons equal half a U.S. cup.
 
@@ -164,11 +174,11 @@ Ask for responses in question form. Parentheses mark optional units or descripto
 >
 > _(4 × 3) ÷ 2 = 6. Counting from each team gives 12 matchups, but each game is counted twice._
 
-**$1000** — Using the digits 0 through 4, how many four-digit numbers are divisible by 4 and use no digit more than once?
+**$1000** — A slower runner gets a 300-meter head start and runs at 3 meters per second. A faster runner starts behind them and runs at 5 meters per second. How far does the faster runner travel before catching up?
 
-> What is 30 (numbers)?
+> What is 750 (meters)?
 >
-> _Valid endings are 04, 12, 20, 24, 32 and 40. The three endings with zero leave 3 × 2 prefixes each. The three without zero leave 2 × 2 prefixes each because the first digit cannot be zero. 3 × (3 × 2) + 3 × (2 × 2) = 30._
+> _The gap closes at 5 − 3 = 2 m/s. Catch-up time is 300 ÷ 2 = 150 s. The faster runner travels 5 × 150 = 750 m._
 
 ## Round 2 — Double Jeopardy!
 
@@ -202,47 +212,55 @@ Ask for responses in question form. Parentheses mark optional units or descripto
 
 ### Animal Kingdom
 
-**$400** — This is the only group of mammals capable of sustained powered flight.
-
-> What are bats?
-
-**$800** — A group of these big cats can be called a pride.
-
-> What are lions?
-
-**$1200** — This marine mammal is also called a killer whale.
+**$400** — This marine mammal is also called a killer whale.
 
 > What is an orca?
 
-**$1600** — This lizard can move its eyes independently to look in two directions at once.
+**$800** — This is the only group of mammals capable of sustained powered flight.
 
-> What is a chameleon?
+> What are bats?
 
-**$2000** — A narwhal’s spiral tusk is an elongated example of this body part.
+**$1200** — This brightly colored tropical amphibian gets its common name from the use of some species’ skin toxins on blowgun darts.
 
-> What is a tooth?
+> What is a poison dart frog?
+>
+> _Accept poison arrow frog._
+
+**$1600** — This bird of prey folds its wings into a steep hunting dive called a stoop, often taking other birds in midair.
+
+> What is a peregrine falcon?
+>
+> _Accept peregrine._
+
+**$2000** — This stocky marsupial scavenger with black fur and a piercing screech is the largest living carnivorous marsupial.
+
+> What is a Tasmanian devil?
+>
+> _Accept Taz if the team clearly means the animal._
 
 ### Science at Home
 
-**$400** — Polished mirrors send light back toward you by this process.
+**$400** — Hot air rises from a radiator and cooler air moves in to replace it. What kind of heat transfer is this circulating flow?
 
-> What is reflection?
+> What is convection?
 
-**$800** — This process turns liquid water into vapor from its surface.
+**$800** — Water droplets bead on a waxed surface because cohesive forces pull the water surface together. What is the name of this effect?
 
-> What is evaporation?
+> What is surface tension?
 
-**$1200** — This gas makes up most of Earth’s atmosphere.
+**$1200** — In a beam of light, the electric field can oscillate side to side, up and down, or in a mix of directions. What is this property of light called?
 
-> What is nitrogen?
+> What is polarization?
 
-**$1600** — This force opposes a book sliding along a tabletop.
+**$1600** — In rotating systems, this quantity is conserved when there is no net external torque. It explains why a skater spins faster when pulling in their arms.
 
-> What is friction?
+> What is angular momentum?
 
-**$2000** — A straw appears bent in a glass of water because light changes direction across materials. This is the name of that effect.
+**$2000** — This mesh-like polymer of sugars and short peptides gives most bacterial cell walls their strength.
 
-> What is refraction?
+> What is peptidoglycan?
+>
+> _Accept murein._
 
 ### Music for Everyone
 
@@ -250,13 +268,17 @@ Ask for responses in question form. Parentheses mark optional units or descripto
 
 > What is 88 (keys)?
 
-**$800** — In a standard string quartet, this instrument is lower than the viola.
+**$800** — What musical term describes the interval from C up to the next G?
 
-> What is the cello?
+> What is a perfect fifth?
+>
+> _Accept a fifth. The notes are seven semitones apart._
 
-**$1200** — This device helps musicians keep time by producing regular clicks.
+**$1200** — A piece in 6/8 usually has two main beats per measure, each divided into three. What is this meter called?
 
-> What is a metronome?
+> What is compound duple (meter)?
+>
+> _Accept compound duple time._
 
 **$1600** — In a traditional four-part choir, this voice part lies between alto and bass.
 

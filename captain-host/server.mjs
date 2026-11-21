@@ -41,6 +41,7 @@ createServer(async (req, res) => {
   };
   try {
     const url = new URL(req.url, "http://localhost");
+    if (url.pathname === "/healthz" && req.method === "GET") return send(200, { status: "ok" });
     if (url.pathname === "/") { res.writeHead(302, { Location: "/jeopardy/" }); return res.end(); }
     if (url.pathname.startsWith("/jeopardy/")) {
       const file = resolve(root, decodeURIComponent(url.pathname.slice(10)) || "index.html");

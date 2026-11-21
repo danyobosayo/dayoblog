@@ -35,3 +35,16 @@ and file-relative timestamps. Once all five are present, **Sing It Back**
 appears in Settings → Board. Move an existing category Off to make space
 for it. Guessing clues open buzzers when the host starts playback.
 Timed finish-the-lyric clues open buzzers when the clip pauses.
+
+## Permanent projector URL
+
+The repository's Render Blueprint defines one free Docker web service. Connect
+it to the repository in Render to get an HTTPS `onrender.com` address. Open
+`/jeopardy/` on that address for the projector. The QR code uses that same
+address and captain requests go to the hosted server.
+
+Open the hosted game before the event and rehearse with two phones. Render's
+free service spins down after 15 minutes without inbound traffic. An open
+captain lobby polls the service during play. A restart or a redeploy clears
+in-memory lobbies, so pause deploys during a game and start a new lobby if the
+service has restarted.

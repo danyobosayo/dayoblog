@@ -4,3 +4,8 @@
 !static/
 !static/jeopardy/
 !static/jeopardy/**
+
+!supabase/
+!supabase/functions/
+!supabase/functions/captain-api/
+!supabase/functions/captain-api/room.mjs

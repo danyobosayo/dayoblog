@@ -215,7 +215,8 @@ function renderSetupTeams() {
     row.style.animationDelay = i * 55 + "ms";
     row.innerHTML = `
       <span class="swatch"></span>
-      <input type="text" maxlength="22" aria-label="Team ${i + 1} name">`;
+      <input type="text" maxlength="22" aria-label="Team ${i + 1} name">
+      <span class="captain-seat-status" hidden>Joined</span>`;
     const inp = row.querySelector("input");
     inp.placeholder = DEFAULT_NAMES[i];
     inp.value = existing[i] ?? "";

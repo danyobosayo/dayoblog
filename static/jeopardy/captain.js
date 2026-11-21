@@ -9,7 +9,7 @@ let pending = false;
 try { identity = JSON.parse(sessionStorage.getItem(key)); } catch { /* private browsing */ }
 
 async function request(action, data) {
-  const response = await fetch(`/captain-api/${action}?room=${encodeURIComponent(room)}`, {
+  const response = await fetch(`${captainApi}${action}?room=${encodeURIComponent(room)}`, {
     method: data ? "POST" : "GET",
     headers: { "Content-Type": "application/json", ...(identity ? { Authorization: identity.token } : {}) },
     body: data ? JSON.stringify(data) : undefined,

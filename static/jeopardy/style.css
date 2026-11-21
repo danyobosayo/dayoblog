@@ -1727,3 +1727,24 @@ body[data-view="results"] #view-results { display: flex; animation: viewIn var(-
 @media (prefers-reduced-motion: reduce) { .media-status .eq i { animation: none; } }
 .final-judge-row:has(.fj-response) { flex-wrap: wrap; }
 .fj-response { flex: 1 0 100%; margin: 0; padding: .65rem; background: #251b15; border-radius: .5rem; color: var(--gold-pale); overflow-wrap: anywhere; }
+
+.setup-actions .captain-lobby {
+  width: min(100%, 28rem);
+  justify-self: center;
+  text-align: center;
+}
+.captain-lobby img { width: clamp(12rem, 35vw, 17rem); height: auto; }
+.captain-seat-status {
+  color: #c4e8b8;
+  font-size: .68rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.team-row.captain-joined { border-color: color-mix(in srgb, var(--tc) 55%, transparent); }
+.team-row.captain-joined {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  row-gap: .15rem;
+}
+.team-row.captain-joined .swatch { grid-row: span 2; }
+.team-row.captain-joined .captain-seat-status { grid-column: 2; }

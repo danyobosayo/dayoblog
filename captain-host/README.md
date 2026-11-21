@@ -48,3 +48,16 @@ free service spins down after 15 minutes without inbound traffic. An open
 captain lobby polls the service during play. A restart or a redeploy clears
 in-memory lobbies, so pause deploys during a game and start a new lobby if the
 service has restarted.
+
+## Production on Supabase
+
+Use https://dayoblog.pages.dev/jeopardy/ for the projector. The board and
+captain page share the API endpoint in the public captain config script.
+The standalone Node server remains available for LAN rehearsals.
+
+The dedicated Potluck Jeopardy project keeps lobby state in a table that
+only the Edge Function's service role can access. The function uses
+per-lobby host and captain tokens and a version check to commit concurrent
+actions without dropping seats, buzzes, wagers or drafts. The function
+accepts the production Pages origin and eight-hour lobby expiry is enforced
+on reads. The host browser still controls the board and scores.

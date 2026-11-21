@@ -10,7 +10,7 @@ const captainLobby = (() => {
 
   async function request(action, data) {
     const suffix = room ? `?room=${encodeURIComponent(room.code)}` : "";
-    const response = await fetch("/captain-api/" + action + suffix, {
+    const response = await fetch(captainApi + action + suffix, {
       method: data ? "POST" : "GET",
       headers: { "Content-Type": "application/json", ...(room ? { Authorization: room.host } : {}) },
       body: data ? JSON.stringify(data) : undefined,
@@ -23,7 +23,15 @@ const captainLobby = (() => {
   function syncNames(state) {
     const inputs = document.querySelectorAll("#team-inputs input");
     state.teams.forEach((team, i) => {
-      if (team && inputs[i]) inputs[i].value = team.name;
+      const input = inputs[i];
+      if (!input) return;
+      input.readOnly = true;
+      input.value = team?.name || "";
+      input.placeholder = "Not yet joined";
+      const row = input.closest(".team-row");
+      row.classList.toggle("captain-joined", Boolean(team));
+      const badge = row.querySelector(".captain-seat-status");
+      badge.hidden = !team;
     });
     joinCount = state.teams.filter(Boolean).length;
     status.textContent = `${joinCount} of ${state.teams.length} captains joined`;
@@ -78,10 +86,11 @@ const captainLobby = (() => {
       image.src = qr.createDataURL(5, 15);
       const link = document.querySelector("#captain-link");
       link.href = url.href;
-      link.textContent = url.href;
+      link.textContent = "Open captain join link";
       panel.hidden = false;
       open.setAttribute("aria-expanded", "true");
       document.querySelectorAll("#team-count-seg button").forEach(button => { button.disabled = true; });
+      syncNames({ teams: Array(setupTeamCount).fill(null) });
       poll();
     } catch {
       room = undefined;

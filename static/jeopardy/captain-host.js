@@ -6,7 +6,6 @@ const captainLobby = (() => {
   let started = false;
   let lastStage;
   let closing = false;
-  let joinCount = 0;
 
   async function request(action, data) {
     const suffix = room ? `?room=${encodeURIComponent(room.code)}` : "";
@@ -33,8 +32,7 @@ const captainLobby = (() => {
       const badge = row.querySelector(".captain-seat-status");
       badge.hidden = !team;
     });
-    joinCount = state.teams.filter(Boolean).length;
-    status.textContent = `${joinCount} of ${state.teams.length} captains joined`;
+    status.textContent = "";
   }
 
   async function poll() {

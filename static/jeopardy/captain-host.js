@@ -1,0 +1,117 @@
+const captainLobby = (() => {
+  const panel = document.querySelector("#captain-lobby");
+  const open = document.querySelector("#captain-open");
+  const status = document.querySelector("#captain-lobby-status");
+  let room;
+  let started = false;
+  let lastStage;
+  let closing = false;
+  let joinCount = 0;
+
+  async function request(action, data) {
+    const suffix = room ? `?room=${encodeURIComponent(room.code)}` : "";
+    const response = await fetch("/captain-api/" + action + suffix, {
+      method: data ? "POST" : "GET",
+      headers: { "Content-Type": "application/json", ...(room ? { Authorization: room.host } : {}) },
+      body: data ? JSON.stringify(data) : undefined,
+    });
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error);
+    return result;
+  }
+
+  function syncNames(state) {
+    const inputs = document.querySelectorAll("#team-inputs input");
+    state.teams.forEach((team, i) => {
+      if (team && inputs[i]) inputs[i].value = team.name;
+    });
+    joinCount = state.teams.filter(Boolean).length;
+    status.textContent = `${joinCount} of ${state.teams.length} captains joined`;
+  }
+
+  async function poll() {
+    if (!room) return;
+    try {
+      if (!started) {
+        syncNames(await request("state"));
+      } else {
+        const current = clue;
+        const remoteClue = current?.openForBuzz && !current.dd && !current.resolved && !current.revealed
+          ? {
+              id: current.buzzId,
+              eligible: S.teams.flatMap((_, i) =>
+                !current.lockedOut.includes(i) && (!S.settings.strictTurns || S.activeTeam === i) ? [i] : []),
+              answering: current.buzzed,
+            }
+          : null;
+        const stage = JSON.stringify(remoteClue);
+        const result = stage !== lastStage
+          ? await request("stage", { clue: remoteClue })
+          : await request("state");
+        lastStage = stage;
+        if (current && current === clue && result.clue?.id === current.buzzId) {
+          for (const i of result.queue) buzzIn(i);
+        }
+      }
+    } catch {
+      status.textContent = "Connection interrupted. Host buzzers still work.";
+    } finally {
+      setTimeout(poll, 300);
+    }
+  }
+
+  open.addEventListener("click", async () => {
+    open.disabled = true;
+    try {
+      room = await request("create", { count: setupTeamCount });
+      const base = new URL(location.href);
+      if (["localhost", "127.0.0.1"].includes(base.hostname)) {
+        const lan = await fetch("/captain-api/address").then(response => response.json());
+        base.hostname = lan.host;
+      }
+      const url = new URL("captain.html", base);
+      url.searchParams.set("room", room.code);
+      const qr = qrcode(0, "M");
+      qr.addData(url.href);
+      qr.make();
+      const image = document.querySelector("#captain-qr");
+      image.src = qr.createDataURL(5, 15);
+      const link = document.querySelector("#captain-link");
+      link.href = url.href;
+      link.textContent = url.href;
+      panel.hidden = false;
+      open.setAttribute("aria-expanded", "true");
+      document.querySelectorAll("#team-count-seg button").forEach(button => { button.disabled = true; });
+      poll();
+    } catch {
+      room = undefined;
+      open.disabled = false;
+      panel.hidden = false;
+      open.setAttribute("aria-expanded", "true");
+      status.textContent = "Captain lobby unavailable. Open the game from the captain server to enable phone buzzers.";
+    }
+  });
+
+  return {
+    openWagers(category, limits) { return request("final-wagers", { category, limits }); },
+    openFinal(question) { return request("final-open", { question }); },
+    revealFinal() { return request("final-reveal", {}); },
+    get active() { return Boolean(room); },
+    async prepare() {
+      if (!room || started) return true;
+      if (closing) return false;
+      closing = true;
+      try {
+        syncNames(await request("stage", { clue: null }));
+        started = true;
+        lastStage = "null";
+        return true;
+      } catch {
+        status.textContent = "Could not lock the lobby. Try Start Game again.";
+        return false;
+      } finally {
+        closing = false;
+      }
+    },
+  };
+})();

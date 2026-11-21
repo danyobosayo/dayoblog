@@ -1,0 +1,15 @@
+/* Bencho Context Meter dot styles (MIT). See LICENSE. */
+.ctx-grid {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;}
+
+.ctx-dot {
+  display: block;
+  border-radius: 2px;
+  background: var(--ctx-empty);
+  transition: background-color 260ms ease, opacity 220ms ease, scale 260ms cubic-bezier(0.22, 1, 0.36, 1);}
+
+@keyframes ctx-grow { from { scale: 0; }
+
+@keyframes ctx-shrink { from { scale: 1; }

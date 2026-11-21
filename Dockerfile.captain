@@ -1,0 +1,8 @@
+FROM node:24-alpine
+WORKDIR /app
+ENV NODE_ENV=production PORT=1314
+COPY --chown=node:node captain-host/server.mjs captain-host/server.mjs
+COPY --chown=node:node static/jeopardy static/jeopardy
+USER node
+EXPOSE 1314
+CMD ["node", "captain-host/server.mjs"]

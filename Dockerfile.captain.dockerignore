@@ -1,0 +1,6 @@
+**
+!captain-host/
+!captain-host/server.mjs
+!static/
+!static/jeopardy/
+!static/jeopardy/**

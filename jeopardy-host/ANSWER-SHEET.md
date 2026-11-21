@@ -1,349 +1,394 @@
-# Bible Study Jeopardy — Answer Sheet
+# Thanksgiving Potluck Jeopardy — Answer Sheet
 
-_Host reference. Generated from `questions.js` — run `node static/jeopardy/make-answer-sheet.js` after editing._
+_Host reference. Generated from `questions.js` — run `node jeopardy-host/make-answer-sheet.js` after editing._
+
+Ask for responses in question form. Parentheses mark optional units or descriptors. Use the notes for explicitly accepted variants.
 
 ## Round 1 — Jeopardy!
 
-### Bible 101
+### Kids’ Corner
 
-**$200** — Genesis 1:1 says "In the beginning God created" these two things.
+**$200** — These striped insects make honey.
 
-> What are the heavens and the earth?  
-> _Genesis 1:1_
+> What are honeybees?
+>
+> _Accept bees._
 
-**$400** — He lived on locusts and wild honey, and he baptized Jesus in the Jordan.
+**$400** — In Frozen, this snowman dreams of summer.
 
-> Who is John the Baptist?  
-> _Jesus' relative — their mothers were cousins._
+> Who is Olaf?
 
-**$600** — A physician by trade, he wrote both a gospel and Acts, which makes him the author of more of the New Testament by word count than Paul.
+**$600** — This shape has six sides.
 
-> Who is Luke?  
-> _The only gentile author in the Bible._
+> What is a hexagon?
 
-**$800** — At 969 years, he holds the record for the longest life in the Bible.
+**$800** — In Bluey, this is the name of Bluey’s little sister.
 
-> Who is Methuselah?  
-> _Genesis 5:27. He died the year of the flood._
+> Who is Bingo?
 
-**$1000** — Roughly this many years separate the last page of Malachi from the first page of Matthew — the so-called silent years.
+**$1000** — In Charlotte’s Web, this pig is saved with help from a spider.
 
-> What is 400 years?
+> Who is Wilbur?
 
-### Sing It Back
+### Young Adult Era
 
-**$200** — Name this Elevation Worship song.
+**$200** — This sandbox video game features Creepers, crafting tables, and the Nether.
 
-🎵 clip: clips/trust-in-god.mp3 · plays 0s–end
+> What is Minecraft?
 
-> What is "Trust in God"?  
-> _Featuring Chris Brown and Isaiah Templeton._
+**$400** — In Among Us, this is the role that secretly sabotages the crew.
 
-**$400** — Name this song.
+> What is the Impostor?
+>
+> _Accept Imposter._
 
-🎵 clip: clips/reckless-love.mp3 · plays 0s–end
+**$600** — In the original Wordle, you have this many guesses to find the five-letter word.
 
-> What is "Reckless Love"?  
-> _Cory Asbury, 2018._
+> What is 6 (guesses)?
 
-**$600** — Name the artist singing this one.
+**$800** — This animated film follows Miles Morales as he meets Spider-People from other dimensions for the first time.
 
-🎵 clip: clips/this-is-amazing-grace.mp3 · plays 0s–end
+> What is Spider-Man: Into the Spider-Verse?
+>
+> _Accept Into the Spider-Verse._
 
-> Who is Phil Wickham?  
-> _"This Is Amazing Grace," 2013._
+**$1000** — In Stardew Valley, this corporation runs the blue-branded supermarket competing with Pierre’s shop.
 
-**$800** — Finish the lyric.
+> What is Joja (Corporation)?
+>
+> _Accept JojaMart._
 
-🎵 clip: clips/firm-foundation.mp3 · plays 1s–4.75s
+### The ’90s & ’00s
 
-> What is “That I put my faith in Jesus”?  
-> _Cody Carnes, "Firm Foundation (He Won't)."_
+**$200** — This 1995 Pixar film introduced Woody and Buzz Lightyear.
 
-**$1000** — For the full thousand: name both this song and the artists performing it.
+> What is Toy Story?
 
-🎵 clip: clips/goodbye-yesterday.mp3 · plays 0s–end
+**$400** — This Japanese pocket pet needed feeding and care through buttons on an egg-shaped keychain.
 
-> What is "Goodbye Yesterday" by Elevation Rhythm and Gracie Binion?
+> What is a Tamagotchi?
 
-### History Class
+**$600** — This instant messaging service from AOL let people post away messages.
 
-**$200** — Of the seven wonders of the ancient world, this Egyptian one is the only survivor.
+> What is AIM?
+>
+> _Accept AOL Instant Messenger._
 
-> What is the Great Pyramid of Giza?
+**$800** — Apple used the slogan ‘1,000 songs in your pocket’ for this music player.
 
-**$400** — This Roman emperor's Edict of Milan legalized Christianity in AD 313.
+> What is the iPod?
 
-> Who is Constantine?
+**$1000** — This browser game let you care for digital pets from species such as Aisha, Kacheek and Shoyru.
 
-**$600** — Gutenberg's 1440s invention made the Bible the first mass-produced book in Europe.
+> What is Neopets?
 
-> What is the printing press?
+### Bible Stories
 
-**$800** — In 1054 this split cleaved Christianity into the Roman Catholic west and the Eastern Orthodox east.
+**$200** — David used this weapon to launch the stone that struck Goliath.
 
-> What is the Great Schism?
+> What is a sling?
+>
+> _1 Samuel 17:49. Accept slingshot for this game._
 
-**$1000** — Signed in 1919, this treaty formally ended the First World War — and its punishing terms helped set up the second.
+**$400** — This queen risked approaching the king without being summoned to plead for her people.
 
-> What is the Treaty of Versailles?
+> Who is Esther?
+>
+> _Esther 4:16–5:2._
 
-### Bible Geography
+**$600** — In Acts, Paul and this companion sang hymns in prison before an earthquake opened the doors.
 
-**$200** — Jesus grew up in this Galilean town, prompting the question "can anything good come from" there?
+> Who is Silas?
+>
+> _Acts 16:25–26._
 
-> What is Nazareth?  
-> _John 1:46_
+**$800** — When the walls of Jericho fell, this woman and her family were brought out safely.
 
-**$400** — The Israelites wandered the wilderness for this many years.
+> Who is Rahab?
+>
+> _Joshua 6:22–25._
 
-> What is 40?  
-> _One year for each day the spies scouted Canaan._
+**$1000** — This judge asked for dew on a fleece while the ground stayed dry.
 
-**$600** — John baptized Jesus in this river.
+> Who is Gideon?
+>
+> _Judges 6:36–38._
 
-> What is the Jordan?
+### At the Potluck
 
-**$800** — Moses came down this mountain carrying the Ten Commandments.
+**$200** — This orange squash is the namesake filling in a classic Thanksgiving pie.
 
-> What is Mount Sinai?  
-> _Exodus 19-20. Also called Horeb._
+> What is pumpkin?
 
-**$1000** — Jesus was crucified at this spot just outside Jerusalem, a name meaning "the place of the skull."
+**$400** — This appliance would toast slices of bread before you cut them into cubes.
 
-> What is Golgotha?  
-> _Calvary is the Latin version of the same name._
+> What is a toaster?
 
-### Anime
+**$600** — This many tablespoons equal half a U.S. cup.
 
-**$200** — It's the very first entry in the National Pokédex — number 001.
+> What is 8 (tablespoons)?
 
-> What is Bulbasaur?
+**$800** — This Korean dish mixes rice with toppings such as seasoned vegetables and gochujang. Its name refers to mixed rice.
 
-**$400** — This is how long Aang spent frozen in the iceberg before Katara and Sokka found him.
+> What is bibimbap?
 
-> What is 100 years?
+**$1000** — This dessert gets its name from the French for ‘burnt cream’ and has a brittle caramelized sugar top.
 
-**$600** — In the written first phase of the Chunin Exams, this is how many questions Naruto actually answered correctly.
+> What is crème brûlée?
+>
+> _Accept without French accents._
 
-> What is zero?  
-> _He left it blank and passed anyway by refusing to quit on the tenth question._
+### Figure It Out
 
-**$800** — Gojo Satoru's Domain Expansion goes by this name.
+**$200** — Six guests will sit at each of four tables. How many plates should you put out so every guest gets one?
 
-> What is Unlimited Void?  
-> _Muryōkūsho._
+> What is 24 (plates)?
+>
+> _4 × 6 = 24._
 
-**$1000** — Saitama insists he became the strongest man alive on a completely ordinary daily routine. Name all four parts of it.
+**$400** — You have $30. Two pies cost $9 each and a bag of rolls costs $5. How much money is left?
 
-> What is 100 push-ups, 100 sit-ups, 100 squats, and a 10 km run?  
-> _Every single day for three years — and it made his hair fall out._
+> What is 7 (dollars)?
+>
+> _30 − (2 × 9 + 5) = 7._
 
-### Miracles & Mayhem
+**$600** — A 27-minute timer goes off at 6:03 a.m. in Dallas on Thanksgiving Day. What time was it in South Korea when the timer was set? Use Central Standard Time in Dallas.
 
-**$200** — Jesus fed five thousand people with five loaves and this many fish.
+> What is 8:36 (p.m. KST)?
+>
+> _6:03 a.m. − 27 min = 5:36 a.m. CST. 5:36 a.m. + 15 h = 8:36 p.m. KST._
 
-> What is two?  
-> _The only miracle in all four gospels._
+**$800** — Each of four teams plays every other team once. How many games are played?
 
-**$400** — This tenth and final plague is the one that finally broke Pharaoh.
+> What is 6 (games)?
+>
+> _(4 × 3) ÷ 2 = 6. Counting from each team gives 12 matchups, but each game is counted twice._
 
-> What is the death of the firstborn?  
-> _Exodus 12_
+**$1000** — Using the digits 0 through 4, how many four-digit numbers are divisible by 4 and use no digit more than once?
 
-**$600** — His superhuman strength ran out the night Delilah had his hair cut off.
-
-> Who is Samson?  
-> _Judges 16_
-
-**$800** — When this prophet's terrified servant had his eyes opened, he saw the hills full of fiery horses and chariots.
-
-> Who is Elisha?  
-> _2 Kings 6:17_
-
-**$1000** — The sun stopped in the middle of the sky for about a full day so this leader could finish a battle.
-
-> Who is Joshua?  
-> _Joshua 10:13_
+> What is 30 (numbers)?
+>
+> _Valid endings are 04, 12, 20, 24, 32 and 40. The three endings with zero leave 3 × 2 prefixes each. The three without zero leave 2 × 2 prefixes each because the first digit cannot be zero. 3 × (3 × 2) + 3 × (2 × 2) = 30._
 
 ## Round 2 — Double Jeopardy!
 
-### General Science
+### Bible Geography
 
-**$400** — Every biology class calls this organelle the powerhouse of the cell.
+**$400** — According to Luke 2, Jesus was born in this town.
 
-> What is the mitochondria?
+> What is Bethlehem?
 
-**$800** — One neuron passes a signal to the next across this microscopic gap.
+**$800** — According to Genesis 12, Abram set out for this land after leaving Haran.
 
-> What is a synapse?
+> What is Canaan?
 
-**$1200** — At atomic number 92, it's the heaviest element that occurs naturally in any real quantity.
+**$1200** — Jesus told a blind man to wash in this pool in John 9.
 
-> What is uranium?
+> What is Siloam (Pool)?
+>
+> _Accept Pool of Siloam._
 
-**$1600** — This law of thermodynamics is the reason entropy in a closed system only ever increases.
+**$1600** — In 1 Kings 18, Elijah challenged the prophets of Baal on this mountain.
 
-> What is the second law?  
-> _Why you can't un-scramble an egg._
+> What is Carmel (Mount)?
+>
+> _Accept Mount Carmel._
 
-**$2000** — Roughly 8 minutes and 20 seconds — that's how long this takes to reach Earth.
+**$2000** — According to Revelation 1:9, John was on this island when he received his vision.
 
-> What is sunlight?  
-> _If the Sun vanished, we wouldn't know for 8 minutes._
-
-### Mental Math
-
-**$400** — A hoodie costs $80 and is marked 25% off. This is what you actually pay.
-
-> What is $60?
-
-**$800** — This number cubed is 343.
-
-> What is 7?
-
-**$1200** — You buy a horse for $60, sell it for $70, buy it back for $80, and sell it again for $90. This is your total profit.
-
-> What is $20?  
-> _Two separate $10 gains. Most people say $10 or $30._
-
-**$1600** — In a room of just 23 people, the chance that two of them share a birthday is closest to this percentage.
-
-> What is 50%?  
-> _The birthday paradox — it's about 50.7%._
-
-**$2000** — Add up every whole number from 1 to 100 and you get this total.
-
-> What is 5,050?  
-> _Fifty pairs that each add to 101. Gauss worked it out as a schoolboy._
-
-### Psalms & Proverbs
-
-**$400** — Fill in the blank: "The Lord is my __________; I shall not want."
-
-> What is shepherd?  
-> _Psalm 23:1_
-
-**$800** — This king, who asked God for wisdom instead of money, is credited with most of Proverbs.
-
-> Who is Solomon?
-
-**$1200** — Fill in the blank: "Your word is a lamp to my feet and a light to my __________."
-
-> What is path?  
-> _Psalm 119:105_
-
-**$1600** — Proverbs 3:5-6 promises that if you trust the Lord instead of leaning on your own understanding, He will do this to your paths.
-
-> What is make them straight?
-
-**$2000** — Jesus quoted the opening line of this psalm from the cross: "My God, my God, why have you forsaken me?"
-
-> What is Psalm 22?  
-> _It goes on to describe pierced hands and feet, and soldiers casting lots for clothing._
-
-### Parables
-
-**$400** — A shepherd leaves ninety-nine behind to go after the single one that wandered off.
-
-> What is the parable of the lost sheep?  
-> _Luke 15:3-7_
-
-**$800** — In this parable a father spots his son far off, runs to him, and throws a feast.
-
-> What is the Prodigal Son?  
-> _Luke 15_
-
-**$1200** — A priest and a Levite walk straight past a beaten man; this unlikely traveller stops.
-
-> Who is the Good Samaritan?  
-> _Luke 10_
-
-**$1600** — In the parable of the talents, the servant who buried his money had been given this many.
-
-> What is one?  
-> _Matthew 25:14-30_
-
-**$2000** — This man's harvest was so good he tore down his barns to build bigger ones — and God called him a fool, because he died that very night.
-
-> What is the parable of the rich fool?  
-> _Luke 12:16-21_
+> What is Patmos (Island)?
+>
+> _Accept the island of Patmos._
 
 ### Animal Kingdom
 
-**$400** — It has a duck's bill, a beaver's tail, venomous spurs, and it lays eggs despite being a mammal.
+**$400** — This is the only group of mammals capable of sustained powered flight.
 
-> What is the platypus?
+> What are bats?
 
-**$800** — The closest living relative of the T. rex is this bird, which you have almost certainly eaten.
+**$800** — A group of these big cats can be called a pride.
 
-> What is the chicken?
+> What are lions?
 
-**$1200** — A group of owls is called this, which is also where laws get made.
+**$1200** — This marine mammal is also called a killer whale.
 
-> What is a parliament?
+> What is an orca?
 
-**$1600** — This shrimp throws a punch so fast it boils the water around its claw and can crack aquarium glass.
+**$1600** — This lizard can move its eyes independently to look in two directions at once.
 
-> What is the mantis shrimp?
+> What is a chameleon?
 
-**$2000** — Nicknamed "Ming," a specimen of this shellfish was found to be about 507 years old — the longest-lived animal ever recorded.
+**$2000** — A narwhal’s spiral tusk is an elongated example of this body part.
 
-> What is a clam?  
-> _An ocean quahog, hatched around 1499._
+> What is a tooth?
 
-### Bible Oddities
+### Science at Home
 
-**$400** — Noah's dove finally came back carrying a fresh leaf from this tree — which is why its branch still means peace.
+**$400** — Polished mirrors send light back toward you by this process.
 
-> What is an olive tree?  
-> _Genesis 8:11_
+> What is reflection?
 
-**$800** — Genesis says this man "walked with God, and he was not, for God took him" — he never died at all.
+**$800** — This process turns liquid water into vapor from its surface.
 
-> Who is Enoch?  
-> _Genesis 5:24. Methuselah's father._
+> What is evaporation?
 
-**$1200** — Dying at 127, she is the only woman in the Bible whose age at death is recorded.
+**$1200** — This gas makes up most of Earth’s atmosphere.
 
-> Who is Sarah?  
-> _Genesis 23:1_
+> What is nitrogen?
 
-**$1600** — In Numbers 22 this animal sees an angel, and then talks back to its owner about it.
+**$1600** — This force opposes a book sliding along a tabletop.
 
-> What is a donkey?  
-> _Balaam's donkey._
+> What is friction?
 
-**$2000** — Two words long in most English translations, it's the shortest verse in the Bible.
+**$2000** — A straw appears bent in a glass of water because light changes direction across materials. This is the name of that effect.
 
-> What is "Jesus wept"?  
-> _John 11:35_
+> What is refraction?
+
+### Music for Everyone
+
+**$400** — A standard modern concert piano has this many keys.
+
+> What is 88 (keys)?
+
+**$800** — In a standard string quartet, this instrument is lower than the viola.
+
+> What is the cello?
+
+**$1200** — This device helps musicians keep time by producing regular clicks.
+
+> What is a metronome?
+
+**$1600** — In a traditional four-part choir, this voice part lies between alto and bass.
+
+> What is tenor?
+
+**$2000** — Italian for ‘at a walking pace,’ this tempo marking usually sits between adagio and moderato.
+
+> What is andante?
+
+### World Landmarks
+
+**$400** — The Eiffel Tower stands in this city.
+
+> What is Paris?
+
+**$800** — This Italian city is home to the Colosseum.
+
+> What is Rome?
+
+**$1200** — This country is home to the ancient Inca site Machu Picchu.
+
+> What is Peru?
+
+**$1600** — This river runs through London past the Houses of Parliament.
+
+> What is the Thames (River)?
+>
+> _Accept River Thames._
+
+**$2000** — Petra, the ancient city famed for buildings cut into sandstone, is in this modern country.
+
+> What is Jordan?
+>
+> _Here Jordan refers to the country._
+
+### Pairs in Scripture
+
+**$400** — After leaving Moab, Ruth stays with this mother-in-law.
+
+> Who is Naomi?
+>
+> _Ruth 1._
+
+**$800** — In 1 Samuel, this son of Saul becomes a close friend of David.
+
+> Who is Jonathan?
+
+**$1200** — Jesus calls Simon Peter and this brother while they are casting a net.
+
+> Who is Andrew?
+>
+> _Matthew 4:18–20._
+
+**$1600** — In Acts 18, Aquila and this wife explain the way of God more accurately to Apollos.
+
+> Who is Priscilla?
+>
+> _Accept Prisca._
+
+**$2000** — Euodia and this woman are urged to agree in the Lord in Philippians 4.
+
+> Who is Syntyche?
+>
+> _Accept recognizable pronunciations._
+
+## Sing It Back (optional column)
+
+**Clue 1** — Name this song.
+
+Clip: clips/run-to-the-father.mp3 · 0s–end
+
+> What is Run to the Father?
+>
+> _Cody Carnes._
+
+**Clue 2** — What lyric comes next?
+
+Clip: clips/what-a-beautiful-name.mp3 · 0s–end
+
+> What is "Death could not hold you"?
+>
+> _What a Beautiful Name — Hillsong Worship. The excerpt starts at 2:42 in the original. Pause just before the accepted line._
+
+**Clue 3** — Name this song.
+
+Clip: clips/thank-god-im-free.mp3 · 0s–end
+
+> What is Thank God I’m Free?
+>
+> _Elevation Rhythm & Lizzie Morgan._
+
+**Clue 4** — What lyric comes next?
+
+Clip: clips/build-my-life.mp3 · 0s–end
+
+> What is "Worthy of every song we could ever sing"?
+>
+> _Build My Life — Housefires feat. Pat Barrett. Pause just before the accepted line._
+
+**Clue 5** — Name this song.
+
+Clip: clips/the-lord-will-provide.mp3 · 0s–end
+
+> What is The Lord Will Provide?
+>
+> _Passion & Landon Wolfe._
 
 ## Final Jeopardy pool
 
-**1. The Early Church** — After Judas died, the eleven cast lots to replace him and chose this man, who is then never mentioned in Scripture again.
+**1. Thanksgiving** — A 1941 federal law set U.S. Thanksgiving on this weekday occurrence in November.
 
-> Who is Matthias?  
-> _Acts 1:26_
+> What is the fourth Thursday?
 
-**2. Firsts** — Antioch is the city where, according to Acts 11:26, the disciples were first called by this name.
+**2. Acts of Kindness** — In Acts 9, Peter raises a woman known for making clothes. Her Aramaic name is Tabitha, and this is her Greek name.
 
-> What are Christians?
+> Who is Dorcas?
 
-**3. Four For Four** — Setting aside the resurrection itself, this is the only miracle of Jesus that all four gospel writers thought was important enough to include.
+**3. The Night Sky** — Polaris is part of this constellation, also known as the Little Bear.
 
-> What is the feeding of the five thousand?  
-> _Matthew 14, Mark 6, Luke 9, John 6._
+> What is Ursa Minor?
+>
+> _Accept Little Bear. The Little Dipper is an asterism within Ursa Minor._
 
-**4. Words We Borrowed** — Sung at the end of countless songs, this Hebrew word is a command that literally means "praise Yah"; in the Bible it turns up almost entirely in the Psalms and in Revelation.
+**4. World Geography** — The Danube passes through Austria before reaching Hungary. This capital city is its stop in Austria.
 
-> What is Hallelujah?  
-> _Hebrew hallelu (praise) + Yah (short for YHWH)._
+> What is Vienna?
 
-**5. Numbers** — Jesus told Peter to forgive not seven times, but this many.
+**5. Bible Books** — This letter asks its recipient to welcome Onesimus back as a beloved brother.
 
-> What is seventy-seven? (or seventy times seven)  
-> _Matthew 18:22 — translations split between the two._
+> What is Philemon?
+>
+> _Accept the Letter to Philemon._
 
 ---
 

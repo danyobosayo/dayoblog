@@ -5,8 +5,8 @@
 const $  = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
-const SAVE_KEY = "bs-jeopardy-v3";
-const LAYOUT_KEY = "bs-jeopardy-layout";
+const SAVE_KEY = "potluck-jeopardy-v2";
+const LAYOUT_KEY = "potluck-jeopardy-layout-v2";
 const MAX_COLS = 6;
 
 /* Every category from every round, in one flat pool. The board is just a list
@@ -21,6 +21,10 @@ const POOL = [];
 GAME.rounds.forEach((r, ri) =>
   r.categories.forEach((c) =>
     POOL.push({ id: slug(c.title), title: c.title, clues: c.clues, home: ri })));
+
+if (GAME.musicClues?.length === 5) {
+  POOL.push({ id: "sing-it-back", title: "Sing It Back", clues: GAME.musicClues });
+}
 
 const poolById = (id) => POOL.find((p) => p.id === id);
 
@@ -52,8 +56,8 @@ function loadLayout() {
 function forgetLayout() {
   try { localStorage.removeItem(LAYOUT_KEY); } catch (e) { /* noop */ }
 }
-const PALETTE = ["#4dd2ff", "#ff6b8a", "#7ee787", "#ffb04d"];
-const DEFAULT_NAMES = ["Team 1", "Team 2", "Team 3", "Team 4"];
+const PALETTE = ["#4dd2ff", "#ff6b8a", "#7ee787", "#ffb04d", "#c9a3ff", "#ffe071"];
+const DEFAULT_NAMES = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6"];
 
 /* ==========================================================================
    STATE
@@ -226,7 +230,7 @@ function initSetup() {
     const btn = e.target.closest("button[data-n]");
     if (!btn) return;
     setupTeamCount = +btn.dataset.n;
-    $$("#team-count-seg button").forEach((b) => b.classList.toggle("on", b === btn));
+    $$("#team-count-seg button").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
     renderSetupTeams();
     SFX.select();
   });
@@ -248,7 +252,8 @@ function initSetup() {
   $("#btn-start").addEventListener("click", startNewGame);
 }
 
-function startNewGame() {
+async function startNewGame() {
+  if (captainLobby.active && !(await captainLobby.prepare())) return;
   const names = $$(".team-row input").map((inp, i) => inp.value.trim() || DEFAULT_NAMES[i]);
   const teams = names.map((name, i) => ({ name, color: PALETTE[i], score: 0 }));
 
@@ -289,6 +294,22 @@ function startFromState() {
 
 let lastBoardShown = null;   // which round the cascade last played for
 
+/* Bencho Context Meter field, adapted to the board’s played clue count. */
+function renderRoundMeter(played, total) {
+  const meter = $("#round-meter");
+  if (meter.childElementCount !== total) {
+    meter.replaceChildren();
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement("span");
+      dot.className = "ctx-dot";
+      meter.append(dot);
+    }
+  }
+  for (const [i, dot] of Array.from(meter.children).entries()) {
+    dot.classList.toggle("is-played", i < played);
+  }
+}
+
 function renderBoard() {
   const round = roundOf(S.round);
   const ids = colsOf(S.round);
@@ -325,8 +346,11 @@ function renderBoard() {
       tile.dataset.cat = id;
       tile.dataset.c = c;
       tile.dataset.row = row;
-      tile.innerHTML = `<span class="amt">$${val}</span>`;
+      tile.innerHTML = `<span class="stk-face"><span class="amt">$${val}</span></span>`;
       if (!S.used[k]) {
+        const face = tile.firstElementChild;
+        tile.addEventListener("pointerenter", () => face.setAttribute("data-lift", ""));
+        tile.addEventListener("pointerleave", () => face.removeAttribute("data-lift"));
         tile.addEventListener("click", () => openClue(id, row, tile));
       } else {
         tile.tabIndex = -1;
@@ -337,7 +361,9 @@ function renderBoard() {
 
   $("#round-name").textContent = round.name;
   const done = usedCount(S.round);
-  $("#round-progress").textContent = `${done} of ${clueCount(S.round)} played`;
+  const total = clueCount(S.round);
+  $("#round-progress").textContent = `${done} of ${total} played`;
+  renderRoundMeter(done, total);
 
   const exhausted = boardExhausted();
   const nextBtn = $("#btn-next-round");
@@ -456,6 +482,9 @@ function openClue(catId, row, tileEl) {
     dd,
     wager: null,
     buzzed: null,
+    buzzId: String(Date.now()) + "-" + Math.random().toString(36).slice(2),
+    queue: [],
+    openForBuzz: false,
     lockedOut: [],
     revealed: false,
     resolved: false,
@@ -520,6 +549,7 @@ function showClueBody() {
   $("#answer-box").classList.remove("show");
 
   body.classList.add("show");
+  clue.openForBuzz = !clue.media;
   startMedia(clue.media);
   renderBuzzRow();
   renderClueActions();
@@ -591,6 +621,7 @@ function showWagerPanel() {
 /* --- buzz row --------------------------------------------------------- */
 
 function renderBuzzRow() {
+  renderBuzzStatus();
   const row = $("#buzz-row");
   row.innerHTML = "";
 
@@ -612,13 +643,14 @@ function renderBuzzRow() {
     // so every button should visibly go dead
     // (but the team that just won it stays lit rather than greying out)
     const dead = (clue.resolved && clue.buzzed !== i)
-      || clue.lockedOut.includes(i) || !allowed;
+      || clue.lockedOut.includes(i) || !allowed || !clue.openForBuzz;
     const b = document.createElement("button");
     b.className = "buzz-btn"
       + (clue.buzzed === i ? " on" : "")
       + (dead ? " out" : "");
     b.style.setProperty("--tc", t.color);
     b.innerHTML = `<span class="num">${i + 1}</span>${escapeHtml(t.name)}`;
+    b.disabled = Boolean(dead);
     b.addEventListener("click", () => buzzIn(i));
     row.appendChild(b);
   });
@@ -629,9 +661,38 @@ function renderBuzzRow() {
   });
 }
 
+function renderBuzzStatus() {
+  const status = $("#buzz-status");
+  const team = S.teams[clue.buzzed];
+  if (clue.revealed || clue.resolved || clue.dd || !team) {
+    status.replaceChildren();
+    delete status.dataset.active;
+    return;
+  }
+  if (status.dataset.active !== String(clue.buzzed)) {
+    const label = document.createElement("strong");
+    label.textContent = team.name + " is answering";
+    const timer = document.createElement("span");
+    timer.className = "captain-answer-timer";
+    timer.setAttribute("aria-hidden", "true");
+    const next = document.createElement("span");
+    next.className = "captain-next";
+    status.replaceChildren(label, timer, next);
+    status.dataset.active = String(clue.buzzed);
+  }
+  const waiting = clue.queue.map(i => S.teams[i]?.name).filter(Boolean);
+  status.querySelector(".captain-next").textContent = waiting.length ? "Up next: " + waiting.join(" → ") : "";
+}
+
 function buzzIn(i) {
-  if (!clue || clue.resolved || clue.lockedOut.includes(i)) return;
+  if (!clue || !clue.openForBuzz || clue.dd || clue.revealed || clue.resolved || !S.teams[i] || clue.lockedOut.includes(i)) return;
   if (S.settings.strictTurns && i !== S.activeTeam) return;
+  if (clue.buzzed === i || clue.queue.includes(i)) return;
+  if (clue.buzzed !== null) {
+    clue.queue.push(i);
+    renderBuzzStatus();
+    return;
+  }
   clue.buzzed = i;
   pauseTimer();
   SFX.buzzIn();
@@ -685,15 +746,20 @@ function markWrong() {
     stopTimer();
     revealAnswer();
   } else {
-    renderBuzzRow();
-    renderClueActions();
-    resumeTimer();
+    const next = clue.queue.shift();
+    if (next !== undefined) buzzIn(next);
+    else {
+      renderBuzzRow();
+      renderClueActions();
+      resumeTimer();
+    }
   }
 }
 
 function revealAnswer() {
   if (!clue) return;
   clue.revealed = true;
+  clue.queue = [];
   stopTimer();
   playAnswerClip();
   $("#answer-box").classList.add("show");
@@ -714,6 +780,8 @@ function closeClue(instant) {
   stopTimer();
   stopMedia();
 
+  $("#buzz-status").replaceChildren();
+  delete $("#buzz-status").dataset.active;
   const cur = clue;
   clue = null;
 
@@ -920,6 +988,8 @@ function stopMedia() {
 function setPausedUI(paused) {
   $("#clue-media").classList.toggle("paused", paused);
   const btn = $("#media-play");
+  const text = $("#media-play-text");
+  btn.dataset.action = paused ? "play" : "pause";
   const label = $("#media-label");
   const primary = (on) => {
     btn.classList.toggle("btn-gold", on);
@@ -927,19 +997,19 @@ function setPausedUI(paused) {
   };
 
   if (!paused) {
-    btn.textContent = "Pause";
-    primary(false);
+    text.textContent = curMedia?.manualCutoff && !clue?.openForBuzz && !clue?.revealed ? "Pause for guesses" : "Pause";
+    primary(true);
     if (label) label.textContent = "Now playing";
   } else if (!mediaStarted) {
     // the clip is loaded and waiting — make this the obvious thing to click
-    btn.textContent = "▶  Play clip";
+    text.textContent = "Play clip";
     primary(true);
-    if (label) label.textContent = "Ready — press play";
+    if (label) label.textContent = "Ready to play";
   } else {
     // after a clip window ends, the button's job is to carry the song on
-    btn.textContent = clipStopped ? "Continue" : "Play";
-    primary(false);
-    if (label) label.textContent = clipStopped ? "Clip ended" : "Paused";
+    text.textContent = clipStopped ? "Continue" : "Play";
+    primary(true);
+    if (label) label.textContent = clipStopped ? "" : "Paused";
   }
 }
 
@@ -968,7 +1038,7 @@ function initMedia() {
           // which armClipWindow handles. This is just a backstop in case the
           // player never reports that it started.
           setTimeout(armClipWindow, 2500);
-        } else {
+        } else if (!curMedia.manualCutoff) {
           // guessing clue: the countdown runs alongside the music
           startTimer();
         }
@@ -979,11 +1049,13 @@ function initMedia() {
       if (isYT) { ytCommand("pauseVideo"); ytPaused = true; }
       else if (audioEl) audioEl.pause();
       setPausedUI(true);
+      if (curMedia.manualCutoff && clue && !clue.openForBuzz && !clue.revealed) startTimer();
     }
   });
 
   $("#media-replay").addEventListener("click", () => {
     if (!curMedia) return;
+    const firstStart = !mediaStarted;
     clearTimeout(clipTimer);
     clipArmed = false;
     clipStopped = false;
@@ -998,6 +1070,7 @@ function initMedia() {
       audioEl.play().catch(() => setPausedUI(true));
     }
     setPausedUI(false);
+    if (firstStart && curMedia.end == null && !curMedia.manualCutoff) startTimer();
     armClipWindow();   // re-arm the cut so a replay stops in the same place
   });
 
@@ -1014,6 +1087,10 @@ function buildTimerStrip(el, segments) {
 }
 
 function startTimer() {
+  if (clue?.media && !clue.revealed && !clue.resolved) {
+    clue.openForBuzz = true;
+    renderBuzzRow();
+  }
   const strip = $("#timer-strip");
   if (!S.settings.timer) { strip.style.display = "none"; return; }
   strip.style.display = "flex";
@@ -1093,10 +1170,21 @@ function nextRound() {
    FINAL JEOPARDY
    ========================================================================== */
 
-function goToFinal() {
+async function goToFinal() {
+  let phoneTeams = [];
+  if (captainLobby.active) {
+    try {
+      const f = GAME.finals[S.finalIndex] || GAME.finals[0];
+      const state = await captainLobby.openWagers(f.category, S.teams.map(t => Math.max(0, Math.floor(t.score))));
+      phoneTeams = state.teams;
+    } catch {
+      toast("Could not open private wagers. Try again.");
+      return;
+    }
+  }
   snapshot("go to Final Jeopardy");
   S.phase = "final";
-  S.final = { wagers: {}, results: {} };
+  S.final = { wagers: {}, results: {}, phoneTeams };
   save();
   document.body.dataset.view = "final";
   renderFinal();
@@ -1124,6 +1212,14 @@ function renderFinal() {
       <span class="fw-score">${money(t.score)}</span>
       <input type="number" min="0" max="${max}" step="100" value="${S.final.wagers[i] ?? 0}"
              aria-label="${escapeHtml(t.name)} wager">`;
+    if (captainLobby.active && S.final.phoneTeams?.[i]) {
+      const input = row.querySelector("input");
+      const label = document.createElement("span");
+      label.textContent = "Private wager";
+      input.replaceWith(label);
+      list.appendChild(row);
+      return;
+    }
     row.querySelector("input").addEventListener("input", (e) => {
       const v = Math.max(0, Math.min(max, Math.round(+e.target.value || 0)));
       S.final.wagers[i] = v;
@@ -1136,7 +1232,23 @@ function showFinalStep(id) {
   $$(".final-step").forEach((s) => s.classList.toggle("show", s.id === id));
 }
 
-function lockFinalWagers() {
+async function lockFinalWagers() {
+  const lock = $("#final-lock");
+  if (lock.disabled) return;
+  if (captainLobby.active) {
+    lock.disabled = true;
+    try {
+      const { wagers } = await captainLobby.openFinal($("#final-clue-text").textContent);
+      wagers.forEach((wager, i) => {
+        if (wager !== null) S.final.wagers[i] = wager;
+      });
+    } catch {
+      toast("Could not open Final on phones. Try again.");
+      return;
+    } finally {
+      lock.disabled = false;
+    }
+  }
   S.teams.forEach((t, i) => {
     const max = Math.max(0, t.score);
     S.final.wagers[i] = Math.max(0, Math.min(max, Math.round(S.final.wagers[i] || 0)));
@@ -1157,7 +1269,21 @@ function lockFinalWagers() {
   }
 }
 
-function revealFinal() {
+async function revealFinal() {
+  const reveal = $("#final-reveal");
+  if (reveal.disabled) return;
+  let entries = [];
+  if (captainLobby.active) {
+    reveal.disabled = true;
+    try {
+      ({ entries } = await captainLobby.revealFinal());
+    } catch {
+      toast("Could not lock Final responses. Try Reveal again.");
+      return;
+    } finally {
+      reveal.disabled = false;
+    }
+  }
   stopTimer();
   timer = null;
   SFX.stopTicking();
@@ -1176,6 +1302,12 @@ function revealFinal() {
         <button data-v="1">Right</button>
         <button data-v="0">Wrong</button>
       </span>`;
+    if (captainLobby.active) {
+      const response = document.createElement("p");
+      response.className = "fj-response";
+      response.textContent = entries[i]?.text.trim() || "No response";
+      row.append(response);
+    }
     row.querySelectorAll("button").forEach((b) => {
       b.addEventListener("click", () => {
         const right = b.dataset.v === "1";
@@ -1526,13 +1658,15 @@ function initSettings() {
   });
 
   $("#set-add-team").addEventListener("click", () => {
-    if (S.teams.length >= 4) return toast("Four teams is the max");
+    if (captainLobby.active) return toast("Team seats are fixed in captain mode");
+    if (S.teams.length >= DEFAULT_NAMES.length) return toast("Six teams is the max");
     snapshot("add team");
     const i = S.teams.length;
     S.teams.push({ name: DEFAULT_NAMES[i], color: PALETTE[i], score: 0 });
     save(); renderAll(); renderSettings();
   });
   $("#set-remove-team").addEventListener("click", () => {
+    if (captainLobby.active) return toast("Team seats are fixed in captain mode");
     if (S.teams.length <= 1) return toast("Need at least one team");
     snapshot("remove team");
     S.teams.pop();
@@ -1700,7 +1834,7 @@ function initChrome() {
     if (k === "0" && (e.metaKey || e.ctrlKey)) { e.preventDefault(); applyZoom(100, true); return; }
 
     if (!clue) return;
-    if (k >= "1" && k <= "4") { e.preventDefault(); buzzIn(+k - 1); return; }
+    if (k >= "1" && k <= String(DEFAULT_NAMES.length)) { e.preventDefault(); buzzIn(+k - 1); return; }
     if (k === "enter") { e.preventDefault(); markCorrect(); return; }
     if (k === "x") { e.preventDefault(); markWrong(); return; }
     if (k === " ") { e.preventDefault(); revealAndHold(); return; }

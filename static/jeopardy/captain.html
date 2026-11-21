@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Team Captain · Potluck Jeopardy</title>
+<link rel="stylesheet" href="captain.css?v=26">
+<main class="phone-card">
+  <header><p>Thanksgiving Potluck</p><h1 id="captain-title">Join your team</h1></header>
+  <form id="join-form">
+    <label for="team-name">Team name</label>
+    <input id="team-name" maxlength="22" required autocomplete="off">
+    <button>Join as captain</button>
+  </form>
+  <div id="phone-game" hidden>
+    <button id="phone-buzz" disabled>Buzz in</button>
+  </div>
+  <form id="wager-form" hidden>
+    <p id="phone-wager-category"></p>
+    <label for="phone-wager">Private wager</label>
+    <input id="phone-wager" type="number" min="0" step="1" value="0" required inputmode="numeric">
+    <p id="phone-wager-limit"></p>
+    <button type="submit">Lock wager</button>
+  </form>
+  <form id="final-form" hidden>
+    <p id="phone-final-clue"></p>
+    <label for="final-response">Your team’s response</label>
+    <textarea id="final-response" rows="3" maxlength="240" placeholder="What is…?"></textarea>
+    <button id="final-submit" type="submit">Submit response</button>
+  </form>
+  <p id="phone-status" role="status"></p>
+</main>
+<script src="captain.js?v=26"></script>
+</html>

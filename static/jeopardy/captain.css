@@ -1,0 +1,14 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #201813; color: #fff5e7; }
+body { margin: 0; display: grid; place-items: center; min-height: 100svh; padding: 1rem; box-sizing: border-box; }
+.phone-card { width: min(100%, 26rem); padding: 1.5rem; box-sizing: border-box; background: #30241c; border: 1px solid #76513b; border-radius: 1.25rem; }
+header p { color: #ffcf89; margin: 0; }
+h1 { font-family: Georgia, serif; margin: .5rem 0 1.4rem; overflow-wrap: anywhere; }
+label, input, button { display: block; width: 100%; box-sizing: border-box; }
+input, button { font: inherit; min-height: 3rem; padding: .75rem; border: 1px solid #76513b; border-radius: .75rem; margin-top: .5rem; }
+button { background: #ffcf89; color: #201813; font-weight: 800; touch-action: manipulation; }
+button:disabled { background: #493329; color: #e0c6ad; }
+#phone-buzz { min-height: 9rem; font-size: 2rem; }
+#phone-status { min-height: 1.5rem; margin-bottom: 0; color: #ffe6bd; }
+:focus-visible { outline: 3px solid #ffcf89; outline-offset: 3px; }
+#final-response { width: 100%; box-sizing: border-box; margin-top: .5rem; padding: .75rem; font: inherit; border: 1px solid #76513b; border-radius: .75rem; }
+#phone-final-clue { line-height: 1.5; }

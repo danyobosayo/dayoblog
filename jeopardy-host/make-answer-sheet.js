@@ -1,5 +1,5 @@
 /* Regenerates ANSWER-SHEET.md from questions.js.
-   Run from the repo root:  node static/jeopardy/make-answer-sheet.js
+   Run from the repo root:  node jeopardy-host/make-answer-sheet.js
 
    NOTE: this writes only inside the repo. Never copy the output over a file in
    the Obsidian vault that has hand-written annotations on it — regenerating is
@@ -15,9 +15,12 @@ const dir = __dirname;
 const GAME = require(path.join(dir, "..", "static", "jeopardy", "questions.js"));
 
 const out = [];
-out.push("# Bible Study Jeopardy — Answer Sheet");
+out.push("# Thanksgiving Potluck Jeopardy — Answer Sheet");
 out.push("");
-out.push("_Host reference. Generated from `questions.js` — run `node static/jeopardy/make-answer-sheet.js` after editing._");
+out.push("_Host reference. Generated from `questions.js` — run `node jeopardy-host/make-answer-sheet.js` after editing._");
+out.push("");
+
+out.push("Ask for responses in question form. Parentheses mark optional units or descriptors. Use the notes for explicitly accepted variants.");
 out.push("");
 
 GAME.rounds.forEach((round, ri) => {
@@ -37,18 +40,27 @@ GAME.rounds.forEach((round, ri) => {
           : `🎵 clip: ${m.src} · plays ${win}`);
         out.push("");
       }
-      out.push(`> ${c.a}${c.note ? `  \n> _${c.note}_` : ""}`);
+      out.push(`> ${c.a}${c.note ? `\n>\n> _${c.note}_` : ""}`);
       out.push("");
     });
   });
 });
+
+if (GAME.musicClues?.length === 5) {
+  out.push("## Sing It Back (optional column)", "");
+  GAME.musicClues.forEach((c, i) => {
+    out.push(`**Clue ${i + 1}** — ${c.q}`, "");
+    out.push(`Clip: ${c.media.src} · ${c.media.start ?? 0}s–${c.media.end == null ? "end" : c.media.end + "s"}`, "");
+    out.push(`> ${c.a}${c.note ? `\n>\n> _${c.note}_` : ""}`, "");
+  });
+}
 
 out.push("## Final Jeopardy pool");
 out.push("");
 GAME.finals.forEach((f, i) => {
   out.push(`**${i + 1}. ${f.category}** — ${f.q}`);
   out.push("");
-  out.push(`> ${f.a}${f.note ? `  \n> _${f.note}_` : ""}`);
+  out.push(`> ${f.a}${f.note ? `\n>\n> _${f.note}_` : ""}`);
   out.push("");
 });
 

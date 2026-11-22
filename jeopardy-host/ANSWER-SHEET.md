@@ -36,11 +36,11 @@ Ask for responses in question form. Parentheses mark optional units or descripto
 
 > Who is Kendrick Lamar?
 
-**$400** — In Among Us, this is the role that secretly sabotages the crew.
+**$400** — An unusually large red dog with this name is the star of a PBS Kids series.
 
-> What is the Impostor?
+> Who is Clifford?
 >
-> _Accept Imposter._
+> _Accept Clifford the Big Red Dog._
 
 **$600** — Fans waited about 13 years between the fifth and sixth numbered installments of this Rockstar Games franchise.
 

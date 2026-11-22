@@ -19,7 +19,7 @@ const GAME = {
         ]),
         category("Young Adult Era", [
           ["Who headlined the Super Bowl LIX halftime show in February 2025?", "Who is Kendrick Lamar?"],
-          ["In Among Us, this is the role that secretly sabotages the crew.", "What is the Impostor?", "Accept Imposter."],
+          ["An unusually large red dog with this name is the star of a PBS Kids series.", "Who is Clifford?", "Accept Clifford the Big Red Dog."],
           ["Fans waited about 13 years between the fifth and sixth numbered installments of this Rockstar Games franchise.", "What is Grand Theft Auto?", "Accept GTA. Count from GTA V’s original 2013 launch."],
           ["Name the five emotions working at Headquarters in Riley’s mind in the original Inside Out.", "What are Joy, Sadness, Fear, Anger, and Disgust?", "Accept any order."],
           ["In Club Penguin, what was the name of the Pizza Parlor minigame where players filled pizza orders on a conveyor belt?", "What is Pizzatron 3000?", "Accept Pizzatron."],

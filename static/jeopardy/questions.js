@@ -114,11 +114,7 @@ const GAME = {
         ]),
   ],
   finals: [
-    { category: "Thanksgiving", q: "A 1941 federal law set U.S. Thanksgiving on this weekday occurrence in November.", a: "What is the fourth Thursday?" },
-    { category: "Acts of Kindness", q: "In Acts 9, Peter raises a woman known for making clothes. Her Aramaic name is Tabitha, and this is her Greek name.", a: "Who is Dorcas?" },
-    { category: "The Night Sky", q: "Polaris is part of this constellation, also known as the Little Bear.", a: "What is Ursa Minor?", note: "Accept Little Bear. The Little Dipper is an asterism within Ursa Minor." },
-    { category: "World Geography", q: "The Danube passes through Austria before reaching Hungary. This capital city is its stop in Austria.", a: "What is Vienna?" },
-    { category: "Bible Books", q: "This letter asks its recipient to welcome Onesimus back as a beloved brother.", a: "What is Philemon?", note: "Accept the Letter to Philemon." },
+    { category: "World History", q: "Japan signed the formal surrender documents that ended World War II in this month and year.", a: "What is September 1945?", note: "Require both month and year. Accept September 2, 1945. Japan announced its surrender in August and signed the documents on September 2." },
   ],
 };
 

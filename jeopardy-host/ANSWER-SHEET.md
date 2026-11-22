@@ -388,30 +388,12 @@ Ask for responses in question form. Parentheses mark optional units or descripto
 
 ## Final Jeopardy pool
 
-**1. Thanksgiving** — A 1941 federal law set U.S. Thanksgiving on this weekday occurrence in November.
+**1. World History** — Japan signed the formal surrender documents that ended World War II in this month and year.
 
-> What is the fourth Thursday?
-
-**2. Acts of Kindness** — In Acts 9, Peter raises a woman known for making clothes. Her Aramaic name is Tabitha, and this is her Greek name.
-
-> Who is Dorcas?
-
-**3. The Night Sky** — Polaris is part of this constellation, also known as the Little Bear.
-
-> What is Ursa Minor?
+> What is September 1945?
 >
-> _Accept Little Bear. The Little Dipper is an asterism within Ursa Minor._
-
-**4. World Geography** — The Danube passes through Austria before reaching Hungary. This capital city is its stop in Austria.
-
-> What is Vienna?
-
-**5. Bible Books** — This letter asks its recipient to welcome Onesimus back as a beloved brother.
-
-> What is Philemon?
->
-> _Accept the Letter to Philemon._
+> _Require both month and year. Accept September 2, 1945. Japan announced its surrender in August and signed the documents on September 2._
 
 ---
 
-60 clues across 2 boards, plus 5 Final Jeopardy options.
+60 clues across 2 boards, plus 1 Final Jeopardy options.

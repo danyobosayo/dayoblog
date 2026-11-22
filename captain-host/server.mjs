@@ -46,7 +46,7 @@ createServer(async (req, res) => {
     if (action === "create" && req.method === "POST") {
       for (const [code, room] of rooms) if (room.expires < Date.now()) rooms.delete(code);
       if (rooms.size >= 50) return send(429, { error: "Too many open lobbies" });
-      if (!Number.isInteger(data.count) || data.count < 2 || data.count > 6) return send(400, { error: "Choose two to six teams" });
+      if (!Number.isInteger(data.count) || data.count < 2 || data.count > 10) return send(400, { error: "Choose two to ten teams" });
       const code = token(4);
       const room = freshRoom(data.count);
       rooms.set(code, room);

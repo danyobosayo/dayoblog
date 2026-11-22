@@ -62,8 +62,8 @@ function loadLayout() {
 function forgetLayout() {
   try { localStorage.removeItem(LAYOUT_KEY); } catch (e) { /* noop */ }
 }
-const PALETTE = ["#4dd2ff", "#ff6b8a", "#7ee787", "#ffb04d", "#c9a3ff", "#ffe071"];
-const DEFAULT_NAMES = ["Team 1", "Team 2", "Team 3", "Team 4", "Team 5", "Team 6"];
+const PALETTE = ["#4dd2ff", "#ff6b8a", "#7ee787", "#ffb04d", "#c9a3ff", "#ffe071", "#67e8d2", "#ffa1d4", "#9daaff", "#d5e981"];
+const DEFAULT_NAMES = PALETTE.map((_, i) => `Team ${i + 1}`);
 
 /* ==========================================================================
    STATE
@@ -1666,7 +1666,7 @@ function initSettings() {
 
   $("#set-add-team").addEventListener("click", () => {
     if (captainLobby.active) return toast("Team seats are fixed in captain mode");
-    if (S.teams.length >= DEFAULT_NAMES.length) return toast("Six teams is the max");
+    if (S.teams.length >= DEFAULT_NAMES.length) return toast("Ten teams is the max");
     snapshot("add team");
     const i = S.teams.length;
     S.teams.push({ name: DEFAULT_NAMES[i], color: PALETTE[i], score: 0 });
@@ -1841,7 +1841,12 @@ function initChrome() {
     if (k === "0" && (e.metaKey || e.ctrlKey)) { e.preventDefault(); applyZoom(100, true); return; }
 
     if (!clue) return;
-    if (k >= "1" && k <= String(DEFAULT_NAMES.length)) { e.preventDefault(); buzzIn(+k - 1); return; }
+    if (/^[0-9]$/.test(k)) {
+      const seat = k === "0" ? 9 : Number(k) - 1;
+      e.preventDefault();
+      buzzIn(seat);
+      return;
+    }
     if (k === "enter") { e.preventDefault(); markCorrect(); return; }
     if (k === "x") { e.preventDefault(); markWrong(); return; }
     if (k === " ") { e.preventDefault(); revealAndHold(); return; }

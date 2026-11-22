@@ -41,7 +41,7 @@ Deno.serve(async (req) => {
     try { data = JSON.parse(raw || "{}"); } catch { return send(400, { error: "Invalid JSON" }); }
     if (!data || typeof data !== "object" || Array.isArray(data)) return send(400, { error: "Invalid request" });
     if (action === "create" && req.method === "POST") {
-      if (!Number.isInteger(data.count) || data.count < 2 || data.count > 6) return send(400, { error: "Choose two to six teams" });
+      if (!Number.isInteger(data.count) || data.count < 2 || data.count > 10) return send(400, { error: "Choose two to ten teams" });
       const room = freshRoom(data.count);
       const code = token(4);
       await db("?expires_at=lt." + encodeURIComponent(new Date().toISOString()), "DELETE");

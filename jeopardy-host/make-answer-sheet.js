@@ -46,11 +46,10 @@ GAME.rounds.forEach((round, ri) => {
   });
 });
 
-if (GAME.musicClues?.length === 5) {
-  out.push("## Sing It Back (optional column)", "");
-  GAME.musicClues.forEach((c, i) => {
+for (const category of GAME.optionalCategories || []) {
+  out.push(`## ${category.title} (optional column)`, "");
+  category.clues.forEach((c, i) => {
     out.push(`**Clue ${i + 1}** — ${c.q}`, "");
-    out.push(`Clip: ${c.media.src} · ${c.media.start ?? 0}s–${c.media.end == null ? "end" : c.media.end + "s"}`, "");
     out.push(`> ${c.a}${c.note ? `\n>\n> _${c.note}_` : ""}`, "");
   });
 }

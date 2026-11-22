@@ -314,77 +314,77 @@ Ask for responses in question form. Parentheses mark optional units or descripto
 >
 > _Here Jordan refers to the country._
 
-### Pairs in Scripture
+### Worship Music
 
-**$400** — After leaving Moab, Ruth stays with this mother-in-law.
+**$400** — Name this song.
 
-> Who is Naomi?
->
-> _Ruth 1._
-
-**$800** — In 1 Samuel, this son of Saul becomes a close friend of David.
-
-> Who is Jonathan?
-
-**$1200** — Jesus calls Simon Peter and this brother while they are casting a net.
-
-> Who is Andrew?
->
-> _Matthew 4:18–20._
-
-**$1600** — In Acts 18, Aquila and this wife explain the way of God more accurately to Apollos.
-
-> Who is Priscilla?
->
-> _Accept Prisca._
-
-**$2000** — Euodia and this woman are urged to agree in the Lord in Philippians 4.
-
-> Who is Syntyche?
->
-> _Accept recognizable pronunciations._
-
-## Sing It Back (optional column)
-
-**Clue 1** — Name this song.
-
-Clip: clips/run-to-the-father.mp3 · 0s–end
+🎵 clip: clips/run-to-the-father.mp3 · plays 0s–end
 
 > What is Run to the Father?
 >
 > _Cody Carnes._
 
-**Clue 2** — What lyric comes next?
+**$800** — What lyric comes next?
 
-Clip: clips/what-a-beautiful-name.mp3 · 0s–end
+🎵 clip: clips/what-a-beautiful-name.mp3 · plays 0s–end
 
 > What is "Death could not hold you"?
 >
 > _What a Beautiful Name — Hillsong Worship. The excerpt starts at 2:42 in the original. Pause just before the accepted line._
 
-**Clue 3** — Name this song.
+**$1200** — Name this song.
 
-Clip: clips/thank-god-im-free.mp3 · 0s–end
+🎵 clip: clips/thank-god-im-free.mp3 · plays 0s–end
 
 > What is Thank God I’m Free?
 >
 > _Elevation Rhythm & Lizzie Morgan._
 
-**Clue 4** — What lyric comes next?
+**$1600** — What lyric comes next?
 
-Clip: clips/build-my-life.mp3 · 0s–end
+🎵 clip: clips/build-my-life.mp3 · plays 0s–end
 
 > What is "Worthy of every song we could ever sing"?
 >
 > _Build My Life — Housefires feat. Pat Barrett. Pause just before the accepted line._
 
-**Clue 5** — Name this song.
+**$2000** — Name this song.
 
-Clip: clips/the-lord-will-provide.mp3 · 0s–end
+🎵 clip: clips/the-lord-will-provide.mp3 · plays 0s–end
 
 > What is The Lord Will Provide?
 >
 > _Passion & Landon Wolfe._
+
+## Pairs in Scripture (optional column)
+
+**Clue 1** — After leaving Moab, Ruth stays with this mother-in-law.
+
+> Who is Naomi?
+>
+> _Ruth 1._
+
+**Clue 2** — In 1 Samuel, this son of Saul becomes a close friend of David.
+
+> Who is Jonathan?
+
+**Clue 3** — Jesus calls Simon Peter and this brother while they are casting a net.
+
+> Who is Andrew?
+>
+> _Matthew 4:18–20._
+
+**Clue 4** — In Acts 18, Aquila and this wife explain the way of God more accurately to Apollos.
+
+> Who is Priscilla?
+>
+> _Accept Prisca._
+
+**Clue 5** — Euodia and this woman are urged to agree in the Lord in Philippians 4.
+
+> Who is Syntyche?
+>
+> _Accept recognizable pronunciations._
 
 ## Final Jeopardy pool
 

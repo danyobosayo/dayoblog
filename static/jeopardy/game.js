@@ -20,10 +20,10 @@ const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g
 const POOL = [];
 GAME.rounds.forEach((r, ri) =>
   r.categories.forEach((c) =>
-    POOL.push({ id: slug(c.title), title: c.title, clues: c.clues, home: ri })));
+    POOL.push({ id: c.id || slug(c.title), title: c.title, clues: c.clues, home: ri })));
 
-if (GAME.musicClues?.length === 5) {
-  POOL.push({ id: "sing-it-back", title: "Sing It Back", clues: GAME.musicClues });
+for (const category of GAME.optionalCategories || []) {
+  POOL.push({ ...category, id: category.id || slug(category.title) });
 }
 
 const poolById = (id) => POOL.find((p) => p.id === id);
@@ -49,7 +49,13 @@ function loadLayout() {
     // ignore anything referring to categories that no longer exist
     const ok = GAME.rounds.every((_, ri) =>
       Array.isArray(l[ri]) && l[ri].every((id) => poolById(id)));
-    return ok ? l : null;
+    if (!ok) return null;
+    // Migrate the old default while keeping deliberately customized boards.
+    const defaults = defaultLayout();
+    const oldRound2 = defaults[1].map(id => id === "sing-it-back" ? "pairs-in-scripture" : id);
+    if (JSON.stringify(l[0]) === JSON.stringify(defaults[0]) &&
+        JSON.stringify(l[1]) === JSON.stringify(oldRound2)) return defaults;
+    return l;
   } catch (e) { return null; }
 }
 

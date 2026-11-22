@@ -94,25 +94,24 @@ const GAME = {
           ["This river runs through London past the Houses of Parliament.", "What is the Thames (River)?", "Accept River Thames."],
           ["Petra, the ancient city famed for buildings cut into sandstone, is in this modern country.", "What is Jordan?", "Here Jordan refers to the country."],
         ]),
-        category("Pairs in Scripture", [
+        { id: "sing-it-back", title: "Worship Music", clues: [
+          { q: "Name this song.", a: "What is Run to the Father?", note: "Cody Carnes.", media: { type: "audio", src: "clips/run-to-the-father.mp3" } },
+          { q: "What lyric comes next?", a: 'What is "Death could not hold you"?', note: "What a Beautiful Name — Hillsong Worship. The excerpt starts at 2:42 in the original. Pause just before the accepted line.", media: { type: "audio", src: "clips/what-a-beautiful-name.mp3", manualCutoff: true } },
+          { q: "Name this song.", a: "What is Thank God I’m Free?", note: "Elevation Rhythm & Lizzie Morgan.", media: { type: "audio", src: "clips/thank-god-im-free.mp3" } },
+          { q: "What lyric comes next?", a: 'What is "Worthy of every song we could ever sing"?', note: "Build My Life — Housefires feat. Pat Barrett. Pause just before the accepted line.", media: { type: "audio", src: "clips/build-my-life.mp3", manualCutoff: true } },
+          { q: "Name this song.", a: "What is The Lord Will Provide?", note: "Passion & Landon Wolfe.", media: { type: "audio", src: "clips/the-lord-will-provide.mp3" } },
+        ] },
+      ],
+    },
+  ],
+  optionalCategories: [
+    category("Pairs in Scripture", [
           ["After leaving Moab, Ruth stays with this mother-in-law.", "Who is Naomi?", "Ruth 1."],
           ["In 1 Samuel, this son of Saul becomes a close friend of David.", "Who is Jonathan?"],
           ["Jesus calls Simon Peter and this brother while they are casting a net.", "Who is Andrew?", "Matthew 4:18–20."],
           ["In Acts 18, Aquila and this wife explain the way of God more accurately to Apollos.", "Who is Priscilla?", "Accept Prisca."],
           ["Euodia and this woman are urged to agree in the Lord in Philippians 4.", "Who is Syntyche?", "Accept recognizable pronunciations."],
         ]),
-      ],
-    },
-  ],
-  // Once all five clips are ready, Sing It Back appears in Settings → Board.
-  // Times are seconds relative to the MP3. Omit end for name-that-song clues.
-  // { q: "...", a: "What is ...?", media: { type: "audio", src: "clips/new.mp3", start: 0, end: 8 } }
-  musicClues: [
-    { q: "Name this song.", a: "What is Run to the Father?", note: "Cody Carnes.", media: { type: "audio", src: "clips/run-to-the-father.mp3" } },
-    { q: "What lyric comes next?", a: 'What is "Death could not hold you"?', note: "What a Beautiful Name — Hillsong Worship. The excerpt starts at 2:42 in the original. Pause just before the accepted line.", media: { type: "audio", src: "clips/what-a-beautiful-name.mp3", manualCutoff: true } },
-    { q: "Name this song.", a: "What is Thank God I’m Free?", note: "Elevation Rhythm & Lizzie Morgan.", media: { type: "audio", src: "clips/thank-god-im-free.mp3" } },
-    { q: "What lyric comes next?", a: 'What is "Worthy of every song we could ever sing"?', note: "Build My Life — Housefires feat. Pat Barrett. Pause just before the accepted line.", media: { type: "audio", src: "clips/build-my-life.mp3", manualCutoff: true } },
-    { q: "Name this song.", a: "What is The Lord Will Provide?", note: "Passion & Landon Wolfe.", media: { type: "audio", src: "clips/the-lord-will-provide.mp3" } },
   ],
   finals: [
     { category: "Thanksgiving", q: "A 1941 federal law set U.S. Thanksgiving on this weekday occurrence in November.", a: "What is the fourth Thursday?" },

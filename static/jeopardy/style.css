@@ -1759,3 +1759,23 @@ body[data-view="results"] #view-results { display: flex; animation: viewIn var(-
   .podiums:has(> :nth-child(7)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .podiums:has(> :nth-child(7)) .podium { padding: 4px 5px; }
 }
+.team-row:has(.captain-seat-move:not([hidden])) {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  row-gap: .3rem;
+}
+.captain-seat-move:not([hidden]) {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+}
+.captain-seat-number { margin-right: auto; font-size: .72rem; color: var(--gold-pale); }
+.captain-seat-move button {
+  min-width: 1.75rem;
+  min-height: 1.75rem;
+  border: 1px solid #765440;
+  border-radius: .35rem;
+  background: #3b2a21;
+}
+.captain-seat-move button:disabled { opacity: .35; }

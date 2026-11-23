@@ -92,6 +92,7 @@ wagerForm.addEventListener("submit", async event => {
 });
 
 function render() {
+  if (Number.isInteger(state.slot)) identity.slot = state.slot;
   const team = state.teams[identity.slot];
   document.querySelector("#captain-title").textContent = team.name;
   finalForm.hidden = !state.final;

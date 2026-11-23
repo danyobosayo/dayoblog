@@ -222,7 +222,12 @@ function renderSetupTeams() {
     row.innerHTML = `
       <span class="swatch"></span>
       <input type="text" maxlength="22" aria-label="Team ${i + 1} name">
-      <span class="captain-seat-status" hidden>Joined</span>`;
+      <span class="captain-seat-status" hidden>Joined</span>
+      <span class="captain-seat-move" data-seat="${i}" hidden>
+        <span class="captain-seat-number">#${i + 1}</span>
+        <button type="button" data-step="-1" aria-label="Swap team ${i + 1} with the previous seat">↑</button>
+        <button type="button" data-step="1" aria-label="Swap team ${i + 1} with the next seat">↓</button>
+      </span>`;
     const inp = row.querySelector("input");
     inp.placeholder = DEFAULT_NAMES[i];
     inp.value = existing[i] ?? "";

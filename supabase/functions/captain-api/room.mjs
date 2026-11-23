@@ -13,6 +13,7 @@ function view(room, slot = -1) {
   const final = room.final;
   const entry = final?.entries[slot];
   return {
+    slot: slot >= 0 ? slot : null,
     teams: room.teams.map(team => team && { name: team.name }),
     wager: room.wager && slot >= 0 && !final ? {
       category: room.wager.category, max: room.wager.limits[slot],
@@ -82,6 +83,15 @@ export function handleRoom(room, action, method, data, auth, send) {
     if (!room.final) return send(409, { error: "Final responses have not opened yet." });
     room.final.locked = true;
     return send(200, { entries: room.final.entries });
+  }
+  if (action === "reorder") {
+    if (room.stage !== "lobby") return send(409, { error: "Team order is locked once play starts." });
+    const { from, to } = data;
+    if (![from, to].every(i => Number.isInteger(i) && i >= 0 && i < room.teams.length)) {
+      return send(400, { error: "Invalid team number." });
+    }
+    [room.teams[from], room.teams[to]] = [room.teams[to], room.teams[from]];
+    return send(200, view(room));
   }
   if (action === "stage") {
     room.stage = "game";

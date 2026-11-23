@@ -6,6 +6,8 @@ const captainLobby = (() => {
   let started = false;
   let lastStage;
   let closing = false;
+  let moving = false;
+  let layoutRevision = 0;
 
   async function request(action, data) {
     const suffix = room ? `?room=${encodeURIComponent(room.code)}` : "";
@@ -31,6 +33,12 @@ const captainLobby = (() => {
       row.classList.toggle("captain-joined", Boolean(team));
       const badge = row.querySelector(".captain-seat-status");
       badge.hidden = !team;
+      const controls = row.querySelector(".captain-seat-move");
+      controls.hidden = false;
+      controls.querySelectorAll("button").forEach(button => {
+        const target = i + Number(button.dataset.step);
+        button.disabled = moving || target < 0 || target >= state.teams.length;
+      });
     });
     status.textContent = "";
   }
@@ -39,7 +47,9 @@ const captainLobby = (() => {
     if (!room) return;
     try {
       if (!started) {
-        syncNames(await request("state"));
+        const revision = layoutRevision;
+        const state = await request("state");
+        if (!moving && !closing && !started && revision === layoutRevision) syncNames(state);
       } else {
         const current = clue;
         const remoteClue = current?.openForBuzz && !current.dd && !current.resolved && !current.revealed
@@ -65,6 +75,29 @@ const captainLobby = (() => {
       setTimeout(poll, 300);
     }
   }
+
+  document.querySelector("#team-inputs").addEventListener("click", async event => {
+    const button = event.target.closest(".captain-seat-move button");
+    if (!button || !room || moving || started || closing) return;
+    const from = Number(button.closest(".captain-seat-move").dataset.seat);
+    const to = from + Number(button.dataset.step);
+    const start = document.querySelector("#btn-start");
+    moving = true;
+    layoutRevision++;
+    start.disabled = true;
+    document.querySelectorAll(".captain-seat-move button").forEach(control => { control.disabled = true; });
+    try {
+      const state = await request("reorder", { from, to });
+      moving = false;
+      syncNames(state);
+      document.querySelector(`.captain-seat-move[data-seat="${to}"] button:not(:disabled)`)?.focus();
+    } catch (error) {
+      status.textContent = error.message;
+    } finally {
+      moving = false;
+      start.disabled = false;
+    }
+  });
 
   open.addEventListener("click", async () => {
     open.disabled = true;
@@ -106,7 +139,7 @@ const captainLobby = (() => {
     get active() { return Boolean(room); },
     async prepare() {
       if (!room || started) return true;
-      if (closing) return false;
+      if (closing || moving) return false;
       closing = true;
       try {
         syncNames(await request("stage", { clue: null }));

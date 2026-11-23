@@ -10,7 +10,7 @@ sermon notes the user keeps in their Obsidian vault. The vault is the **source o
 truth**; this repo is downstream. New sermons are written in the vault first, then
 copied here so Hugo can publish them.
 
-- **Vault (source):** `/Users/dayo/matcha milk tea/2 - General Notes/Sermons`
+- **Vault (source):** `/Users/dayo/Library/Mobile Documents/iCloud~md~obsidian/Documents/matcha milk tea/020 Faith/Sermons`
 - **Repo (dest):** `content/sermons/`
 
 Files are copied with **no transformation** — same filename, same front matter, same
@@ -24,7 +24,7 @@ Run the helper script from the repo root.
 1. **Check the delta** (always do this first — it is read-only):
 
    ```bash
-   .claude/skills/sync-sermons/sync-sermons.sh
+   .agents/skills/sync-sermons/sync-sermons.sh
    ```
 
    It prints three groups:
@@ -35,14 +35,14 @@ Run the helper script from the repo root.
 2. **Apply** new + changed files:
 
    ```bash
-   .claude/skills/sync-sermons/sync-sermons.sh --apply
+   .agents/skills/sync-sermons/sync-sermons.sh --apply
    ```
 
 3. **Apply and prune** (also delete orphaned repo files that no longer exist in the
    vault). Only use this when the user confirms a vault deletion was intentional:
 
    ```bash
-   .claude/skills/sync-sermons/sync-sermons.sh --apply --prune
+   .agents/skills/sync-sermons/sync-sermons.sh --apply --prune
    ```
 
 ## After syncing
@@ -60,5 +60,5 @@ Override with environment variables:
 
 ```bash
 SERMON_SRC="/path/to/vault/Sermons" SERMON_DST="/path/to/repo/content/sermons" \
-  .claude/skills/sync-sermons/sync-sermons.sh --apply
+  .agents/skills/sync-sermons/sync-sermons.sh --apply
 ```

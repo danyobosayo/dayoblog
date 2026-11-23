@@ -20,7 +20,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR" && git rev-parse --show-toplevel 2>/dev/null || echo "$SCRIPT_DIR/../../..")"
 
-SRC="${SERMON_SRC:-/Users/dayo/matcha milk tea/2 - General Notes/Sermons}"
+SRC="${SERMON_SRC:-/Users/dayo/Library/Mobile Documents/iCloud~md~obsidian/Documents/matcha milk tea/020 Faith/Sermons}"
 DST="${SERMON_DST:-$REPO_ROOT/content/sermons}"
 
 # _index.md carries Hugo menu config and is managed in the repo — never synced.
